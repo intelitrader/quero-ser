@@ -1,0 +1,26 @@
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.exe
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.deps.json
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.runtimeconfig.json
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.runtimeconfig.dev.json
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.dll
+C:\Users\lr592\Documents\Projetos\bin\Debug\netcoreapp3.1\Projetos.pdb
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.csprojAssemblyReference.cache
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.AssemblyInfoInputs.cache
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.AssemblyInfo.cs
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.csproj.CoreCompileInputs.cache
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.dll
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.pdb
+C:\Users\lr592\Documents\Projetos\obj\Debug\netcoreapp3.1\Projetos.genruntimeconfig.cache
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.exe
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.deps.json
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.runtimeconfig.json
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.runtimeconfig.dev.json
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.dll
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\bin\Debug\netcoreapp3.1\Projetos.pdb
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.csprojAssemblyReference.cache
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.AssemblyInfoInputs.cache
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.AssemblyInfo.cs
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.csproj.CoreCompileInputs.cache
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.dll
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.pdb
+C:\Users\lr592\Documents\Projetos\All Projects\Quebra\obj\Debug\netcoreapp3.1\Projetos.genruntimeconfig.cache
