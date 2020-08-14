@@ -1,0 +1,50 @@
+body{
+    color: white;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    font-size: 36px;
+}
+
+header h1, section{
+    text-align: center;
+}
+
+section{
+    background: rgb(0, 130, 110);
+    margin: 0 auto; /*Para centralizar o container na tela*/
+    width: 500px;
+    height: 350px;
+}
+
+section #inputDados, #mostragem, #resultado{
+    font-size: 26px;
+    padding: 20px;
+}
+
+section #inputDados #inputVetorA, #inputVetorB{
+    width: 100px;
+    font-size: 20px;
+    /*height: 25px;*/
+}
+
+section #mostragem #mostragemVetorA, #mostragemVetorB{
+    width: 200px;
+    font-size: 20px;
+    /*height: 25px;*/
+}
+
+section #inputDados #btnAddVetorA, #btnAddVetorB, #resultado #btnCalcular, #btnLimpar{
+    background: black;
+    color: white;
+}
+
+section #inputDados #btnAddVetorA, #btnAddVetorB{
+    font-size: 20px;
+}
+
+section #resultado #btnCalcular, #btnLimpar{
+    font-size: 24px;
+}
