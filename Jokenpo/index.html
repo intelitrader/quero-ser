@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css" type="text/css">
+    <title>Jokenpo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jokenpo</h1>
+    </header>
+    <section>
+        <div id="left">
+            <p>User 1#Azul</p>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="./img/pedra.jpg" alt="Pedra" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioLeft" id="pedraLeft">
+                            <label for="pedraLeft">Pedra</label>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/papel.jpg" alt="Papel" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioLeft" id="papelLeft">
+                            <label for="papelLeft">Papel</label>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/tesoura.jpg" alt="Tesoura" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioLeft" id="tesouraLeft">
+                            <label for="tesouraLeft">Tesoura</label>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+
+        <div id="right">
+            <p>User 2#Vermelho</p>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="./img/pedra.jpg" alt="Pedra" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioRight" id="pedraRight">
+                            <label for="pedraRight">Pedra</label>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/papel.jpg" alt="Papel" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioRight" id="papelRight">
+                            <label for="papelRight">Papel</label>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/tesoura.jpg" alt="Tesoura" width="100px" height="100px">
+                        <figcaption>
+                            <input type="radio" name="radioRight" id="tesouraRight">
+                            <label for="tesouraRight">Tesoura</label>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <p><input type="button" value="Jogar" id="btnJogar"></p>
+        <div id="resultado">
+            <p id="info"></p>
+            <p id="vencedorAzul"></p>
+            <p id="vencedorVermelho"></p>
+            <p id="empate"></p>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

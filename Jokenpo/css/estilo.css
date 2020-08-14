@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+}
+
+header h1, section{
+    color: white;
+    font: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 36px;
+}
+
+section #left, #right{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    font-size: 24px;
+    display: inline-block;
+}
+
+section #left{
+    background: rgb(100, 100, 200);
+}
+
+section #right{
+    background: rgb(200, 100, 100);
+}
+
+section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section ul li{
+    clear: both;
+    display: inline-block;
+    padding: 10px;
+}
+
+section ul li figure{
+    margin: 0;
+}
+
+section #btnJogar{
+    font-size: 24px;
+    width: 150px;
+    height: 50px;
+}
+
+section #resultado{
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+section #resultado #vencedorAzul{
+    color: rgb(100, 100, 200);
+}
+
+section #resultado #vencedorVermelho{
+    color: rgb(200, 100, 100);
+}
