@@ -1,0 +1,31 @@
+body{
+    background: rgb(0, 172, 172);
+}
+
+header h1{
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+header h1, section{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    font-size: 26px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px black;
+}
+
+section #inputDados #inputNumber, #selectNumeros{
+    width: 100px;
+}
+
+section #inputDados #inputNumber, #btnAdicionar, #selectNumeros, #btnCalcular, #btnLimpar, #resultado{
+    font-size: 20px;
+}
