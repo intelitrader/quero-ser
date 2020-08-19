@@ -1,0 +1,10 @@
+public class ConvertendoLetrasEmNumeros {
+
+    public static void main(String[] args) {
+        String palvara ="nove mil e cinco";
+        
+        ConversaoParaPalavras retValor = new ConversaoParaPalavras();
+        System.out.println(retValor.retornaValor(palvara));
+    }
+    
+}
