@@ -1,0 +1,9 @@
+ public static void main(String[] args) {
+        NomeAutor nomeAutor = new NomeAutor();
+        
+        String valorRetornado = nomeAutor.refatorarNome("João Mariano das Neves");
+        
+        System.out.println("Nome Autor: " + valorRetornado);
+    }
+    
+}

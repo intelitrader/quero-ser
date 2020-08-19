@@ -1,0 +1,85 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class NomeAutor {
+
+    public String refatorarNome(String nome) {
+        String[] input = null;
+
+        String valorRetorno = null;
+
+        if (nome != null && nome.length() > 0) {
+            input = nome.trim().split(" ");
+            List<String> novaLista = new ArrayList<>(Arrays.asList(input));
+
+            for (int i = 0; i < novaLista.size(); i++) {
+                switch (novaLista.get(i)) {
+                    case "da":
+                        novaLista.remove(i);
+                        break;
+                    case "de":
+                        novaLista.remove(i);
+                        break;
+                    case "do":
+                        novaLista.remove(i);
+                        break;
+                    case "das":
+                        novaLista.remove(i);
+                        break;
+                    case "dos":
+                        novaLista.remove(i);
+                        break;
+                }
+            }
+
+            switch (input.length) {
+                case 1:
+                    valorRetorno = novaLista.get(0).toUpperCase();
+                    break;
+                case 2:
+                    valorRetorno = novaLista.get(1).toUpperCase() + "," + novaLista.get(0);
+                    break;
+                default:
+                    valorRetorno = novaLista.get(0).toUpperCase() + "," + novaLista.get(novaLista.size() - 1);
+                    break;
+            }
+
+            for (String busca : input) {
+                switch (busca) {
+                    case "Filho":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Filha":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Neto":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Neta":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Sobrinho":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Sobrinha":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+
+                    case "Junior":
+                        valorRetorno = novaLista.get(novaLista.size() - 2).toUpperCase() + " " + novaLista.get(novaLista.size() - 1).toUpperCase() + "," + input[0];
+                        break;
+                }
+            }
+        } else {
+            valorRetorno = "palavra invalida";
+        }
+
+        return valorRetorno;
+    }
+}
