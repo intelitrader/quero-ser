@@ -1,0 +1,17 @@
+public class InterseccaoDeSegmentosDeReta {
+
+    //Intersecção de segmentos de reta
+    public static void main(String[] args) {
+        LinhaD2 primeiraLinha = new LinhaD2();
+        primeiraLinha.setX(8);
+        primeiraLinha.setY(8.5);
+        
+        LinhaD2 segundaLinha =  new LinhaD2();
+        segundaLinha.setX(7);
+        segundaLinha.setY(8.5);
+        
+        Boolean valor = primeiraLinha.equals(segundaLinha);
+        System.out.println("As linhas se cruzam?: " + valor);
+    }
+    
+}
