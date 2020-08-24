@@ -5,10 +5,15 @@ namespace Quero.Ser.Application.UseCase.FizzBuzz
 {
     public class FizzBuzzUseCase : IFizzBuzzUseCase
     {
-
         public IEnumerable<string> Handler(int inicio, int fim)
         {
             var listaDeRetorno = new List<string>();
+
+            if (inicio > fim)
+            {
+                listaDeRetorno.Add("Inicio não pode ser maior que o fim");
+                return listaDeRetorno;
+            }
 
             for (var numero = inicio; numero <= fim; numero++)
             {

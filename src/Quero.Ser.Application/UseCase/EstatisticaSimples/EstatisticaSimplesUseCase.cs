@@ -8,6 +8,9 @@ namespace Quero.Ser.Application.UseCase.EstatisticaSimples
     {
         public EstatisticaSimplesResponse Handler(List<int> listaDeInteiros)
         {
+            if (listaDeInteiros == null || !listaDeInteiros.Any())
+                return null;
+
             var response = new EstatisticaSimplesResponse();
             response.Minimo = listaDeInteiros.Min();
             response.Maximo = listaDeInteiros.Max();
