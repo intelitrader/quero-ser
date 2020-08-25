@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Quero.Ser
+/src/Quero.Ser.Api/bin/Debug/netcoreapp3.1
+/src/Quero.Ser.Api/obj
+/src/Quero.Ser.Application/obj
+/src/Quero.Ser.Domain/obj
+/src/Quero.Ser.Application/bin/Debug/netcoreapp3.1
+/src/Quero.Ser.Domain/bin/Debug/netcoreapp3.1
+/.vs
