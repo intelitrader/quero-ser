@@ -1,15 +1,14 @@
-﻿using System;
+using System;
 
 namespace caixa
 {
     public class Caixa
     {
-        public string saque(int v)
+        public static string saque(int v)
         {
             int[] notas = { 100, 50, 20, 10 };
             int[] aux = new int[4];
             string resultado = "";
-            int resto;
 
             if (v <= 0)
             {
@@ -27,7 +26,7 @@ namespace caixa
             {
                 if (aux[i] !=0 && aux[i] >= 1)
                 {
-                    resultado += "notade" + notas[i].ToString() + ":" + aux[i].ToString();
+                    resultado += "nota de " + notas[i].ToString() + ": " + aux[i].ToString() + "\n";
                 }
             }
             if (v <= 0)
@@ -35,7 +34,21 @@ namespace caixa
             else
                 return "Valor indisponível";
                 
-        } 
-      
+        }
+        static void Main(string[] args)
+        {
+            int valor = 0;
+            Console.WriteLine("Digite o valor a ser sacado: ");
+            if( int.TryParse(Console.ReadLine(), out valor) )
+            {
+                Console.WriteLine(Caixa.saque(valor));
+            }
+            else
+            {
+                Console.WriteLine("Valor digitado inválido");
+            }
+        }
+
+
     }
 }
