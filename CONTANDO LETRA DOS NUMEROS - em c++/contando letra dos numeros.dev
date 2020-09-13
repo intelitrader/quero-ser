@@ -28,7 +28,7 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000001000000
+CompilerSettings=0000000000000000000000000
 UnitCount=1
 
 [VersionInfo]
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=contaodor de letras.cpp
+FileName=contando letra dos numeros.cpp
 CompileCpp=1
 Folder=
 Compile=1
