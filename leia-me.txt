@@ -4,3 +4,4 @@ os 3 foram solucionados seguindo as regras impostas.
 Com as linguagens de programação que tenho mais familiaridade.
 Cada desafio está em uma pasta separadas pelo nome do desafio escolhido,
 com as linhas de comando e seus executáveis na mesmas.
+Existe uma pasta contendo somente os executaveis dos respectivos projetos para facilitar.
