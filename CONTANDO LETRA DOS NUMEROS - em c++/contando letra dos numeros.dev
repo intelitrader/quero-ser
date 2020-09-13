@@ -52,7 +52,11 @@ SyncProduct=1
 
 [Unit1]
 <<<<<<< HEAD
+<<<<<<< HEAD
 FileName=contando letras dos numeros.cpp
+=======
+FileName=contando letra dos numeros.cpp
+>>>>>>> 6eb38892e982793b3f760f705ac6f5e2d1543082
 =======
 FileName=contando letra dos numeros.cpp
 >>>>>>> 6eb38892e982793b3f760f705ac6f5e2d1543082

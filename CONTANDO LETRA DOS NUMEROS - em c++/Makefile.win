@@ -5,8 +5,13 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 <<<<<<< HEAD
+<<<<<<< HEAD
 OBJ      = "contando\ letras\ dos\ numeros.o"
 LINKOBJ  = "contando letras dos numeros.o"
+=======
+OBJ      = "contando\ letra\ dos\ numeros.o"
+LINKOBJ  = "contando letra dos numeros.o"
+>>>>>>> 6eb38892e982793b3f760f705ac6f5e2d1543082
 =======
 OBJ      = "contando\ letra\ dos\ numeros.o"
 LINKOBJ  = "contando letra dos numeros.o"
@@ -30,8 +35,13 @@ $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "contando\ letras\ dos\ numeros.o": contando\ letras\ dos\ numeros.cpp
 	$(CPP) -c "contando letras dos numeros.cpp" -o "contando letras dos numeros.o" $(CXXFLAGS)
+=======
+"contando\ letra\ dos\ numeros.o": contando\ letra\ dos\ numeros.cpp
+	$(CPP) -c "contando letra dos numeros.cpp" -o "contando letra dos numeros.o" $(CXXFLAGS)
+>>>>>>> 6eb38892e982793b3f760f705ac6f5e2d1543082
 =======
 "contando\ letra\ dos\ numeros.o": contando\ letra\ dos\ numeros.cpp
 	$(CPP) -c "contando letra dos numeros.cpp" -o "contando letra dos numeros.o" $(CXXFLAGS)
