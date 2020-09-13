@@ -1,11 +1,11 @@
-# Project: contando letra dos numeros
+# Project: contando letras dos numeros
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = "contando\ letra\ dos\ numeros.o"
-LINKOBJ  = "contando letra dos numeros.o"
+OBJ      = "contando\ letras\ dos\ numeros.o"
+LINKOBJ  = "contando letras dos numeros.o"
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-"contando\ letra\ dos\ numeros.o": contando\ letra\ dos\ numeros.cpp
-	$(CPP) -c "contando letra dos numeros.cpp" -o "contando letra dos numeros.o" $(CXXFLAGS)
+"contando\ letras\ dos\ numeros.o": contando\ letras\ dos\ numeros.cpp
+	$(CPP) -c "contando letras dos numeros.cpp" -o "contando letras dos numeros.o" $(CXXFLAGS)

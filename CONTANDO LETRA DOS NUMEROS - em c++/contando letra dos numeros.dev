@@ -1,6 +1,6 @@
 [Project]
 FileName=contando letra dos numeros.dev
-Name=contando letra dos numeros
+Name=contando letras dos numeros
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=contando letra dos numeros.cpp
+FileName=contando letras dos numeros.cpp
 CompileCpp=1
 Folder=
 Compile=1
