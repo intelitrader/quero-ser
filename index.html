@@ -1,0 +1,31 @@
+<!DOCTYPE HTML> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+	<title>jokenpô</title>
+</head>
+<body>
+    <h1>JS - Jokenpô</h1>
+	<h3>Jogador:</h3>
+	<img src="C:\Users\prode\Desktop\Projetos\jokenpo\pedra.webp" alt="Pedra" width="75px"height="75px">
+	<img src="C:\Users\prode\Desktop\Projetos\jokenpo\papel.png" alt="Papel" width="75px"height="75px">
+	<img src="C:\Users\prode\Desktop\Projetos\jokenpo\tesoura.webp" alt="Tesoura" width="65px"height="65px">
+    <form name="frmJokenpo">
+		<input type="radio" name="grupo" id="pedra">Pedra &nbsp; &nbsp;
+	    <input type="radio" name="grupo" id="papel">Papel &nbsp; &nbsp;
+	    <input type="radio" name="grupo" id="tesoura">Tesoura
+		<p>
+			<input type="button" value=" JOGAR " onclick="jogar()">&nbsp;
+			<input type="reset" value=" RESET " onclick="resetar()">
+		</p>
+		
+	</form>
+	<hr>
+	<h3>Computador:</h3>
+	<img id ="pc" src="C:\Users\prode\Desktop\Projetos\jokenpo\computador.jpg" alt="PC" width="225px"height="200px">
+	<hr>
+	<h3 id="placar"></h3>
+	<script src="C:\Users\prode\Desktop\Projetos\jokenpo\Jokenpo.js"></script>
+</body>
+
+</html>
