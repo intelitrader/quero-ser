@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,28 +9,20 @@ namespace Teste1
 {
     class Program
     {
+        //Jokenpo
+        //Você está resolvendo este problema.
+        //Este problema foi utilizado em 1217 Dojo(s).
+        //Jokenpo é uma brincadeira japonesa, onde dois jogadores escolhem um dentre três possíveis itens: Pedra, Papel ou Tesoura.
+        //O objetivo é fazer um juiz de Jokenpo que dada a jogada dos dois jogadores informa o resultado da partida.
+        //As regras são as seguintes:
+        //Pedra empata com Pedra e ganha de Tesoura
+        //Tesoura empata com Tesoura e ganha de Papel
+        //Papel empata com Papel e ganha de Pedra
+
         static void Main(string[] args)
         {
-            // Declare variables and then initialize to zero.
-            int num1 = 0; int num2 = 0;
-
-            // Display title as the C# console calculator app.
-            Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
-
-            // Ask the user to type the first number.
-            Console.WriteLine("Type a number, and then press Enter");
-            num1 = Convert.ToInt32(Console.ReadLine());
-
-            // Ask the user to type the second number.
-            Console.WriteLine("Type another number, and then press Enter");
-            num2 = Convert.ToInt32(Console.ReadLine());
-
-            // Ask the user to choose an option.
-            Console.WriteLine("A soma dos numeros é: " + (num1 + num2));
-
-            Console.Write("Press any key to close the Calculator console app...");
-            Console.ReadKey();
+            Jokenpo jogo = new Jokenpo();
+            jogo.Jogo();
         }
     }
 }
