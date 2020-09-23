@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Estatistica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   //site = "http://dojopuzzles.com/problemas/exibe/calculando-estatisticas-simples/";
+
+            List<int> list = new List<int>();
+            list.Add(6);
+            list.Add(9);
+            list.Add(15);
+            list.Add(-2);
+            list.Add(92);
+            list.Add(11);
+            int media = 0;
+            for (int i = 0; i < list.Count; i++)
+            {
+                media = media + list[i];
+            }
+            media = media / list.Count;
+            
+            Console.WriteLine("Menor Numero: {0}", list.Min());
+            Console.WriteLine("Maior Valor: {0} ", list.Max());
+            Console.WriteLine("Número de elementos na seqüência: {0} ", list.Count);
+            Console.WriteLine("Media: {0}", media);
+
+            //O resultado do Dojo está errado, a média de 6,9,15,-2,92,11 é 131 / 6
+            //Média é a Soma de Toda uma extensão de dados dividido pelo seu comprimento
+        }
+    }
+}
