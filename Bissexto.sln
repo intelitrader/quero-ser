@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bissexto", "Bissexto\Bissexto.csproj", "{FA97BBCD-66D4-46FF-9382-441B66DA8BCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA97BBCD-66D4-46FF-9382-441B66DA8BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA97BBCD-66D4-46FF-9382-441B66DA8BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA97BBCD-66D4-46FF-9382-441B66DA8BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA97BBCD-66D4-46FF-9382-441B66DA8BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3162279-7303-4F38-B2BF-32ED15D5C41F}
+	EndGlobalSection
+EndGlobal
