@@ -1,0 +1,84 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Jokenpo {
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+        Random gerador = new Random();
+
+        String resultado = "", computador_escolha = "";
+        int pontos = 0;
+
+        while (teclado.hasNext()) {// o laco rodara enquanto o usuario inserir valores.
+            String escolha = teclado.next(); //recebe uma String do usuario pelo teclado
+            int aleatorio = gerador.nextInt(100000) % 3; //cria uma condicao aleatoria
+
+            /*
+             * abaixo temos as codicoes de escolha feitas atraves do switch, ele funciona como um menu de escolhas. Caso o usuario
+             * escreva "*", o programa encerra.
+             */
+            if (escolha.equals("*"))
+                return;
+            switch (aleatorio) {
+            case 0:
+                computador_escolha = "tesoura";
+                break;
+            case 1:
+                computador_escolha = "papel";
+                break;
+            default:
+                computador_escolha = "pedra";
+            }
+
+            if (escolha.equals("tesoura")) {
+                switch (aleatorio) {
+                case 0:
+                    resultado = "empate";
+                    break;
+                case 1:
+                    resultado = "voce venceu";
+                    pontos++;
+                    break;
+                default:
+                    resultado = "voce perdeu";
+                    pontos--;
+                }
+            }
+
+            if (escolha.equals("papel")) {
+                switch (aleatorio) {
+                case 0:
+                    resultado = "voce perdeu";
+                    pontos--;
+                    break;
+                case 1:
+                    resultado = "empate";
+                    break;
+                default:
+                    resultado = "voce venceu";
+                    pontos++;
+                }
+            }
+
+            if (escolha.equals("pedra")) {
+                switch (aleatorio) {
+                case 0:
+                    resultado = "voce venceu";
+                    pontos++;
+                    break;
+                case 1:
+                    resultado = "voce perdeu";
+                    pontos--;
+                    break;
+                default:
+                    resultado = "empate";
+                }
+            }
+
+            System.out.println(escolha + " X " + computador_escolha + ": " + resultado + "\npontos: " + pontos);
+        }
+    }
+
+}
