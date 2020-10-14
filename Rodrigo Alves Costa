@@ -8,49 +8,146 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bissexto
+namespace Troco1
 {
-    public partial class Form1 : Form
+    public partial class Troco : Form
     {
-        public Form1()
+        public Troco()
         {
             InitializeComponent();
         }
-
-        
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        public int valor=0;
+        public int pagamento=0;
+        public int cem=0;
+        public int cinquenta=0;
+        public int vinte=0;
+        public int dez=0;
+        public int cinco=0;
+        public int dois=0;
+        public int um=0;
+        public int cinquentac=0;
+        public int vintecinco=0;
+        public int dezc=0;
+        public int cincoc=0;
+        public int umc=0;
+        private void Form1_Load(object sender, EventArgs e)
         {
             
-                int ano = Convert.ToInt32(textBox1.Text);
-                 if (ano == 0)
-                {
-                    MessageBox.Show("Não é um Ano Bissexto");
-                }
-                 else
-                {
-                if (((ano % 400) == 0) || (ano % 4 == 0 && ano % 100 != 0))
-                {
-                    MessageBox.Show("Ano Bissexto");
-                }
-                else
-                {
-                    MessageBox.Show("Não é um Ano Bissexto");
-                }
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                valor = Convert.ToInt32(textBox1.Text);
+                pagamento = Convert.ToInt32(textBox2.Text);
+            if (valor > pagamento)
+            {
+                MessageBox.Show("o pagamento está incorreto.");
+            }
+            else
+            {
+                int total = pagamento - valor;
+                while (total >= 10000)
+                {
+                    total = total - 10000;
+                    cem = cem + 1;
+                }
+                while (total >= 5000)
+                {
+                    total = total - 5000;
+                    cinquenta = cinquenta + 1;
+                }
+                while (total >= 2000)
+                {
+                    total = total - 2000;
+                    vinte = vinte + 1;
+                }
+                while (total >= 1000)
+                {
+                    total = total - 1000;
+                    dez = dez + 1;
+                }
+                while (total >= 500)
+                {
+                    total = total - 500;
+                    cinco = cinco + 1;
+                }
+                while (total >= 200)
+                {
+                    total = total - 200;
+                    dois = dois + 1;
+                }
+                while (total >= 100)
+                {
+                    total = total - 100;
+                    um = um + 1;
+                }
+                while (total >= 50)
+                {
+                    total = total - 50;
+                    cinquentac = cinquentac + 1;
+                }
+                while (total >= 25)
+                {
+                    total = total - 25;
+                    vintecinco = vintecinco + 1;
+                }
+                while (total >= 10)
+                {
+                    total = total - 10;
+                    dezc = dezc + 1;
+                }
+                while (total >= 5)
+                {
+                    total = total - 5;
+                    cincoc = cincoc + 1;
+                }
+                while (total >= 1)
+                {
+                    total = total - 1;
+                    umc = umc + 1;
+                }
+                string ntotal = total.ToString();
+                string ncem = cem.ToString();
+                string ncinquenta = cinquenta.ToString();
+                string nvinte = vinte.ToString();
+                string ndez = dez.ToString();
+                string ncinco = cinco.ToString();
+                string ndois = dois.ToString();
+                string num = um.ToString();
+                string ncinquentac = cinquentac.ToString();
+                string nvinteecinco = vintecinco.ToString();
+                string ndezc = dezc.ToString();
+                string ncincoc = cincoc.ToString();
+                string numc = umc.ToString();
+
+                label1.Text = ncem + " nota(s) de cem\n" + ncinquenta + " nota(s) de cinquenta\n" + nvinte + " nota(s) de vinte\n" + ndez + " nota(s) de dez\n" + ncinco + " nota(s) de cinco\n" + ndois + " nota(s) de dois\n" + num + " nota(s) de um\n" + ncinquentac + " moeda(s) de cinquenta\n" + nvinteecinco + " moeda(s) de vinte e cinco\n" + ndezc + " moeda(s) de dez\n" + ncincoc + " moeda(s) de cinco\n" + numc + " moeda(s) de um";
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
