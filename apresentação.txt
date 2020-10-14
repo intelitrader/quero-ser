@@ -1,0 +1,8 @@
+ola bom dia, eu sou o douglas terminando faculdade de engenharia eletronica no IFSP e começando ciencia de dados, tenho muita vontade de apreender e  trabalhar na parte de desenvolvimento de algortmos assim como minhas qualificaçoes sugere segue exercicios do dojo resolvido em c# junto com meu e meu linkdin:
+https://www.linkedin.com/in/douglas-rocha-0311a4a7
+
+
+link das atividades resolvidas
+1 http://dojopuzzles.com/problemas/exibe/geracao-de-fatores-primos/
+2 http://dojopuzzles.com/problemas/exibe/fizzbuzz/
+3 http://dojopuzzles.com/problemas/exibe/jokenpo/
