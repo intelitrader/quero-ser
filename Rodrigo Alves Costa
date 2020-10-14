@@ -1,1 +1,146 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        public int a = 0;
+        public int b = 0;
+        private void Pedra1_Click(object sender, EventArgs e)
+        {
+            Pedra1.Enabled = false;
+            Papel1.Enabled = false;
+            Tesoura1.Enabled = false;
+            Pedra2.Enabled = true;
+            Papel2.Enabled = true;
+            Tesoura2.Enabled = true;
+            a = 1;
+        }
+
+        private void Papel1_Click(object sender, EventArgs e)
+        {
+            Pedra1.Enabled = false;
+            Papel1.Enabled = false;
+            Tesoura1.Enabled = false;
+            Pedra2.Enabled = true;
+            Papel2.Enabled = true;
+            Tesoura2.Enabled = true;
+            a = 2;
+        }
+
+        private void Tesoura1_Click(object sender, EventArgs e)
+        {
+            Pedra1.Enabled = false;
+            Papel1.Enabled = false;
+            Tesoura1.Enabled = false;
+            Pedra2.Enabled = true;
+            Papel2.Enabled = true;
+            Tesoura2.Enabled = true;
+            a = 3;
+        }
+
+        private void Pedra2_Click(object sender, EventArgs e)
+        {
+            Pedra2.Enabled = false;
+            Papel2.Enabled = false;
+            Tesoura2.Enabled = false;
+            Jokenpo.Enabled = true;
+            b = 1;
+        }
+
+        private void Papel2_Click(object sender, EventArgs e)
+        {
+            Pedra2.Enabled = false;
+            Papel2.Enabled = false;
+            Tesoura2.Enabled = false;
+            Jokenpo.Enabled = true;
+            b = 2;
+        }
+
+        private void Tesoura2_Click(object sender, EventArgs e)
+        {
+            Pedra2.Enabled = false;
+            Papel2.Enabled = false;
+            Tesoura2.Enabled = false;
+            Jokenpo.Enabled = true;
+            b = 3;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Jokenpo_Click(object sender, EventArgs e)
+        {
+            Jokenpo.Enabled = false;
+            Pedra1.Enabled = true;
+            Papel1.Enabled = true;
+            Tesoura1.Enabled = true;
+
+            if (a == b)
+            {
+                MessageBox.Show("empate");
+            }
+            else
+            {
+                if (a == 1 && b == 2)
+                {
+                    MessageBox.Show("B ganhou");
+                }
+                else
+                {
+                    if (a == 1 && b == 3)
+                    {
+                        MessageBox.Show("A ganhou");
+                    }
+                    else
+                    {
+                        if(a==2 && b == 1)
+                        {
+                            MessageBox.Show("A ganhou");
+                        }
+                        else
+                        {
+                            if(a==2 && b == 3)
+                            {
+                                MessageBox.Show("B ganhou");
+                            }
+                            else
+                            {
+                                if(a==3 && b == 1)
+                                {
+                                    MessageBox.Show("B ganhou");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("A ganhou");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+          
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
 
