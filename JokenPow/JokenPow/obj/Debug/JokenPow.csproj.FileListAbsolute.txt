@@ -1,0 +1,19 @@
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\bin\Debug\JokenPow.exe.config
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\bin\Debug\JokenPow.exe
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\bin\Debug\JokenPow.pdb
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.csprojResolveAssemblyReference.cache
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.Form1.resources
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.Properties.Resources.resources
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.csproj.GenerateResource.Cache
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.exe
+c:\users\infoc07\documents\visual studio 2015\Projects\JokenPow\JokenPow\obj\Debug\JokenPow.pdb
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\bin\Debug\JokenPow.exe.config
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\bin\Debug\JokenPow.exe
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\bin\Debug\JokenPow.pdb
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.csprojAssemblyReference.cache
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.Properties.Resources.resources
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.csproj.GenerateResource.cache
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.csproj.CoreCompileInputs.cache
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.exe
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.pdb
+C:\Users\Apocryphoon-Win\Downloads\atividades-frei-master\JokenPow\JokenPow\obj\Debug\JokenPow.frmJoken.resources

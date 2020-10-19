@@ -1,0 +1,10 @@
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.frmEstatistica.resources
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.csproj.GenerateResource.cache
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\bin\Debug\Estatistica.exe.config
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\bin\Debug\Estatistica.exe
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\bin\Debug\Estatistica.pdb
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.Properties.Resources.resources
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.csproj.CoreCompileInputs.cache
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.exe
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.pdb
+C:\Users\Apocryphoon-Win\source\repos\Estatistica\Estatistica\obj\Debug\Estatistica.csprojAssemblyReference.cache

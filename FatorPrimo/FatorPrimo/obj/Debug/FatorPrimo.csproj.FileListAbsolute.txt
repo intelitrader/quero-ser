@@ -1,0 +1,10 @@
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\bin\Debug\FatorPrimo.exe.config
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\bin\Debug\FatorPrimo.exe
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\bin\Debug\FatorPrimo.pdb
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.csprojAssemblyReference.cache
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.frmFatores.resources
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.Properties.Resources.resources
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.csproj.GenerateResource.cache
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.csproj.CoreCompileInputs.cache
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.exe
+C:\Users\Apocryphoon-Win\source\repos\FatorPrimo\FatorPrimo\obj\Debug\FatorPrimo.pdb
