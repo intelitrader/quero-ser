@@ -1,0 +1,20 @@
+using System;
+
+namespace Bissexto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   //site = "http://dojopuzzles.com/problemas/exibe/ano-bissexto/";
+
+            Console.Write("Digite o Valor do Ano: ");
+            String texto;
+            texto = Console.ReadLine();
+
+            if (DateTime.IsLeapYear(Convert.ToInt32(texto)))
+                Console.WriteLine("o Ano é Bissexto");
+            else
+                Console.WriteLine("Não Bissexto");
+        }
+    }
+}
