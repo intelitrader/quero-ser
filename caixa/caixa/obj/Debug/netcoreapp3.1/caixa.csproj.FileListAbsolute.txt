@@ -1,0 +1,11 @@
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\obj\Debug\netcoreapp3.1\caixa.csprojAssemblyReference.cache
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\obj\Debug\netcoreapp3.1\caixa.AssemblyInfoInputs.cache
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\obj\Debug\netcoreapp3.1\caixa.AssemblyInfo.cs
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.exe
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.deps.json
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.runtimeconfig.json
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.runtimeconfig.dev.json
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.dll
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\bin\Debug\netcoreapp3.1\caixa.pdb
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\obj\Debug\netcoreapp3.1\caixa.dll
+C:\Users\jose.cjunior\Documents\gabi\caixa\caixa\obj\Debug\netcoreapp3.1\caixa.pdb
