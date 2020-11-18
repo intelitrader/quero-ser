@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
+#include <conio.h>
+#define TAM_ASS 30
+#include <stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include <assert.h>
+
+//DESAFIO 3 DO TESTE
+//https://dojopuzzles.com/problems/jokenpo/
+
+int jogada1=0;
+int jogada2=0;
+
+
+void jogar(n1,n2){
+	
+	system("CLS");
+	if(n1==n2){
+		printf("Empate");
+	}
+	if((n1==1&&n2==3)||(n2==1&&n1==3)){
+		printf("O jogador que escolheu Pedra, ganhou");
+	}
+	if((n1==2&&n2==1)||(n1==1&&n2==2)){
+		printf("O jogador que escolheu Papel, ganhou");
+	}
+	if((n1==2&&n2==3)||(n2==2&&n1==3)){
+		printf("O jogador que escolheu Tesoura, ganhou");
+	}
+	
+}
+
+
+int main(){
+	
+	printf("entre com a primeira jogada:\n\n1- Pedra\n2- Papel\n3- Tesoura");
+	scanf("%i",&jogada1);
+	
+	system("CLS");
+	
+	printf("entre com a segunda jogada:\n\n1- Pedra\n2- Papel\n3- Tesoura");
+	scanf("%i",&jogada2);
+	
+	jogar(jogada1,jogada2);
+	
+	
+	
+}//fim main
