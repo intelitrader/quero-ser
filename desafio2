@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include <assert.h>
+
+
+
+// EXERCICIO 2 DO TESTE
+//https://dojopuzzles.com/problems/calculando-estatisticas-simples/
+
+
+
+int TAM=0;
+int j=0;
+int iMenor = 0;
+int calculo;
+int resposta=0;
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	printf("Insira o tamanho do vetor:");
+	scanf("%i",&TAM);
+	
+	int i, contador, numeros[TAM], aux;
+	
+	printf("\nEntre com o vetor de %i numeros: ", TAM);
+	
+	for(i=0;i<TAM;i++){
+		
+		system("CLS");
+		printf("Entre com o %iº numero: ", i);
+		scanf("%i", &numeros[i]);
+		
+	}
+	
+	for(contador=1;contador<TAM;contador++){
+		
+		for(i=0;i<TAM-1;i++){
+			
+			if(numeros[i]>numeros[i+1]){
+				
+				aux=numeros[i];
+				numeros[i]=numeros[i+1];
+				numeros[i+1]= aux;				
+			}
+			
+		}
+		
+		
+	}
+		printf("\n\nO vetor ordenado é:");
+		for(i=0;i<TAM;i++){
+	
+	
+	printf("%i ", numeros[i]);
+	
+}
+
+	i=0;
+	
+	printf("\n\nO maior valor é: %i", numeros[TAM-1]);
+	
+	
+	  do {
+
+    
+        // descobre o menor índice
+        if (numeros[i] < numeros[iMenor]) {
+            iMenor = i;
+        }
+
+        i++;
+
+    } while (i < TAM);
+    
+    printf("\n\nO menor valor é: %i", numeros[iMenor]);
+    printf("\nNúmero de elementos é: %i", TAM);
+    
+    for(i=0;i<TAM;i++){
+    	calculo += numeros[i];
+	}
+	
+	printf("A soma dos elementos é de: %i", calculo);
+	
+	calculo = (calculo/TAM);
+	
+	printf("\n Valor médio em inteiros: %i", calculo);
+	
+	
+
+return 0;
+}
