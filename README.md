@@ -1,104 +1,409 @@
-# Quero ser Intelitrader!
+// Login : https://dojopuzzles.com/problems/gerar-login/ by Lucas Tanaka
 
-Em primeiro lugar, é bom dizer que nós **amamos** o que fazemos: programar, resolver problemas complexos, conhecer novas tecnologias, frameworks, padrões. E queremos no time gente como a gente.
+#ifndef LOGIN_H
+#define LOGIN_H
 
-Ao que interessa:
+#include
 
-* [Quem somos nós?](#OqEhAIntelitrader)
-* [Sobre as vagas](#SobreAsVagas)
-* [Localização](#Localizacao)
-* [Como me candidato?](#ComoMeCandidato)
-* [Requisitos básicos](#RequisitosBasicos)
-* [Posições](#Posicoes)
-	* [Software Engineer](#QualificacoesSE)
-	* [Front-End Engineer](#QualificacoesFE)
-* [Condições e Benefícios](#CondicoesEDiferenciais)
+using namespace std;
 
--------
-### [Pera, mas o que é a Intelitrader?](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa especializada no desenvolvimento de **soluções de alto desempenho para o mercado financeiro**, temos no nosso portfólio de clientes alguns dos maiores players do mercado financeiro nacional.
+bool validarNome(string nome, string sobrenome, string &msg){
+if(nome[0] < 64 or nome[0] > 91){
+cout << endl;
+msg = "Erro. A primeira letra deve ser uma letra maiuscula. Digite novamente. \n";
+return false;
+}
+for(int i = 1; i < nome.size(); i++){
+if(nome[i] < 96 or nome[i] > 123){
+cout << endl;
+msg = "Erro! O nome não devem ter simbolos e deve começar com letra maiuscula e o restante minuscula. Digite novamente. \n";
+return false;
+}
+}
+if(sobrenome[0] < 64 or sobrenome[0] > 91){
+cout << endl;
+msg = "Erro. A primeira letra do sobrenome deve ser uma letra maiuscula. Digite novamente. \n";
+return false;
+}
+for(int i = 1; i < sobrenome.size(); i++){
+if(sobrenome[i] < 96 or sobrenome[i] > 123){
+cout << endl;
+msg = "Erro! O nome não deve ter simbolos e deve começar com letra maiuscula e o restante minuscula. Digite novamente. \n";
+return false;
+}
+}
+return true;
+}
 
-### [Sobre as vagas](id:SobreAsVagas)
-Estamos sempre procurando por talentos para integrar o nosso dream team. As posições de desenvolvimento vão desde engenharia de software de **back-end** (encarando desafios de escalabilidade e desempenho das soluções), até engenharia de **front-end** (desafios de escalabilidade, desempenho e usabilidade).
+bool validarNascimento(string nascimento, string &msg){
+if(nascimento[2] != '/' and nascimento[5] != '/'){
+cout << endl;
+msg = "Erro! O dia, mes e o ano devem ser separadas por /. Digite novamente. \n";
+return false;
+}
+if(nascimento[0] > 52 or nascimento[0] < 48 and nascimento[1] > 57 or nascimento[1] < 48){
+cout << endl;
+msg = "Erro! Dia invalido. Digite novamente. \n";
+return false;
+}
+if(nascimento[3] < 48 or nascimento[3] > 50 and nascimento[4] > 57 or nascimento[4] < 48){
+cout << endl;
+msg = "Erro! Mes invalido. Digite novamente. \n";
+return false;
+}
+if(nascimento[6] < 48 or nascimento[6] > 50 and nascimento[7] != 57 or nascimento[7] != 48 and nascimento[8] < 48 or nascimento[8] > 57 and nascimento[9] > 57 or nascimento[9] < 48){
+cout << endl;
+msg = "Erro! Ano invalido. Digite novamente. \n";
+return false;
+}
+return true;
+}
 
-### [Onde vocês ficam?](id:Localizacao)
-Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quarentena)**.
+bool validarEmail(string email, string &msg){
+string formatoPadrao = "x@y.z";
 
-### [Como me candidato?](id:ComoMeCandidato)
+int posAt = -1;
+int posDot = -1;
 
-1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
+int amountAt = 0;
+int amountDot = 0;
 
-2. Faça um fork desse repositório, escolha 3 testes desafiadores do [DojoPuzzles](http://dojopuzzles.com/), resolva com sua linguagem favorita, crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**. Ah, se você mandar o famigerado teste do "Ano Bisexto" seu curriculum vai para o fim da fila de avaliação.
+for (int index = 0; index < email.size(); index++) {
+    if(email[index] == '@' and posAt == -1){
+        posAt = index;
+    }else if(email[index] == '.' and posDot == -1){
+        posDot = index;
+    }
+    
+    if(email[index] == '@')
+        amountAt++;
+    
+    if(email[index] == '.')
+        amountDot++;
+}
 
-3. Com hora marcada, um dos membros do nosso time entrará em contato com você para uma **conversa descontraída** sobre suas habilidades.
+if(amountAt > 1){
+    cout << endl;
+    msg = "Erro de formatação: muitos @";
+    return false;
+}
 
-4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
+if(amountDot > 1){
+    cout << endl;
+    msg = "Erro de formatação: muitos .";
+    return false;
+}
 
-### [Requisitos Básicos](id:RequisitosBasicos)
+if(posDot < posAt){
+    cout << endl;
+    msg = "Erro de formatação: posição incorreta do .";
+    return false;
+}
 
-* Precisamos de gente que procure o **estado da arte** no que faz, MAS que tenha plena noção de que **nem sempre é possível** alcançá-lo em um ambiente ágil =(;
-* Ter graduação é legal! Mas se você não for formado, não tem problema. Conhecemos vários profissionais plenamente capacitados que não são formados.
+if(amountAt == 0 or amountDot == 0){
+    cout << endl;
+    msg = "Erro de formatação: sem @ ou sem .";
+    return false;
+}
+return true;
+}
 
-### [Diferenciais](id:Diferenciais)
+bool sugestaoLogin(string login, string nome, string sobrenome, string email, string nascimento, string &msg){
+string sugestao1 = sobrenome + nascimento[0] + nascimento[1];
+string sugestao2 = sobrenome + nascimento[8] + nascimento[9];
+string sugestao3 = nome + nascimento[6] + nascimento[7]; + nascimento[8] + nascimento[9];
+string sugestao4 = sobrenome + '@' + nascimento[8] + nascimento[9];
 
-* **Inteligência** e **Dedicação**: Mais do que a experiência, valorizamos a forma como lida com aquilo que **não sabe**.
-* Melhorar Sempre: Estamos em busca de pessoas que **respirem** a filosofia de **melhoria contínua**.
+if(login != sugestao1 and login != sugestao2 and login != sugestao3 and login != sugestao4){
+    cout << endl;
+    cout << "Login ja existente. O login deve ser unico." << endl;
 
-## [Posições](id:Posicoes)
-----
+    cout << "Sugestoes de login: " << endl;
+    cout << sugestao1 << endl;
+    cout << sugestao2 << endl;
+    cout << sugestao3 << endl;
+    cout << sugestao4 << endl;
+    cout << endl;
+    
+    return false;
+}
+return true;
+}
 
-#### [Software Engineer](id:QualificacoesSE)
-Você irá criar e aprimorar as soluções que tratam a imensa maioria das informações, processos "invisíveis" para o usuário comum. Ex: Cotação da bolsa de valores, informações de clientes, APIs web, etc.
+#endif
 
-**Qualificações mínimas**
+#include
+#include "Login.h"
 
-* Ao menos 6 meses de experiência relevante **OU** estar cursando técnico ou gradução em Ciências das Computação, Sistemas da Informação e áreas relacionadas;
-* Sólidos conhecimentos em **lógica de programação**;
-* Sólidos conhecimentos em **Orientação a objetos** (classes, atributos, métodos, objetos, encapsulamento, associação, herança, interfaces, polimorfismo);
-* Bons conhecimentos de estruturas de dados (pilhas, filas, arrays, matrizes, dicionários, listas ligadas, etc)
-* Conhecimentos mínimos em **comunicação entre client-side e server-side** (HTTP, REST, serialização, JSON);
-* **Inglês** técnico (leitura / escrita);
-* **GIT**;
+using namespace std;
 
-**Qualificões desejáveis (mas não essenciais)**
+int main(){
+string nome, sobrenome, nascimento, email, login, msg = "";
 
-* Conhecimentos em infraestrutura (Configuração de IIS);
-* Arquitetura escalável;
-* Práticas de engenharia de software e XP (DDD, TDD, Refactoring, CI, Coding Standards, Pair Programming, ...);
-* Segurança (SQL Injection);
-* Vagrant, Docker, AWS;
-* Sistemas de fila (RabbitMQ, ActiveMQ, ...);
+do{
+	cout << msg << endl;
+	
+	cout << "Digite seu primeiro e ultimo nome: ";
+	cin >> nome >> sobrenome;
 
-#### [Front-End Engineer](id:QualificacoesFE)
-Você irá criar e aprimorar as soluções com as quais os usuários finais interagem, e que por sua vez interagem com o back-end.
+}while(!validarNome(nome, sobrenome, msg));
 
-**Qualificações mínimas**
+msg = "";
 
-* HTML (principalmente semântica);
-* Javascript (sem dependência de jQuery, boas práticas);
-* CSS 3;
-* Bons conhecimentos em **comunicação entre client-side e server-side** (HTTP, REST, serialização, JSON);
-* **Inglês** técnico (leitura / escrita);
-* **GIT**;
+do{
+	cout << msg << endl;
+	
+	cout << "Digite sua data de nascimento [dd/mm/aaaa]: ";
+	cin >> nascimento;
+	
+}while(!validarNascimento(nascimento, msg));
 
-**Qualificões desejáveis (mas não essenciais)**
+msg = "";
 
-* Asp.NET;
-* Desenvolvimento para mobile (nativo): iOS, Android, Xamarin;
-* Layouts responsivos;
-* API Query languages: OData, GraphQL, ...;
-* Frameworks SPA: AngularJS, React, Vue, ...;
-* Práticas de engenharia de software e XP (DDD, TDD, Refactoring, CI, Coding Standards, Pair Programming, ...);
-* HTML5 features (localStorage, geoLocation, history API, etc);
+do{
+	cout << msg;
+	
+	cout << "Digite seu email [x@y.z]: ";
+	cin >> email;
 
-## [Condições e Diferenciais](id:CondicoesEDiferenciais)
+}while(!validarEmail(email, msg));
 
-* Regime: **PJ**;
-* Período: **Integral**;
-* Contratação: **Imediata**;
+msg = "";
 
-**Diferenciais:**
+do{	
+	cout << msg;
 
-* Home Office;
-* Horário **altamente flexível**;
-* Eventos mensais (**na faixa**);
+	cout << "Login desejado: ";
+	cin >> login;
+
+}while(!sugestaoLogin(login, nome, sobrenome, email, nascimento, msg));
+
+cout << "cadastro realizado com sucesso!" << endl;
+
+return 0;
+}
+
+// Telefone : https://dojopuzzles.com/problems/desbloqueando-seu-telefone/ by Lucas Tanaka
+
+#ifndef TELEFONE_H
+#define TELEFONE_H
+
+#include
+
+using namespace std;
+
+bool desbloquearTelefone(string pin, string desbloquear, string &msg){
+if(pin != desbloquear){
+msg = "PIN incorreto! Digite o PIN novamente. \n";
+return false;
+}
+msg = "Telefone desbloqueado com sucesso!";
+return true;
+}
+
+bool validarPin(string pin, string padrao, string &msg){
+if(pin.size() < 2 and pin.size() > 17){
+msg = "Erro! O pin deve conter de 2 até 9 digitos conforme o formato " + padrao + ". Digite novamente o PIN.\n";
+return false;
+}
+for(int index = 0; index <= pin.size(); index++){
+if(index % 2 != 0 and pin[index] != '-' and index < pin.size() - 1){
+msg = "Erro! Deve conter '-' entre os numeros conforme o formato " + padrao + ". Digite novamente o PIN.\n";
+return false;
+}else if(index % 2 == 0 or index == 0){
+char umCaracter = pin[index];
+int versaoInteiraCaracter = (int) umCaracter;
+
+        if(versaoInteiraCaracter < 48 and versaoInteiraCaracter > 57){
+            msg = "Erro! O numero do PIN não segue o formato " + padrao + " em que X representa um numero de 0 a 9. Digite novamente. \n";
+            return false;
+        }
+        if(pin[index] == pin[index + 2] or pin[index] == pin[index + 4] or pin[index] == pin[index + 6] or pin[index] == pin[index + 8] or pin[0] == pin[10] == pin[12] == pin[14] == pin[16]){
+            msg = "Erro! Os numeros contidos no PIN nao devem se repetir. Digite novamente. \n";
+            return false;
+        }
+        if(pin[index] < 0){
+            msg = "Erro! Os numeros do PIN nao deve conter numeros menores que zero. Digite novamente. \n";
+            return false;
+        }
+    }else{}
+}
+msg = "O seu PIN foi guardado com sucesso!";
+return true;
+}
+
+int padroesValidos(string pin){
+int quantidadePadroesValidos = 9, quantidadeTracos = 0;
+
+for(int index = 0; index <= (pin.size() - 1); index++){
+    if(index % 2 != 0 or pin[index] == '-')
+        quantidadeTracos ++;
+}
+
+int apenasNumeros = pin.size() - quantidadeTracos;
+
+for(int i = 8; i >= apenasNumeros; i--){
+    quantidadePadroesValidos = quantidadePadroesValidos * i;
+}
+return quantidadePadroesValidos;
+}
+
+#endif /* TELEFONE_H */
+
+#include
+#include "Telefone.h"
+
+using namespace std;
+
+int main(){
+string padrao = "(X-X-X-X)";
+string pin;
+string desbloquear;
+string msg = "";
+
+do{
+    cout << msg;
+    
+    cout << "Digite um novo PIN para o seu telefone no formato " + padrao + ": ";
+    cin >> pin;
+    
+    cout << endl;
+
+}while(!validarPin(pin, padrao, msg));
+
+cout << msg << endl;
+
+cout << "Havia pelo menos " << padroesValidos(pin) << " padroes validos contidos nesta quantidade de digitos." << endl;
+
+msg = "";
+
+do{
+    cout << msg;
+
+    cout << "\nDigite o PIN para desbloquear o telefone: ";
+    cin >> desbloquear;
+    
+    cout << endl;
+
+}while(!desbloquearTelefone(pin, desbloquear, msg));
+
+cout << msg << endl;
+
+return 0;
+}
+
+// Ladrilhando : https://dojopuzzles.com/problems/ladrilhando/ by Lucas Tanaka
+
+#ifndef LADRILHOS_H
+#define LADRILHOS_H
+
+#include
+#include <math.h>
+
+using namespace std;
+
+int calcularLadrilhos(int A, int B, int C, int D, int E, int altura, int largura){
+int d1 = sqrt(pow((A - 0), 2) + pow((0 - 0), 2));
+int d2 = sqrt(pow((D - 0), 2) + pow((E - 0), 2));
+int d3 = sqrt(pow((B - D), 2) + pow((C - E), 2));
+int d4 = sqrt(pow((B - A), 2) + pow((C - 0), 2));
+int areaSala = 0;
+
+if(d1 == d2 == d3 == d4)
+    areaSala = pow(d1,2);
+else 
+    areaSala = d1 * d2;
+
+int areaLadrilho = altura * largura;
+
+return areaSala / areaLadrilho;
+}
+
+bool validarTamanho(int altura, int largura, string &msg){
+if(altura <= 0 or largura <= 0){
+msg = "Erro! O tamanho do ladrilho deve ser numeros inteiros maiores que zero. \n";
+return false;
+}
+return true;
+}
+
+#endif
+
+#ifndef COORDENADAS_H
+#define COORDENADAS_H
+
+#include
+#include <math.h>
+using namespace std;
+
+bool validarPontos(int A,int B, int C, int D, int E, string &msg){
+int d1 = sqrt(pow((A - 0), 2) + pow((0 - 0), 2));
+int d2 = sqrt(pow((D - 0), 2) + pow((E - 0), 2));
+int d3 = sqrt(pow((B - D), 2) + pow((C - E), 2));
+int d4 = sqrt(pow((B - A), 2) + pow((C - 0), 2));
+
+if(A < 0 or B < 0 or C < 0 or D < 0 or E < 0){
+    msg = "As coordenadas devem conter números inteiros maiores que zero. Digite novamente. \n";
+    return false;
+}
+if(B == D and C == E){
+    msg = "Erro! Os vértices (B, C) e (D, E) não podem coincidir. Digite novamente.\n";
+    return false;
+}
+if(d1 != d2 and d2 != d3 and d3 != d4 and d4 != d1){
+    msg = "Erro! Os pontos citados não correspondem a uma sala quadrangular. Digite novamente. \n";
+    return false;
+}
+return true;
+}
+
+#endif
+
+#include
+#include
+#include "Coordenadas.h"
+#include "Ladrilhos.h"
+
+using namespace std;
+
+int main(){
+int coordenadaA = 0;
+int coordenadaB = 0;
+int coordenadaC = 0;
+int coordenadaD = 0;
+int coordenadaE = 0;
+int larguraLadrilho;
+int alturaLadrilho = 0;
+int distancia = 0;
+string msg = "";
+
+do{
+    cout << msg;
+    cout << "Complete os quatro pontos de cada vértice da sala (0, 0), (A, 0), (B, C) e (D, E)" << endl;
+    cout << "A: ";
+    cin >> coordenadaA;
+    cout << "B: ";
+    cin >> coordenadaB;
+    cout << "C: ";
+    cin >> coordenadaC;
+    cout << "D: ";
+    cin >> coordenadaD;
+    cout << "E: ";
+    cin >> coordenadaE;
+    cout << endl;
+
+}while(!validarPontos(coordenadaA, coordenadaB, coordenadaC, coordenadaD, coordenadaE, msg));
+
+do{
+    msg = "";
+    cout << "Informe o tamanho do ladrilho [Altura x Largura]: ";
+    cin >> alturaLadrilho >> larguraLadrilho;
+    cout << endl;
+
+}while(!validarTamanho(alturaLadrilho, larguraLadrilho, msg));
+
+cout << "Quantidade de ladrinhos para cobrir a sala atual: " << calcularLadrilhos(coordenadaA, coordenadaB, coordenadaC, coordenadaD, coordenadaE, alturaLadrilho, larguraLadrilho) << endl;
+
+return 0;
+
+}
