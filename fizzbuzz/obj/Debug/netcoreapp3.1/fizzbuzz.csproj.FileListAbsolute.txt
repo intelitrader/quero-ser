@@ -1,0 +1,13 @@
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.exe
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.deps.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.runtimeconfig.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.runtimeconfig.dev.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\bin\Debug\netcoreapp3.1\fizzbuzz.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.csprojAssemblyReference.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.AssemblyInfoInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.AssemblyInfo.cs
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.csproj.CoreCompileInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\fizzbuzz\obj\Debug\netcoreapp3.1\fizzbuzz.genruntimeconfig.cache
