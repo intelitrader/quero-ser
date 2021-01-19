@@ -1,0 +1,13 @@
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.exe
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.deps.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.runtimeconfig.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.runtimeconfig.dev.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\bin\Debug\netcoreapp3.1\Calcular troco.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.csprojAssemblyReference.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.AssemblyInfoInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.AssemblyInfo.cs
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.csproj.CoreCompileInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Calcular troco\Calcular troco\obj\Debug\netcoreapp3.1\Calcular troco.genruntimeconfig.cache
