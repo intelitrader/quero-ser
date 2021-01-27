@@ -9,7 +9,7 @@
 
 void get_input(char* buffer, size_t size) {
   printf("Expressão: ");
-  fgets(buffer, size - 1, stdin);
+  fgets(buffer, size, stdin);
 
   // remove a quebra de linha deixada por fgets
   char* linefeed = strchr(buffer, '\n');
@@ -23,11 +23,15 @@ void get_input(char* buffer, size_t size) {
   }
 }
 
-int main() {
-
+int main(int argc, char* argv[]) {
   // buffer que armazena a expressão
-  char infix[1024];
-  get_input(infix, sizeof(infix));
+  char infix[1024] = {0};
+
+  if(argc > 1) {
+    strncpy(infix, argv[1], sizeof(infix) - 1); // o -1 é pra inserir o ')' ao final da expressão
+  }
+  else
+    get_input(infix, sizeof(infix) - 1);
 
   // converte a expressão no formato infix, para postfix
   // ex.: (32 - 5) * (77 / 7) = 32 5 - 77 7 / *
@@ -35,8 +39,8 @@ int main() {
   infix_to_postfix(infix, &postfix);
 
   // resolve a expressão que agora está no formato postfix
-  int result = solve_expression(&postfix);
-  printf("Resultado = %d\n", result);
+  double result = solve_expression(&postfix);
+  printf("Resultado = %lf\n", result);
 
   return EXIT_SUCCESS;
 

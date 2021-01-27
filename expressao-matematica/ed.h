@@ -11,7 +11,10 @@ typedef enum {
 } symbol_t;
 
 typedef struct {
-  int value; // caractere(operador) ou número
+  union {
+    double number;
+    char   operator;
+  };
   symbol_t type;
 } data_t;
 

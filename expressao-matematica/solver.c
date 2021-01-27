@@ -8,7 +8,7 @@ static inline void cannot_solve(char* why) {
   exit(EXIT_FAILURE);
 }
 
-static inline bool get_operands(stack_t* s, int* op1, int* op2) {
+static inline bool get_operands(stack_t* s, double* op1, double* op2) {
   // devido uma falha não identificada na etapa de análise da expressão, está faltando os dois operandos
   // necessários para a operação ser realizada
   if(s->size < 2)
@@ -18,8 +18,8 @@ static inline bool get_operands(stack_t* s, int* op1, int* op2) {
   logo é necessário retirá-lo primeiro para não comprometer a ordem que foram 
   específicados na expressão */
 
-  *op2 = pop(s).value; // segundo operando
-  *op1 = pop(s).value; // primeiro segundo
+  *op2 = pop(s).number; // segundo operando
+  *op1 = pop(s).number; // primeiro segundo
 
   return true;
 }
@@ -34,13 +34,13 @@ static inline bool get_operands(stack_t* s, int* op1, int* op2) {
   os dois primeiros elementos da pilha são desempilhados e a operação é realizada. Logo em seguida, o resultado dessa operação é empilhado em `result`.
   Se a fila `postfix` esvaziar, todos os elementos foram avaliados, restando no topo de `result` o resultado final da expressão, que é retornado 
 */
-int solve_expression(queue_t* postfix) {
+double solve_expression(queue_t* postfix) {
   if(postfix->head == NULL)
     return 0;
 
   stack_t result = {0};
   data_t data = {0};
-  int operand1, operand2;
+  double operand1, operand2;
 
   while(postfix->head != NULL) {
     data = dequeue(postfix);
@@ -51,15 +51,15 @@ int solve_expression(queue_t* postfix) {
       // Adquire os dois operandos da operação
       if(!get_operands(&result, &operand1, &operand2))
         cannot_solve("Erro: não foi possível resolver a operação, pois falta operandos. Por favor, reveja a expressão!");
-      switch ((char) data.value) {
-        case '+':  data.value = operand1 + operand2; break;
-        case '-':  data.value = operand1 - operand2; break;
-        case '*':  data.value = operand1 * operand2; break;
+      switch (data.operator) {
+        case '+':  data.number = operand1 + operand2; break;
+        case '-':  data.number = operand1 - operand2; break;
+        case '*':  data.number = operand1 * operand2; break;
         case '/':
           if(operand2 == 0)
             cannot_solve("Erro: tentativa de divisão por zero! Por favor, reveja a expressão!");
 
-          data.value = operand1 / operand2;
+          data.number = operand1 / operand2;
           break;
       }
 
@@ -69,5 +69,5 @@ int solve_expression(queue_t* postfix) {
     }
   }
 
-  return pop(&result).value;
+  return pop(&result).number;
 }

@@ -26,6 +26,19 @@ Resultado = 7
 
 ```bash
 ./desafio3
+Expressão: 7.27 * (4.5 - 8 / 8.21 ) / 9 * 7.4 + 1
+Resultado: 22.07
+```
+
+Obs: também é possível informar a expressão como argumento via linha de comando
+
+```bash
+./desafio3 "2 * 3.1415 * 1.33"
+Resultado = 8.356390
+```
+
+```bash
+./desafio3
 Expressão: 100 + (20 * / 2)
 
 100 + (20 * / 2)
@@ -61,7 +74,5 @@ Erro: tentativa de divisão por zero! Por favor, reveja a expressão!
 Pontos a serem melhorados:
 
 - permitir uso de números negativos, pois (10 - -10) atualmente é um erro
-
-- permitir uso de números com casa decimal
 
 - aprimorar a análise dos parênteses

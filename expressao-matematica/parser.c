@@ -18,9 +18,9 @@ static bool get_next_token(char* buffer, analyzer_t* analyzer) {
 }
 
 // após o analisador identificar um número, adquire todos os seus dígitos e o retorna
-static int get_next_number(char* buffer, analyzer_t* analyzer) {
+static double get_next_number(char* buffer, analyzer_t* analyzer) {
   char* save = NULL;
-  int number = strtol(&buffer[analyzer->offset - 1], &save, 10);
+  double number = strtod(&buffer[analyzer->offset - 1], &save);
   analyzer->offset += (size_t) save - (size_t) &buffer[analyzer->offset];
 
   return number;
@@ -153,7 +153,10 @@ void infix_to_postfix(char* infix, queue_t* postfix) {
     a fila 'postfix'. Toda vez que um ')' é encontrado, esse processo de transferência ocorre até que um '(' 
     esteja no topo da pilha.
   */
-  data_t data = {'(', OPERATOR};
+  data_t data = {0};
+  data.operator = '(';
+  data.type = OPERATOR;
+
   push(&operators, &data); // primeiro operador empilhado é o '('
   infix[strlen(infix)] = ')'; // finaliza a expressão com o ')'
 
@@ -168,12 +171,12 @@ void infix_to_postfix(char* infix, queue_t* postfix) {
         invalid_expression(infix, &analyzer, "Erro: operando não esperado!\n");
 
       analyzer.last_token_type = NUMBER;
-      data.value = get_next_number(infix, &analyzer);
-      data.type  = NUMBER;
+      data.number = get_next_number(infix, &analyzer);
+      data.type   = NUMBER;
       enqueue(postfix, &data);
     }
     else if(isoperator(analyzer.curr_token)) {
-      data.value = analyzer.curr_token;
+      data.operator = analyzer.curr_token;
       data.type = OPERATOR;
 
       if(analyzer.curr_token == '(')
@@ -189,7 +192,7 @@ void infix_to_postfix(char* infix, queue_t* postfix) {
         // estava entre parênteses
         while(operators.top) {
           data = pop(&operators);
-          if(data.value != '(')
+          if(data.operator != '(')
             enqueue(postfix, &data);
           else
             break;
@@ -210,7 +213,7 @@ void infix_to_postfix(char* infix, queue_t* postfix) {
         // maior precedência que eles, isso garante a ordem que os operadores ficarão no formato postfix
         while(operators.top) {
           data = pop(&operators);
-          if(check_precedence(data.value) >= curr_op_precedence)
+          if(check_precedence(data.operator) >= curr_op_precedence)
             enqueue(postfix, &data);
           else {
             // se o operador recém desempilhado possuir menor precedência, insiro ele novamente na pilha
@@ -220,7 +223,7 @@ void infix_to_postfix(char* infix, queue_t* postfix) {
         }
 
         // insiro na pilha o novo operador
-        data.value = analyzer.curr_token;
+        data.operator = analyzer.curr_token;
         push(&operators, &data);
       }
     } // end if isoperator
