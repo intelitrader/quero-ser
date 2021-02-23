@@ -1,0 +1,13 @@
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.csprojAssemblyReference.cache
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.AssemblyInfoInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.AssemblyInfo.cs
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.csproj.CoreCompileInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.exe
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.deps.json
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.runtimeconfig.json
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.runtimeconfig.dev.json
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.dll
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\bin\Debug\netcoreapp3.1\Dojo-FatoresPrimos.pdb
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.dll
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.pdb
+C:\Senai\Atividades-Csharp\Dojo-FatoresPrimos\obj\Debug\netcoreapp3.1\Dojo-FatoresPrimos.genruntimeconfig.cache
