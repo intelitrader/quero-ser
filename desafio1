@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include <assert.h>
+
+//EXERCICIO 1 DO TESTE
+
+https://dojopuzzles.com/problems/distribuicao-de-mictorios/
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	int m=0;
+	int i=0;
+	int c=0;
+	int d=0;
+	int resposta = 0;
+	int vetorMic[m];
+	int micOcupados[c];
+	int micDisponiveis[d];
+	
+	
+	
+	printf("Por favor, informe quantos mictórios haverá:");
+	scanf("%i",&m);
+	
+	
+		
+	for(i=0;i<m;i++){
+		system("CLS");
+		printf("\nO mictório de número %iº está ocupado?: \n Digite:\n\n 1 - Para sim\n\n 2 - Para não",i);
+		scanf("%i", &resposta);
+		
+		if(resposta==1){
+			
+			micOcupados[c]=i;
+			c++;
+			
+		}else if(resposta==2){
+			
+			micDisponiveis[d] = i;
+			d++;
+		
+		}
+		
+	}
+	
+	system("CLS");
+	
+	i = 0;
+	for(i=0;i<d;i++){
+		printf("\nPosições disponíveis:%i", micDisponiveis[i]);
+	}
+	printf("\n\n");
+	
+	for(i=0;i<c;i++){
+		printf("\n O mictório de posiçâo: %i ja tem um mijão!:(", micOcupados[i]);
+
+	}
+	
+	printf("\n\nHá %i mictórios disponíveis", d);
+	
+	
+}//fim main
+
