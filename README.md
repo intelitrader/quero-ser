@@ -66,12 +66,12 @@ Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruçõ
 
 -------
 
-### [Requisitos Básicos](id:RequisitosBasicos)
+## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
 
 * Precisamos de gente que procure o **estado da arte** no que faz, MAS que tenha plena noção de que **nem sempre é possível** alcançá-lo em um ambiente ágil =(;
 * Ter graduação é legal! Mas se você não for formado, não tem problema. Conhecemos vários profissionais plenamente capacitados que não são formados.
 
-### [Diferenciais](id:Diferenciais)
+## [Diferenciais](id:Diferenciais)
 
 * **Inteligência** e **Dedicação**: Mais do que a experiência, valorizamos a forma como lida com aquilo que **não sabe**.
 * Melhorar Sempre: Estamos em busca de pessoas que **respirem** a filosofia de **melhoria contínua**.
