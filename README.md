@@ -26,7 +26,7 @@ Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quar
 
 ### [Como me candidato?](id:ComoMeCandidato)
 
-#### Suporte Técnico(id:CandidaturaSuporte)
+#### [Suporte Técnico](id:CandidaturaSuporte)
 
 Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instruções abaixo:
 
@@ -41,7 +41,7 @@ Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instru�
 5. *Bônus*. Este item não é necessário para enviar sua candidatura, mas é desejável. Após concluir o item 2 crie um serviço através do projeto NSSM para rodar o primo como um serviço Windows. Gere evidência de que ele pode ser iniciado e parado pelo Windows e nos envie junto do email do item 2.
 
 
-#### Desenvolvedor(id:CandidaturaDev)
+#### [Desenvolvedor](id:CandidaturaDev)
 
 Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruções abaixo:
 
