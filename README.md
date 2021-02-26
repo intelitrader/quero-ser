@@ -11,7 +11,7 @@ Ao que interessa:
 	* [Suporte Técnico](#CandidaturaSuporte)
 	* [Desenvolvedor](#CandidaturaDev)
 * [Requisitos básicos (para todas as vagas)](#RequisitosBasicos)
-* [Posições](#Posicoes)
+* [Posições (para vagas específicas)](#Posicoes)
 	* [Software Engineer](#QualificacoesSE)
 	* [Front-End Engineer](#QualificacoesFE)
 * [Condições e Benefícios](#CondicoesEDiferenciais)
@@ -76,8 +76,7 @@ Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruçõ
 * **Inteligência** e **Dedicação**: Mais do que a experiência, valorizamos a forma como lida com aquilo que **não sabe**.
 * Melhorar Sempre: Estamos em busca de pessoas que **respirem** a filosofia de **melhoria contínua**.
 
-## [Posições](id:Posicoes)
-----
+## [Posições (para vagas específicas)](id:Posicoes)
 
 #### [Software Engineer](id:QualificacoesSE)
 Você irá criar e aprimorar as soluções que tratam a imensa maioria das informações, processos "invisíveis" para o usuário comum. Ex: Cotação da bolsa de valores, informações de clientes, APIs web, etc.
