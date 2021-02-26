@@ -26,17 +26,9 @@ Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quar
 
 ### [Como me candidato?](id:ComoMeCandidato)
 
-#### Dev
+#### Suporte Técnico(id:CandidaturaSuporte)
 
-1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
-
-2. Faça um fork desse repositório, escolha 3 testes desafiadores do [DojoPuzzles](http://dojopuzzles.com/), resolva com sua linguagem favorita, crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**. Ah, se você mandar o famigerado teste do "Ano Bisexto" seu curriculum vai para o fim da fila de avaliação.
-
-3. Com hora marcada, um dos membros do nosso time entrará em contato com você para uma **conversa descontraída** sobre suas habilidades.
-
-4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
-
-#### Suporte Técnico
+Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instruções abaixo:
 
 1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
 
@@ -47,6 +39,19 @@ Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quar
 4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
 
 5. *Bônus*. Este item não é necessário para enviar sua candidatura, mas é desejável. Após concluir o item 2 crie um serviço através do projeto NSSM para rodar o primo como um serviço Windows. Gere evidência de que ele pode ser iniciado e parado pelo Windows e nos envie junto do email do item 2.
+
+
+#### Desenvolvedor(id:CandidaturaDev)
+
+Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruções abaixo:
+
+1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
+
+2. Faça um fork desse repositório, escolha 3 testes desafiadores do [DojoPuzzles](http://dojopuzzles.com/), resolva com sua linguagem favorita, crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**. Ah, se você mandar o famigerado teste do "Ano Bisexto" seu curriculum vai para o fim da fila de avaliação.
+
+3. Com hora marcada, um dos membros do nosso time entrará em contato com você para uma **conversa descontraída** sobre suas habilidades.
+
+4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
 
 ##### Links
 
