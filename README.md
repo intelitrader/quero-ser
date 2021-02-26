@@ -30,7 +30,7 @@ Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quar
 
 -------
 
-#### [Suporte Técnico](id:CandidaturaSuporte)
+### [Suporte Técnico](id:CandidaturaSuporte)
 
 Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instruções abaixo:
 
@@ -46,7 +46,7 @@ Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instru�
 
 -------
 
-#### [Desenvolvedor](id:CandidaturaDev)
+### [Desenvolvedor](id:CandidaturaDev)
 
 Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruções abaixo:
 
