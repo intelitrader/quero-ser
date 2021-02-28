@@ -10,7 +10,7 @@ import poker.Carta;
 public class Game {
 	public Partida partida;
 	public int pontosPlayer1 = 0, pontosPlayer2 = 0, servico = 0;
-	public static int game = 0, set = 0;
+	public static int game = 0, set = 0, gamesTotal = 0;
 	int dado;
 	List<SetGame> sets = new ArrayList<SetGame>();
 	
@@ -172,6 +172,7 @@ public class Game {
 		}
 		
 		Game.game++;
+		Game.gamesTotal++;
 		mostrarGameSet();
 		saque();
 	}
@@ -219,6 +220,7 @@ public class Game {
 		System.out.println("Tipo de piso: " + partida.estilo.getPiso());
 		System.out.println("Jogadores: " + partida.player1.getName() + " " + partida.player1.getSet() + " x " + partida.player2.getSet() + " " + partida.player2.getName());
 		System.out.println("Quantidade de sets jogados: " + sets.size());
+		System.out.println("Quantidade total de games: " + Game.gamesTotal);
 		System.out.println("====================");
 		
 		for (SetGame setGame : sets) {

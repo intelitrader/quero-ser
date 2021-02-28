@@ -11,6 +11,7 @@ public class Regras {
 
 	public void game(Game g) {
 		Game.game++;
+		Game.gamesTotal++;
 		Game.mostrarGameSet();
 		g.saque();
 	}
