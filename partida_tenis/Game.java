@@ -216,7 +216,7 @@ public class Game {
 		System.out.println("RESUMO DO JOGO");
 		System.out.println("====================");
 		System.out.println("Tipo de jogo: " + partida.estilo.getTipo());
-		System.out.println("Tipo de jogo: " + partida.estilo.getPiso());
+		System.out.println("Tipo de piso: " + partida.estilo.getPiso());
 		System.out.println("Jogadores: " + partida.player1.getName() + " " + partida.player1.getSet() + " x " + partida.player2.getSet() + " " + partida.player2.getName());
 		System.out.println("Quantidade de sets jogados: " + sets.size());
 		System.out.println("====================");
