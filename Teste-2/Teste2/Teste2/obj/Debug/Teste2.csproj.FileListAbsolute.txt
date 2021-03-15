@@ -1,0 +1,7 @@
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\bin\Debug\Teste2.exe.config
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\bin\Debug\Teste2.exe
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\bin\Debug\Teste2.pdb
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\obj\Debug\Teste2.csprojAssemblyReference.cache
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\obj\Debug\Teste2.csproj.CoreCompileInputs.cache
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\obj\Debug\Teste2.exe
+C:\Users\gusta\rpinteli\quero-ser\Teste-2\Teste2\Teste2\obj\Debug\Teste2.pdb

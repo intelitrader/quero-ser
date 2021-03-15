@@ -1,0 +1,7 @@
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\bin\Debug\Teste3.exe.config
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\bin\Debug\Teste3.exe
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\bin\Debug\Teste3.pdb
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\obj\Debug\Teste3.csprojAssemblyReference.cache
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\obj\Debug\Teste3.csproj.CoreCompileInputs.cache
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\obj\Debug\Teste3.exe
+C:\Users\gusta\rpinteli\quero-ser\Teste-3\Teste3\Teste3\obj\Debug\Teste3.pdb
