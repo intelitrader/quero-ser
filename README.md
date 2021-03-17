@@ -34,21 +34,11 @@ Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quar
 
 Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instruções abaixo:
 
-1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
+1. Baixe [este arquivo zip](https://drive.google.com/file/d/1Y_ATwGFL3M69EgePw7T5E-QRYl6O9oBB/view?usp=sharing) e extraia seu conteúdo em sua máquina. Sua máquina deve ter o sistema operacional Windows.
 
-2. Baixe o binário do [tiodb](https://drive.google.com/file/d/1doyiHXdo_9FmQk405USOGDyhW352GVl8/view?usp=sharing) e o script Python do projeto primo da Intelitrader (link após as instruções). Monte uma configuração do primo que mantenha o tio.exe executando mesmo que o processo seja morto pelo gerenciador de processos (o primo deve colocá-lo de volta em execução). Faça um vídeo com a evidência do seu funcionamento e suba no YouTube como não-listado. Envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link de sua evidência**, um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**.
+2. Leia o conteúdo do arquivo leiame.txt e siga suas instruções.
 
-3. Com hora marcada, um dos membros do nosso time entrará em contato com você para uma **conversa descontraída** sobre suas habilidades.
-
-4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
-
-5. *Bônus*. Este item não é necessário para enviar sua candidatura, mas é desejável. Após concluir o item 2 crie um serviço através do projeto NSSM para rodar o primo como um serviço Windows. Gere evidência de que ele pode ser iniciado e parado pelo Windows e nos envie junto do email do item 2.
-
-##### Links
-
- - [Tiodb](https://github.com/intelitrader/tiodb) (repositório)
- - [Primo](https://github.com/intelitrader/primo) (repositório)
- - [NSSM](https://nssm.cc/)
+3. Envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link de sua evidência**, um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**.
 
 -------
 
