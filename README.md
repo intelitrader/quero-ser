@@ -1,32 +1,48 @@
-# Quero ser Intelitrader!
+# Quero ser Intelitrader
 
-Em primeiro lugar, é bom dizer que nós **amamos** o que fazemos: programar, resolver problemas complexos, conhecer novas tecnologias, frameworks, padrões. E queremos no time gente como a gente.
+## [Quem somos](id:OqEhAIntelitrader)
+A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
 
-Ao que interessa:
+## [Sobre as vagas](id:SobreAsVagas)
+Você gosta de programar e aprender? Aqui é o lugar certo. 
 
-* [Quem somos nós?](#OqEhAIntelitrader)
-* [Sobre as vagas](#SobreAsVagas)
-* [Localização](#Localizacao)
-* [Como me candidato?](#ComoMeCandidato)
-	* [Suporte Técnico](#CandidaturaSuporte)
-	* [Desenvolvedor](#CandidaturaDev)
-* [Requisitos básicos (para todas as vagas)](#RequisitosBasicos)
-* [Posições (para vagas específicas)](#Posicoes)
-	* [Software Engineer](#QualificacoesSE)
-	* [Front-End Engineer](#QualificacoesFE)
-* [Condições e Benefícios](#CondicoesEDiferenciais)
+Temos uma cultura focada em formação e vamos te ensinar tudo que você precisa para virar um Engenheiro ou Engenheira de Software. Temos demanda para backend e frontend.
 
--------
-### [Pera, mas o que é a Intelitrader?](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa especializada no desenvolvimento de **soluções de alto desempenho para o mercado financeiro**, temos no nosso portfólio de clientes alguns dos maiores players do mercado financeiro nacional.
+Usamos Scrum, Git, Visual Studio e Visual Studio Code.
 
-### [Sobre as vagas](id:SobreAsVagas)
-Estamos sempre procurando por talentos para integrar o nosso dream team. As posições de desenvolvimento vão desde engenharia de software de **back-end** (encarando desafios de escalabilidade e desempenho das soluções), até engenharia de **front-end** (desafios de escalabilidade, desempenho e usabilidade).
+Aqui usamos bastante C# e C++. Usamos também JavaScript (front) e Python (algumas ferramentas internas).
 
-### [Onde vocês ficam?](id:Localizacao)
-Em todos os lugares, aqui todo mundo trabalha **de onde quiser (mesmo sem a quarentena)**.
+## [Onde vocês ficam?](id:Localizacao)
+Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
 
-### [Como me candidato?](id:ComoMeCandidato)
+Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
+
+## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
+
+Não nos importamos com formação. 
+
+Você fez faculdade? Bom pra você, esperamos que você tenha aproveitado e aprendido bastante. Tem bastante gente que faz 4 anos de faculdade e não aprende nada. :-(
+
+O que nos interessa é:
+
+* Você sabe programar?
+* Você gosta de programar?
+* Você gosta de aprender?
+* Você sabe que na área de programação você precisa aprender sempre, o tempo todo, todo dia?
+
+Nós te ajudamos guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e disposição para estudar.
+
+## [Como me candidato?](id:ComoMeCandidato)
+
+### [Desenvolvedor(a)](id:CandidaturaDev)
+
+Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
+
+1. Leia com atenção. Sua candidatura só será considerada se você seguir corretamente as instruções.
+2. Faça um fork desse repositório.
+3. Escolha 3 testes em [DojoPuzzles](http://dojopuzzles.com/) e resolva com sua linguagem favorita (se você escolher o desafio "Ano Bissexto" seu curriculum será desconsiderado)
+4. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
+5. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
 
 -------
 
@@ -38,88 +54,13 @@ Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instru�
 
 2. Leia o conteúdo do arquivo leiame.txt e siga suas instruções.
 
-3. Envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link de sua evidência**, um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**.
+3. Envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link de sua evidência**, um **link para seu curriculum, portfolio ou linkedin**.
 
--------
 
-### [Desenvolvedor](id:CandidaturaDev)
-
-Se você deseja se candidatar a uma vaga de **Desenvolvedor** siga as instruções abaixo:
-
-1. Leia essas instruções com atenção. Sua candidatura só será considerada se seu teste for feito corretamente conforme as instruções.
-
-2. Faça um fork desse repositório, escolha 3 testes desafiadores do [DojoPuzzles](http://dojopuzzles.com/), resolva com sua linguagem favorita, crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), um **link para seu curriculum, portfolio ou linkedin** e também diga como chegou até nós :). Avaliaremos sua solução **ASAP**. Ah, se você mandar o famigerado teste do "Ano Bisexto" seu curriculum vai para o fim da fila de avaliação.
-
-3. Com hora marcada, um dos membros do nosso time entrará em contato com você para uma **conversa descontraída** sobre suas habilidades.
-
-4. Agora é só esperar, se você for ***O Escolhido***, receberá as próximas instruções em breve.
-
--------
-
-## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
-
-* Precisamos de gente que procure o **estado da arte** no que faz, MAS que tenha plena noção de que **nem sempre é possível** alcançá-lo em um ambiente ágil =(;
-* Ter graduação é legal! Mas se você não for formado, não tem problema. Conhecemos vários profissionais plenamente capacitados que não são formados.
-
-## [Diferenciais](id:Diferenciais)
-
-* **Inteligência** e **Dedicação**: Mais do que a experiência, valorizamos a forma como lida com aquilo que **não sabe**.
-* Melhorar Sempre: Estamos em busca de pessoas que **respirem** a filosofia de **melhoria contínua**.
-
-## [Posições (para vagas específicas)](id:Posicoes)
-
-#### [Software Engineer](id:QualificacoesSE)
-Você irá criar e aprimorar as soluções que tratam a imensa maioria das informações, processos "invisíveis" para o usuário comum. Ex: Cotação da bolsa de valores, informações de clientes, APIs web, etc.
-
-**Qualificações mínimas**
-
-* Ao menos 6 meses de experiência relevante **OU** estar cursando técnico ou gradução em Ciências das Computação, Sistemas da Informação e áreas relacionadas;
-* Sólidos conhecimentos em **lógica de programação**;
-* Sólidos conhecimentos em **Orientação a objetos** (classes, atributos, métodos, objetos, encapsulamento, associação, herança, interfaces, polimorfismo);
-* Bons conhecimentos de estruturas de dados (pilhas, filas, arrays, matrizes, dicionários, listas ligadas, etc)
-* Conhecimentos mínimos em **comunicação entre client-side e server-side** (HTTP, REST, serialização, JSON);
-* **Inglês** técnico (leitura / escrita);
-* **GIT**;
-
-**Qualificões desejáveis (mas não essenciais)**
-
-* Conhecimentos em infraestrutura (Configuração de IIS);
-* Arquitetura escalável;
-* Práticas de engenharia de software e XP (DDD, TDD, Refactoring, CI, Coding Standards, Pair Programming, ...);
-* Segurança (SQL Injection);
-* Vagrant, Docker, AWS;
-* Sistemas de fila (RabbitMQ, ActiveMQ, ...);
-
-#### [Front-End Engineer](id:QualificacoesFE)
-Você irá criar e aprimorar as soluções com as quais os usuários finais interagem, e que por sua vez interagem com o back-end.
-
-**Qualificações mínimas**
-
-* HTML (principalmente semântica);
-* Javascript (sem dependência de jQuery, boas práticas);
-* CSS 3;
-* Bons conhecimentos em **comunicação entre client-side e server-side** (HTTP, REST, serialização, JSON);
-* **Inglês** técnico (leitura / escrita);
-* **GIT**;
-
-**Qualificões desejáveis (mas não essenciais)**
-
-* Asp.NET;
-* Desenvolvimento para mobile (nativo): iOS, Android, Xamarin;
-* Layouts responsivos;
-* API Query languages: OData, GraphQL, ...;
-* Frameworks SPA: AngularJS, React, Vue, ...;
-* Práticas de engenharia de software e XP (DDD, TDD, Refactoring, CI, Coding Standards, Pair Programming, ...);
-* HTML5 features (localStorage, geoLocation, history API, etc);
-
-## [Condições e Diferenciais](id:CondicoesEDiferenciais)
+## [Condições](id:CondicoesEDiferenciais)
 
 * Regime: **PJ**;
 * Período: **Integral**;
 * Contratação: **Imediata**;
 
-**Diferenciais:**
 
-* Home Office;
-* Horário **altamente flexível**;
-* Eventos mensais (**na faixa**);
