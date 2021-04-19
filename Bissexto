@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Bissexto
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                int ano = Convert.ToInt32(textBox1.Text);
+                 if (ano == 0)
+                {
+                    MessageBox.Show("Não é um Ano Bissexto");
+                }
+                 else
+                {
+                if (((ano % 400) == 0) || (ano % 4 == 0 && ano % 100 != 0))
+                {
+                    MessageBox.Show("Ano Bissexto");
+                }
+                else
+                {
+                    MessageBox.Show("Não é um Ano Bissexto");
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
