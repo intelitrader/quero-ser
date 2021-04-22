@@ -1,0 +1,13 @@
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.exe
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.deps.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.runtimeconfig.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.runtimeconfig.dev.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\bin\Debug\netcoreapp3.1\vetores-escalar.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.csprojAssemblyReference.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.AssemblyInfoInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.AssemblyInfo.cs
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.csproj.CoreCompileInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\vetores-escalar\obj\Debug\netcoreapp3.1\vetores-escalar.genruntimeconfig.cache

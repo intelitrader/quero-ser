@@ -1,0 +1,13 @@
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.exe
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.deps.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.runtimeconfig.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.runtimeconfig.dev.json
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\bin\Debug\netcoreapp3.1\roleta-romana.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.csprojAssemblyReference.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.AssemblyInfoInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.AssemblyInfo.cs
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.csproj.CoreCompileInputs.cache
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.dll
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.pdb
+C:\Users\thi_s\Desktop\CSharp-Exercicios\intelitrader\roleta-romana\obj\Debug\netcoreapp3.1\roleta-romana.genruntimeconfig.cache
