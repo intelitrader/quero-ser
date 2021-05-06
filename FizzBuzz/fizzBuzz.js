@@ -1,4 +1,9 @@
+// Link do problema no DojoPuzzles: https://dojopuzzles.com/problems/fizzbuzz/
+
 // Números divisiveis por outro número tem resto igual à 0
+
+// Para textar é necessário ter instalado o node
+// Digite no terminal: node [caminho]/fizzBuzz.js ou apenas "node fizzBuzz.js" caso já esteja na pasta do exercício (no terminal)
 
 for (let i = 1; i <= 100; i++) {
     // Divisível por 3?

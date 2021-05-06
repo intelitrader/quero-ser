@@ -1,0 +1,13 @@
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.csprojAssemblyReference.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.AssemblyInfoInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.AssemblyInfo.cs
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.csproj.CoreCompileInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.exe
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.deps.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.runtimeconfig.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.runtimeconfig.dev.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\bin\Debug\netcoreapp3.1\BuracoNasLetras.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\BuracoNasLetras\obj\Debug\netcoreapp3.1\BuracoNasLetras.genruntimeconfig.cache

@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\EncontreOTelefone\\EncontreOTelefone.csproj": {}
+    "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\BuracoNasLetras\\BuracoNasLetras.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\EncontreOTelefone\\EncontreOTelefone.csproj": {
+    "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\BuracoNasLetras\\BuracoNasLetras.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\EncontreOTelefone\\EncontreOTelefone.csproj",
-        "projectName": "EncontreOTelefone",
-        "projectPath": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\EncontreOTelefone\\EncontreOTelefone.csproj",
+        "projectUniqueName": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\BuracoNasLetras\\BuracoNasLetras.csproj",
+        "projectName": "BuracoNasLetras",
+        "projectPath": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\BuracoNasLetras\\BuracoNasLetras.csproj",
         "packagesPath": "C:\\Users\\DIOGO-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\EncontreOTelefone\\obj\\",
+        "outputPath": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\BuracoNasLetras\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\DIOGO-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\program files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
