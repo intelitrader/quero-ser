@@ -1,0 +1,9 @@
+para i no intervalo (1.100):
+        se i% 3 == 0 e i% 5 == 0:
+           imprimir ('FizzBuzz')
+        elif i% 3 == 0:
+            imprimir ('Fizz')
+        elif i% 5 == 0:
+          imprimir ('Buzz')
+        senão:
+            imprimir (i)

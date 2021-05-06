@@ -1,0 +1,10 @@
+imprimir ('JOKENPO')
+jogador1 = entrada ("Jogador1:")
+jogador2 = entrada ("Jogador2:")
+texto = "pedra" <"papel" <"tesoura" <"pedra"
+se (jogador1 == jogador2):
+ imprimir ("Empate!")
+elif (jogador1 <jogador2):
+ print ("Jogador 1 ganhou.")
+senão:
+ imprimir ("Jogador 2 ganhou.")
