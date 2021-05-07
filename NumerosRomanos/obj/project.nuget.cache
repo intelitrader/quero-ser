@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oOXs/yUV3y6c55ZwEGtNS6YObUzKTCPJ2Znq2JobflncZSEMHGj+hf3EGVzri6wV3UcCIuEbbdpJjpizfpblUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DIOGO-PC\\Desktop\\quero-ser\\NumerosRomanos\\NumerosRomanos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DIOGO-PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

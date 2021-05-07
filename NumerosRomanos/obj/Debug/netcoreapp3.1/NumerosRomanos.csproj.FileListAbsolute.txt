@@ -1,0 +1,13 @@
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.exe
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.deps.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.runtimeconfig.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.runtimeconfig.dev.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\bin\Debug\netcoreapp3.1\NumerosRomanos.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.csprojAssemblyReference.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.AssemblyInfoInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.AssemblyInfo.cs
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.csproj.CoreCompileInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\NumerosRomanos\obj\Debug\netcoreapp3.1\NumerosRomanos.genruntimeconfig.cache
