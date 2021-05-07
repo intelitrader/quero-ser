@@ -1,0 +1,16 @@
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.exe
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.deps.json
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.runtimeconfig.json
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.runtimeconfig.dev.json
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.dll
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\ref\Desafio 3.dll
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\bin\Debug\net5.0\Desafio 3.pdb
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.csprojAssemblyReference.cache
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.AssemblyInfoInputs.cache
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.AssemblyInfo.cs
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.dll
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\ref\Desafio 3.dll
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.pdb
+C:\Users\HOME\Desktop\quero-ser\Desafio 3\obj\Debug\net5.0\Desafio 3.genruntimeconfig.cache
