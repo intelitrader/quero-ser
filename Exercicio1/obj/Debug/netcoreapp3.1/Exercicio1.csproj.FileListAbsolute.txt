@@ -1,0 +1,13 @@
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.exe
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.deps.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.runtimeconfig.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.runtimeconfig.dev.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\bin\Debug\netcoreapp3.1\Exercicio1.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.csprojAssemblyReference.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.AssemblyInfoInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.AssemblyInfo.cs
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.csproj.CoreCompileInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\Exercicio1\obj\Debug\netcoreapp3.1\Exercicio1.genruntimeconfig.cache
