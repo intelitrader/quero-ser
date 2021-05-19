@@ -1,0 +1,14 @@
+4
+Ola tudo bem.
+Esse desafio do HackerRank.Parece ser bem divertido.
+Hmmm C eh muito legal.Mas nem todo mundo gosta.Que pena.
+Eu gosto e pra mim isso eh o que importa.Hehe.
+8
+3 3 1 1
+3 2 1 1
+3 1 1 1
+2 2 2
+2 1 2
+2 2 3
+3 1 2 4
+1 3
