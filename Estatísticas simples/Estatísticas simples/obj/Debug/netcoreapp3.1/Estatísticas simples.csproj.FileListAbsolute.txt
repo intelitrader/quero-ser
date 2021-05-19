@@ -1,0 +1,13 @@
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.exe
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.deps.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.runtimeconfig.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.runtimeconfig.dev.json
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\bin\Debug\netcoreapp3.1\Estatísticas simples.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.csprojAssemblyReference.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.AssemblyInfoInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.AssemblyInfo.cs
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.csproj.CoreCompileInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\DesafiosIntelitrader\Estatísticas simples\Estatísticas simples\obj\Debug\netcoreapp3.1\Estatísticas simples.genruntimeconfig.cache
