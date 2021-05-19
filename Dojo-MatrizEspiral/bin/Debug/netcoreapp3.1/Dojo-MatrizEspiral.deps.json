@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Dojo-MatrizEspiral/1.0.0": {
+        "runtime": {
+          "Dojo-MatrizEspiral.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dojo-MatrizEspiral/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

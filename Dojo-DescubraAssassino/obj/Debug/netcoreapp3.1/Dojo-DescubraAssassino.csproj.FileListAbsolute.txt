@@ -1,0 +1,13 @@
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.exe
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.deps.json
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.runtimeconfig.json
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.runtimeconfig.dev.json
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.dll
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\bin\Debug\netcoreapp3.1\Dojo-DescubraAssassino.pdb
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.csprojAssemblyReference.cache
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.AssemblyInfoInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.AssemblyInfo.cs
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.csproj.CoreCompileInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.dll
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.pdb
+C:\Senai\Atividades-Csharp\Dojo-DescubraAssassino\obj\Debug\netcoreapp3.1\Dojo-DescubraAssassino.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.exe
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.deps.json
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.runtimeconfig.json
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.runtimeconfig.dev.json
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.dll
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\bin\Debug\netcoreapp3.1\Dojo-MatrizEspiral.pdb
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.csprojAssemblyReference.cache
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.AssemblyInfoInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.AssemblyInfo.cs
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.csproj.CoreCompileInputs.cache
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.dll
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.pdb
+C:\Senai\Atividades-Csharp\Dojo-MatrizEspiral\obj\Debug\netcoreapp3.1\Dojo-MatrizEspiral.genruntimeconfig.cache
