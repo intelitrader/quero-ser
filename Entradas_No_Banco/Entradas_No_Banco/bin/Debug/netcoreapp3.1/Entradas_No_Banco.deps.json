@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Entradas_No_Banco/1.0.0": {
+        "runtime": {
+          "Entradas_No_Banco.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Entradas_No_Banco/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

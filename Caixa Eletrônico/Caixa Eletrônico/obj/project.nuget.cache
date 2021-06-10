@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/VzQlq9eYsPn8rbghhuafusxeLMI3ZoJMtK4JbLDFLhO2a1pvYmioYG1Jml3th+LrVG+oETzt4LUtwHaHfLYBQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mercatudo\\Documents\\DojoPuzzles\\Caixa Eletrônico\\Caixa Eletrônico\\Caixa Eletrônico.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mercatudo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

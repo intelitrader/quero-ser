@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\mercatudo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\mercatudo\\.nuget\\packages"
+    ]
+  }
+}
