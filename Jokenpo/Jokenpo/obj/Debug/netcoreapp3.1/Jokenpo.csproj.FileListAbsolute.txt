@@ -1,0 +1,13 @@
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.exe
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.deps.json
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.runtimeconfig.json
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.runtimeconfig.dev.json
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.dll
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\bin\Debug\netcoreapp3.1\Jokenpo.pdb
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.csprojAssemblyReference.cache
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.AssemblyInfoInputs.cache
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.AssemblyInfo.cs
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.csproj.CoreCompileInputs.cache
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.dll
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.pdb
+C:\Users\mercatudo\Documents\DojoPuzzles\Jokenpo\Jokenpo\obj\Debug\netcoreapp3.1\Jokenpo.genruntimeconfig.cache

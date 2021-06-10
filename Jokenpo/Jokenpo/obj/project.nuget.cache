@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Go0DZhAJSPj8kPb236WOM9WyiRdh3neaNM3hSTqzskJRn3Qx9z7aQzdgZgTJby5F1z1FuOFwai+apHPmIuUnA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mercatudo\\Documents\\DojoPuzzles\\Jokenpo\\Jokenpo\\Jokenpo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mercatudo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

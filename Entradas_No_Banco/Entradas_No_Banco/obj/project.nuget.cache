@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "F26TQ6hw9lOhknLYeP1wpZ5meyd22uxqWumPUzoJukx3AAkWi/eiWPIQ6v6SPt8WokHYL+jwFJVLWleMMUQ7Hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mercatudo\\Documents\\DojoPuzzles\\Entradas_No_Banco\\Entradas_No_Banco\\Entradas_No_Banco.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mercatudo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
