@@ -1,0 +1,16 @@
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.AssemblyInfo.cs
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.exe
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.deps.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.runtimeconfig.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.runtimeconfig.dev.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\ref\Mictorios.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\bin\Debug\net5.0\Mictorios.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\ref\Mictorios.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioTres\Mictorios\obj\Debug\net5.0\Mictorios.genruntimeconfig.cache

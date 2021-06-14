@@ -1,0 +1,16 @@
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.AssemblyInfo.cs
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.exe
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.deps.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.runtimeconfig.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.runtimeconfig.dev.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\ref\EstatisticaSimples.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\bin\Debug\net5.0\EstatisticaSimples.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\ref\EstatisticaSimples.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioDois\EstatisticaSimples\obj\Debug\net5.0\EstatisticaSimples.genruntimeconfig.cache
