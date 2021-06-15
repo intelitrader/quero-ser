@@ -1,0 +1,13 @@
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.exe
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.deps.json
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.runtimeconfig.json
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.runtimeconfig.dev.json
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.dll
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\bin\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.pdb
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.csproj.AssemblyReference.cache
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.AssemblyInfoInputs.cache
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.AssemblyInfo.cs
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.csproj.CoreCompileInputs.cache
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.dll
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.pdb
+C:\Users\r.madeira.furlaneti\Documents\GitHub\quero-ser\QuizAnimal\Intelitrader.QueroSer.QuizAnimal\Intelitrader.QueroSer.QuizAnimal\obj\Debug\netcoreapp3.1\Intelitrader.QueroSer.QuizAnimal.genruntimeconfig.cache
