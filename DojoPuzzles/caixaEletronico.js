@@ -45,7 +45,6 @@ const quantidadeNotas = (valor) => {
         //dá a quantidade de notas, pela divisão do valor solicitado pelo valor da nota
         //depois pega o valor da nota e subtrai pelo valor da nota multiplicado pela quantidade de notas
         //este ciclo ocorre com as notas de 100, 50, 20 e 10
-
         if (valor >= 100) {
             qtdNotas100 = parseInt(valor / 100)
             valor = valor - (100 * qtdNotas100)
@@ -62,20 +61,16 @@ const quantidadeNotas = (valor) => {
             qtdNotas10 = parseInt(valor / 10)
             valor = valor - (10 * qtdNotas10)
         }
-        
+
         //Mostra os valores das notas e o valor restante no console
         console.log(`Notas de 100:  ${qtdNotas100} - R$${qtdNotas100 * 100},00`);
         console.log(`Notas de 50:  ${qtdNotas50} - R$${qtdNotas50 * 50},00`);
         console.log(`Notas de 20:  ${qtdNotas20} - R$${qtdNotas20 * 20},00`);
         console.log(`Notas de 10:  ${qtdNotas10} - R$${qtdNotas10 * 10},00`);
         console.log(`Valor Restante:  R$${valor },00`);
-    } 
-    //Caso dê errado, irá printar o erro no console
+    }
+    //Caso algo dê errado, irá printar o erro no console
     catch (error) {
         console.error(error)
     }
-
-
-
-
 }
