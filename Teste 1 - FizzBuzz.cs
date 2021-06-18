@@ -1,6 +1,6 @@
 /*
 Ricardo Ruiz <-> Teste Dojo
-  Link: https://dojopuzzles.com/problems/diamantes/
+  Link: https://dojopuzzles.com/problems/fizzbuzz/
 Problema:
   Neste problema, você deverá exibir uma lista de 1 a 100, um em cada linha, com as seguintes exceções:
 
