@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste: Anderson Macedo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Desafios</h1>
+      <nav class="menu">
+        <button id="troco" class="active">Troco</button>
+        <button id="celular">Celular</button>
+        <button id="nuvem">Nuvem</button>
+      </nav>
+    </header>
+    <hr>    
+
+
+    <section class="troco">
+      <h2><a href="http://dojopuzzles.com/problems/troco/">Troco</a></h2>
+      <form class="troco-form">
+        <div>
+          <label for="gasto">Valor Gasto:</label>
+          <input name="gasto" id="gasto" type="text">
+        </div>
+        <div>
+          <label for="pago">Valor Pago:</label>
+          <input name="pago" id="pago" type="text">
+        </div>
+        <button>Calcular</button>
+      </form>
+      <h2>Resultado:</h2>
+      <div class="troco-resultado"></div>
+    </section>
+
+
+    <section class="celular hidden">
+      <h2><a href="http://dojopuzzles.com/problems/escrevendo-no-celular/">Escrevendo no Celular</a></h2>
+      <form>
+        <div>
+          <label for="text-to-number">Codificar mensagem:</label>
+          <input type="text" id="text-to-number" name="text-to-number">
+        </div>
+      </form>
+      <h2>Resultado</h2>
+      <div class="celular-resultado-text"></div>
+      <hr>
+      <form>
+        <div>
+          <label for="number-to-text">Decodificar mensagem:</label>
+          <input type="text" id="number-to-text" name="number-to-text">
+        </div>
+      </form>
+      <h2>Resultado</h2>
+      <div class="celular-resultado-number"></div>
+    </section>
+
+    <section class="nuvem hidden">
+      <h2><a href="http://dojopuzzles.com/problems/nuvem-de-cinzas/">Nuvens de Cinza</a></h2>
+      <form class="nuvem-form">
+        <div>
+          <label for="colunas">Quantidade de colunas</label>
+          <input type="number" name="colunas" id="colunas" min="1" max="20">
+        </div>
+        <div>
+          <label for="linhas">Quantidade de linhas</label>
+          <input type="number" name="linhas" id="linhas" min="1" max="20">
+        </div>
+        <div>
+          <label for="nuvens">Quantidade de nuvens iniciais</label>
+          <input type="number" name="nuvens" id="nuvens" min="1" max="10">
+        </div>
+        <div>
+          <label for="aeroportos">Quantidade de aeroportos</label>
+          <input type="number" name="aeroportos" id="aeroportos" min="1" max="10">
+        </div>
+        <button>Calcular</button>
+      </form>
+
+      <h2>Resultado</h2>
+      <div class="nuvem-resultado-texto"></div>
+      <div class="legenda">Legenda: A = aeroporto | o = intacto | * = encoberto de nuvem</div>
+      <div class="nuvem-resultado"></div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
