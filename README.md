@@ -44,19 +44,6 @@ Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
 4. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
 5. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
 
--------
-
-### [Suporte Técnico](id:CandidaturaSuporte)
-
-Se você deseja se candidatar a uma vaga de **Suporte Técnico** siga as instruções abaixo:
-
-1. Baixe [este arquivo zip](https://drive.google.com/file/d/1Y_ATwGFL3M69EgePw7T5E-QRYl6O9oBB/view?usp=sharing) e extraia seu conteúdo em sua máquina. Sua máquina deve ter o sistema operacional Windows.
-
-2. Leia o conteúdo do arquivo leiame.txt e siga suas instruções.
-
-3. Envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link de sua evidência**, um **link para seu curriculum, portfolio ou linkedin**.
-
-
 ## [Condições](id:CondicoesEDiferenciais)
 
 * Regime: **PJ**;
