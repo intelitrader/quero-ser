@@ -1,0 +1,13 @@
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.exe
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.deps.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.runtimeconfig.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.runtimeconfig.dev.json
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\bin\Debug\netcoreapp3.1\EncontreOTelefone.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.csprojAssemblyReference.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.AssemblyInfoInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.AssemblyInfo.cs
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.csproj.CoreCompileInputs.cache
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.dll
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.pdb
+C:\Users\DIOGO-PC\Desktop\quero-ser\EncontreOTelefone\obj\Debug\netcoreapp3.1\EncontreOTelefone.genruntimeconfig.cache
