@@ -1,0 +1,5 @@
+C:\Users\kauak\OneDrive\Área de Trabalho\quero-ser\Desafio\empresaSolucao\obj\Debug\net5.0\empresaSolucao.csprojAssemblyReference.cache
+C:\Users\kauak\OneDrive\Área de Trabalho\quero-ser\Desafio\empresaSolucao\obj\Debug\net5.0\empresaSolucao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauak\OneDrive\Área de Trabalho\quero-ser\Desafio\empresaSolucao\obj\Debug\net5.0\empresaSolucao.AssemblyInfoInputs.cache
+C:\Users\kauak\OneDrive\Área de Trabalho\quero-ser\Desafio\empresaSolucao\obj\Debug\net5.0\empresaSolucao.AssemblyInfo.cs
+C:\Users\kauak\OneDrive\Área de Trabalho\quero-ser\Desafio\empresaSolucao\obj\Debug\net5.0\empresaSolucao.csproj.CoreCompileInputs.cache
