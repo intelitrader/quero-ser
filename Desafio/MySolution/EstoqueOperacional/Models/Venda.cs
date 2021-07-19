@@ -2,14 +2,14 @@ namespace EstoqueOperacional.Models
 {
     public class Venda
     {
-        private int codigo {get;set;}
-        private int qtdVendida {get;set;}
-        private int situacao {get;set;}
-        private int canal {get;set;}
+        public int codProduto {get;set;}
+        public int qtdVendida {get;set;}
+        public int situacao {get;set;}
+        public int canal {get;set;}
 
         public Venda(int codigo, int qtdVendida, int situacao, int canal)
         {
-            this.codigo = codigo;
+            this.codProduto = codigo;
             this.qtdVendida = qtdVendida;
             this.situacao = situacao;
             this.canal = canal;
