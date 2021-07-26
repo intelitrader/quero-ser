@@ -1,6 +1,6 @@
-namespace EstoqueOperacional.Structs
+namespace EstoqueOperacional.Models
 {
-    public struct DadosRelatorioTransfere
+    public class VendaRelatorioTransfere
     {
         public int produto;
         public int qtCO;
@@ -10,7 +10,7 @@ namespace EstoqueOperacional.Structs
         public int necessidade;
         public int transArmzParaCO;
 
-        public DadosRelatorioTransfere(int produto, int qtCO, int qtMin, int qtVendas, int estqAposVendas, int necessidade, int transfArmzParaCO)
+        public VendaRelatorioTransfere(int produto, int qtCO, int qtMin, int qtVendas, int estqAposVendas, int necessidade, int transfArmzParaCO)
         {
             this.produto = produto;
             this.qtCO = qtCO;
