@@ -11,17 +11,17 @@ namespace EstoqueOperacional
     {
         static void Main(string[] args)
         {
-            // Coleta cada uma das linhas de vendas passadas no arquivo.
-            List<Venda> vendas = VendasEmLinhasParaListaDeProdutos(File.ReadAllLines(args[0]));
+            // Coleta as linhas das vendas passadas no arquivo e transforma em uma lista do tipo "Venda"
+            List<Venda> vendas = VendasEmLinhasParaListaDeVenda(File.ReadAllLines(args[0]));
 
-            // Coleta cada uma das linhas de produtos passados no arquivo.
+            // Coleta as linhas dos produtos passados no arquivo e transforma em uma lista do tipo "Produto"
             List<Produto> produtos = ProdutosEmLinhasParaListaDeProdutos(File.ReadAllLines(args[1]));
 
-            // Gera os dados do relatório "transfere".
-            List<DadosRelatorioTransfere> dadosRelatorioTransfere = GerarDadosRelatorioTransfere(vendas, produtos);
+            // Gera as vendas do relatório "transfere"
+            List<VendaRelatorioTransfere> vendasRelatorioTransfere = GerarVendasRelatorioTransfere(vendas, produtos);
 
             // Cria o arquivo e coloca os dados do relatório "transfere".
-            GerarRelatorioTransfere(dadosRelatorioTransfere);
+            GerarRelatorioTransfere(vendasRelatorioTransfere);
         }
 
         // Transforma linhas de produtos tiradas do arquivo para uma lista do tipo "Produto".
@@ -51,8 +51,8 @@ namespace EstoqueOperacional
             return listaDeProdutos;
         }
 
-        // Transforma linhas de vendas tiradas do arquivo para uma lista do tipo "Vendas".
-        public static List<Venda> VendasEmLinhasParaListaDeProdutos(string[] linhasDasVendas)
+        // Transforma linhas de vendas tiradas do arquivo para uma lista do tipo "Venda".
+        public static List<Venda> VendasEmLinhasParaListaDeVenda(string[] linhasDasVendas)
         {
             List<Venda> listaDeVendas = new List<Venda>();
 
@@ -82,35 +82,20 @@ namespace EstoqueOperacional
             return listaDeVendas;
         }
 
-        // Gera os dados do relatório "transfere".
-        public static List<DadosRelatorioTransfere> GerarDadosRelatorioTransfere(List<Venda> vendas, List<Produto> produtos)
+        public static List<VendaRelatorioTransfere> GerarVendasRelatorioTransfere(List<Venda> vendas, List<Produto> produtos)
         {
-            // Agrupa as vendas pelo código do produto onde a situação for "venda confirmada e com pagamento ok" ou "venda confirmada, mas com pagamento pendente".
-            var vendasConfirmadas = 
+            // Agrupa a soma das quantidades vendidas de cada produto
+            var somaQtdVendidasAgrupadas = 
                 from venda in vendas
                 where venda.situacao == 100 || venda.situacao == 102
-                group venda by venda.codProduto;
+                group venda by venda.codProduto into vendasConfirmadas
+                select new { codProduto = vendasConfirmadas.Key, qtdVendida = vendasConfirmadas.Sum(x => x.qtdVendida) };
 
-            var resumoVendas = new List<ResumoVendas>();
-            
-            // Coleta a soma das quantidades vendidas de cada produto e as coloca na lista "resumoVendas".
-            foreach(var vendaConfirmada in vendasConfirmadas)
-            {
-                resumoVendas.Add
-                (
-                    new ResumoVendas
-                    (
-                        vendaConfirmada.Key,
-                        vendaConfirmada.Sum(x => x.qtdVendida)
-                    )
-                );
-            }
-
-            // Gera os dados finais do relatório "transfere".
-            var relatorioTransfere = 
-                from venda in resumoVendas
+            // Gera as vendas do relatório "transfere".
+            var vendasRelatorioTransfere = 
+                from venda in somaQtdVendidasAgrupadas
                 join produto in produtos on venda.codProduto equals produto.codigo
-                select new DadosRelatorioTransfere
+                select new VendaRelatorioTransfere
                 (
                     produto.codigo,
                     produto.qtdEstoque,
@@ -121,11 +106,11 @@ namespace EstoqueOperacional
                     produto.qtdMinCO - (produto.qtdEstoque - venda.qtdVendida) > 10 ? produto.qtdMinCO - (produto.qtdEstoque - venda.qtdVendida) : produto.qtdMinCO - (produto.qtdEstoque - venda.qtdVendida) > 1 ? 10 : 0
                 );
 
-            return relatorioTransfere.ToList();
+            return vendasRelatorioTransfere.ToList();
         }
 
         // Cria o arquivo e coloca os dados do relatório "transfere".
-        public static void GerarRelatorioTransfere(List<DadosRelatorioTransfere> dadosRelatorioTransfere)
+        public static void GerarRelatorioTransfere(List<VendaRelatorioTransfere> vendasRelatorioTransfere)
         {
             if (File.Exists("./transfere"))
             {
@@ -136,7 +121,7 @@ namespace EstoqueOperacional
 
             File.AppendAllText("./transfere", "Produto\t\tQtCO\t\tQtMin\t\tQtVendas\tEstq. após Vendas\tNecessidade\t\tTransf. de Arm p/ CO\n");
             
-            foreach(var produto in dadosRelatorioTransfere)
+            foreach(var produto in vendasRelatorioTransfere)
             {
                 File.AppendAllText("./transfere", $"{produto.produto}\t\t{produto.qtCO}\t\t{produto.qtMin}\t\t{produto.qtVendas}\t\t{produto.estqAposVendas}\t\t\t{produto.necessidade}\t\t\t{produto.transArmzParaCO}\n");
             }
