@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EstoqueOperacional.Models;
-using EstoqueOperacional.Structs;
 
 namespace EstoqueOperacional
 {
@@ -18,10 +17,22 @@ namespace EstoqueOperacional
             List<Produto> produtos = ProdutosEmLinhasParaListaDeProdutos(File.ReadAllLines(args[1]));
 
             // Gera as vendas do relatório "transfere"
-            List<VendaRelatorioTransfere> vendasRelatorioTransfere = GerarVendasRelatorioTransfere(vendas, produtos);
+            List<VendaRelatorioTransfere> vendasRelatorioTransfere = GeraVendasRelatorioTransfere(vendas, produtos);
 
-            // Cria o arquivo e coloca os dados do relatório "transfere".
-            GerarRelatorioTransfere(vendasRelatorioTransfere);
+            int[] vendasCanceladas = GeraVendasCanceladas(vendas);
+
+            int[] vendasNaoFinalizadas = GeraVendasNaoFinalizadas(vendas);
+
+            // Coleta as vendas onde a propriedade "situacao" é igual a "999"
+            int[] vendasComErro = GeraVendasComErro(vendas);
+
+            List<(int linha, int codProduto)> vendasCodigoProdutoInexistente = GeraVendasCodigoProdutoInexistente(vendas, produtos, vendasCanceladas, vendasNaoFinalizadas, vendasComErro);
+
+            // Cria e coloca os dados do relatório "transfere"
+            GeraRelatorioTransfere(vendasRelatorioTransfere);
+
+            // Cria e coloca os dados do relatório "divergencias"
+            GeraRelatorioDivergencia(vendasCanceladas, vendasNaoFinalizadas, vendasComErro, vendasCodigoProdutoInexistente);
         }
 
         // Transforma linhas de produtos tiradas do arquivo para uma lista do tipo "Produto".
@@ -33,17 +44,12 @@ namespace EstoqueOperacional
             {
                 string[] dadosDoProduto = linhasDosProdutos[count].Split(";");
 
-                Produto produto = new Produto(
-                    int.Parse(
-                        dadosDoProduto[0]
-                    ),
-                    int.Parse(
-                        dadosDoProduto[1]
-                    ),
-                    int.Parse(
-                        dadosDoProduto[2]
-                    )
-                );
+                Produto produto = new Produto
+                    (
+                        int.Parse(dadosDoProduto[0]),
+                        int.Parse(dadosDoProduto[1]),
+                        int.Parse(dadosDoProduto[2])
+                    );
 
                 listaDeProdutos.Add(produto);
             }
@@ -60,21 +66,13 @@ namespace EstoqueOperacional
             {
                 string[] dadosDaVenda = linhasDasVendas[count].Split(";");
 
-                Venda venda = new Venda(
-                    int.Parse(
-                        dadosDaVenda[0]
-                    ),
-                    int.Parse(
-                        dadosDaVenda[1]
-                    ),
-                    int.Parse(
-                        dadosDaVenda[2]
-                    ),
-                    
-                    int.Parse(
-                        dadosDaVenda[3]
-                    )
-                );
+                Venda venda = new Venda
+                    (
+                        int.Parse(dadosDaVenda[0]),
+                        int.Parse(dadosDaVenda[1]),
+                        int.Parse(dadosDaVenda[2]),
+                        int.Parse(dadosDaVenda[3])
+                    );
 
                 listaDeVendas.Add(venda);
             }
@@ -82,7 +80,7 @@ namespace EstoqueOperacional
             return listaDeVendas;
         }
 
-        public static List<VendaRelatorioTransfere> GerarVendasRelatorioTransfere(List<Venda> vendas, List<Produto> produtos)
+        public static List<VendaRelatorioTransfere> GeraVendasRelatorioTransfere(List<Venda> vendas, List<Produto> produtos)
         {
             // Agrupa a soma das quantidades vendidas de cada produto
             var somaQtdVendidasAgrupadas = 
@@ -109,8 +107,37 @@ namespace EstoqueOperacional
             return vendasRelatorioTransfere.ToList();
         }
 
+        public static int[] GeraVendasCanceladas(List<Venda> vendas)
+        {
+            return (from venda in vendas where venda.situacao == 135 select vendas.IndexOf(venda) + 1).ToArray();
+        }
+
+        public static int[] GeraVendasNaoFinalizadas(List<Venda> vendas)
+        {
+            return (from venda in vendas where venda.situacao == 190 select vendas.IndexOf(venda) + 1).ToArray();
+        }
+
+        public static int[] GeraVendasComErro(List<Venda> vendas)
+        {
+            return (from venda in vendas where venda.situacao == 999 select vendas.IndexOf(venda) + 1).ToArray();
+        }
+
+        public static List<(int linha, int codProduto)> GeraVendasCodigoProdutoInexistente(List<Venda> vendas, List<Produto> produtos, int[] vendasCanceladas, int[] vendasNaoFinalizadas, int[] vendasComErro)
+        {
+            return
+            (
+                from venda in vendas
+                where !(from produto in produtos select produto.codigo).Contains(venda.codProduto)
+                where !vendasCanceladas.Contains(vendas.IndexOf(venda) + 1)
+                where !vendasNaoFinalizadas.Contains(vendas.IndexOf(venda) + 1)
+                where !vendasComErro.Contains(vendas.IndexOf(venda) + 1)
+                select (vendas.IndexOf(venda) + 1, venda.codProduto)
+            )
+            .ToList();
+        }
+
         // Cria o arquivo e coloca os dados do relatório "transfere".
-        public static void GerarRelatorioTransfere(List<VendaRelatorioTransfere> vendasRelatorioTransfere)
+        public static void GeraRelatorioTransfere(List<VendaRelatorioTransfere> vendasRelatorioTransfere)
         {
             if (File.Exists("./transfere"))
             {
@@ -124,6 +151,34 @@ namespace EstoqueOperacional
             foreach(var produto in vendasRelatorioTransfere)
             {
                 File.AppendAllText("./transfere", $"{produto.produto}\t\t{produto.qtCO}\t\t{produto.qtMin}\t\t{produto.qtVendas}\t\t{produto.estqAposVendas}\t\t\t{produto.necessidade}\t\t\t{produto.transArmzParaCO}\n");
+            }
+        }
+
+        public static void GeraRelatorioDivergencia(int[] vendasCanceladas, int[] vendasNaoFinalizadas, int[] vendasComErro, List<(int linha, int codProduto)> vendasCodigoProdutoInexistente)
+        {
+            if (File.Exists("./divergencias"))
+            {
+                File.Delete("./divergencias");
+            }
+
+            foreach(int linha in vendasCanceladas)
+            {
+                File.AppendAllText("./divergencias", $"Linha {linha} - Venda cancelada\n");
+            }
+
+            foreach(int linha in vendasNaoFinalizadas)
+            {
+                File.AppendAllText("./divergencias", $"Linha {linha} - Venda não finalizada\n");
+            }
+
+            foreach(int linha in vendasComErro)
+            {
+                File.AppendAllText("./divergencias", $"Linha {linha} - Erro desconhecido. Acionar equipe de TI\n");
+            }
+
+            foreach(var venda in vendasCodigoProdutoInexistente)
+            {
+                File.AppendAllText("./divergencias", $"Linha {venda.linha} - Código de Produto não encontrado {venda.codProduto}\n");
             }
         }
     }
