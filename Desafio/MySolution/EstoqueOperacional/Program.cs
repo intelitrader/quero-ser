@@ -28,11 +28,15 @@ namespace EstoqueOperacional
 
             List<(int linha, int codProduto)> vendasCodigoProdutoInexistente = GeraVendasCodigoProdutoInexistente(vendas, produtos, vendasCanceladas, vendasNaoFinalizadas, vendasComErro);
 
+            List<(int canal, int qtdVendida)> dadosRelatorioTotCanais = GeraDadosRelatorioTotCanais(vendas);
+
             // Cria e coloca os dados do relatório "transfere"
             GeraRelatorioTransfere(vendasRelatorioTransfere);
 
             // Cria e coloca os dados do relatório "divergencias"
             GeraRelatorioDivergencia(vendasCanceladas, vendasNaoFinalizadas, vendasComErro, vendasCodigoProdutoInexistente);
+
+            GeraRelatorioTotCanais(dadosRelatorioTotCanais);
         }
 
         // Transforma linhas de produtos tiradas do arquivo para uma lista do tipo "Produto".
@@ -136,49 +140,86 @@ namespace EstoqueOperacional
             .ToList();
         }
 
+        public static List<(int, int)> GeraDadosRelatorioTotCanais(List<Venda> vendas)
+        {
+            var dadosRelatorioTotCanais = (from venda in vendas where venda.situacao == 100 || venda.situacao == 102 group venda by venda.canal into vendasConfirmadas select (vendasConfirmadas.Key, vendasConfirmadas.Sum(x => x.qtdVendida))).ToList();
+            dadosRelatorioTotCanais.Sort();
+            return dadosRelatorioTotCanais;
+        }
+
         // Cria o arquivo e coloca os dados do relatório "transfere".
         public static void GeraRelatorioTransfere(List<VendaRelatorioTransfere> vendasRelatorioTransfere)
         {
-            if (File.Exists("./transfere"))
+            if (File.Exists("./transfere.txt"))
             {
-                File.Delete("./transfere");
+                File.Delete("./transfere.txt");
             }
 
-            File.AppendAllText("./transfere", "Necessidade de Transferência Armazém para CO\n\n");
+            File.AppendAllText("./transfere.txt", "Necessidade de Transferência Armazém para CO\n\n");
 
-            File.AppendAllText("./transfere", "Produto\t\tQtCO\t\tQtMin\t\tQtVendas\tEstq. após Vendas\tNecessidade\t\tTransf. de Arm p/ CO\n");
+            File.AppendAllText("./transfere.txt", "Produto\t\tQtCO\t\tQtMin\t\tQtVendas\tEstq. após Vendas\tNecessidade\t\tTransf. de Arm p/ CO\n");
             
             foreach(var produto in vendasRelatorioTransfere)
             {
-                File.AppendAllText("./transfere", $"{produto.produto}\t\t{produto.qtCO}\t\t{produto.qtMin}\t\t{produto.qtVendas}\t\t{produto.estqAposVendas}\t\t\t{produto.necessidade}\t\t\t{produto.transArmzParaCO}\n");
+                File.AppendAllText("./transfere.txt", $"{produto.produto}\t\t{produto.qtCO}\t\t{produto.qtMin}\t\t{produto.qtVendas}\t\t{produto.estqAposVendas}\t\t\t{produto.necessidade}\t\t\t{produto.transArmzParaCO}\n");
             }
         }
 
+        // Cria o arquivo e coloca os dados do relatório "divergencia".
         public static void GeraRelatorioDivergencia(int[] vendasCanceladas, int[] vendasNaoFinalizadas, int[] vendasComErro, List<(int linha, int codProduto)> vendasCodigoProdutoInexistente)
         {
-            if (File.Exists("./divergencias"))
+            if (File.Exists("./divergencias.txt"))
             {
-                File.Delete("./divergencias");
+                File.Delete("./divergencias.txt");
             }
 
             foreach(int linha in vendasCanceladas)
             {
-                File.AppendAllText("./divergencias", $"Linha {linha} - Venda cancelada\n");
+                File.AppendAllText("./divergencias.txt", $"Linha {linha} - Venda cancelada\n");
             }
 
             foreach(int linha in vendasNaoFinalizadas)
             {
-                File.AppendAllText("./divergencias", $"Linha {linha} - Venda não finalizada\n");
+                File.AppendAllText("./divergencias.txt", $"Linha {linha} - Venda não finalizada\n");
             }
 
             foreach(int linha in vendasComErro)
             {
-                File.AppendAllText("./divergencias", $"Linha {linha} - Erro desconhecido. Acionar equipe de TI\n");
+                File.AppendAllText("./divergencias.txt", $"Linha {linha} - Erro desconhecido. Acionar equipe de TI\n");
             }
 
             foreach(var venda in vendasCodigoProdutoInexistente)
             {
-                File.AppendAllText("./divergencias", $"Linha {venda.linha} - Código de Produto não encontrado {venda.codProduto}\n");
+                File.AppendAllText("./divergencias.txt", $"Linha {venda.linha} - Código de Produto não encontrado {venda.codProduto}\n");
+            }
+        }
+
+        public static void GeraRelatorioTotCanais(List<(int canal, int qtdVendida)> dadosRelatorioTotCanais)
+        {
+            if (File.Exists("./totcanais.txt"))
+            {
+                File.Delete("./totcanais.txt");
+            }
+
+            File.AppendAllText("./totcanais.txt", $"Quantidades de Vendas por canal\n\n");
+
+            foreach(var dados in dadosRelatorioTotCanais)
+            {
+                switch(dados.canal)
+                {
+                    case 1:
+                       File.AppendAllText("./totcanais.txt", $"{dados.canal} - Representantes\t\t{dados.qtdVendida}\n");
+                        break;
+                    case 2:
+                       File.AppendAllText("./totcanais.txt", $"{dados.canal} - Website\t\t\t{dados.qtdVendida}\n");
+                        break;
+                    case 3:
+                       File.AppendAllText("./totcanais.txt", $"{dados.canal} - App móvel Android\t\t{dados.qtdVendida}\n");
+                        break;
+                    case 4:
+                       File.AppendAllText("./totcanais.txt", $"{dados.canal} - App móvel iPhone\t\t{dados.qtdVendida}\n");
+                        break;
+                }
             }
         }
     }
