@@ -10,33 +10,45 @@ namespace EstoqueOperacional
     {
         static void Main(string[] args)
         {
-            // Coleta as linhas das vendas passadas no arquivo e transforma em uma lista do tipo "Venda"
-            List<Venda> vendas = VendasEmLinhasParaListaDeVenda(File.ReadAllLines(args[0]));
+            try
+            {
+                if(args.Count() < 2)
+                {
+                    throw new ArgumentException("Modo de usar: EstoqueOperacional <arquivo vendas> <arquivo produtos>\nExemplo: EstoqueOperacional.exe vendas.txt produtos.txt");
+                }
 
-            // Coleta as linhas dos produtos passados no arquivo e transforma em uma lista do tipo "Produto"
-            List<Produto> produtos = ProdutosEmLinhasParaListaDeProdutos(File.ReadAllLines(args[1]));
+                // Coleta as linhas das vendas passadas no arquivo e transforma em uma lista do tipo "Venda"
+                List<Venda> vendas = VendasEmLinhasParaListaDeVenda(File.ReadAllLines(args[0]));
 
-            // Gera as vendas do relatório "transfere"
-            List<VendaRelatorioTransfere> vendasRelatorioTransfere = GeraVendasRelatorioTransfere(vendas, produtos);
+                // Coleta as linhas dos produtos passados no arquivo e transforma em uma lista do tipo "Produto"
+                List<Produto> produtos = ProdutosEmLinhasParaListaDeProdutos(File.ReadAllLines(args[1]));
 
-            int[] vendasCanceladas = GeraVendasCanceladas(vendas);
+                // Gera as vendas do relatório "transfere"
+                List<VendaRelatorioTransfere> vendasRelatorioTransfere = GeraVendasRelatorioTransfere(vendas, produtos);
 
-            int[] vendasNaoFinalizadas = GeraVendasNaoFinalizadas(vendas);
+                int[] vendasCanceladas = GeraVendasCanceladas(vendas);
 
-            // Coleta as vendas onde a propriedade "situacao" é igual a "999"
-            int[] vendasComErro = GeraVendasComErro(vendas);
+                int[] vendasNaoFinalizadas = GeraVendasNaoFinalizadas(vendas);
 
-            List<(int linha, int codProduto)> vendasCodigoProdutoInexistente = GeraVendasCodigoProdutoInexistente(vendas, produtos, vendasCanceladas, vendasNaoFinalizadas, vendasComErro);
+                // Coleta as vendas onde a propriedade "situacao" é igual a "999"
+                int[] vendasComErro = GeraVendasComErro(vendas);
 
-            List<(int canal, int qtdVendida)> dadosRelatorioTotCanais = GeraDadosRelatorioTotCanais(vendas);
+                List<(int linha, int codProduto)> vendasCodigoProdutoInexistente = GeraVendasCodigoProdutoInexistente(vendas, produtos, vendasCanceladas, vendasNaoFinalizadas, vendasComErro);
 
-            // Cria e coloca os dados do relatório "transfere"
-            GeraRelatorioTransfere(vendasRelatorioTransfere);
+                List<(int canal, int qtdVendida)> dadosRelatorioTotCanais = GeraDadosRelatorioTotCanais(vendas);
 
-            // Cria e coloca os dados do relatório "divergencias"
-            GeraRelatorioDivergencia(vendasCanceladas, vendasNaoFinalizadas, vendasComErro, vendasCodigoProdutoInexistente);
+                // Cria e coloca os dados do relatório "transfere"
+                GeraRelatorioTransfere(vendasRelatorioTransfere);
 
-            GeraRelatorioTotCanais(dadosRelatorioTotCanais);
+                // Cria e coloca os dados do relatório "divergencias"
+                GeraRelatorioDivergencia(vendasCanceladas, vendasNaoFinalizadas, vendasComErro, vendasCodigoProdutoInexistente);
+
+                GeraRelatorioTotCanais(dadosRelatorioTotCanais);
+            }
+            catch(ArgumentException exp)
+            {
+                Console.WriteLine("Argumento informado de forma incorreta.\n\n" + exp.Message);
+            }
         }
 
         // Transforma linhas de produtos tiradas do arquivo para uma lista do tipo "Produto".
