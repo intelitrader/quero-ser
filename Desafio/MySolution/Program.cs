@@ -39,5 +39,20 @@ namespace MySolution
             return product;
         }
 
+        //Parsing string para sell.
+        static SellModel ParseToSell(string strSell)
+        {
+            int[] strList = Array.ConvertAll(strSell.Split(';'), int.Parse);
+
+            SellModel sell = new SellModel()
+            { 
+                Code = strList[0], 
+                Quantity = strList[1],
+                Status = (StatusModel)strList[2],
+                Channel = (ChannelModel)strList[3]
+            };
+
+            return sell;
+        }
     }
 }
