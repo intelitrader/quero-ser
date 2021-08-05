@@ -22,7 +22,38 @@ namespace MySolution
                 return;
             }
 
+            //Inicializando e populando vendas.
+            List<SellModel> sells = new ();
+			Task populateSellsTask = Task.Run(() => 
+            {
+                using (StreamReader streamReader = new StreamReader(argss[0]))
+		        {
+			        while (!streamReader.EndOfStream)
+			        {
+				    sells.Add(Program.ParseToSell(streamReader.ReadLine()));
+			        }
+		        }
+            }
+            );
+
+            //Inicializando e populando produtos.
+            List<ProductModel> products = new ();
+            Task populateProductsTask = Task.Run(() => 
+            {
+                using (StreamReader streamReader = new StreamReader(argss[1]))
+		        {
+			        while (!streamReader.EndOfStream)
+			        {
+				    products.Add(Program.ParseToProduct(streamReader.ReadLine()));
+			        }
+		        }
+            }
+            );
+            
+            Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
+
         }
+
 
         //Parsing string para produto.
         static ProductModel ParseToProduct(string strProduct)
