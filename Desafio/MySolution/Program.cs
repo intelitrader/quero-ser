@@ -50,16 +50,20 @@ namespace MySolution
             }
             );
             
+            //Thread aguardando listas serem poluladas.
             Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
 
-            //Gerando relatorios.
-            WriteTransfersReport(products, sells);
-            WriteDivergencesReport(products, sells);
+            //Guardando produtos vendidos.
+            var qtSold = GetQtSold(sells);
 
+            //Gerando relatorios.
+            WriteTransfersReport(products, qtSold);
+            WriteDivergencesReport(products, sells);
+            WritePerChannelReport(products, qtSold);
         }
 
         //Escrevendo arquivo relatorio de divergencias.
-        static void WriteDivergencesReport(List<ProductModel> products, List<SellModel> sells)
+        private static void WriteDivergencesReport(List<ProductModel> products, List<SellModel> sells)
         {
             using(StreamWriter streamWriter = new StreamWriter("DIVERGENCIAS.txt"))
             {
@@ -85,8 +89,26 @@ namespace MySolution
             }
         }
 
+        //Escrevendo arquivo relatorio de canais.
+        private static void WritePerChannelReport(List<ProductModel> products, IEnumerable<SellModel> sold)
+        {
+            using(StreamWriter streamWriter = new StreamWriter("TOTCANAIS.txt"))
+            {
+                streamWriter.WriteLine("Quantidades de Vendas por canal\n");
+
+                streamWriter.WriteLine("1 - Representantes\t\t\t{0}",
+                GetQtSoldByChannel(ChannelModel.CommercialRepresentative, sold));
+                streamWriter.WriteLine("2 - Website\t\t\t{0}",
+                GetQtSoldByChannel(ChannelModel.Website, sold));
+                streamWriter.WriteLine("3 - App móvel Android\t\t{0}",
+                GetQtSoldByChannel(ChannelModel.AndroidApp, sold));
+                streamWriter.WriteLine("4 - App móvel iPhone\t\t{0}",
+                GetQtSoldByChannel(ChannelModel.IphoneApp, sold));
+            }
+        }
+
         //Escrevendo arquivo relatorio de transferencias.
-        static void WriteTransfersReport(List<ProductModel> products, List<SellModel> sells)
+        private static void WriteTransfersReport(List<ProductModel> products, IEnumerable<SellModel> sold)
         {
 
             using(StreamWriter streamWriter = new StreamWriter("TRANSFERE.txt"))
@@ -109,7 +131,7 @@ namespace MySolution
                 productCode = products[i].Code;
                 qtCO = products[i].Quantity;
                 qtMin = products[i].MinRequiredQuantity;
-                qtSold = GetQtSoldByCode(products[i].Code, sells);
+                qtSold = GetQtSoldByCode(products[i].Code, sold);
                 qtStockAfterSell = products[i].Quantity - qtSold;
                 qtRepoRequired = products[i].MinRequiredQuantity - qtStockAfterSell;
 
@@ -129,16 +151,31 @@ namespace MySolution
 
         }
 
-        //Somando quantidade vendida por produto.
-        static int GetQtSoldByCode(int code, List<SellModel> sells)
+        //Somando quantidade vendida.
+        public static IEnumerable<SellModel> GetQtSold(List<SellModel> sells)
         {
             return sells
-            .Where(x=> x.Code == code && x.Status <= (StatusModel)102)
+            .Where(x=> x.Status <= (StatusModel)102);
+        }
+
+        //Somando quantidade vendida por produto.
+        private static int GetQtSoldByCode(int code, IEnumerable<SellModel> sold)
+        {
+            return sold
+            .Where(x=> x.Code == code )
+            .Sum(x => x.Quantity);
+        }
+
+        //Somando quantidade vendida por canal de venda.
+        private static int GetQtSoldByChannel(ChannelModel channel, IEnumerable<SellModel> sold)
+        {
+            return sold
+            .Where(x=> x.Channel == channel)
             .Sum(x => x.Quantity);
         }
 
         //Parsing string para produto.
-        static ProductModel ParseToProduct(string strProduct)
+        private static ProductModel ParseToProduct(string strProduct)
         {
             int[] strList = Array.ConvertAll(strProduct.Split(';'), int.Parse);
 
@@ -153,18 +190,16 @@ namespace MySolution
         }
 
         //Parsing string para sell.
-        static SellModel ParseToSell(string strSell)
+        private static SellModel ParseToSell(string strSell)
         {
             int[] strList = Array.ConvertAll(strSell.Split(';'), int.Parse);
 
-            SellModel sell = new SellModel()
-            { 
-                Code = strList[0], 
-                Quantity = strList[1],
-                Status = (StatusModel)strList[2],
-                Channel = (ChannelModel)strList[3]
-            };
-
+            SellModel sell = new SellModel(
+                code:       strList[0],
+                quantity:   strList[1],
+                status:     (StatusModel)strList[2],
+                channel:    (ChannelModel)strList[3]
+            );
             return sell;
         }
     }
