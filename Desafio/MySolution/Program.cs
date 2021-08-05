@@ -11,14 +11,12 @@ namespace MySolution
     {
         static void Main(string[] args)
         {
-            string[] argss = new string[]{
-                @"C:\Users\dev\Documents\GitHub\quero-ser\Desafio\MySolution\bin\Debug\net5.0\c1_vendas.txt",
-                @"C:\Users\dev\Documents\GitHub\quero-ser\Desafio\MySolution\bin\Debug\net5.0\c1_produtos.txt"};
-            
-            if(argss.Length != 2)
+            //Checando input.
+            if(args.Length != 2)
             {
                 Console.WriteLine("Modo de usar:");
                 Console.WriteLine("mysolution.exe vendas.txt produtos.txt");
+                Console.WriteLine("dotnet run vendas.txt produtos.txt");
                 return;
             }
 
@@ -26,7 +24,7 @@ namespace MySolution
             List<SellModel> sells = new ();
 			Task populateSellsTask = Task.Run(() => 
             {
-                using (StreamReader streamReader = new StreamReader(argss[0]))
+                using (StreamReader streamReader = new StreamReader(args[0]))
 		        {
 			        while (!streamReader.EndOfStream)
 			        {
@@ -40,7 +38,7 @@ namespace MySolution
             List<ProductModel> products = new ();
             Task populateProductsTask = Task.Run(() => 
             {
-                using (StreamReader streamReader = new StreamReader(argss[1]))
+                using (StreamReader streamReader = new StreamReader(args[1]))
 		        {
 			        while (!streamReader.EndOfStream)
 			        {
@@ -50,11 +48,11 @@ namespace MySolution
             }
             );
             
-            //Thread aguardando listas serem poluladas.
+            //Thread aguardando listas serem populadas.
             Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
 
-            //Guardando produtos vendidos.
-            var qtSold = GetQtSold(sells);
+            //Buscando vendas concluidas.
+            IEnumerable<SellModel> qtSold = GetQtSold(sells);
 
             //Gerando relatorios.
             WriteTransfersReport(products, qtSold);
@@ -95,14 +93,15 @@ namespace MySolution
             using(StreamWriter streamWriter = new StreamWriter("TOTCANAIS.txt"))
             {
                 streamWriter.WriteLine("Quantidades de Vendas por canal\n");
+                streamWriter.WriteLine("Canal\t\t\tQtVendas");
 
-                streamWriter.WriteLine("1 - Representantes\t\t\t{0}",
+                streamWriter.WriteLine("1 - Representantes\t\t{0}",
                 GetQtSoldByChannel(ChannelModel.CommercialRepresentative, sold));
-                streamWriter.WriteLine("2 - Website\t\t\t{0}",
+                streamWriter.WriteLine("2 - Website\t\t{0}",
                 GetQtSoldByChannel(ChannelModel.Website, sold));
-                streamWriter.WriteLine("3 - App móvel Android\t\t{0}",
+                streamWriter.WriteLine("3 - App móvel Android\t{0}",
                 GetQtSoldByChannel(ChannelModel.AndroidApp, sold));
-                streamWriter.WriteLine("4 - App móvel iPhone\t\t{0}",
+                streamWriter.WriteLine("4 - App móvel iPhone\t{0}",
                 GetQtSoldByChannel(ChannelModel.IphoneApp, sold));
             }
         }
@@ -121,37 +120,34 @@ namespace MySolution
                     qtRepoRequired,
                     qtTransferRequired;
 
-                streamWriter.Write($"Necessidade de Transferência Armazém para CO\n\n" + 
-                "Produto\tQtCO\tQtMin\tQtVendas\tEstq.após\tNecess.\tTransf. de\n" +
-                "\t\t\t\t\tVendas\t\t\tArm p/ CO\n");
+                    streamWriter.Write($"Necessidade de Transferência Armazém para CO\n\n" + 
+                    "Produto\tQtCO\tQtMin\tQtVendas\tEstq.após\tNecess.\tTransf. de\n" +
+                    "\t\t\t\t\tVendas\t\t\tArm p/ CO\n");
 
-            for (int i = 0; i < products.Count; i++)
-            {
+                for (int i = 0; i < products.Count; i++)
+                {
+                    productCode = products[i].Code;
+                    qtCO = products[i].Quantity;
+                    qtMin = products[i].MinRequiredQuantity;
+                    qtSold = GetQtSoldByCode(products[i].Code, sold);
+                    qtStockAfterSell = products[i].Quantity - qtSold;
+                    qtRepoRequired = products[i].MinRequiredQuantity - qtStockAfterSell;
 
-                productCode = products[i].Code;
-                qtCO = products[i].Quantity;
-                qtMin = products[i].MinRequiredQuantity;
-                qtSold = GetQtSoldByCode(products[i].Code, sold);
-                qtStockAfterSell = products[i].Quantity - qtSold;
-                qtRepoRequired = products[i].MinRequiredQuantity - qtStockAfterSell;
+                    if(qtRepoRequired < 0) qtRepoRequired = 0;
+                    qtTransferRequired = qtRepoRequired;
 
-                if(qtRepoRequired < 0) qtRepoRequired = 0;
-                qtTransferRequired = qtRepoRequired;
+                    if(qtTransferRequired < 10 && qtTransferRequired != 0)
+                    qtTransferRequired = 10;
 
-                if(qtTransferRequired < 10 && qtTransferRequired != 0)
-                qtTransferRequired = 10;
-
-                streamWriter.WriteLine(
-                    "{0}\t{1}\t{2}\t{3}\t\t{4}\t\t{5}\t{6}", 
-                    productCode,qtCO,qtMin,qtSold,qtStockAfterSell,qtRepoRequired,qtTransferRequired
-                );
+                    streamWriter.WriteLine(
+                        "{0}\t{1}\t{2}\t{3}\t\t{4}\t\t{5}\t{6}", 
+                        productCode,qtCO,qtMin,qtSold,qtStockAfterSell,qtRepoRequired,qtTransferRequired
+                    );
+                }
             }
-
-            }
-
         }
 
-        //Somando quantidade vendida.
+        //Retornando vendas concluidas.
         public static IEnumerable<SellModel> GetQtSold(List<SellModel> sells)
         {
             return sells
@@ -185,7 +181,6 @@ namespace MySolution
                 quantity: strList[1],
                 minRequiredQuantity: strList[2]
             );
-
             return product;
         }
 
