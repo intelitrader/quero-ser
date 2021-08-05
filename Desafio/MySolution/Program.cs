@@ -52,6 +52,58 @@ namespace MySolution
             
             Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
 
+            WriteTransfers(products, sells);
+
+        }
+
+        //Escrevendo arquivo relatorio de vendas confirmadas.
+        static void WriteTransfers(List<ProductModel> products, List<SellModel> sells)
+        {
+
+            using(StreamWriter streamWriter = new StreamWriter("transfere.txt"))
+            {
+                int productCode;
+                int qtCO;
+                int qtMin;
+                int qtSold;
+                int qtStockAfterSell;
+                int qtRepoRequired;
+                int qtTransferRequired;
+
+            streamWriter.Write(
+                $"Necessidade de Transferência Armazém para CO\n\n" + 
+                "Produto\tQtCO\tQtMin\tQtVendas\tEstq.após\tNecess.\tTransf. de\n" +
+                "\t\t\t\t\tVendas\t\t\tArm p/ CO\n");
+
+            for (int i = 0; i < products.Count; i++)
+            {
+
+                productCode = products[i].Code;
+                qtCO = products[i].Quantity;
+                qtMin = products[i].MinRequiredQuantity;
+                qtSold = GetQtSoldByCode(products[i].Code, sells);
+                qtStockAfterSell = products[i].Quantity - qtSold;
+                qtRepoRequired = products[i].MinRequiredQuantity - qtStockAfterSell;
+
+                if(qtRepoRequired < 0) qtRepoRequired = 0;
+                qtTransferRequired = qtRepoRequired;
+
+                if(qtTransferRequired < 10 && qtTransferRequired != 0)
+                qtTransferRequired = 10;
+
+                streamWriter.WriteLine(
+                    "{0}\t{1}\t{2}\t{3}\t\t{4}\t\t{5}\t{6}", productCode,
+                                                             qtCO,
+                                                             qtMin,
+                                                             qtSold,
+                                                             qtStockAfterSell,
+                                                             qtRepoRequired,
+                                                             qtTransferRequired
+                );
+            }
+
+            }
+
         }
 
         //Somando quantidade vendida por produto.
