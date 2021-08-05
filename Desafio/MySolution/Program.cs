@@ -52,26 +52,54 @@ namespace MySolution
             
             Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
 
+            //Gerando relatorios.
             WriteTransfersReport(products, sells);
+            WriteDivergencesReport(products, sells);
 
         }
 
-        //Escrevendo arquivo relatorio de vendas confirmadas.
+        //Escrevendo arquivo relatorio de divergencias.
+        static void WriteDivergencesReport(List<ProductModel> products, List<SellModel> sells)
+        {
+            using(StreamWriter streamWriter = new StreamWriter("DIVERGENCIAS.txt"))
+            {
+                int i = 1;
+
+                foreach(SellModel sell in sells)
+                {
+
+                    if(sell.Status == (StatusModel)135)
+                    streamWriter.WriteLine($"Linha {i} – Venda cancelada");
+
+                    else if(sell.Status == (StatusModel)190)
+                    streamWriter.WriteLine($"Linha {i} – Venda não finalizada");
+
+                    else if(sell.Status == (StatusModel)999)
+                    streamWriter.WriteLine($"Linha {i} – Erro desconhecido. Acionar equipe de TI");
+                    
+                    else if(!products.Select(x => x).Where(x => x.Code == sell.Code).Any())
+                    streamWriter.WriteLine($"Linha {i} – Código de Produto não encontrado {sell.Code}");
+
+                    i++;
+                }
+            }
+        }
+
+        //Escrevendo arquivo relatorio de transferencias.
         static void WriteTransfersReport(List<ProductModel> products, List<SellModel> sells)
         {
 
-            using(StreamWriter streamWriter = new StreamWriter("transfere.txt"))
+            using(StreamWriter streamWriter = new StreamWriter("TRANSFERE.txt"))
             {
-                int productCode;
-                int qtCO;
-                int qtMin;
-                int qtSold;
-                int qtStockAfterSell;
-                int qtRepoRequired;
-                int qtTransferRequired;
+                int productCode,
+                    qtCO,
+                    qtMin,
+                    qtSold,
+                    qtStockAfterSell,
+                    qtRepoRequired,
+                    qtTransferRequired;
 
-            streamWriter.Write(
-                $"Necessidade de Transferência Armazém para CO\n\n" + 
+                streamWriter.Write($"Necessidade de Transferência Armazém para CO\n\n" + 
                 "Produto\tQtCO\tQtMin\tQtVendas\tEstq.após\tNecess.\tTransf. de\n" +
                 "\t\t\t\t\tVendas\t\t\tArm p/ CO\n");
 
@@ -92,13 +120,8 @@ namespace MySolution
                 qtTransferRequired = 10;
 
                 streamWriter.WriteLine(
-                    "{0}\t{1}\t{2}\t{3}\t\t{4}\t\t{5}\t{6}", productCode,
-                                                             qtCO,
-                                                             qtMin,
-                                                             qtSold,
-                                                             qtStockAfterSell,
-                                                             qtRepoRequired,
-                                                             qtTransferRequired
+                    "{0}\t{1}\t{2}\t{3}\t\t{4}\t\t{5}\t{6}", 
+                    productCode,qtCO,qtMin,qtSold,qtStockAfterSell,qtRepoRequired,qtTransferRequired
                 );
             }
 
