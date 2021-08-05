@@ -54,6 +54,13 @@ namespace MySolution
 
         }
 
+        //Somando quantidade vendida por produto.
+        static int GetQtSoldByCode(int code, List<SellModel> sells)
+        {
+            return sells
+            .Where(x=> x.Code == code && x.Status <= (StatusModel)102)
+            .Sum(x => x.Quantity);
+        }
 
         //Parsing string para produto.
         static ProductModel ParseToProduct(string strProduct)
