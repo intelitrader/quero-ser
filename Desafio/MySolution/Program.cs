@@ -9,8 +9,6 @@ namespace MySolution
 {
     class Program
     {
-        public static List<SellModel> sells = new ();
-        public static List<SellModel> products = new ();
         static void Main(string[] args)
         {
             string[] argss = new string[]{
@@ -25,6 +23,21 @@ namespace MySolution
             }
 
         }
+
+        //Parsing string para produto.
+        static ProductModel ParseToProduct(string strProduct)
+        {
+            int[] strList = Array.ConvertAll(strProduct.Split(';'), int.Parse);
+
+            ProductModel product = new ProductModel
+            (
+                code: (int)strList[0], 
+                quantity: strList[1],
+                minRequiredQuantity: strList[2]
+            );
+
+            return product;
+        }
+
     }
-        
 }
