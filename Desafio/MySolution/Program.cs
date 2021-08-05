@@ -52,12 +52,12 @@ namespace MySolution
             
             Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
 
-            WriteTransfers(products, sells);
+            WriteTransfersReport(products, sells);
 
         }
 
         //Escrevendo arquivo relatorio de vendas confirmadas.
-        static void WriteTransfers(List<ProductModel> products, List<SellModel> sells)
+        static void WriteTransfersReport(List<ProductModel> products, List<SellModel> sells)
         {
 
             using(StreamWriter streamWriter = new StreamWriter("transfere.txt"))
