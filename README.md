@@ -47,6 +47,7 @@ Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
 3. Acesse a pasta Desafio e resolva o desafio proposto
 4. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
 5. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
+6. Boa noite,estou envaindo o Pull requests,referente ao exercício do Dojo Puzzles,Fizz Buzz.
 
 ## [Condições](id:CondicoesEDiferenciais)
 
