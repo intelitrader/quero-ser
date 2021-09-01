@@ -36,15 +36,15 @@ namespace MySolution
         }
 
         //Lendo arquivo de vendas e populando lista.
-        public static List<Sell> ReadSells(string sellsPath)
+        public static List<SellModel> ReadSells(string sellsPath)
         {
             StreamReader sr = new StreamReader(sellsPath);
-            List<Sell> sells = new ();
+            List<SellModel> sells = new ();
 
             while (!sr.EndOfStream)
             {
                 Span<int> line = sr.ReadLine().Split(';').Select(int.Parse).ToArray();
-                Sell sell = new Sell
+                SellModel sell = new SellModel
                 (
                 prodCode: (uint)line[0],
                 soldQt: line[1],
