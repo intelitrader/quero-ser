@@ -20,20 +20,6 @@ namespace MySolution
                 return;
             }
 
-            //Inicializando e populando vendas.
-            List<SellModel> sells = new ();
-			Task populateSellsTask = Task.Run(() => 
-            {
-                using (StreamReader streamReader = new StreamReader(args[0]))
-		        {
-			        while (!streamReader.EndOfStream)
-			        {
-				    sells.Add(Program.ParseToSell(streamReader.ReadLine()));
-			        }
-		        }
-            }
-            );
-
             //Inicializando e populando produtos.
             List<ProductModel> products = new ();
             Task populateProductsTask = Task.Run(() => 
@@ -58,6 +44,27 @@ namespace MySolution
             WriteTransfersReport(products, qtSold);
             WriteDivergencesReport(products, sells);
             WritePerChannelReport(products, qtSold);
+        }
+
+        //Lendo arquivo de vendas e populando lista.
+        public static List<Sell> ReadSells(string sellPath)
+        {
+            StreamReader sr = new StreamReader(sellPath);
+            List<Sell> sells = new ();
+
+            while (!sr.EndOfStream)
+            {
+                Span<int> line = sr.ReadLine().Split(';').Select(int.Parse).ToArray();
+                Sell sell = new Sell
+                (
+                prodCode: (uint)line[0],
+                soldQt: line[1],
+                status: line[2],
+                channel: line[3]
+                );
+                sells.Add(sell);
+            }
+            return sells;
         }
 
         //Escrevendo arquivo relatorio de divergencias.
