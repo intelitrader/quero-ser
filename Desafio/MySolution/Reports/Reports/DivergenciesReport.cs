@@ -7,7 +7,7 @@ namespace MySolution.Models
 {
     static class DivergenciesReport
     {
-        public static void Save(IEnumerable<SellModel> sells, IEnumerable<ProductModel> products)
+        public static void Save(List<SellModel> sells, List<ProductModel> products)
         {
             
             StringBuilder sb = new StringBuilder();
@@ -40,7 +40,6 @@ namespace MySolution.Models
             File.WriteAllText("DIVERGENCIAS.txt", content);
             
         }
-        
-        
+
     }
 }
