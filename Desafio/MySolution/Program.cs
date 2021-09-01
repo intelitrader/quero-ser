@@ -57,15 +57,15 @@ namespace MySolution
         }
 
         //Lendo arquivo de produtos e populando lista.
-        public static List<Product> ReadProducts(string productsPath)
+        public static List<ProductModel> ReadProducts(string productsPath)
         {
             StreamReader sr = new StreamReader(productsPath);
-            List<Product> products = new ();
+            List<ProductModel> products = new ();
 
             while (!sr.EndOfStream)
             {
                 Span<int> line = sr.ReadLine().Split(';').Select(int.Parse).ToArray();
-                Product product = new Product
+                ProductModel product = new ProductModel
                 (
                 prodCode: (uint)line[0],
                 initialQt: line[1],
