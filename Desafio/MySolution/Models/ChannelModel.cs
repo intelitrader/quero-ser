@@ -2,24 +2,24 @@ namespace MySolution.Models
 {
     public enum ChannelModel
     {
-        CommercialRepresentative = 1,
-        Website,
-        AndroidApp,
-        IphoneApp
+            Representative = 1,
+            Website = 2,
+            Android = 3,
+            Iphone = 4,
     }
     public static class ChannelExtensions
     {
-    public static string ToFriendlyString(this Channel channel)
+    public static string ToFriendlyString(this ChannelModel channel)
         {
             switch(channel)
             {
-                case Channel.Representative:
+                case ChannelModel.Representative:
                     return "Representantes";
-                case Channel.Website:
+                case ChannelModel.Website:
                     return "Website";
-                case Channel.Android:
+                case ChannelModel.Android:
                     return "App móvel Android";
-                case Channel.Iphone:
+                case ChannelModel.Iphone:
                     return "App móvel iPhone";
                 default:
                     return "";
