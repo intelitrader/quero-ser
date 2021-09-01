@@ -47,9 +47,9 @@ namespace MySolution
         }
 
         //Lendo arquivo de vendas e populando lista.
-        public static List<Sell> ReadSells(string sellPath)
+        public static List<Sell> ReadSells(string sellsPath)
         {
-            StreamReader sr = new StreamReader(sellPath);
+            StreamReader sr = new StreamReader(sellsPath);
             List<Sell> sells = new ();
 
             while (!sr.EndOfStream)
@@ -65,6 +65,26 @@ namespace MySolution
                 sells.Add(sell);
             }
             return sells;
+        }
+
+        //Lendo arquivo de produtos e populando lista.
+        public static List<Product> ReadProducts(string productsPath)
+        {
+            StreamReader sr = new StreamReader(productsPath);
+            List<Product> products = new ();
+
+            while (!sr.EndOfStream)
+            {
+                Span<int> line = sr.ReadLine().Split(';').Select(int.Parse).ToArray();
+                Product product = new Product
+                (
+                prodCode: (uint)line[0],
+                initialQt: line[1],
+                minimunQt: line[2]
+                );
+                products.Add(product);
+            }
+            return products;
         }
 
         //Escrevendo arquivo relatorio de divergencias.
