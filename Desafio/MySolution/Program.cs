@@ -20,30 +20,19 @@ namespace MySolution
                 return;
             }
 
-            //Inicializando e populando produtos.
-            List<ProductModel> products = new ();
-            Task populateProductsTask = Task.Run(() => 
-            {
-                using (StreamReader streamReader = new StreamReader(args[1]))
-		        {
-			        while (!streamReader.EndOfStream)
-			        {
-				    products.Add(Program.ParseToProduct(streamReader.ReadLine()));
-			        }
-		        }
-            }
-            );
-            
-            //Thread aguardando listas serem populadas.
-            Task.WaitAll(new Task[] {populateSellsTask, populateProductsTask});
+            //Iniciando tasks de leitura.
+            var s = Task.Run(() => ReadSells(args[0]));
+            var p = Task.Run(() => ReadProducts(args[1]));
 
-            //Buscando vendas concluidas.
-            IEnumerable<SellModel> qtSold = GetQtSold(sells);
+            //Populando vendas e produtos.
+            List<SellModel> sells = s.Result;
+            List<ProductModel> products = p.Result;
 
-            //Gerando relatorios.
-            WriteTransfersReport(products, qtSold);
-            WriteDivergencesReport(products, sells);
-            WritePerChannelReport(products, qtSold);
+            //Chamando metodos pra gerar relatorios.
+            TransfersReport.Save(sells, products);
+            DivergenciesReport.Save(sells, products);
+            TotalChannelsReport.Save(sells);
+
         }
 
         //Lendo arquivo de vendas e populando lista.
