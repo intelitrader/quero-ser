@@ -9,7 +9,7 @@ namespace MySolution.Models
             this.Status = (StatusModel)status;
             this.Channel = (ChannelModel)channel;
 
-            if (this.Status == Status.Completed || this.Status == Status.PaymentPending)
+            if (this.Status == StatusModel.Completed || this.Status == StatusModel.PaymentPending)
             {
                 ////Total by ProdCode
                 ProductModel.SetTotalSoldByProdCode(this.ProdCode, soldQt);
