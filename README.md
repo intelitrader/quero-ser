@@ -17,6 +17,10 @@ Nossa sede é em São Paulo mas todo mundo é home office com horário flexível
 
 Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
 
+Temos horário flexível, você pode trabalhar na hora que for melhor para você. Estuda à tarde? Sem problemas. Vai pra academia todo dia 11:00? Ótimo, continue com sua rotina.
+
+O tempo gasto com a Intelitrader também é flexível. Você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é se você entrega código de qualidade e gosta de programar, aprender e estudar.
+
 ## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
 
 Não nos importamos com formação. 
@@ -30,7 +34,7 @@ O que nos interessa é:
 * Você gosta de aprender?
 * Você sabe que na área de programação você precisa aprender sempre, o tempo todo, todo dia?
 
-Nós te ajudamos guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e disposição para estudar.
+Nós te ajudamos ensinando e guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e ter disposição para estudar.
 
 ## [Como me candidato?](id:ComoMeCandidato)
 
