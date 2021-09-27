@@ -121,7 +121,8 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
     int Success = 1;
     
     // Parse the products buffer and build products table
-    for (int i = 0; i <= FileSize; i++)
+    int i = 0;
+    while (i <= FileSize)
     {
         char c0 = FileBuffer[i];
         char c1 = FileBuffer[i + 1];
@@ -159,7 +160,8 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
         else if ((c0 == '\r') && (c1 == '\n'))
         {
             // EOL is the third delimiter
-            FileBuffer[i++] = '\0';
+            FileBuffer[i] = '\0';
+	    i += 2;
             
             MinimumQuantity = atoi(BeginStr);
             BeginStr = &FileBuffer[i];
@@ -186,16 +188,14 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
             
             ProductCount++;
             
-            // reset all to 0
             ProductId = 0;
             Quantity = 0;
             MinimumQuantity = 0;
-            
         }
         // Unix EOL
         else if (c0 == '\n')
         {
-            FileBuffer[i] = '\0';
+            FileBuffer[i++] = '\0';
             MinimumQuantity = atoi(BeginStr);
             BeginStr = &FileBuffer[i];
             
@@ -220,8 +220,6 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
             Products[ProductCount].SalesQuantity = 0;
             
             ProductCount++;
-            
-            // reset all to 0
             ProductId = 0;
             Quantity = 0;
             MinimumQuantity = 0;
@@ -243,9 +241,13 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
             }
             BeginStr = &FileBuffer[i];
         }
+	else
+	{
+	    i++;
+	}
     }
     
-    printf("%s\n", Success ? "SUCESSO" : "FALHA");
+    printf("%s - %d produtos encontrados\n", Success ? "SUCESSO" : "FALHA", ProductCount);
     
     ProductList.Count = ProductCount;
     ProductList.Capacity = ProductCapacity;
@@ -365,7 +367,8 @@ int main(int argc, char **argv)
     printf("Gerando Arquivo de Divergencias.\n");
     
     // parse the vendas buffer and search and update the products table
-    for (int i = 0; i <= VendasFilesize; i++)
+    int i = 0;
+    while (i <= VendasFilesize)
     {
         char c0 = VendasBuffer[i];
         char c1 = VendasBuffer[i + 1];
@@ -397,7 +400,8 @@ int main(int argc, char **argv)
         else if ((c0 == '\r') && (c1 == '\n'))
         {
             // EOL is the  delimiter
-            VendasBuffer[i++] = '\0';
+            VendasBuffer[i] = '\0';
+	    i += 2;
             
             SalePlatform = atoi(BeginStr);
             BeginStr = &VendasBuffer[i];
@@ -422,7 +426,6 @@ int main(int argc, char **argv)
             QuantitySold = 0;
             SaleStatus = 0;
             SalePlatform = 0;
-            
             CurrentLine++;
         }
         
@@ -430,7 +433,7 @@ int main(int argc, char **argv)
         else if (c0 == '\n')
         {
             // EOL is the  delimiter
-            VendasBuffer[i] = '\0';
+            VendasBuffer[i++] = '\0';
             
             SalePlatform = atoi(BeginStr);
             
@@ -456,7 +459,6 @@ int main(int argc, char **argv)
             QuantitySold = 0;
             SaleStatus = 0;
             SalePlatform = 0;
-            
             CurrentLine++;
         }
         // delimiter
@@ -481,6 +483,10 @@ int main(int argc, char **argv)
             }
             BeginStr = &VendasBuffer[i];
         }
+	else
+	{
+	    i++;
+	}
     }
     
     fclose(DivergenciasFile);
@@ -547,7 +553,7 @@ int main(int argc, char **argv)
     fprintf(TotalCanalFile,  "1 - Representantes          %5d\n", ProductList.OrdersPerson);
     fprintf(TotalCanalFile,  "2 - Website                 %5d\n", ProductList.OrdersWeb);
     fprintf(TotalCanalFile,  "3 - App móvel Android       %5d\n", ProductList.OrdersAndroid);
-    fprintf(TotalCanalFile,  "4 - App móvel iPhone        %5d",   ProductList.OrdersIOS);
+    fprintf(TotalCanalFile,  "4 - App móvel iPhone        %5d\n",   ProductList.OrdersIOS);
     
     return 0;
 }
