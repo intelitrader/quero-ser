@@ -340,8 +340,10 @@ int main(int argc, char **argv)
     
     OrdersBuffer[OrdersFilesize] = '\0';
     
-    // Build the products table 
     fread(ProductsBuffer, 1, ProductsFilesize, ProductsFileHandle);
+    fclose(ProductsFileHandle);
+    
+    // Build the products table 
     ProductTable ProductList = BuildProductList(ProductsBuffer, ProductsFilesize);
     
     int ProductId = 0;
@@ -352,6 +354,8 @@ int main(int argc, char **argv)
     
     // parse the orders buffer and search and update the products table
     fread(OrdersBuffer, 1, OrdersFilesize, OrdersFileHandle);
+    fclose(OrdersFileHandle);
+    
     char *BeginStr = &OrdersBuffer[0];
     
     FILE *DivergenciasFile = fopen("divergencias.txt", "w");
@@ -488,8 +492,8 @@ int main(int argc, char **argv)
     fclose(DivergenciasFile);
     
     // Log Total of orders across platforms
-    FILE *TranfereFile = fopen("transfere.txt", "w");
-    if (!TranfereFile)
+    FILE *TransfereFile = fopen("transfere.txt", "w");
+    if (!TransfereFile)
     {
         printf("Erro: Falha na criação de arquivo transfere.txt\n");
         return 1;
@@ -497,11 +501,11 @@ int main(int argc, char **argv)
     
     printf("Gerando tranferencias\n");
     
-    fprintf(TranfereFile, "Necessidade de Transferência Armazém para CO\n\n");
+    fprintf(TransfereFile, "Necessidade de Transferência Armazém para CO\n\n");
     
-    fprintf(TranfereFile,
+    fprintf(TransfereFile,
             "Produto    QtCO    QtMin    QtVendas    Estq.após    Necess.    Transf. de\n");
-    fprintf(TranfereFile,
+    fprintf(TransfereFile,
             "                                                     Vendas     Arm p/ CO\n");
     
     for (int i = 0; i < ProductList.Count; i++)
@@ -529,10 +533,12 @@ int main(int argc, char **argv)
             TransferToOP = 10;
         }
         
-        fprintf(TranfereFile,
+        fprintf(TransfereFile,
                 "%5d     %5d    %5d       %5d        %5d      %5d        %5d\n",
                 Id, QtCO, QtMin, QtVendas, EstAposVendas, TransferQuantity, TransferToOP);
     }
+    
+    fclose(TransfereFile);
     
     // Log Total of orders across platforms
     FILE *TotalCanalFile = fopen("totcanal.txt", "w");
@@ -550,6 +556,8 @@ int main(int argc, char **argv)
     fprintf(TotalCanalFile,  "2 - Website                 %5d\n", ProductList.OrdersWeb);
     fprintf(TotalCanalFile,  "3 - App móvel Android       %5d\n", ProductList.OrdersAndroid);
     fprintf(TotalCanalFile,  "4 - App móvel iPhone        %5d\n",   ProductList.OrdersIOS);
+    
+    fclose(TotalCanalFile);
     
     return 0;
 }

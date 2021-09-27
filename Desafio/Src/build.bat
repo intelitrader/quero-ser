@@ -1,6 +1,6 @@
-rem USING MSVC VER. 19.29.30133 for x86
-
 @echo off
+
+rem USING MSVC VER. 19.29.30133 for x86
 
 set SRC_DIR= "..\Src\main.c"
 
