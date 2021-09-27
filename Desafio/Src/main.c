@@ -161,7 +161,7 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
         {
             // EOL is the third delimiter
             FileBuffer[i] = '\0';
-	    i += 2;
+            i += 2;
             
             MinimumQuantity = atoi(BeginStr);
             BeginStr = &FileBuffer[i];
@@ -241,10 +241,10 @@ ProductTable BuildProductList(char *FileBuffer, int FileSize)
             }
             BeginStr = &FileBuffer[i];
         }
-	else
-	{
-	    i++;
-	}
+        else
+        {
+            i++;
+        }
     }
     
     printf("%s - %d produtos encontrados\n", Success ? "SUCESSO" : "FALHA", ProductCount);
@@ -296,58 +296,53 @@ int main(int argc, char **argv)
         printf("Uso: %s [VENDAS.TXT] [PRODUTOS.TXT]\n", argv[0]);
         return 1; 
     }
-    char *VendasFilename   = argv[1];
-    char *ProdutosFilename = argv[2];
+    char *OrdersFilename   = argv[1];
+    char *ProductsFilename = argv[2];
     
-    FILE *VendasFile = fopen(VendasFilename, "rb");
-    if (VendasFile == NULL)
+    FILE *OrdersFileHandle = fopen(OrdersFilename, "rb");
+    if (OrdersFileHandle == NULL)
     {
-        printf("Erro: Arquivo Inexistente! (%s)\n", VendasFilename);
+        printf("Erro ao abrir arquivo (%s)\n", OrdersFilename);
         return 1;
     }
     
-    FILE *ProdutosFile = fopen(ProdutosFilename, "rb");
-    if (ProdutosFile == NULL)
+    FILE *ProductsFileHandle = fopen(ProductsFilename, "rb");
+    if (ProductsFileHandle == NULL)
     {
-        printf("Erro: Arquivo Inexistente! (%s)\n", ProdutosFilename);
+        printf("Erro ao abrir arquivo (%s)\n", ProductsFilename);
         return 1;
     }
     
     // getting the size of the PRODUTOS.TXT file
-    fseek(ProdutosFile, 0, SEEK_END);
-    int ProdutosFilesize  = ftell(ProdutosFile);
-    fseek(ProdutosFile, 0, SEEK_SET);
+    fseek(ProductsFileHandle, 0, SEEK_END);
+    int ProductsFilesize  = ftell(ProductsFileHandle);
+    fseek(ProductsFileHandle, 0, SEEK_SET);
     
     // getting the size of the VENDAS.TXT file
-    fseek(VendasFile, 0, SEEK_END);
-    int VendasFilesize  = ftell(VendasFile);
-    fseek(VendasFile, 0, SEEK_SET);
+    fseek(OrdersFileHandle, 0, SEEK_END);
+    int OrdersFilesize  = ftell(OrdersFileHandle);
+    fseek(OrdersFileHandle, 0, SEEK_SET);
     
-    char *ProdutosBuffer = (char *)malloc(ProdutosFilesize + 1);
-    if (ProdutosBuffer == NULL)
+    char *ProductsBuffer = (char *)malloc(ProductsFilesize + 1);
+    if (ProductsBuffer == NULL)
     {
-        printf("Unexpected error!\n");
-        printf("%d\n", ProdutosFilesize);
+        printf("Erro inesperado\n");
         return 1;
     }
-    ProdutosBuffer[ProdutosFilesize] = '\0';
+    ProductsBuffer[ProductsFilesize] = '\0';
     
-    char *VendasBuffer = (char *)malloc(VendasFilesize + 1);
-    if (VendasBuffer == NULL)
+    char *OrdersBuffer = (char *)malloc(OrdersFilesize + 1);
+    if (OrdersBuffer == NULL)
     {
-        printf("Unexpected error!\n");
-        printf("%d\n", ProdutosFilesize);
-        
+        printf("Erro inesperado\n");
         return 1;
     }
     
-    VendasBuffer[VendasFilesize] = '\0';
+    OrdersBuffer[OrdersFilesize] = '\0';
     
-    fread(ProdutosBuffer, 1, ProdutosFilesize, ProdutosFile);
-    
-    fread(VendasBuffer, 1, VendasFilesize, VendasFile);
-    
-    ProductTable ProductList = BuildProductList(ProdutosBuffer, ProdutosFilesize);
+    // Build the products table 
+    fread(ProductsBuffer, 1, ProductsFilesize, ProductsFileHandle);
+    ProductTable ProductList = BuildProductList(ProductsBuffer, ProductsFilesize);
     
     int ProductId = 0;
     int QuantitySold = 0;
@@ -355,23 +350,24 @@ int main(int argc, char **argv)
     int SalePlatform = 0;
     int CurrentLine = 1;
     
-    char *BeginStr = &VendasBuffer[0];
+    // parse the orders buffer and search and update the products table
+    fread(OrdersBuffer, 1, OrdersFilesize, OrdersFileHandle);
+    char *BeginStr = &OrdersBuffer[0];
     
     FILE *DivergenciasFile = fopen("divergencias.txt", "w");
     if (!DivergenciasFile)
     {
-        printf("Erro: Falha na criacao de arquivo divergencias.txt\n");
+        printf("Erro: Falha na criacao de arquivo divergências.txt\n");
         return 1;
     }
     
-    printf("Gerando Arquivo de Divergencias.\n");
+    printf("Gerando Arquivo de Divergências.\n");
     
-    // parse the vendas buffer and search and update the products table
     int i = 0;
-    while (i <= VendasFilesize)
+    while (i <= OrdersFilesize)
     {
-        char c0 = VendasBuffer[i];
-        char c1 = VendasBuffer[i + 1];
+        char c0 = OrdersBuffer[i];
+        char c1 = OrdersBuffer[i + 1];
         
         // end of file
         if (c1 == '\0')
@@ -400,11 +396,11 @@ int main(int argc, char **argv)
         else if ((c0 == '\r') && (c1 == '\n'))
         {
             // EOL is the  delimiter
-            VendasBuffer[i] = '\0';
-	    i += 2;
+            OrdersBuffer[i] = '\0';
+            i += 2;
             
             SalePlatform = atoi(BeginStr);
-            BeginStr = &VendasBuffer[i];
+            BeginStr = &OrdersBuffer[i];
             
             if ((SaleStatus == ORDER_OK) || (SaleStatus == ORDER_PENDING))
             {
@@ -433,7 +429,7 @@ int main(int argc, char **argv)
         else if (c0 == '\n')
         {
             // EOL is the  delimiter
-            VendasBuffer[i++] = '\0';
+            OrdersBuffer[i++] = '\0';
             
             SalePlatform = atoi(BeginStr);
             
@@ -453,7 +449,7 @@ int main(int argc, char **argv)
                 LogDivergence(DivergenciasFile, SaleStatus, CurrentLine, 0);
             }
             
-            BeginStr = &VendasBuffer[i];
+            BeginStr = &OrdersBuffer[i];
             
             ProductId = 0;
             QuantitySold = 0;
@@ -464,7 +460,7 @@ int main(int argc, char **argv)
         // delimiter
         else if (c0 == ';')
         {
-            VendasBuffer[i++] = '\0';
+            OrdersBuffer[i++] = '\0';
             
             // ProductId is set to 0, hit first delimiter
             if (!ProductId)
@@ -481,12 +477,12 @@ int main(int argc, char **argv)
             {
                 SaleStatus = atoi(BeginStr);
             }
-            BeginStr = &VendasBuffer[i];
+            BeginStr = &OrdersBuffer[i];
         }
-	else
-	{
-	    i++;
-	}
+        else
+        {
+            i++;
+        }
     }
     
     fclose(DivergenciasFile);
@@ -495,7 +491,7 @@ int main(int argc, char **argv)
     FILE *TranfereFile = fopen("transfere.txt", "w");
     if (!TranfereFile)
     {
-        printf("Erro: Falha na criacao de arquivo transfere.txt\n");
+        printf("Erro: Falha na criação de arquivo transfere.txt\n");
         return 1;
     }
     
@@ -542,7 +538,7 @@ int main(int argc, char **argv)
     FILE *TotalCanalFile = fopen("totcanal.txt", "w");
     if (!TotalCanalFile)
     {
-        printf("Erro: Falha na criacao de arquivo totcanal.txt\n");
+        printf("Erro: Falha na criação de arquivo totcanal.txt\n");
         return 1;
     }
     
