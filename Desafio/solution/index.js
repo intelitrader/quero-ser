@@ -37,33 +37,40 @@ app.get('/arquivos', (req, res) => {
             
             test = 1;
             opT = 'c1_';
-
+            
             readDir();
-
+            
             arq.forEach((el)=>{
                 fs.unlinkSync('../solution/output/' + el);
             });
-
+            
         }else if(result.op == 2){
             
             test = 2;
             opT = 'c2_';
-
+            
             readDir();
-
+            
             arq.forEach((el)=>{
                 fs.unlinkSync('../solution/output/' + el);
             });
             
         }else{
-            process.exit(console.log('Opção inválida'));
+            
+            readDir();
+            
+            arq.forEach((el)=>{
+                fs.unlinkSync('../solution/output/' + el);
+            });
+            
+            process.exit(console.log('Opção de saída'));
         }
         
     });
     
     function delay(n){
         return new Promise(function(resolve){
-            setTimeout(resolve,n*500);
+            setTimeout(resolve,n*850);
         });
     }
     
@@ -76,13 +83,13 @@ app.get('/arquivos', (req, res) => {
                 '../solution/input/Caso de teste 1/c1_produtos.txt',
                 '../solution/input/Caso de teste 1/c1_vendas.txt'
             ];
-
+            
         }else{
             caminhoArquivos = [
                 '../solution/input/Caso de teste 2/c2_produtos.txt',
                 '../solution/input/Caso de teste 2/c2_vendas.txt'
             ];
-
+            
         }
         
         const promises = [];
@@ -181,12 +188,20 @@ function lerArquivo(caminhoArquivo) {
             err ? reject(err) : resolve(data);
             
             if(flag !=0){
+                
                 tranferencias();
                 divergencias();
                 canal();
+                
+                listP.length = 0;
+                listPQntd.length = 0;
+                listV.length = 0;
+                
             }
             flag = 1;
         });
+        
+        flag = 0;
         
     });
     
@@ -196,7 +211,6 @@ function tranferencias(){
     
     var prodDTO = new String();
     var prodV = Number(0);
-    var qntEst = Number(0);
     var i = 0;
     
     const header = 'Necessidade de Transferência Armazém para CO\n\n' + 
@@ -266,7 +280,6 @@ function tranferencias(){
         if (err) throw err;
     });
     
-    return;
 }
 
 function divergencias(){
