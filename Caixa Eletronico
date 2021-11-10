@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+int num;
+printf("NOTAS DISPONIVEIS=> R$ 100,00; R$ 50,00; R$ 20,00 e R$ 10,00");
+printf("\nInsira o valor que deseja sacar: ");
+scanf("%d",&num);
+
+printf("\nNota de 100: %d", num/100);
+num = num % 100;
+
+printf("\nNota de 50: %d", num/50);
+num = num % 50;
+
+printf("\nNota de 20: %d", num/20);
+num = num % 20;
+
+printf("\nMoedas de 10: %d", num/10);
+num = num % 10;
+
+
+  return 0;
+}
