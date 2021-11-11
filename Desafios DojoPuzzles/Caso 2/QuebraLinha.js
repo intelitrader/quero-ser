@@ -1,6 +1,7 @@
 
-var frase = "Um pequeno jabuti xereta viu dez cegonhas felizes."
-var colunas = 20
+//var frase = "Um pequeno jabuti xereta viu dez cegonhas felizes."
+var frase = "Vasco melhor do mundo todo!"
+var colunas = 6
 
 
 //Função para validar o tamanho da coluna em relação as palavras da frase
