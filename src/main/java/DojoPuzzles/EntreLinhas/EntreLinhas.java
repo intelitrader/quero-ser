@@ -61,6 +61,10 @@ public class EntreLinhas {
     public static void main(String[] args) {
         EntreLinhas testando = new EntreLinhas();
         testando.constroiAlfabeto();
-        testando.calculoEntreLetras('a', 'z');
+        testando.calculoEntreLetras('a', 'r');
+        testando.calculoEntreLetras('g', 'w');
+        testando.calculoEntreLetras('d', 'u');
+        testando.calculoEntreLetras('r', 'r');
+        testando.calculoEntreLetras('g', 'a');
     }
 }
