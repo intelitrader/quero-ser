@@ -7,7 +7,7 @@
         {
             if (frase.Length > 255)
             {
-                return "Error: Frase superior a 255 caracteres: ";
+                return "Error: Frase superior a 255 caracteres. ";
             }
 
             //variavel que iremos retornar caso tudo dê certo

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Caso_1\\Functions.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Functions\\Functions.csproj",
       "projectName": "Functions",
-      "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Caso_1\\Functions.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Functions\\Functions.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Caso_1\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Functions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

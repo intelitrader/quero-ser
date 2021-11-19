@@ -15,7 +15,17 @@
       "ProjectGuid": "def746f8-f5b6-441c-807d-9caa7046de9f",
       "DisplayName": "FunctionsTest",
       "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "309f027a-4499-440c-8838-61fe2ff880f5": {
+      "ProjectGuid": "309f027a-4499-440c-8838-61fe2ff880f5",
+      "DisplayName": "Functions",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

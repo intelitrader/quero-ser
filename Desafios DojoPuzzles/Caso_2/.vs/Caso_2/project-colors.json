@@ -10,7 +10,12 @@
       "ProjectGuid": "9286de8e-d253-4bdf-ab92-28dd6355700d",
       "DisplayName": "TestFunctions",
       "ColorIndex": 1
+    },
+    "0acb8022-0e4d-47e2-bcfc-e029dfde962d": {
+      "ProjectGuid": "0acb8022-0e4d-47e2-bcfc-e029dfde962d",
+      "DisplayName": "Main",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

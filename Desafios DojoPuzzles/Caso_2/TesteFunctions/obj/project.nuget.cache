@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nRwDtXMqyvIxta1aRxy/HNjccIfbAP8FMvMGsoO7861Ya/becmSNInsbveuGSuhW8fzxSmMi/FNfCxKjhtYA9w==",
+  "dgSpecHash": "TogH1S86Bk0WfvlBETYDZnm5o/gVzdMwfRhi4/NJzvOqCKAJ+I7jYcWH43b9wEBCM/dmRyP/gps4hISvzbvwXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\TesteFunctions\\TestFunctions.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\TesteFunctions\\TestFunctions.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

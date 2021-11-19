@@ -12,7 +12,7 @@ string frase = Console.ReadLine().ToUpper();
 
 if (frase.Length > 255)
 {
-    Console.WriteLine("\nFrase superior a 255 caracteres: ");
+    Console.WriteLine("\nFrase superior a 255 caracteres. ");
 }
 else
 {

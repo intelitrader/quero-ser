@@ -17,8 +17,8 @@
   "libraries": {
     "Functions/1.0.0": {
       "type": "project",
-      "path": "../Caso_1/Functions.csproj",
-      "msbuildProject": "../Caso_1/Functions.csproj"
+      "path": "../Functions/Functions.csproj",
+      "msbuildProject": "../Functions/Functions.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -58,8 +58,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Caso_1\\Functions.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Caso_1\\Functions.csproj"
+            "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Functions\\Functions.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_1\\Functions\\Functions.csproj"
             }
           }
         }

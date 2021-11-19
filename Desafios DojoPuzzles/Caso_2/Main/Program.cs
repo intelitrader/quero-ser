@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using Functions;
 
@@ -30,7 +31,7 @@ try
     {
         Console.WriteLine("Tamanho de coluna invalido! \n\nO tamanho da coluna deve ser maior \nque a quantidade de caracteres da maior palavra na frase\n");
     }
-    
+
     Console.WriteLine("\nAPERTA QUALQUER TECLA PARA ENCERRAR ");
     Console.ReadLine();
 }

@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\Caso_2\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\Caso_2\\Main.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\Main\\Main.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\Caso_2\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\Functions\\Functions.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Desafios DojoPuzzles\\Caso_2\\Functions\\Functions.csproj"
+            "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\Functions\\Functions.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\quero-ser\\Desafios DojoPuzzles\\Caso_2\\Functions\\Functions.csproj"
             }
           }
         }

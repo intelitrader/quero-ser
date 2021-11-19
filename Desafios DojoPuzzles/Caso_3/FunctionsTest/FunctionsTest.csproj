@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Caso_3\Functions.csproj" />
+    <ProjectReference Include="..\Functions\Functions.csproj" />
   </ItemGroup>
 
 </Project>
