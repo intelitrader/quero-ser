@@ -1,0 +1,15 @@
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.AssemblyInfoInputs.cache
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.AssemblyInfo.cs
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\TesteSolucao.exe
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\TesteSolucao.deps.json
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\TesteSolucao.runtimeconfig.json
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\TesteSolucao.dll
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\ref\TesteSolucao.dll
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\bin\Debug\net6.0\TesteSolucao.pdb
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.dll
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\ref\TesteSolucao.dll
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.pdb
+C:\Users\Administrador\Desktop\Teste\TesteSolucao\TesteSolucao\obj\Debug\net6.0\TesteSolucao.genruntimeconfig.cache
