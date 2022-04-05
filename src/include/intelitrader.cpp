@@ -236,7 +236,7 @@ void Analytics::analisysArchive()
           writeFile ( "ANALYTICS/DIVERGENCIAS.txt", situation.data(), std::ios::app );
 
         // [TOTCANAIS]
-        int8_t canal = m_SalesStack.top().Canal;
+        int canal = m_SalesStack.top().Canal;
 
         if ( m_SalesStack.top().Situation == PAYMENT_OK ||
              m_SalesStack.top().Situation == PAYMENT_PENDENT )
