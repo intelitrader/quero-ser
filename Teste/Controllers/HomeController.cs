@@ -6,7 +6,7 @@ namespace Teste.Controllers
     public class HomeController
     {   
         // Models
-        HomeModel home = new HomeModel();
+        HomeModel homeModel = new HomeModel();
 
         // Views
         HomeView homeView = new HomeView();
@@ -14,7 +14,7 @@ namespace Teste.Controllers
         public void Home()
         {
             homeView.Introducao();
-            home.Aplicacao();
+            homeModel.Aplicacao();
         }
     }
 }

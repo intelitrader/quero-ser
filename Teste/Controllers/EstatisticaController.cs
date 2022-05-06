@@ -6,7 +6,7 @@ namespace Teste.Controllers
     public class EstatisticaController
     {
         // Models
-        EstatisticaModel estatistica = new EstatisticaModel();
+        EstatisticaModel estatisticaModel = new EstatisticaModel();
 
         // Views
         EstatisticaView estatisticaView = new EstatisticaView();
@@ -14,7 +14,7 @@ namespace Teste.Controllers
         public void Estatistica()
         {
             estatisticaView.IntroducaoEstatistica();
-            estatistica.Estatistica();
+            estatisticaModel.Estatistica();
         }
     }
 }

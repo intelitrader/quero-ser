@@ -4,47 +4,57 @@ namespace Teste.Models
 {
     public class JokenpoModel
     {
-        public string nome1 { get; set; }
-        public string nome2 { get; set; }
-        public string escolha1 { get; set; }
-        public string escolha2 { get; set; }
-        public string modojogo { get; set; }
-        public int escolharobo { get; set; }
-
+        // Declaração de variáveis
+        public string Jogador1 { get; set; }
+        public string Escolha1 { get; set; }
+        public int Escolha1Int { get; set; }
+        public int Escolha2Int { get; set; }
+        public string EscolhaAstolfoString { get; set; }
+        public string ModoJogo { get; set; }
 
         public void Jokenpo()
         {
-            Console.WriteLine("Para começarmos, você deseja jogar com um amigo ou contra o computador?: ");
-            Console.Write("(Computador/Amigo): ");
-            modojogo = Console.ReadLine().ToLower();
 
             string reinicia;
 
+            // Estabelecemos um Do While para que seja possível reiniciar caso o jogador queira.
             do
             {
+                Console.WriteLine("Para começarmos, você deseja jogar com um amigo ou contra o computador?: ");
+                Console.Write("(Computador/Amigo): ");
+                ModoJogo = Console.ReadLine().ToLower();
+
                 JokenpoModel jogo = new JokenpoModel();
-                switch (modojogo)
+
+                switch (ModoJogo)
                 {
                     case "computador":
                         {
-                            Random rnd = new Random();
-                            escolharobo = rnd.Next(1, 3);
+                            // Declaração de variáveis locais
+                            int EscolhaAstolfo;
 
+                            // Cria o objeto Rnd da classe Random e ao usar o método next é feito a atribuição de um número aleátorio a variável EscolhaAstolfo.
+                            // É importante observa que como as opções são poucas (1, 2 ou 3) é comum que o número gerado/escolhido aleátoriamente se repita algumas vezes seguidas.
                             // 1 = Pedra
                             // 2 = Papel
                             // 3 = Tesoura
+                            Random Rnd = new Random();
+                            EscolhaAstolfo = Rnd.Next(1, 3);
+
+                            // Alguns textos e atribuição de valores.
+                            #region Textos
 
                             Console.Clear();
-                            Console.WriteLine("Ok, vamos começar!");
 
-                            // System.Threading.Thread.Sleep(2000);
+                            Console.WriteLine("Ok, vamos começar!");
+                            System.Threading.Thread.Sleep(2000);
                             Console.WriteLine("Primeiramente qual o seu nome?");
                             Console.Write("Meu nome é: ");
-                            nome1 = Console.ReadLine();
+                            Jogador1 = Console.ReadLine();
 
                             Console.WriteLine("Certo, agora faça a sua jogada, lembrando que as escolhas são: pedra, papel ou tesoura.");
                             Console.Write($"Eu escolho ");
-                            escolha1 = Console.ReadLine().ToLower();
+                            Escolha1 = Console.ReadLine().ToLower();
 
                             Console.WriteLine("");
 
@@ -56,150 +66,334 @@ namespace Teste.Models
 
                             Console.WriteLine("");
 
-                            // Pedra
-                            if (escolha1 == "pedra" && escolharobo == 2)
+                            #endregion
+
+                            // Converter o valor das variáveis que estão em string para int e vice versa.
+                            #region Conversor
+
+                            switch (Escolha1)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu papel!");
-                                Console.WriteLine($"Senhoras e senhores! Papel ganha de {escolha1}, portanto o vencedor é Astolfo!!");
+                                case "pedra":
+                                    {
+                                        Escolha1Int = 1;
+                                    }
+                                    break;
+                                case "papel":
+                                    {
+                                        Escolha1Int = 2;
+                                    }
+                                    break;
+                                case "tesoura":
+                                    {
+                                        Escolha1Int = 3; ;
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            switch (EscolhaAstolfo)
+                            {
+                                case 1:
+                                    {
+                                        EscolhaAstolfoString = "pedra";
+                                    }
+                                    break;
+                                case 2:
+                                    {
+                                        EscolhaAstolfoString = "papel";
+                                    }
+                                    break;
+                                case 3:
+                                    {
+                                        EscolhaAstolfoString = "tesoura";
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            #endregion
+
+                            // Toda a operação que define o resultado da partida, se há vencedor e quem é o vencedor.
+                            #region Jokenpo
+
+                            if (Escolha1Int - EscolhaAstolfo == 1 || Escolha1Int - EscolhaAstolfo == -2)
+                            {
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu {EscolhaAstolfoString}!");
+                                Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de {EscolhaAstolfoString}, portanto o vencedor é {Jogador1}!!");
 
                             }
-                            else if (escolha1 == "pedra" && escolharobo == 3)
+                            else if (Escolha1Int == EscolhaAstolfo)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu tesoura!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha1} ganha de tesoura, portanto o vencedor é {nome1}!!");
-                            }
-                            else if (escolha1 == "pedra" && escolharobo == 1)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo também escolheu {escolha1}!");
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo também escolheu {EscolhaAstolfoString}!");
                                 Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
                             }
-
-                            // Papel
-                            else if (escolha1 == "papel" && escolharobo == 3)
+                            else if (Escolha1Int - EscolhaAstolfo == -1 || Escolha1Int - EscolhaAstolfo == 2)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu tesoura!");
-                                Console.WriteLine($"Senhoras e senhores! Tesoura ganha de {escolha1}, portanto o vencedor é Astolfo!!");
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu {EscolhaAstolfoString}!");
+                                Console.WriteLine($"Senhoras e senhores! {EscolhaAstolfoString} ganha de {Escolha1}, portanto o vencedor é Astolfo!!");
 
                             }
-                            else if (escolha1 == "papel" && escolharobo == 1)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu pedra!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha1} ganha de pedra, portanto o vencedor é {nome1}!!");
-                            }
-                            else if (escolha1 == "papel" && escolharobo == 2)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo também escolheu {escolha1}!");
-                                Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
-                            }
-
-                            // Tesoura
-                            else if (escolha1 == "tesoura" && escolharobo == 1)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu pedra!");
-                                Console.WriteLine($"Senhoras e senhores! Pedra ganha de {escolha1}, portanto o vencedor é Astolfo!!");
-
-                            }
-                            else if (escolha1 == "tesoura" && escolharobo == 2)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo escolheu papel!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha1} ganha de papel, portanto o vencedor é {nome1}!!");
-                            }
-                            else if (escolha1 == "tesoura" && escolharobo == 3)
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto Astolfo também escolheu {escolha1}!");
-                                Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
-                            }
-
                             else
                             {
                                 Console.WriteLine($"Escolha inválida, por favor escolham entre uma das três opções!");
                             }
+
+                            #endregion
+
+                            // Inicialmente eu havia feito dessa maneira, mas a utilização de tantos if else é algo que me incomoda muito, então fui atrás de um meio de simplificar.
+                            // As variáveis Escolha1Int e AstolfoEscolhaString não haviam sido criadas até este momento.
+                            #region Jeito Antigo
+
+                            #region Pedra
+                            // if (Escolha1 == "pedra" && EscolhaAstolfo == 2)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu papel!");
+                            //     Console.WriteLine($"Senhoras e senhores! Papel ganha de {Escolha1}, portanto o vencedor é Astolfo!!");
+
+                            // }
+                            // else if (Escolha1 == "pedra" && EscolhaAstolfo == 3)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu tesoura!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de tesoura, portanto o vencedor é {Jogador1}!!");
+                            // }
+                            // else if (Escolha1 == "pedra" && EscolhaAstolfo == 1)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo também escolheu {Escolha1}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+                            // }
+                            #endregion
+
+                            #region Papel
+                            // else if (Escolha1 == "papel" && EscolhaAstolfo == 3)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu tesoura!");
+                            //     Console.WriteLine($"Senhoras e senhores! Tesoura ganha de {Escolha1}, portanto o vencedor é Astolfo!!");
+
+                            // }
+                            // else if (Escolha1 == "papel" && EscolhaAstolfo == 1)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu pedra!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de pedra, portanto o vencedor é {Jogador1}!!");
+                            // }
+                            // else if (Escolha1 == "papel" && EscolhaAstolfo == 2)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo também escolheu {Escolha1}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+                            // }
+                            #endregion
+
+                            #region Tesoura
+                            // else if (Escolha1 == "tesoura" && EscolhaAstolfo == 1)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu pedra!");
+                            //     Console.WriteLine($"Senhoras e senhores! Pedra ganha de {Escolha1}, portanto o vencedor é Astolfo!!");
+
+                            // }
+                            // else if (Escolha1 == "tesoura" && EscolhaAstolfo == 2)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo escolheu papel!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de papel, portanto o vencedor é {Jogador1}!!");
+                            // }
+                            // else if (Escolha1 == "tesoura" && EscolhaAstolfo == 3)
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto Astolfo também escolheu {Escolha1}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+                            // }
+
+                            #endregion
+
+                            #region Invalido
+                            // else
+                            // {
+                            //     Console.WriteLine($"Escolha inválida, por favor escolham entre uma das três opções!");
+                            // }
+                            #endregion
+
+                            #endregion
                         }
                         break;
 
                     case "amigo":
                         {
+                            // Declaração de variáveis locais
+                            string Jogador2;
+                            string Escolha2;
+
+                            // Alguns textos e atribuição de valores.
+                            #region Textos
+
                             Console.Clear();
                             Console.WriteLine("Ok, vamos começar!");
                             Console.WriteLine("Primeiramente, qual o nome do jogador 1?");
                             Console.Write("Meu nome é: ");
-                            nome1 = Console.ReadLine();
+                            Jogador1 = Console.ReadLine();
 
                             Console.WriteLine("E o nome do jogador 2?");
                             Console.Write("Meu nome é: ");
-                            nome2 = Console.ReadLine();
+                            Jogador2 = Console.ReadLine();
 
                             Console.Clear();
                             Console.WriteLine("Agora, façam as suas jogadas, lembrando que as escolhas são: pedra, papel ou tesoura.");
-                            Console.Write($"{nome1}: ");
-                            escolha1 = Console.ReadLine().ToLower();
+                            Console.Write($"{Jogador1}: ");
+                            Escolha1 = Console.ReadLine().ToLower();
 
                             Console.Clear();
-                            Console.Write($"{nome2}: ");
-                            escolha2 = Console.ReadLine().ToLower();
+                            Console.Write($"{Jogador2}: ");
+                            Escolha2 = Console.ReadLine().ToLower();
                             Console.Clear();
 
-                            // Pedra
-                            if (escolha1 == "pedra" && escolha2 == "papel")
+                            #endregion
+
+                            // Converter o valor das variáveis que estão em string para int e vice versa.
+                            #region Conversor
+
+                            switch (Escolha1)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha2} ganha de {escolha1}, portanto o vencedor é {nome2}!!");
+                                case "pedra":
+                                    {
+                                        Escolha1Int = 1;
+                                    }
+                                    break;
+                                case "papel":
+                                    {
+                                        Escolha1Int = 2;
+                                    }
+                                    break;
+                                case "tesoura":
+                                    {
+                                        Escolha1Int = 3; ;
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            switch (Escolha2)
+                            {
+                                case "pedra":
+                                    {
+                                        Escolha2Int = 1;
+                                    }
+                                    break;
+                                case "papel":
+                                    {
+                                        Escolha2Int = 2;
+                                    }
+                                    break;
+                                case "tesoura":
+                                    {
+                                        Escolha2Int = 3; ;
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            #endregion
+
+                            // Toda a operação que define o resultado da partida, se há vencedor e quem é o vencedor.
+                            #region Jokenpo
+
+                            if (Escolha1Int - Escolha2Int == 1 || Escolha1Int - Escolha2Int == -2)
+                            {
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                                Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de {Escolha2}, portanto o vencedor é {Jogador1}!!");
 
                             }
-                            else if (escolha1 == "pedra" && escolha2 == "tesoura")
+                            else if (Escolha1Int - Escolha2Int == -1 || Escolha1Int - Escolha2Int == 2)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"!!");
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                                Console.WriteLine($"Senhoras e senhores! {Escolha2} ganha de {Escolha1}, portanto o vencedor é {Jogador2}!!");
+
                             }
-                            else if (escolha1 == "pedra" && escolha2 == "pedra")
+                            else if (Escolha1Int == Escolha2Int)
                             {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} também escolheu {escolha2}!");
+                                Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} também escolheu {Escolha2}!");
                                 Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
                             }
-
-                            // Papel
-
-                            else if (escolha1 == "papel" && escolha2 == "papel")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
-
-                            }
-                            else if (escolha1 == "papel" && escolha2 == "tesoura")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha2} ganha de {escolha1}, portanto o vencedor é {nome2}!!");
-                            }
-                            else if (escolha1 == "papel" && escolha2 == "pedra")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha1} ganha de {escolha2}, portanto o vencedor é {nome1} !!");
-                            }
-
-                            // Tesoura
-
-                            else if (escolha1 == "tesoura" && escolha2 == "papel")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha1} ganha de {escolha2}, portanto o vencedor é {nome1}!!");
-
-                            }
-                            else if (escolha1 == "tesoura" && escolha2 == "tesoura")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
-                            }
-                            else if (escolha1 == "tesoura" && escolha2 == "pedra")
-                            {
-                                Console.WriteLine($"{nome1} escolheu {escolha1} enquanto {nome2} escolheu {escolha2}!");
-                                Console.WriteLine($"Senhoras e senhores! {escolha2} ganha de {escolha1}, portanto o vencedor é {nome2}!!");
-                            }
-
-                            // Inválida
                             else
                             {
                                 Console.WriteLine($"Escolha inválida, por favor escolham entre uma das três opções!");
                             }
+
+                            #endregion
+
+                            // Inicialmente eu havia feito dessa maneira, mas a utilização de tantos if else é algo que me incomoda muito, então fui atrás de um meio de simplificar.
+                            // A variável Escolha2Int não havia sido criada até este momento.
+                            #region Jeito Antigo
+
+                            #region Pedra
+
+                            // if (Escolha1 == "pedra" && Escolha2 == "papel")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha2} ganha de {Escolha1}, portanto o vencedor é {Jogador2}!!");
+
+                            // }
+                            // else if (Escolha1 == "pedra" && Escolha2 == "tesoura")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"!!");
+                            // }
+                            // else if (Escolha1 == "pedra" && Escolha2 == "pedra")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} também escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+                            // }
+
+                            #endregion
+
+                            #region Papel
+
+                            // else if (Escolha1 == "papel" && Escolha2 == "papel")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+
+                            // }
+                            // else if (Escolha1 == "papel" && Escolha2 == "tesoura")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha2} ganha de {Escolha1}, portanto o vencedor é {Jogador2}!!");
+                            // }
+                            // else if (Escolha1 == "papel" && Escolha2 == "pedra")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de {Escolha2}, portanto o vencedor é {Jogador1} !!");
+                            // }
+
+                            #endregion
+
+                            #region Tesoura
+
+                            // else if (Escolha1 == "tesoura" && Escolha2 == "papel")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha1} ganha de {Escolha2}, portanto o vencedor é {Jogador1}!!");
+
+                            // }
+                            // else if (Escolha1 == "tesoura" && Escolha2 == "tesoura")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! Parece que temos um empate!! Sem vencedores por agora, mas será que haverá uma revanche?");
+                            // }
+                            // else if (Escolha1 == "tesoura" && Escolha2 == "pedra")
+                            // {
+                            //     Console.WriteLine($"{Jogador1} escolheu {Escolha1} enquanto {Jogador2} escolheu {Escolha2}!");
+                            //     Console.WriteLine($"Senhoras e senhores! {Escolha2} ganha de {Escolha1}, portanto o vencedor é {Jogador2}!!");
+                            // }
+
+                            // // Inválida
+                            // else
+                            // {
+                            //     Console.WriteLine($"Escolha inválida, por favor escolham entre uma das três opções!");
+                            // }
+
+                            #endregion
+
+                            #endregion
                         }
                         break;
                     default:
@@ -216,6 +410,5 @@ namespace Teste.Models
 
 
         }
-
     }
 }

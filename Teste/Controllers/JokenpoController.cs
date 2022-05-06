@@ -6,7 +6,7 @@ namespace Teste.Controllers
     public class JokenpoController
     {
         // Models
-        JokenpoModel jokenpo = new JokenpoModel();
+        JokenpoModel jokenpoModel = new JokenpoModel();
 
         // Views
         JokenpoView jokenpoView = new JokenpoView();
@@ -14,8 +14,7 @@ namespace Teste.Controllers
         public void Jokenpo()
         {
             jokenpoView.IntroducaoJokenpo();
-            jokenpo.Jokenpo();
-            // jokenpoView.Operacao();
+            jokenpoModel.Jokenpo();
         }
     }
 }
