@@ -1,0 +1,26 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "description": "Desafio Intelitrader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: nenhum teste em especifico\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelitrader/quero-ser.git"
+  },
+  "keywords": [
+    "intelitrader"
+  ],
+  "author": "Nuno Proença Santos Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intelitrader/quero-ser/issues"
+  },
+  "homepage": "https://github.com/intelitrader/quero-ser#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "prompt": "^1.2.0"
+  }
+}
