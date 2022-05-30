@@ -1,6 +1,24 @@
-Linha 4 - Venda Não Finalizada
-Linha 7 - Venda Não Finalizada
-Linha 9 - Venda Cancelada
-Linha 10 - Erro Desconhecido. Acionar Equipe de TI
-Linha 14 - Código de Produto Não Encontrado 27440
-Linha 20 - Código de Produto Não Encontrado 31288
+Linha 8 - Erro Desconhecido. Acionar Equipe de TI
+Linha 32 - Venda Cancelada
+Linha 37 - Erro Desconhecido. Acionar Equipe de TI
+Linha 85 - Código de Produto Não Encontrado 13112
+Linha 88 - Venda Não Finalizada
+Linha 121 - Código de Produto Não Encontrado 13210
+Linha 222 - Venda Cancelada
+Linha 241 - Código de Produto Não Encontrado 13516
+Linha 268 - Venda Não Finalizada
+Linha 322 - Venda Não Finalizada
+Linha 332 - Venda Cancelada
+Linha 362 - Venda Cancelada
+Linha 395 - Venda Cancelada
+Linha 397 - Venda Não Finalizada
+Linha 413 - Venda Cancelada
+Linha 437 - Venda Não Finalizada
+Linha 466 - Venda Cancelada
+Linha 467 - Venda Cancelada
+Linha 636 - Venda Não Finalizada
+Linha 659 - Venda Cancelada
+Linha 669 - Venda Cancelada
+Linha 673 - Venda Cancelada
+Linha 684 - Venda Cancelada
+Linha 776 - Venda Cancelada
