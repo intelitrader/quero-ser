@@ -15,11 +15,11 @@ namespace DesafioIntelitrader.Service
                 {
                     sw.WriteLine("Necessidade de Trasferência Armazém para CO");
                     sw.WriteLine();
-                    sw.WriteLine("Produto\tQtCO\tQtMin\tQtVendas\tEstq.após Vendas\tNecess.\tTransf. de Arm p/CO");
+                    sw.WriteLine("Produto\tQtCO\tQtMin\tQtVend Estq.após Necess. Transf.");
                     sw.WriteLine();
                     foreach (var venda in vendasConfirmadas)
                     {
-                        sw.WriteLine($"{venda.Produto} \t {venda.QtCO} \t {venda.QtMin} \t {venda.QtVendas} \t {venda.EstoquePosVendas} \t {venda.NecessidadeReposicao} \t {venda.QuantidadeTransferir}");
+                        sw.WriteLine($"{venda.Produto}\t{venda.QtCO}\t{venda.QtMin}\t{venda.QtVendas}\t{venda.EstoquePosVendas}\t{venda.NecessidadeReposicao}\t{venda.QuantidadeTransferir}");
                         
                     }
                 }
