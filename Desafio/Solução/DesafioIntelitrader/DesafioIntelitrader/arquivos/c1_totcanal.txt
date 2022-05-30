@@ -1,0 +1,7 @@
+Quantidades de Vendas por Canal
+
+Canal	QtVendas
+1 - REPRESENTANTE_COMERCIAL	624
+2 - WEBSITE	873
+3 - ANDROID	582
+4 - IPHONE	88
