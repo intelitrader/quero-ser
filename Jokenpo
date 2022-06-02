@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+int op, op2;
+char conf= 's';
+
+
+  while (conf=='s' || conf=='S') {
+  printf("\n(Jogador 1) Digite a opcao que quer jogar\n0 para pedra\n1 para papel\n2 para tesoura\n:");
+  scanf("%d",&op);
+  printf("\n(Jogador 2) Digite a opcao que quer jogar\n0 para pedra\n1 para papel\n2 para tesoura\n:");
+  scanf("%d",&op2);
+  
+  if (op2== 0 && op==0)         printf("\nEmpate! Ninguem ganhou.");
+  else if (op2== 0 && op==1)    printf("\nJogador1 ganhou!");
+  else if (op2== 0 && op==2)    printf("\nJogador2 ganhou!");
+  else if (op2== 1 && op==0)    printf("\nJogador2 ganhou!");
+  else if (op2== 1 && op==1)    printf("\nEmpate! Ninguem ganhou.");
+  else if (op2== 1 && op==2)    printf("\nJogador1 ganhou!");
+  else if (op2== 2 && op==0)    printf("\nJogador1 ganhou!");
+  else if (op2== 2 && op==1)    printf("\nJogador2 ganhou!");
+  else                            printf("\nEmpate! Ninguem ganhou.");
+
+  printf("\nQuer joga de novo <S/N>: ");
+  scanf("%s",&conf);
+  }
+  return 0;
+}
