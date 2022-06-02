@@ -1,0 +1,6 @@
+Quantidades de Vendas por canal
+
+1 - Representantes		624
+2 - Website			873
+3 - App móvel Android		582
+4 - App móvel iPhone		88
