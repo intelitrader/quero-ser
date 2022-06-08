@@ -1,0 +1,11 @@
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\bin\Debug\pedra papel tesoura.exe.config
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\bin\Debug\pedra papel tesoura.exe
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\bin\Debug\pedra papel tesoura.pdb
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.csproj.AssemblyReference.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra_papel_tesoura.Form1.resources
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra_papel_tesoura.Properties.Resources.resources
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.csproj.GenerateResource.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.csproj.CoreCompileInputs.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.exe
+C:\Users\Jhonathan\Desktop\Projetos C#\pedra papel tesoura\pedra papel tesoura\obj\Debug\pedra papel tesoura.pdb

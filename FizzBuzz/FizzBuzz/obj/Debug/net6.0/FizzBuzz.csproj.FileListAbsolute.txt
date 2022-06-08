@@ -1,0 +1,30 @@
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.csproj.AssemblyReference.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.AssemblyInfoInputs.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.AssemblyInfo.cs
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.exe
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.deps.json
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.runtimeconfig.json
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.pdb
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\refint\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.pdb
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.genruntimeconfig.cache
+C:\Users\Jhonathan\Desktop\Projetos C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\ref\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.exe
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.deps.json
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.runtimeconfig.json
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\bin\Debug\net6.0\FizzBuzz.pdb
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.csproj.AssemblyReference.cache
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.AssemblyInfoInputs.cache
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.AssemblyInfo.cs
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\refint\FizzBuzz.dll
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.pdb
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\FizzBuzz.genruntimeconfig.cache
+C:\Users\Jhonathan\Desktop\projetos\exercicios em C#\FizzBuzz\FizzBuzz\obj\Debug\net6.0\ref\FizzBuzz.dll
