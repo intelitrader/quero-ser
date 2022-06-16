@@ -1,0 +1,15 @@
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\bin\Debug\net6.0\Solucao.exe
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\bin\Debug\net6.0\Solucao.deps.json
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\bin\Debug\net6.0\Solucao.runtimeconfig.json
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\bin\Debug\net6.0\Solucao.dll
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\bin\Debug\net6.0\Solucao.pdb
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.csproj.AssemblyReference.cache
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.AssemblyInfoInputs.cache
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.AssemblyInfo.cs
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.csproj.CoreCompileInputs.cache
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.dll
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\refint\Solucao.dll
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.pdb
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\Solucao.genruntimeconfig.cache
+C:\Users\Vinicius\Desktop\quero-ser-intelitrader\Solucao\obj\Debug\net6.0\ref\Solucao.dll
