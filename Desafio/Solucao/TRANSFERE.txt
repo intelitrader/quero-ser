@@ -1,0 +1,5 @@
+Transfere [codProduto=16320, qtCO=344, qtMin=200, qtVendas=128, estoquePosVendas=216, necess=0, transfArmCO=0]
+Transfere [codProduto=23400, qtCO=1435, qtMin=500, qtVendas=937, estoquePosVendas=498, necess=2, transfArmCO=10]
+Transfere [codProduto=26440, qtCO=2899, qtMin=800, qtVendas=239, estoquePosVendas=2660, necess=0, transfArmCO=0]
+Transfere [codProduto=28790, qtCO=310, qtMin=150, qtVendas=245, estoquePosVendas=65, necess=85, transfArmCO=85]
+Transfere [codProduto=36540, qtCO=431, qtMin=100, qtVendas=617, estoquePosVendas=-186, necess=286, transfArmCO=286]
