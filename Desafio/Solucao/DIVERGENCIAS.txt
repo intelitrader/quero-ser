@@ -1,0 +1,7 @@
+Linha - 4 venda nao finalizada no canal de vendas 26440
+Linha - 7 venda nao finalizada no canal de vendas 16320
+Linha - 9 venda cancelada 36540
+Linha - 10 erro nao identificado 26440
+Linha - 14 Codigo de Produto nao encontrado 27440
+Linha - 14 erro nao identificado 27440
+Linha - 20 Codigo de Produto nao encontrado 31288
