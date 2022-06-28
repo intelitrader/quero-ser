@@ -84,8 +84,8 @@ public class App {
 
 		Empresa empresa = new Empresa();
 		
-		String filenameProd = args.length > 0 && args[0] != null? args[0] : "PRODUTOS.txt";
-		String filenameVend = args.length > 1 && args[1] != null? args[1] : "VENDAS.txt";
+		String filenameProd = args.length > 0 && args[0] != null? args[0] : "../Caso de teste 1/c1_produtos.txt";
+		String filenameVend = args.length > 1 && args[1] != null? args[1] : "../Caso de teste 1/c1_vendas.txt";
 
 		var produtos = montarProdutos(filenameProd) ;
 		var vendas = montarVendas(filenameVend);
