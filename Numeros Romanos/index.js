@@ -33,17 +33,17 @@ function NumerosRomanos(numeroRomano) {
     }
   }
   for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] === 1 && i === 0 && numbers[i] < numbers[1]) {
+    if (numbers[i] === 1 && numbers[i] < numbers[i+1]) {
       numbers[i] = -1;
     }
-    if (numbers[i] === 10 && i === 0 && numbers[i] < numbers[1]) {
+    if (numbers[i] === 10 && numbers[i] < numbers[i+1]) {
       numbers[i] = -10;
     }
-    if (numbers[i] === 100 && i === 0 && numbers[i] < numbers[1]) {
+    if (numbers[i] === 100 && numbers[i] < numbers[i+1]) {
       numbers[i] = -100;
     }
     soma += numbers[i];
   }
     console.log(soma)
 }
-NumerosRomanos("XC");
+NumerosRomanos("IX");
