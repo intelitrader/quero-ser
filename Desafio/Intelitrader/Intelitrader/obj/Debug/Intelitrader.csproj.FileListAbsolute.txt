@@ -1,0 +1,8 @@
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\bin\Debug\Intelitrader.exe.config
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\bin\Debug\Intelitrader.exe
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\bin\Debug\Intelitrader.pdb
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\obj\Debug\Intelitrader.csproj.AssemblyReference.cache
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\obj\Debug\Intelitrader.csproj.SuggestedBindingRedirects.cache
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\obj\Debug\Intelitrader.csproj.CoreCompileInputs.cache
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\obj\Debug\Intelitrader.exe
+C:\Users\Danilo\Documents\projetos\quero-ser\Desafio\Intelitrader\Intelitrader\obj\Debug\Intelitrader.pdb
