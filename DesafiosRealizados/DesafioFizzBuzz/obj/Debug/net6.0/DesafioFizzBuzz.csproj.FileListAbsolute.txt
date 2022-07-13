@@ -1,0 +1,15 @@
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\DesafioFizzBuzz.exe
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\DesafioFizzBuzz.deps.json
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\DesafioFizzBuzz.runtimeconfig.json
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\DesafioFizzBuzz.dll
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\ref\DesafioFizzBuzz.dll
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\bin\Debug\net6.0\DesafioFizzBuzz.pdb
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.csproj.AssemblyReference.cache
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.AssemblyInfoInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.AssemblyInfo.cs
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.dll
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\ref\DesafioFizzBuzz.dll
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.pdb
+C:\Users\guica\Desktop\Processo seletivo\DesafioFizzBuzz\obj\Debug\net6.0\DesafioFizzBuzz.genruntimeconfig.cache
