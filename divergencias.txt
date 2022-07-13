@@ -1,0 +1,7 @@
+Linha 2 - Venda não finalizada
+Linha 5 - Venda não finalizada
+Linha 7 - Venda cancelada
+Linha 8 - Erro desconhecido. Acionar equipe de TI
+Linha 12 - Código de Produto não encontrado 27440
+Linha 12 - Erro desconhecido. Acionar equipe de TI
+Linha 18 - Código de Produto não encontrado 31288
