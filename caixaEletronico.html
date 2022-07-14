@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Caixa Eletrônico</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Caixa Eletrônico</h1>
+    
+    <div class="atm-screen" style="display: flex; flex-direction: column; margin: auto; max-width: 400px; background-color: #ccc; padding: 1.2rem; border-radius: 1rem;">
+        <div class="value-area" style="display: flex; align-items:center;">
+            <span style="font-size: 20px;">Valor Solicitado: </span><span class="total-value" style="font-size: 30px; font-weight: bold; margin-left: 1rem; color: green;"></span>
+        </div>
+        <div class="atm-info">
+            <h2>Você receberá o valor em:</h2>
+            <h3 class="banknotes-details"></h3>
+        </div>
+    </div>
+
+    <div class="demo"></div>
+
+    <script>
+
+        const banknotesDetails = document.querySelector('.banknotes-details');
+        const totalValue = document.querySelector('.total-value');
+
+        let valorSaque = parseInt(prompt('Qual valor deseja sacar?'))
+
+        let html = '';
+
+        const cedulas = [100, 50, 20, 10, 1];
+
+        const atm = () => {
+            for(let n in cedulas) {
+                if(valorSaque >= cedulas[n]) {
+                    let nota = parseInt(valorSaque / cedulas[n])
+                    valorSaque %= cedulas[n]
+                    html += `<span>${nota} nota(s) de R$ ${cedulas[n]},00</span><br/>`;
+                }
+            }
+            banknotesDetails.innerHTML = html
+           
+        }   
+
+        totalValue.innerHTML = `R$ ${valorSaque},00`
+
+        atm()
+
+    </script>
+</body>
+</html>
