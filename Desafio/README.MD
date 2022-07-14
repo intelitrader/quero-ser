@@ -24,7 +24,7 @@ etc...
 Cada linha do arquivo refere-se a um produto cadastrado que contém duas informações separadas pelo caractere ";".
 | Posição | Informação                                                   | Formato             | Observações                                             |
 |---------|--------------------------------------------------------------|---------------------|---------------------------------------------------------|
-| (1)     | Código do Produto                                            | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 100000) |
+| (1)     | Código do Produto                                            | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 10000) |
 | (2)     | Quantidade em estoque no início do período                   | Número inteiro      |                                                         |
 | (3)     | Quantidade mínima que deve ser mantida no Centro Operacional | Número Inteiro      |                                                         |
 
