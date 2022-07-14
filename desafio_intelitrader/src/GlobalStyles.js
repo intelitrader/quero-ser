@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle = `
+const globalStyles = createGlobalStyle `
     *{
         margin: 0;
-        paddding: 0;
-        boxing-size: bording-box;
+        padding: 0;
+        box-sizing: border-box;
         font-family: Arial, sans-serif;
     }
 
@@ -12,4 +12,19 @@ const GlobalStyle = createGlobalStyle = `
         background-color: #0B0B3B;
         color: white;
     }
+
+    button{
+        background-color: #FAAC58;
+        border: none;
+        border-radius: 8px;
+        color: #0B0B3B;
+        max-width: 220px ;
+        padding: 10px 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all linear .4s;
+    }
 `
+
+export default globalStyles;
