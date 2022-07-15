@@ -8,11 +8,12 @@
 
 body {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .chBox {
