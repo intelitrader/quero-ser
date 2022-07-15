@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   background-color: #000000;
   color: #fff;
@@ -8,7 +8,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,8 @@ body {
   border: 1px solid #fff;
   display: flex;
   flex-direction: column;
-  height: 40%;
-  width: 40%;
+  min-height: 300px;
+  width: 30%;
   justify-content: space-around;
   text-align: center;
   align-items: center;
@@ -60,4 +60,12 @@ a {
   border: 1px solid black;
   background-color: white;
   color: black;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  width: 100%;
+  text-align: left;
 }

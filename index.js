@@ -54,3 +54,26 @@ const fizzBuzz = () => {
 };
 
 fizzBuzz();
+
+const lower = -Infinity;
+const higher = Infinity;
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + max);
+}
+
+const challegenThree = () => {
+  const ele = document.querySelector("#elements");
+  const seq = document.querySelector("#sequence");
+  const min = document.querySelector("#minimum");
+  const max = document.querySelector("#maximum");
+  const med = document.querySelector("#media");
+
+  const numberOfElements = getRandomArbitrary(1, 10);
+  ele.textContent = `Nº elements: ${numberOfElements}`  
+
+  const maxNumber = getRandomArbitrary(lower, higher)
+  console.log(maxNumber)
+
+
+
+};
