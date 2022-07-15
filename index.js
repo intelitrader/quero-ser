@@ -30,16 +30,27 @@ const checkValue = () => {
 
   if (isValid) {
     const notes = withdrawMoney(amount);
-   return withdraw.textContent = `
+    return (withdraw.textContent = `
             100: ${notes[100]} - 
             50: ${notes[50]} - 
             20: ${notes[20]} - 
             10: ${notes[10]} - 
             turn back: ${notes["turnBack"].toFixed(2)}
-            `;
+            `);
   }
 
- 
-  return withdraw.textContent = 'Only numbers pls'
-
+  return (withdraw.textContent = "Invalid input format");
 };
+
+const fizzBuzz = () => {
+  const textArea = document.querySelector("#fizzBuzz");
+
+  for (var i = 1; i < 101; i++) {
+    if (i % 15 == 0) textArea.value += "FizzBuzz \n";
+    else if (i % 3 == 0) textArea.value += "Fizz \n";
+    else if (i % 5 == 0) textArea.value += "Buzz \n";
+    else textArea.value += i + " \n";
+  }
+};
+
+fizzBuzz();

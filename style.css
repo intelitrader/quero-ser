@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.chBox {
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 40%;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+a {
+  color: red;
+}
+
+#fizzBuzz {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn {
+  width: 150px;
+  border: transparent;
+  background-color: #fff;
+  border-radius: 10px;
+  color: black;
+  transition: 1s;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  background-color: #1c0f20;
+}
+
+#amount {
+  width: 50%;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
