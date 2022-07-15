@@ -18,6 +18,7 @@ function withdrawMoney(withdrawAmount) {
     }
     withdrawNotes["turnBack"] = withdrawAmount;
   }
+
   return withdrawNotes;
 }
 
@@ -30,12 +31,21 @@ const checkValue = () => {
 
   if (isValid) {
     const notes = withdrawMoney(amount);
+
+    console.log(notes);
+
+    if (notes["turnBack"] > 0) {
+      const input = document.querySelector("#amount");
+      return alert(
+        "You can only withdraw values that match the following notes: 100 - 50 - 20 - 10"
+      );
+    }
+
     return (withdraw.textContent = `
             100 notes: ${notes[100]} ||
             50 notes: ${notes[50]} ||
             20 notes: ${notes[20]} || 
             10 notes: ${notes[10]} ||
-            turn back: ${notes["turnBack"].toFixed(2)}
             `);
   }
 
@@ -55,12 +65,9 @@ const fizzBuzz = () => {
 
 fizzBuzz();
 
-const lower = -Infinity;
-const higher = Infinity;
 function getRandomArbitrary(min, max) {
-  return Math.floor(Math.random() * (max - min) + max);
+  return Math.floor(Math.random() * (max - min) + min);
 }
-
 const challegenThree = () => {
   const ele = document.querySelector("#elements");
   const seq = document.querySelector("#sequence");
@@ -68,12 +75,22 @@ const challegenThree = () => {
   const max = document.querySelector("#maximum");
   const med = document.querySelector("#media");
 
-  const numberOfElements = getRandomArbitrary(1, 10);
-  ele.textContent = `Nº elements: ${numberOfElements}`  
+  const numberOfElements = Math.floor(Math.random() * 10);
+  const maxNumber = Math.floor(Math.random() * 100);
+  const minNumber = Math.floor(Math.random() * 100) * -1;
+  const sequence = [];
 
-  const maxNumber = getRandomArbitrary(lower, higher)
-  console.log(maxNumber)
+  for (let i = numberOfElements; i > 0; i--) {
+    sequence.push(getRandomArbitrary(minNumber, maxNumber));
+  }
 
+  const media = sequence.reduce((acc, number) => acc + number, 0) / sequence.length;
 
-
+  med.textContent = `Media: ${media.toFixed(2)}`;
+  max.textContent = `Maximum possible: ${maxNumber}`;
+  ele.textContent = `Nº elements: ${numberOfElements}`;
+  min.textContent = `Minimum possible: ${minNumber}`;
+  seq.textContent = `Sequence sorted: ${sequence.join(" , ")}`;
 };
+
+challegenThree();
