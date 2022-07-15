@@ -12,13 +12,17 @@ export const Container = styled.div `
         margin-bottom: 30px;
     }
 
-    button{
+    a{
+        display: inline-block;
         margin: auto;
+    }
+
+    button{
         width: 150px;
     }
 
     button:hover{
-        background-color: #FF8000;
+        background-color: #FAAC58;
     }
 `
 

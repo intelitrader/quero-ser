@@ -5,23 +5,25 @@ const globalStyles = createGlobalStyle `
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
     }
 
     body{
-        background-color: #0B0B3B;
+        background-color: rgb(51, 51, 51);
         color: white;
     }
 
     button{
-        background-color: #FAAC58;
+        background-color: rgb(254, 123, 29);
         border: none;
         border-radius: 8px;
-        color: #0B0B3B;
+        color: black;
         max-width: 220px ;
         padding: 10px 5px;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 700;
+        font-size: 1em;
         cursor: pointer;
         transition: all linear .4s;
     }
