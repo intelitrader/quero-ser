@@ -31,10 +31,10 @@ const checkValue = () => {
   if (isValid) {
     const notes = withdrawMoney(amount);
     return (withdraw.textContent = `
-            100: ${notes[100]} - 
-            50: ${notes[50]} - 
-            20: ${notes[20]} - 
-            10: ${notes[10]} - 
+            100 notes: ${notes[100]} ||
+            50 notes: ${notes[50]} ||
+            20 notes: ${notes[20]} || 
+            10 notes: ${notes[10]} ||
             turn back: ${notes["turnBack"].toFixed(2)}
             `);
   }
