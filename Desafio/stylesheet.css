@@ -1,0 +1,11 @@
+.preview_resume{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 10px;
+    align-items: center;
+}
+
+.preview_resume > textarea, button{
+    width: 700px;
+}
