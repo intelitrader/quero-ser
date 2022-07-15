@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="chBox">
+      <p>Challenge one | Cash machine</p>
+      <p>Insert how much money do you want to withdraw without comma.</p>
+      <span>Notes availables: 100, 50, 20 and 10.</span>
+
+      <a
+        href="https://dojopuzzles.com/problems/caixa-eletronico/"
+        target="_blank"
+        >Challege link</a
+      >
+      <input id="amount" type="number" placeholder="Insert a value" />
+      <p class="withdraw">Only numbers pls</p>
+      <button class="btn" onclick="checkValue()">Withdraw</button>
+    </div>
+
+    <div class="chBox">
+      <p>Challenge three | calculating simple statistics</p>
+      <p>Crie uma sequência aleatória de números e calcule:</p>
+      <p>Mínimo - Máximo - Média - Quantidade de elementos</p>
+      <a
+        href="https://dojopuzzles.com/problems/calculando-estatisticas-simples/"
+        target="_blank"
+        >Challenge link</a
+      >
+      <div class="infos">
+        <span class="infos-span" id="minimum">Minimum possible: </span>
+        <span class="infos-span" id="maximum">Maximum possible: </span>
+        <span class="infos-span" id="elements">Nº elements: </span>
+        <span class="infos-span" id="sequence">Sequence sorted: </span>
+        <span class="infos-span" id="media">Media: </span>
+      </div>
+
+      <button class="btn" onclick="challegenThree()">Get numbers</button>
+    </div>
+
+    <div class="chBox">
+      <p>Challenge two | Fizz Buzz</p>
+      <p>Uma contagem de 1 a 100 onde:</p>
+      <p>
+        Divisiveis por 3 = Fizz. Divisiveis por 5 = Buzz. Divisiveis por 15 =
+        FizzBuzz. Restante = próprio número
+      </p>
+
+      <a href="https://dojopuzzles.com/problems/fizzbuzz/" target="_blank"
+        >Challenge link</a
+      >
+      <textarea id="fizzBuzz" readonly></textarea>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>

@@ -1,0 +1,104 @@
+* {
+  margin: 10px;
+  padding: 0;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chBox {
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  width: 20%;
+  min-width: 250px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  transition: 1s;
+  height: 450px;
+}
+
+a {
+  color: red;
+  transition: 1s;
+}
+a:hover{
+  color: white;
+}
+
+#fizzBuzz {
+  width: 80px;
+  height: 90px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  resize: none;
+}
+
+.btn {
+  width: 80%;
+  border: transparent;
+  background-color: #fff;
+  border-radius: 10px;
+  color: black;
+  transition: 1s;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #1c0f20;
+  color: #fff;
+}
+
+#amount {
+  width: 80%;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #0c0b0b;
+}
+
+.infos-span {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+p,
+span {
+  text-align: left;
+  width: 80%;
+}
