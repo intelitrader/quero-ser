@@ -32,16 +32,3 @@ while True:
           break
   else:
     print("Infelizmente não podemos sacar essa quantia com as cédulas contidas atualmente no caixa :/")
-
-
-
-
-  
-
-
-
-
-
-
-
-
