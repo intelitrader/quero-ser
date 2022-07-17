@@ -5,8 +5,6 @@ export const lerArquivoProdutos = (e) => {
     const reader = new FileReader();
     reader.onload = (e) => {
         const text = e.target.result.split("\n").filter(x => x !== '');
-
-        console.log(text);
       
         for(var i = 0; i < text.length; i++){
             let listaTemp = text[i].split(";");
@@ -30,8 +28,6 @@ export const lerArquivoVendas = (e) => {
     const reader = new FileReader();
     reader.onload = (e) => {
         const text = e.target.result.split("\n").filter(x => x !== '');
-
-        console.log(text);
 
         for(var i = 0; i < text.length; i++){
             let listaTemp = text[i].split(";");

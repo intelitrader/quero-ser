@@ -49,7 +49,40 @@ export function definirDivegencias(produtos, vendas){
             lista.push(`Linha ${i+1} - Erro desconhecido. Acionar equipe de TI`);
     }
 
-    //console.log(lista);
-
     return lista;
+}
+
+export function definirRelatorioCanais(vendas){
+    let listaVendas = vendas.filter(venda => venda.situacaoVenda === 100 || venda.situacaoVenda === 102);
+
+    let relatorioCanais = [
+        {
+            id: 1, 
+            canal: 'Representantes', 
+            totalVendas: listaVendas.filter(venda => venda.canalVenda === 1)
+                        .reduce((soma, atual) => {return soma + atual.qtdVendas}, 0)
+        },
+        {
+            id: 2, 
+            canal: 'Website', 
+            totalVendas: listaVendas.filter(venda => venda.canalVenda === 2)
+                        .reduce((soma, atual) => {return soma + atual.qtdVendas}, 0)
+        },
+        {
+            id: 3, 
+            canal: 'Aplicativo móvel Android', 
+            totalVendas: listaVendas.filter(venda => venda.canalVenda === 3)
+                        .reduce((soma, atual) => {return soma + atual.qtdVendas}, 0)
+        },
+        {
+            id: 4, 
+            canal: 'Aplicativo móvel iPhone', 
+            totalVendas: listaVendas.filter(venda => venda.canalVenda === 4)
+                        .reduce((soma, atual) => {return soma + atual.qtdVendas}, 0)
+        }
+    ];
+
+    console.log(relatorioCanais);
+    
+    return relatorioCanais;
 }
