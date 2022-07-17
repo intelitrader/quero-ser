@@ -23,3 +23,33 @@ export function definirVendasConfirmadas(produtos, vendas){
 
     return lista;
 }
+
+function checarCodigoProduto(produtos, venda){   
+    for(var i = 0; i < produtos.length; i++){
+        if(produtos[i].codigoProduto === venda.codigoProduto)
+            return {codigo: 0, resposta: true};
+    }
+
+    return {codigo: venda.codigoProduto, resposta: false};
+}
+
+export function definirDivegencias(produtos, vendas){
+    let lista = [];
+
+    for(var i = 0; i < vendas.length; i++){
+        let verificacaoCodigoProduto = checarCodigoProduto(produtos, vendas[i]);
+
+        if(verificacaoCodigoProduto.resposta === false) 
+            lista.push(`Linha ${i+1} - Código de Produto não encontrado ${verificacaoCodigoProduto.codigo}`);
+        if(vendas[i].situacaoVenda === 135)
+            lista.push(`Linha ${i+1} - Venda cancelada`);
+        if(vendas[i].situacaoVenda === 190)
+            lista.push(`Linha ${i+1} - Venda não finalizada`);
+        if(vendas[i].situacaoVenda === 999)
+            lista.push(`Linha ${i+1} - Erro desconhecido. Acionar equipe de TI`);
+    }
+
+    //console.log(lista);
+
+    return lista;
+}
