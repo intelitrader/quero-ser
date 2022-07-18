@@ -1,0 +1,70 @@
+body {
+  background-color: rgb(175, 175, 175);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.jokenpo__container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.resultado-jokenpo {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.caixaEletronico__container,
+.cheque__container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.resultado__container,
+.valorInvalido,
+.resultado-cheque {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.jokenpo__button,
+.caixaEletronico__button,
+.cheque-button {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: rgb(135, 65, 201);
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.jokenpo__container-button:hover,
+.caixaEletronico__container-button:hover,
+.fizzBuzz-button:hover {
+  background-color: rgb(85, 29, 138);
+}
+
+#valor {
+  width: 100px;
+}
