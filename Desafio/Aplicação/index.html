@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        table {
+            width: 80%;
+            margin-top: 50px;
+        }
+
+        td {
+            min-width: 100px
+        }
+        input{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="inputfile">Insira as Produtos(cX_produtos.txt):  </label>
+    <input id="inputfile" accept=".txt" onchange="loadFileProdutos(this.files[0])"
+    type="file" />
+
+    <label for="inputfile">Insira as Vendas(cx_vendas.txt):</label>
+    <input id="inputfile" onchange="loadFileVendas(this.files[0])"
+            type="file" />
+    <button onclick="main()">Emitir Relatorios</button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
