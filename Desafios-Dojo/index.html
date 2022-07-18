@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafios Intelitrader</title>
+
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="jokenpo">
+      <h1>Jokenpo</h1>
+      <div class="jokenpo__container">
+        <label for="player1">Jogador 1</label>
+        <select name="" id="player1">
+          <option value="pedra">Pedra</option>
+          <option value="papel">Papel</option>
+          <option value="tesoura">Tesoura</option>
+        </select>
+        <span>X</span>
+        <select name="" id="player2">
+          <option value="pedra">Pedra</option>
+          <option value="papel">Papel</option>
+          <option value="tesoura">Tesoura</option>
+        </select>
+        <label for="player2">Jogador 2</label>
+      </div>
+      <button class="jokenpo__button">Jogar</button>
+      <span class="resultado-jokenpo"></span>
+    </section>
+
+
+    <section class="caixaEletronico">
+      <h1>Caixa Eletrônico</h1>
+      <div class="caixaEletronico__container">
+        <label for="valor">Valor para sacar</label>
+        <input type="number" id="valor" name="valor">
+      </div>
+      <button class="caixaEletronico__button">sacar</button>
+      <p class="valorInvalido"></p>
+      <div class="resultado__container">
+        <p class="resultado-caixa200"></p>
+        <p class="resultado-caixa100"></p>
+        <p class="resultado-caixa50"></p>
+        <p class="resultado-caixa20"></p>
+        <p class="resultado-caixa10"></p>
+      </div>
+    </section>
+
+
+    <section class="cheque">
+      <h1>Cheque por extenso</h1>
+      <div class="cheque__container">
+        <label for="cheque">Valor do cheque</label>
+        <input type="text" id="cheque" name="cheque" placeholder="0000,00">
+      </div>
+      <button class="cheque-button">Mostrar</button>
+      <p class="resultado-cheque">Resultado: </p>
+      <ul>
+        <h2>Números válidos</h1>
+          <li>Números de 1,00 a 999999,00</li>
+          <li>Digite os centavos</li>
+          <li>Use a vírgula</li>
+      </ul>
+
+    </section>
+  </main>
+
+
+  <script type="module" src="scripts/script.js"></script>
+</body>
+
+</html>
