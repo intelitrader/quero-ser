@@ -1,5 +1,10 @@
 # Quero ser Intelitrader
 
+## Como utilizar
+
+1. Baixe os arquivos de teste 
+2. Insira os arquivos requisitados nos inputs
+3. Clique em emitir
 ## [Quem somos](id:OqEhAIntelitrader)
 A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
 
