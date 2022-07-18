@@ -44,7 +44,7 @@ export default function cheque() {
     "duzentos",
     "trezentos",
     "quatrocentos",
-    "quinhetos",
+    "quinhentos",
     "seiscentos",
     "setecentos",
     "oitocentos",
