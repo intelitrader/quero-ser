@@ -21,8 +21,10 @@ export const Container = styled.div `
         width: 150px;
     }
 
-    button:hover{
-        background-color: #FAAC58;
+    @media screen and (max-width: 992px) {
+        section{
+            flex-direction: column;
+        }
     }
 `
 
@@ -36,5 +38,9 @@ export const FileArea = styled.div `
     label{
         margin-bottom: 10px;
         font-size: 1em;
+    }
+
+    @media screen and (max-width: 992px) {
+        margin: 0 0 20px 0;
     }
 `

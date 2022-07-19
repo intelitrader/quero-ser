@@ -81,8 +81,51 @@ export function definirRelatorioCanais(vendas){
                         .reduce((soma, atual) => {return soma + atual.qtdVendas}, 0)
         }
     ];
-
-    console.log(relatorioCanais);
     
     return relatorioCanais;
+}
+
+function ajustarString(string, tamanho){
+    let novaString = string.toString();
+
+    if(novaString.length <= tamanho){
+        for(var i = novaString.length; i < tamanho; i++){
+            novaString += ' ';
+        }
+    }
+
+   return novaString;
+}
+
+export function gerarArquivoVendas(lista, btn){
+    let conteudo = 'Necessidade de Transferência Armazém para CO\n\nProduto   QtCO   QtMin   QtVendas   Estq.após Vendas   Necess.     Transf. de Arm p/ CO\n';
+
+    for(var i = 0; i < lista.length; i++){
+        conteudo += `${lista[i].produto}     ${ajustarString(lista[i].qtdco, 5)}  ${ajustarString(lista[i].qtdMin, 5)}   ${ajustarString(lista[i].qtdVendas, 5)}      ${ajustarString(lista[i].estoque, 5)}              ${ajustarString(lista[i].necessidadeRepo, 5)}       ${ajustarString(lista[i].qtdTransferida, 5)}\n`;
+    }
+
+    btn.current.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(conteudo));
+    btn.current.setAttribute('download', 'transfere.txt');
+}
+
+export function gerarArquivoDivergencias(lista, btn){
+    let conteudo = '';
+
+    for(var i = 0; i < lista.length; i++){
+        conteudo += `${lista[i]}\n`
+    }
+
+    btn.current.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(conteudo));
+    btn.current.setAttribute('download', 'divergencias.txt');
+}
+
+export function gerarArquivoRelatorio(lista, btn){
+    let conteudo = `Quantidades de Vendas por canal\n\n${ajustarString("Canal", 34)}QtdVendas\n`;
+
+    for(var i = 0; i < lista.length; i++){
+        conteudo += `${lista[i].id} - ${ajustarString(lista[i].canal, 30)}${lista[i].totalVendas}\n`
+    }
+
+    btn.current.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(conteudo));
+    btn.current.setAttribute('download', 'totcanais.txt');
 }

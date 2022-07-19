@@ -27,6 +27,10 @@ const globalStyles = createGlobalStyle `
         cursor: pointer;
         transition: all linear .4s;
     }
+
+    button:hover{
+        background-color: #FAAC58;
+    }
 `
 
 export default globalStyles;
