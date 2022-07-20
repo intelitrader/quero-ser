@@ -1,0 +1,19 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "Desafio técnico da Intelitrader",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader.git"
+  },
+  "author": "gabrielferrarir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader/issues"
+  },
+  "homepage": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader#readme"
+}
