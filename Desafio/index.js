@@ -28,21 +28,21 @@ const salesSerialize = (product) => {
     'canal': key[3],
   };
 };
-const parsedEntities =  async () => ({
-  products: await parseTxt('Desafio/Caso de teste 1/c1_produtos.txt', productSerialize),
-  sales: await parseTxt('Desafio/Caso de teste 1/c1_vendas.txt', salesSerialize)
+const parsedEntities =  async (salesFile, productsFile) => ({
+  products: await parseTxt(productsFile, productSerialize),
+  sales: await parseTxt(salesFile, salesSerialize)
 });
 
-const confirmedSales = async () => {
-  const { sales } = await parsedEntities();
+const confirmedSales = async (salesFile, productsFile) => {
+  const { sales } = await parsedEntities(salesFile, productsFile);
   // console.log("🚀 ~ file: index.js ~ line 37 ~ confirmedSales ~  sales",  sales.length)
   const confirmed = sales.filter((sale) => sale.situacao === '100' ||sale.situacao === '102')
   // console.log("🚀 ~ file: index.js ~ line 39 ~ confirmedSales ~ confirmed", confirmed.length);
   return confirmed;
 };
 
-const totalSalesByProduct = async () => {
-  const sales = await confirmedSales();
+const totalSalesByProduct = async (salesFile, productsFile) => {
+  const sales = await confirmedSales(salesFile, productsFile);
   const salesByProduct = {};
   sales.forEach((sale) => {
     salesByProduct[sale.produto] = (!salesByProduct[sale.produto]) 
@@ -52,10 +52,10 @@ const totalSalesByProduct = async () => {
   return salesByProduct;
 };
 
-const stockAfterSales = async () => {
-  const sales = await totalSalesByProduct();
+const stockAfterSales = async (salesFile, productsFile) => {
+  const sales = await totalSalesByProduct(salesFile, productsFile);
   // console.log("🚀 ~ file: index.js ~ line 56 ~ stockAfterSales ~ sales", sales);
-  const { products } = await parsedEntities();
+  const { products } = await parsedEntities(salesFile, productsFile);
   const stock = products.map((prod, index) => {
     return {
       ...prod,
@@ -67,8 +67,8 @@ const stockAfterSales = async () => {
   // console.log("🚀 ~ file: index.js ~ line 65 ~ stock ~ stock", stock)
 }
 
-const transfer = async () => {
-  const sheet = await stockAfterSales();
+const transfer = async (salesFile, productsFile) => {
+  const sheet = await stockAfterSales(salesFile, productsFile);
   return sheet.map((item) => {
     const isNecessary = (Number(item.stockAfter)- Number(item.qtMin) < 0);
     const absNum = Math.abs(Number(item.stockAfter)- Number(item.qtMin));
@@ -81,10 +81,12 @@ const transfer = async () => {
   })
 };
 
-async function generateTable() {
-  const values = await (await transfer()).map((prod) => Object.values(prod));
+async function generateTransferTable(fileName, salesFile, productsFile) {
+  const values = (await transfer(salesFile, productsFile)).map((prod) => Object.values(prod));
   const data = [['Produto', 'QtCO', 'QtMin', 'QtVendas', 'Estq.após Vendas', 'Necess', 'Transf. de ARrm p/ CO'], ...values];
   const out = table(data);
-  await fs.writeFile('teste.txt', out, 'utf-8')
+  await fs.writeFile(fileName, out, 'utf-8')
 }
-generateTable();
+generateTransferTable(__dirname + '/resultados/c1_transfere.txt', 'Desafio/Caso de teste 1/c1_vendas.txt', 'Desafio/Caso de teste 1/c1_produtos.txt');
+generateTransferTable(__dirname + '/resultados/c2_transfere.txt', 'Desafio/Caso de teste 2/c2_vendas.txt', 'Desafio/Caso de teste 2/c2_produtos.txt');
+
