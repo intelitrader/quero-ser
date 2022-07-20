@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/eulazzo/quero-ser.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
