@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+## Desafio Intelitrader
+Aplicação web publicada em: https://desafiointelitrader.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tecnologias utilizadas
+- JavaScript
+- HTML 5
+- CSS 3 (Styled Components)
+- React.Js
 
-## Available Scripts
+## Telas
+### Home
+Tela inicial onde são carregados os arquivos produtos.txt e vendas.txt para gerar os arquivos pedidos no desafio.
 
-In the project directory, you can run:
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitrader-home.png"  alt="Tela home" title="Tela home"/>
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitrader-home-selecao.png"  alt="Tela home - Seleçã ode arquivo" title="Tela home - Seleção de arquivo"/>
 
-### `npm start`
+### Tabelas
+Tela onde são apresentadas as tabelas de vendas confirmadas e relatório por canais de vendas, além de serem disponibilizados, por meio de botões, os arquivos solicitados no desafio (transfere.txt, divergencias.txt e totcanais.txt).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitrader-tabelas.png"  alt="Tela tabelas" title="Tela tabelas"/>
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitrader-tabelas-download.png"  alt="Tela tabelas - Download" title="Tela tabelas - Download"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Arquivos gerados
+Abaixo estão expostos como os arquivos estão formatados pela aplicação web.
 
-### `npm test`
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitraderarquivo-transfere.png"  alt="Arquivo transfere.txt" title="Arquivo transfere.txt"/>
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitraderarquivo-divergencias.png"  alt="Arquivo divergencias.txt" title="Arquivo divergencias.txt"/>
+<img src="https://github.com/YannFigueiredo/assets/blob/main/desafio-intelitrader-arquivo-relatorio.png"  alt="Arquivo totcanais.txt" title="Arquivo totcanais.txt"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como executar o projeto
+### Acessando o website
+https://desafiointelitrader.netlify.app/
 
-### `npm run build`
+### Com Node.Js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# clonar o repositório
+git clone https://github.com/YannFigueiredo/quero-ser-desafio-yann-figueiredo.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# entrar na pasta da solução do desafio
+cd desafio_intelitrader
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# instalar as dependências
+npm install
 
-### `npm run eject`
+# executar o projeto
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Com Docker
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# clonar o repositório
+git clone https://github.com/YannFigueiredo/quero-ser-desafio-yann-figueiredo.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# entrar na pasta da solução do desafio
+cd desafio_intelitrader
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# executar o docker
+docker-compose up
+```
