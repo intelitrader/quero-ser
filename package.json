@@ -1,0 +1,24 @@
+{
+  "name": "quero-ser",
+  "version": "1.0.0",
+  "description": "## [Quem somos](id:OqEhAIntelitrader) A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eulazzo/quero-ser.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eulazzo/quero-ser/issues"
+  },
+  "homepage": "https://github.com/eulazzo/quero-ser#readme",
+  "dependencies": {
+    "table": "^6.8.0"
+  }
+}
