@@ -1,0 +1,9 @@
+version: "3"
+services:
+  node:
+    container_name: "desafio_intelitrader_react"
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
