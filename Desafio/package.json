@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader/issues"
   },
-  "homepage": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader#readme"
+  "homepage": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader#readme",
+  "dependencies": {
+    "table": "^6.8.0"
+  }
 }

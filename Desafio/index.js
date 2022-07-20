@@ -1,7 +1,8 @@
+const table = require('table').table;
 const fs = require('fs/promises');
 
 const readFile = async (file) => {
-  const content = await fs.readFile(file, { encoding: 'utf-8'})
+  const content = await fs.readFile(file, { encoding: "utf-8"})
   return content;
 }
 const productSerialize = (product) => {
@@ -42,15 +43,48 @@ const confirmedSales = async () => {
 
 const totalSalesByProduct = async () => {
   const sales = await confirmedSales();
-  console.log("🚀 ~ file: index.js ~ line 45 ~ totalSalesByProdutct ~ sales", sales);
   const salesByProduct = {};
   sales.forEach((sale) => {
     salesByProduct[sale.produto] = (!salesByProduct[sale.produto]) 
       ? Number(sale.vendas) 
       : salesByProduct[sale.produto] + Number(sale.vendas);
   });
-  return salesByProduct.
+  return salesByProduct;
+};
+
+const stockAfterSales = async () => {
+  const sales = await totalSalesByProduct();
+  // console.log("🚀 ~ file: index.js ~ line 56 ~ stockAfterSales ~ sales", sales);
+  const { products } = await parsedEntities();
+  const stock = products.map((prod, index) => {
+    return {
+      ...prod,
+      qtVendas: sales[prod.produto],
+      stockAfter: Number(prod.qtCO) - Number(sales[prod.produto]),
+    }
+  })
+  return stock;
+  // console.log("🚀 ~ file: index.js ~ line 65 ~ stock ~ stock", stock)
 }
 
+const transfer = async () => {
+  const sheet = await stockAfterSales();
+  return sheet.map((item) => {
+    const isNecessary = (Number(item.stockAfter)- Number(item.qtMin) < 0);
+    const absNum = Math.abs(Number(item.stockAfter)- Number(item.qtMin));
+    const value = (absNum < 10) ? 10 : absNum;
+    return {
+      ...item,
+      necess: isNecessary ? absNum : 0,
+      transf: isNecessary ? value : 0,
+    }
+  })
+};
 
-totalSalesByProduct();
+async function generateTable() {
+  const values = await (await transfer()).map((prod) => Object.values(prod));
+  const data = [['Produto', 'QtCO', 'QtMin', 'QtVendas', 'Estq.após Vendas', 'Necess', 'Transf. de ARrm p/ CO'], ...values];
+  const out = table(data);
+  await fs.writeFile('teste.txt', out, 'utf-8')
+}
+generateTable();
