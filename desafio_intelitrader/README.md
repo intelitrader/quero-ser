@@ -70,7 +70,7 @@ export default function Home(){
     const inputProdutos = useRef(null);
     const inputVendas = useRef(null);
     
-    # states para armazenar as listadas com os dados de produtos.txt e vendas.txt
+    # states para armazenar as listas com os dados de produtos.txt e vendas.txt
     const [ produtos, setProdutos ] = useState([]);
     const [ vendas, setVendas ] = useState([]);
     
@@ -249,7 +249,11 @@ export function definirRelatorioCanais(vendas){
     
     return relatorioCanais;
 }
+```
 
+### Disponibilizando para download
+Os botões presentes na página tabelas disparam funções para construir strins formatadas para salvar em arquivos txt e gerar evento de download.
+```
 # usada para formatar as strings nos arquivos txt
 function ajustarString(string, tamanho){
     let novaString = string.toString();
@@ -263,7 +267,7 @@ function ajustarString(string, tamanho){
    return novaString;
 }
 
-# as funções que iniciam em "gerar" constroem a string para ser salva em uma arquvio txt e ainda dispara o evento de download para o usuário obter o arquivo pretendido
+# as funções que iniciam em "gerar" constroem a string para ser salva em uma arquivo txt e ainda dispara o evento de download para o usuário obter o arquivo pretendido
 export function gerarArquivoVendas(lista, btn){
     let conteudo = 'Necessidade de Transferência Armazém para CO\n\nProduto   QtCO   QtMin   QtVendas   Estq.após Vendas   Necess.     Transf. de Arm p/ CO\n';
 
