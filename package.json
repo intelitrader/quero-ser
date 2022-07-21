@@ -1,0 +1,24 @@
+{
+  "name": "quero-ser",
+  "version": "1.0.0",
+  "description": "A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielsilverio81/quero-ser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielsilverio81/quero-ser/issues"
+  },
+  "homepage": "https://github.com/Danielsilverio81/quero-ser#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
