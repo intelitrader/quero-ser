@@ -1,0 +1,27 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "Desafio técnico da Intelitrader",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader.git"
+  },
+  "author": "gabrielferrarir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader/issues"
+  },
+  "homepage": "https://github.com/GabrielFerrariR/DESAFIO-quero-ser-intelitrader#readme",
+  "dependencies": {
+    "table": "^6.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
