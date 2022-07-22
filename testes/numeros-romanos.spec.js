@@ -1,4 +1,4 @@
-import { toRoman, toArabic } from './numeros-romanos'
+const { toRoman, toArabic } = require('../desafios/numeros-romanos')
 
 describe('toRoman()', () => {
     test('converts 1', () => expect(toRoman(1)).toEqual('I'));

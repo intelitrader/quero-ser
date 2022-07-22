@@ -1,4 +1,4 @@
-const lookAndSay = require('look-and-say')
+const lookAndSay = require('../desafios/look-and-say')
 
 describe ('look and say', () => {
     test('numero inicial 1, segundo elemento', () =>

@@ -1,4 +1,4 @@
-const buracosNoTexto = require('buracos-no-texto')
+const buracosNoTexto = require('../desafios/buracos-no-texto')
 
 describe ('buracos no texto', () => {
     test('apenas letras maiúsculas', () =>
