@@ -1,3 +1,11 @@
+:root {
+  --main-orange: #F58A07;
+  --main-green: #6F732F;
+  --main-white: #F7F5FB;
+  --main-black: #3A3335;
+  --main-yellow: #FFFB46;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -23,6 +31,7 @@ img {
 }
 
 body {
+  background-color: var(--main-white);
   height: 100vh;
   width: 100vw;
 }

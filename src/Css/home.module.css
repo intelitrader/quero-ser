@@ -1,23 +1,36 @@
 .header {
-  background-color: rgb(125, 17, 248);
-  color: white;
+  background-color: var(--main-black);
   display: flex;
   flex-direction: column;
   height: 7vh;
   justify-content: center;
+  padding: 35px;
   text-align: center;
   width: 100vw;
 }
 
+.headerTitle {
+  color: var(--main-orange);
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 0.15rem var(--main-white);
+}
+
 .footer {
-  background-color: red;
+  background-color: var(--main-black);
   bottom: 0;
-  color: white;
+  color: var(--main-yellow);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 10vh;
   justify-content: center;
-  position: fixed;
   text-align: center;
+  position: fixed;
   width: 100vw;
+}
+
+.footerText {
+  font-weight: 600;
+  margin: auto;
+  text-shadow: 1px 1px 0.15rem var(--main-orange);
 }

@@ -4,31 +4,35 @@ import styled from '../Css/table.module.css';
 
 function Table() {
   return(
-    <main>
+    <>
       <header className={ styled.header}>
-        <Link to="/"><h1>INTELITRADER</h1></Link>
+        <Link to="/" className={ styled.headerTitle }><h1>INTELITRADER</h1></Link>
       </header>
-      <div className={ styled.tableContainer}>
-        <tr>
-            <th scope="col">Produto</th>
-            <th scope="col">QtCO</th>
-            <th scope="col">QtMin</th>
-            <th scope="col">QtVendas</th>
-            <th scope="col">Moeda</th>
-            <th scope="col">Estq. após vendas</th>
-            <th scope="col">Necess.</th>
-            <th scope="col">Transf. de Arm p/ CO</th>
-        </tr>
-      </div>
-      <div className={ styled.downloadButtons }>
-        <button>Baixar TRANSFERE.TXT</button>
-        <button>Baixar DIVERGENCIAS.TXT</button>
-        <button>Baixar TOTCANAIS.TXT</button>
-      </div>
+      <main className={ styled.mainContainer }>
+        <table className={ styled.tableContainer}>
+          <thead>
+            <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">QtCO</th>
+                <th scope="col">QtMin</th>
+                <th scope="col">QtVendas</th>
+                <th scope="col">Moeda</th>
+                <th scope="col">Estq. após vendas</th>
+                <th scope="col">Necess.</th>
+                <th scope="col">Transf. de Arm p/ CO</th>
+            </tr>
+          </thead>
+        </table>
+        <div className={ styled.downloadButtons }>
+          <button>Baixar TRANSFERE.TXT</button>
+          <button>Baixar DIVERGENCIAS.TXT</button>
+          <button>Baixar TOTCANAIS.TXT</button>
+        </div>
+      </main>
       <footer className={ styled.footer }>
-        <h2>Desenvolvido por <a href="https://www.linkedin.com/in/matheus-marinhodsp/">Matheus Marinho</a></h2>
+        <h2 className={ styled.footerText }>Desenvolvido por Matheus Marinho</h2>
       </footer>
-    </main>
+    </>
   );
 };
 

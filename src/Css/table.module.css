@@ -1,23 +1,79 @@
 .header {
-  background-color: rgb(84, 16, 243);
-  color: white;
+  background-color: var(--main-black);
   display: flex;
   flex-direction: column;
   height: 7vh;
   justify-content: center;
+  padding: 35px;
   text-align: center;
   width: 100vw;
 }
 
+.headerTitle {
+  color: var(--main-orange);
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 0.15rem var(--main-white);
+}
+
 .footer {
-  background-color: red;
+  background-color: var(--main-black);
   bottom: 0;
-  color: white;
+  color: var(--main-yellow);
   display: flex;
-  flex-direction: column;
-  height: 9vh;
+  flex-direction: row;
+  height: 10vh;
   justify-content: center;
-  position: fixed;
   text-align: center;
+  position: fixed;
   width: 100vw;
+}
+
+.footerText {
+  font-weight: 600;
+  margin: auto;
+  text-shadow: 1px 1px 0.15rem var(--main-orange);
+}
+
+.mainContainer {
+  background-color: rgb(219, 186, 186);
+  height: 83vh;
+  padding: 5px;
+  width: 100vw;
+}
+
+.downloadButtons {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.downloadButtons button:active {
+  background-color: var(--main-orange);
+}
+
+.downloadButtons button {
+  background-color: var(--main-black);
+  border: 0.5px solid black;
+  border-radius: 15px;
+  color: var(--main-yellow);
+  font-size: 20px;
+  font-weight: 550;
+  margin: 10px;
+  padding: 8px 40px;
+  text-shadow: 2px 1px 0.15rem var(--main-green);
+}
+
+.tableContainer {
+  background-color: var(--main-black);
+  border: 1.5px solid black;
+  border-radius: 5px;
+  margin: auto;
+  width: 80vw;
+}
+
+.tableContainer th {
+  color: var(--main-orange);
+  font-size: 1.22rem;
+  padding: 10px;
 }

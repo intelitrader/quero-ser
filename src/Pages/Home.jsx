@@ -5,23 +5,25 @@ import styled from '../Css/home.module.css';
 function Home() {
   const history = useHistory()
   return(
-    <main>
+    <>
       <header className={ styled.header }>
-        <Link to="/"><h1>INTELITRADER</h1></Link>
+        <Link to="/" className={ styled.headerTitle }><h1>INTELITRADER</h1></Link>
       </header>
-      <div>
-        <h2>Insira o arquivo de produtos!</h2>
-        <input type="file" accept="text/plain" className="input-produtos" />
-      </div>
-      <div>
-        <h2>Insira o arquivo de produtos!</h2>
-        <input type="file" accept="text/plain" className="input-vendas" />
+      <div className={ styled.inputContainer }>
+        <div className={ styled.fileInput }>
+          <h2>Insira o arquivo de produtos!</h2>
+          <input type="file" accept="text/plain" className="input-produtos" />
+        </div>
+        <div className={ styled.fileInput }>
+          <h2>Insira o arquivo de vendas!</h2>
+          <input type="file" accept="text/plain" className="input-vendas" />
+        </div>
       </div>
       <button onClick={ () => history.push('/table') }>Acessar Tabela</button>
       <footer className={ styled.footer }>
-        <h2>Desenvolvido por <a href="https://www.linkedin.com/in/matheus-marinhodsp/">Matheus Marinho</a></h2>
+        <h2 className={ styled.footerText }>Desenvolvido por Matheus Marinho</h2>
       </footer>
-    </main>
+    </>
   );
 };
 
