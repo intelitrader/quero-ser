@@ -1,19 +1,19 @@
 const nextElement = (digit) => {
-    const separator = (digit + '').split('');
-    const resultado = [];
-    let acumulador = 1;
+    const analyze = (digit + '').split('');
+    const result = [];
 
-    for(let i = 0; i < separator.length; i ++) {
+    for(let i = 0; i < analyze.length; i ++) {
+        let accumulator = 1;
         // checagem se numero atual e o proximo sao iguais
-        while(i + 1 < separator.length && separator[i] == separator[i + 1]) {
+        while(i + 1 < analyze.length && analyze[i] === analyze[i + 1]) {
             i ++;
-            acumulador ++;
+            accumulator ++;
         }
-        // guardar o numero de ocorrencias no acumulador + o numero em si
-        resultado.push('' + acumulador);
-        resultado.push(separator[i]);
+        // guardar o numero de ocorrencias no accumulator + o numero em si
+        result.push('' + accumulator);
+        result.push(analyze[i]);
     }
-    return resultado.join('');
+    return result.join('');
 };
 
 const lookAndSay = (digit, n) => {
