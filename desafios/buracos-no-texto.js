@@ -1,16 +1,16 @@
 const letrasComBuraco = ['A', 'D', 'O', 'P', 'Q', 'R', 'a', 'b', 'd', 'e', 'g', 'o', 'p', 'q'];
 
 const buracosNoTexto = (texto) => {
-    const separator = texto.split('')
-    let result = 0
+    const separator = texto.split('');
+    let result = 0;
     for(const letra of separator) {
         if (letra === 'B') {
-            result += 2
+            result += 2;
         }
         if (letrasComBuraco.includes(letra)) {
-            result ++
+            result ++;
         }
     }
-    return result
-}
+    return result;
+};
 module.exports = buracosNoTexto;

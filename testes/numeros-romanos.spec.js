@@ -1,4 +1,4 @@
-const { toRoman, toArabic } = require('../desafios/numeros-romanos')
+const { toRoman, toArabic } = require('../desafios/numeros-romanos');
 
 describe('toRoman()', () => {
     test('converts 1', () => expect(toRoman(1)).toEqual('I'));
@@ -42,4 +42,4 @@ describe('toArabic()', () => {
     test('converts CMXI', () => expect(toArabic('CMXI')).toEqual(911));
     test('converts MXXIV', () => expect(toArabic('MXXIV')).toEqual(1024));
     test('converts MMM', () => expect(toArabic('MMM')).toEqual(3000));
-  });
+});

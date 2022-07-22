@@ -1,4 +1,4 @@
-const lookAndSay = require('../desafios/look-and-say')
+const lookAndSay = require('../desafios/look-and-say');
 
 describe ('look and say', () => {
     test('numero inicial 1, segundo elemento', () =>
@@ -18,4 +18,4 @@ describe ('look and say', () => {
 
     test('numero inicial 2, terceiro elemento', () =>
         expect(lookAndSay(2, 3)).toEqual('1112'));
-})
+});

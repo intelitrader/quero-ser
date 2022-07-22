@@ -1,4 +1,4 @@
-const buracosNoTexto = require('../desafios/buracos-no-texto')
+const buracosNoTexto = require('../desafios/buracos-no-texto');
 
 describe ('buracos no texto', () => {
     test('apenas letras maiúsculas', () =>
@@ -12,4 +12,4 @@ describe ('buracos no texto', () => {
 
     test('contabilizar exceção do B maiúsculo', () =>
         expect(buracosNoTexto('Bora testar')).toEqual(6));
-})
+});
