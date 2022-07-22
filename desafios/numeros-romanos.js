@@ -1,11 +1,8 @@
 const toArabic = (roman) => {
-    // transforma em array de letras
     const analyze = roman.split('');
-
     let result = 0;
 
     for (let i = 0; i <= analyze.length; i ++) {
-        // iterar sobre array uma checagem para cada letra e incrementando o resultado
         const numeral = analyze[i];
         const numeralMaior = analyze[i + 1];
         switch (numeral) {
@@ -95,12 +92,9 @@ const Map ={
 
 const toRoman = (number) => {
     const translate = [];
-
-    // checar o total de algarisms do argumento para realizar a tradução
     const analyze = ('' + number).split('').reverse();
     const algarisms = analyze.length;
 
-    // dado o total de algarisms, cada casa decimal é traduzida usando o seu numero correspondente
     for(let i = 0; i < algarisms; i++) {
         const transalteMap = Map[i];
         const translated = transalteMap[analyze[i]];
