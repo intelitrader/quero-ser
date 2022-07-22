@@ -1,12 +1,13 @@
 const toArabic = (roman) => {
     // transforma em array de letras
-    const Analyze = roman.split('')
+    const analyze = roman.split('');
 
-    let result = 0
-    for (let i = 0; i <= Analyze.length; i ++) {
+    let result = 0;
+
+    for (let i = 0; i <= analyze.length; i ++) {
         // iterar sobre array uma checagem para cada letra e incrementando o resultado
-        let numeral = Analyze[i]
-        let numeralMaior = Analyze[i + 1]
+        const numeral = analyze[i];
+        const numeralMaior = analyze[i + 1];
         switch (numeral) {
             case 'I':
                 numeralMaior === 'V'|
@@ -14,135 +15,98 @@ const toArabic = (roman) => {
                 numeralMaior === 'L'|
                 numeralMaior === 'C'|
                 numeralMaior === 'D'|
-                numeralMaior === 'M'  ? result -- : result ++
-                break
+                numeralMaior === 'M'  ? result -- : result ++;
+                break;
             case 'V':
                 result += 5;
-                break
+                break;
             case 'X':
                 numeralMaior === 'L'|
                 numeralMaior === 'C'|
                 numeralMaior === 'D'|
-                numeralMaior === 'M' ? result -= 10 : result += 10
-                break
+                numeralMaior === 'M' ? result -= 10 : result += 10;
+                break;
             case 'L':
                 result += 50;
-                break
+                break;
             case 'C':
                 numeralMaior === 'D'|
                 numeralMaior === 'M'  ? result -= 100 : result += 100;
-                break
+                break;
             case 'D':
                 result += 500;
-                break
+                break;
             case 'M':
                 result += 1000;
-                break
+                break;
         }
     }
-    return result
-}
+    return result;
+};
 
 const Units = {
-    unit1() { return 'I'},
-    unit2() { return 'II'},
-    unit3() { return 'III'},
-    unit4() { return 'IV'},
-    unit5() { return 'V'},
-    unit6() { return 'VI'},
-    unit7() { return 'VII'},
-    unit8() { return 'VIII'},
-    unit9() { return 'IX'},
-    unit0() { return },
-}
+    1: 'I',
+    2: 'II',
+    3: 'III',
+    4: 'IV',
+    5: 'V',
+    6: 'VI',
+    7: 'VII',
+    8: 'VIII',
+    9: 'IX',
+    0: '',
+};
 const Tens = {
-  ten1() { return 'X'},
-  ten2() { return 'XX'},
-  ten3() { return 'XXX'},
-  ten4() { return 'XL'},
-  ten5() { return 'L'},
-  ten6() { return 'LX'},
-  ten7() { return 'LXX'},
-  ten8() { return 'LXXX'},
-  ten9() { return 'XC'},
-  ten0() {return},
-}
+    1: 'X',
+    2: 'XX',
+    3: 'XXX',
+    4: 'XL',
+    5: 'L',
+    6: 'LX',
+    7: 'LXX',
+    8: 'LXXX',
+    9: 'XC',
+    0: '',
+};
 const Hundreds = {
-  hundred1() { return 'C'},
-  hundred2() { return 'CC'},
-  hundred3() { return 'CCC'},
-  hundred4() { return 'CD'},
-  hundred5() { return 'D'},
-  hundred6() { return 'DC'},
-  hundred7() { return 'DCC'},
-  hundred8() { return 'DCCC'},
-  hundred9() { return 'CM'},
-  hundred0() { return },
-}
+    1: 'C',
+    2: 'CC',
+    3: 'CCC',
+    4: 'CD',
+    5: 'D',
+    6: 'DC',
+    7: 'DCC',
+    8: 'DCCC',
+    9: 'CM',
+    0: '',
+};
 const Thousands = {
-  thousand1() { return 'M'},
-  thousand2() { return 'MM'},
-  thousand3() { return 'MMM'},
-  thousand0() { return },
-}
+    1: 'M',
+    2: 'MM',
+    3: 'MMM',
+    0: '',
+};
+const Map ={
+    0: Units,
+    1: Tens,
+    2: Hundreds,
+    3: Thousands
+};
 
 const toRoman = (number) => {
-    const traducao = []
-    let unidade, dezena, centena, milhar
-    //checar o total de algarismos do argumento para realizar a tradução
-    const Analyze = ('' + number).split('')
-    const Algarismos = Analyze.length
+    const translate = [];
 
-    // dado o total de algarismos, cada casa decimal é traduzida usando o seu numero correspondente
-    if( Algarismos === 1) {
-        let unidade = Analyze[0]
-        let translateUnit = Units[`unit${unidade}`]
-        traducao.push(translateUnit());
+    // checar o total de algarisms do argumento para realizar a tradução
+    const analyze = ('' + number).split('').reverse();
+    const algarisms = analyze.length;
+
+    // dado o total de algarisms, cada casa decimal é traduzida usando o seu numero correspondente
+    for(let i = 0; i < algarisms; i++) {
+        const transalteMap = Map[i];
+        const translated = transalteMap[analyze[i]];
+        translate.unshift(translated);
     }
+    return translate.join('');
+};
 
-    if( Algarismos === 2) {
-        let unidade = Analyze[1]
-        let translateUnit = Units[`unit${unidade}`]
-
-        let dezena = Analyze[0]
-        let translateTen = Tens[`ten${dezena}`]
-
-        traducao.unshift(translateUnit());
-        traducao.unshift(translateTen());
-    }
-
-    if( Algarismos === 3) {
-        let unidade = Analyze[2]
-        let translateUnit = Units[`unit${unidade}`]
-
-        let dezena = Analyze[1]
-        let translateTen = Tens[`ten${dezena}`]
-
-        let centena = Analyze[0]
-        let translateHundred = Hundreds[`hundred${centena}`]
-
-        traducao.unshift(translateUnit());
-        traducao.unshift(translateTen());
-        traducao.unshift(translateHundred());
-    }
-    if( Algarismos === 4) {
-        let unidade = Analyze[3]
-        let translateUnit = Units[`unit${unidade}`]
-
-        let dezena = Analyze[2]
-        let translateTen = Tens[`ten${dezena}`]
-
-        let centena = Analyze[1]
-        let translateHundred = Hundreds[`hundred${centena}`]
-
-        let milhar = Analyze[0]
-        let translateThousand = Thousands[`thousand${milhar}`]
-        traducao.unshift(translateUnit());
-        traducao.unshift(translateTen());
-        traducao.unshift(translateHundred());
-        traducao.unshift(translateThousand());
-    }
-    return traducao.join('')
-}
-
-export { toArabic, toRoman }
+module.exports = { toArabic, toRoman };
