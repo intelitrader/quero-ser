@@ -1,0 +1,5 @@
+numeros romanos: https://dojopuzzles.com/problems/numeros-romanos/
+
+buracos no texto: https://dojopuzzles.com/problems/buracos-nas-letras/
+
+look-and-say: https://dojopuzzles.com/problems/sequencia-look-and-say/
