@@ -1,0 +1,23 @@
+.header {
+  background-color: rgb(84, 16, 243);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 7vh;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+}
+
+.footer {
+  background-color: red;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 9vh;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+}
