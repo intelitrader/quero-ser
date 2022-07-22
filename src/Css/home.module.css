@@ -34,3 +34,38 @@
   margin: auto;
   text-shadow: 1px 1px 0.15rem var(--main-orange);
 }
+
+.tableButton:active {
+  background-color: var(--main-orange);
+}
+
+.tableButton {
+  background-color: var(--main-black);
+  border: 0.5px solid black;
+  border-radius: 15px;
+  color: var(--main-yellow);
+  font-size: 20px;
+  font-weight: 550;
+  margin: 5px;
+  padding: 8px 40px;
+  text-shadow: 2px 1px 0.15rem var(--main-green);
+  width: 20rem;
+}
+
+.inputContainer {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 5px;
+  width: 55vw;
+}
+
+.mainContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100vw;
+}

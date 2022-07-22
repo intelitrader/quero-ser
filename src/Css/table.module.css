@@ -36,7 +36,7 @@
 }
 
 .mainContainer {
-  background-color: rgb(219, 186, 186);
+  background-color: var(--main-white);
   height: 83vh;
   padding: 5px;
   width: 100vw;
@@ -66,14 +66,26 @@
 
 .tableContainer {
   background-color: var(--main-black);
-  border: 1.5px solid black;
+  border: 1.5px solid rgb(41, 41, 41);
   border-radius: 5px;
   margin: auto;
   width: 80vw;
 }
 
 .tableContainer th {
+  background-color: rgb(71, 71, 71);
   color: var(--main-orange);
+  font-size: 1.22rem;
+  padding: 10px;
+}
+
+.tableContainer tbody {
+  text-align: center;
+}
+
+.tableContainer td {
+  background-color: var(--main-white);
+  color: var(--main-black);
   font-size: 1.22rem;
   padding: 10px;
 }

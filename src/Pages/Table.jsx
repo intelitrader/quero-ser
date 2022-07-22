@@ -22,6 +22,18 @@ function Table() {
                 <th scope="col">Transf. de Arm p/ CO</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>Produto</td>
+              <td>QtCO</td>
+              <td>QtMin</td>
+              <td>QtVendas</td>
+              <td>Moeda</td>
+              <td>Estq. após vendas</td>
+              <td>Necess.</td>
+              <td>Transf. de Arm p/ CO</td>
+            </tr>
+          </tbody>
         </table>
         <div className={ styled.downloadButtons }>
           <button>Baixar TRANSFERE.TXT</button>
