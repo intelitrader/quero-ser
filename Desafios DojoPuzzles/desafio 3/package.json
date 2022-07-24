@@ -1,0 +1,14 @@
+{
+  "name": "desafio-3",
+  "version": "1.0.0",
+  "description": "analisando urls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "malinhodev",
+  "license": "ISC",
+  "dependencies": {
+    "parse-url": "^7.0.2"
+  }
+}

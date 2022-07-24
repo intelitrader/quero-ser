@@ -1,0 +1,50 @@
+* {
+    font-family: verdana;
+  }
+  
+  h1 {
+      text-align: center;
+  }
+  div {
+      text-align: center;
+  }
+  table {
+      margin: 1em auto;
+      border-collapse: collapse;
+  }
+  td {
+      border: 1px solid black;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+  }
+  .blocked, .flag {
+      background: lightgray;    
+  }
+  .n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8 {
+      background-color: #eee;
+  }
+  .n1 {
+      color: blue;
+  }
+  .n2 {
+      color: green;
+  }
+  .n3 {
+      color: red;
+  }
+  .n4 {
+      color: maroon;
+  }
+  .n5 {
+      color: blueviolet;
+  }
+  .n6 {
+      color: darkgoldenrod;
+  }
+  .n7 {
+      color: orange;
+  }
+  .n8 {
+      color: tomato;
+  }
