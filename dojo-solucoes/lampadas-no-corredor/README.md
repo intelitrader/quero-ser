@@ -1,4 +1,4 @@
-## Desafio: Lâmpadas do corredor
+## DESAFIO: LÂMPADAS NO CORREDOR
 
  Um homem chamado José é o responsável por ligar e desligar as luzes de um corredor. Cada lâmpada tem seu próprio interruptor que liga e a desliga. Inicialmente todas as lâmpadas estão desligadas.
 
