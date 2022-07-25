@@ -7,6 +7,24 @@ const verifyCodes = (string, code, index) => {
   return string;
 }
 
+const alignStrings = (string, space) => {
+  let transformedString = string.toString();
+  if(transformedString.length <= space) {
+    for(let index = transformedString.length; index < space; index++){
+      transformedString += ' ';
+    }
+  }
+  return transformedString;
+};
+
+export const makeTransferFile = (tableList) => {
+  let saleFile = 'Necessidade de Transferência Armazém para CO\n\nProduto   QtCO   QtMin   QtVendas   Estq.após Vendas   Necess.     Transf. de Arm p/ CO\n';
+  tableList.map(({ productCode, qtdCO, qtdMin, qtdSold, stock, nessToRepo, qtdToTransfer }) => {
+    saleFile += `${productCode}     ${alignStrings(qtdCO, 6)}  ${alignStrings(qtdMin, 6)}   ${alignStrings(qtdSold, 6)}      ${alignStrings(stock, 6)}              ${alignStrings(nessToRepo, 6)}       ${alignStrings(qtdToTransfer, 6)}\n`;
+  });
+  return saleFile;
+};
+
 const makeTable = (saleList, setFiltredSales, productList) => {
   let tableList = [];
   productList.forEach((item) => {
@@ -46,14 +64,6 @@ export function verifySales(salesTxtList, productCodeList, setDivergencyFile, se
   setDivergencyFile(divergencyString);
   const newArray = salesTxtList.filter((item) => item !== null);
   makeTable(newArray, setFiltredSales, productList);
-};
-
-export const makeSalesFile = (tableList) => {
-  let saleFile = 'Produto	  QtCO	  QtMin  	QtVendas	  Estq.após Vendas Necess.   Transf. de Vendas Arm p/ CO\n';
-  tableList.forEach(({ productCode, qtdCO, qtdMin, qtdSold, stock, nessToRepo, qtdToTransfer }) => {
-    saleFile += `${productCode}   ${qtdCO}   ${qtdMin}  ${qtdSold}   ${stock}   ${nessToRepo}   ${qtdToTransfer}\n`
-  });
-  console.log(saleFile);
 };
 
 export function downloadFile(fileContent, title) {

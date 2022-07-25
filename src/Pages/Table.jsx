@@ -2,15 +2,19 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MyContext from '../Context/MyContext';
 import styled from '../Css/table.module.css';
-import {verifySales, downloadFile, makeSalesFile } from '../helpers';
+import {verifySales, downloadFile, makeTransferFile } from '../helpers';
 
 function Table() {
   const { salesTxtList, productTxtList, productCodeList } = useContext(MyContext);
   const [divergencyFile, setDivergencyFile] = useState('');
   const [filtredSales, setFiltredSales] = useState([]);
+  const [transferFile, setTransferFile] = useState('');
   useEffect(() => {
     verifySales(salesTxtList, productCodeList, setDivergencyFile, setFiltredSales, productTxtList);
   }, []);
+  useEffect(() => {
+    setTransferFile(makeTransferFile(filtredSales));
+  }, [filtredSales]);
 
   return(
     <>
@@ -47,7 +51,7 @@ function Table() {
           </tbody>
         </table>
         <div className={ styled.downloadButtons }>
-          <button>Baixar TRANSFERE.TXT</button>
+          <button onClick={ () => downloadFile(transferFile, 'TRANSFERE') }>Baixar TRANSFERE.TXT</button>
           <button onClick={ () => downloadFile(divergencyFile, 'DIVERGENCIAS') }>Baixar DIVERGENCIAS.TXT</button>
           <button>Baixar TOTCANAIS.TXT</button>
         </div>
