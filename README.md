@@ -1,57 +1,39 @@
-# Quero ser Intelitrader
+# Desafio Intelitrader
 
-## [Quem somos](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
+## Link para a aplicação
 
-## [Sobre as vagas](id:SobreAsVagas)
-Você gosta de programar e aprender? Aqui é o lugar certo. 
+- https://processo-seletivo-intelitrader.vercel.app/
 
-Temos uma cultura focada em formação e vamos te ensinar tudo que você precisa para virar um Engenheiro ou Engenheira de Software. Temos demanda para backend e frontend.
+## Objetivo do projeto
+Receber um arquivo contendo o estoque atual dos produtos e um arquivo contendo o histórico das vendas realizadas, analisar os arquivos e definir divergências nos arquivos, quantidade de vendas separadas por canais de venda e organizar a necessidade de transferência do armazém para o centro de operações. 
 
-Usamos Scrum, Git, Visual Studio e Visual Studio Code.
+## Descrição do projeto
 
-Aqui usamos bastante C# e C++. Usamos também JavaScript (front) e Python (algumas ferramentas internas).
+Na tela inicial temos dois locais para inserir os arquivos desejados de vendas e produtos, ao inseri-los é só clicar no botão de ver tabelas para ir para a próxima página.
 
-## [Onde vocês ficam?](id:Localizacao)
-Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
+![tela inicial da aplicação](images/telainicial.png)
 
-Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
+Já na tela principal, temos os botões para baixar os arquivos necessários e uma tabela que mostra o controle de vendas após analisar os arquivos inseridos na página anterior.
 
-Temos horário flexível, você pode trabalhar na hora que for melhor para você. Estuda à tarde? Sem problemas. Vai pra academia todo dia 11:00? Ótimo, continue com sua rotina.
+![tela principal da aplicação](images/tabela.png)
 
-O tempo gasto com a Intelitrader também é flexível. Você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é se você entrega código de qualidade e gosta de programar, aprender e estudar.
+E ao clicar em algum dos botões é feito o download do arquivo desejado, segue abaixo um exemplo feito com o arquivo de transferências.
 
-## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
+![tela principal da aplicação](images/transfere.png)
 
-Não nos importamos com formação. 
+## Como visualizar o projeto localmente
 
-Você fez faculdade? Bom pra você, esperamos que você tenha aproveitado e aprendido bastante. Tem bastante gente que faz 4 anos de faculdade e não aprende nada. :-(
+1- Via url - https://processo-seletivo-intelitrader.vercel.app/
 
-O que nos interessa é:
 
-* Você sabe programar?
-* Você gosta de programar?
-* Você gosta de aprender?
-* Você sabe que na área de programação você precisa aprender sempre, o tempo todo, todo dia?
+2- Via node
+- Clone o repositório através do comando "git clone git@github.com:matheusnff85/processo-seletivo-intelitrader.git"
+- Instale as dependências com o comando "npm install"
+- Por fim utilize o comando "npm start" e abra o link retornado pelo terminal em seu navegador
 
-Nós te ajudamos ensinando e guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e ter disposição para estudar.
 
-## [Como me candidato?](id:ComoMeCandidato)
 
-### [Desenvolvedor(a)](id:CandidaturaDev)
-
-Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
-
-1. Leia com atenção. Sua candidatura só será considerada se você seguir corretamente as instruções.
-2. Faça um fork desse repositório.
-3. Escolha 3 testes em [DojoPuzzles](http://dojopuzzles.com/) e resolva com sua linguagem favorita (se você escolher o desafio "Ano Bissexto" seu curriculum será desconsiderado; se você optar por no lugar do Dojo realizar o que está na pasta Desafio **terá prioridade na seleção**)
-5. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
-6. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
-
-## [Condições](id:CondicoesEDiferenciais)
-
-* Regime: **PJ**;
-* Período: **Integral**;
-* Contratação: **Imediata**;
-
+## Desenvolido por Matheus Marinho
+-Github: https://github.com/matheusnff85
+-Linkedin: https://www.linkedin.com/in/matheus-marinhodsp/
 
