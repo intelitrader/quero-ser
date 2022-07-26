@@ -2,18 +2,21 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MyContext from '../Context/MyContext';
 import styled from '../Css/table.module.css';
-import {verifySales, downloadFile, makeTransferFile } from '../helpers';
+import {verifySales, downloadFile, makeTransferFile, makeChannelsFile } from '../helpers';
 
 function Table() {
   const { salesTxtList, productTxtList, productCodeList } = useContext(MyContext);
   const [divergencyFile, setDivergencyFile] = useState('');
   const [filtredSales, setFiltredSales] = useState([]);
   const [transferFile, setTransferFile] = useState('');
+  const [channelFile, setChannelFile] = useState('');
+
   useEffect(() => {
     verifySales(salesTxtList, productCodeList, setDivergencyFile, setFiltredSales, productTxtList);
   }, []);
   useEffect(() => {
     setTransferFile(makeTransferFile(filtredSales));
+    setChannelFile(makeChannelsFile(salesTxtList));
   }, [filtredSales]);
 
   return(
@@ -53,7 +56,7 @@ function Table() {
         <div className={ styled.downloadButtons }>
           <button onClick={ () => downloadFile(transferFile, 'TRANSFERE') }>Baixar TRANSFERE.TXT</button>
           <button onClick={ () => downloadFile(divergencyFile, 'DIVERGENCIAS') }>Baixar DIVERGENCIAS.TXT</button>
-          <button>Baixar TOTCANAIS.TXT</button>
+          <button onClick={ () => downloadFile(channelFile, 'TOTCANAIS') }>Baixar TOTCANAIS.TXT</button>
         </div>
       </main>
       <footer className={ styled.footer }>

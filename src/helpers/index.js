@@ -17,6 +17,16 @@ const alignStrings = (string, space) => {
   return transformedString;
 };
 
+export const makeChannelsFile = (list) => {
+  const saleList = channelRelatory(list)
+  let channelString = `Quantidades de Vendas por canal\n\n`;
+  console.log(saleList);
+  saleList.map(({id, channel, totalSales}) => {
+    channelString += `${id} - ${alignStrings(channel, 30)}${totalSales}\n`
+  });
+  return channelString;
+};
+
 export const makeTransferFile = (tableList) => {
   let saleFile = 'Necessidade de Transferência Armazém para CO\n\nProduto   QtCO   QtMin   QtVendas   Estq.após Vendas   Necess.     Transf. de Arm p/ CO\n';
   tableList.map(({ productCode, qtdCO, qtdMin, qtdSold, stock, nessToRepo, qtdToTransfer }) => {
@@ -25,6 +35,36 @@ export const makeTransferFile = (tableList) => {
   return saleFile;
 };
 
+const channelRelatory = (saleList) => {
+  const relatories = [
+    {
+      id: 1, 
+      channel: 'Representantes', 
+      totalSales: saleList.filter((sale) => sale.sellChannel === '1')
+        .reduce((acc, curr) => {return acc + Number(curr.qtdSold)}, 0)
+  },
+  {
+      id: 2, 
+      channel: 'Website', 
+      totalSales: saleList.filter((sale) => sale.sellChannel === '2')
+        .reduce((acc, curr) => {return acc + Number(curr.qtdSold)}, 0)
+  },
+  {
+      id: 3, 
+      channel: 'Aplicativo móvel Android', 
+      totalSales: saleList.filter((sale) => sale.sellChannel === '3')
+        .reduce((acc, curr) => {return acc + Number(curr.qtdSold)}, 0)
+  },
+  {
+      id: 4, 
+      channel: 'Aplicativo móvel iPhone', 
+      totalSales: saleList.filter((sale) => sale.sellChannel === '4')
+        .reduce((acc, curr) => {return acc + Number(curr.qtdSold)}, 0)
+  }
+  ];
+  return relatories;
+}
+
 const makeTable = (saleList, setFiltredSales, productList) => {
   let tableList = [];
   productList.forEach((item) => {
@@ -32,7 +72,6 @@ const makeTable = (saleList, setFiltredSales, productList) => {
       return acc + Number(curr.qtdSold);
     }, 0);
     const qtdNess = item.qtdToStayInStock - (item.qtdInStock - qtdSales);
-    console.log(qtdNess);
     const qtdToRepo = qtdNess > 0 ? qtdNess : 0;
     const listObj = {
       productCode: item.productCode, 
@@ -46,7 +85,7 @@ const makeTable = (saleList, setFiltredSales, productList) => {
     tableList.push(listObj);
   });
   setFiltredSales(tableList);
-}
+};
 
 export function verifySales(salesTxtList, productCodeList, setDivergencyFile, setFiltredSales, productList) {
   const divergencyCodes = [135, 190, 999];
