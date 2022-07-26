@@ -1,0 +1,37 @@
+using System;
+
+namespace FizzBuzz {
+    internal class Program {
+        static void Main(string[] args) {
+
+            Fazer();
+
+            Console.WriteLine("=============================== intelitrader/queroser- =========================");
+
+
+        }
+
+
+
+
+        public static void Fazer() {
+
+            for (int i = 1; i < 101; i++) {
+
+                if (i % 3 == 0) {
+
+                    Console.WriteLine("Fizz - [ FizzBuzz ] !");
+                }
+                else if (i % 5 == 0) {
+                    Console.WriteLine("Buzz - [ FizzBuzz ] !");
+                }
+
+                else {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+
+}
+
