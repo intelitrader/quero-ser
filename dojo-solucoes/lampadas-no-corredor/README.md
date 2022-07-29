@@ -16,7 +16,13 @@ Saída: [on, off, off]
  - Typescript
 
 ## Como rodar 
-    Dentro da pasta da solução: ``npm run start`` 
+
+    Dentro da pasta da solução no terminal: 
+    npm i && npm run start
+
+    Possivel checar o exemplo da questão com:
+    npm run test
+
 
     Caso não tenha Node.js e Npm instalados siga o passo a passo no site:
     <a rel="noopener" target="_blank" href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Documentação Node.js</a>

@@ -1,0 +1,17 @@
+{
+  "name": "matriz-espiral",
+  "version": "1.0.0",
+  "description": "Escreva um programa que gera uma matriz em espiral em sentido horário e anti-horário.",
+  "main": "index.js",
+  "scripts": {
+    "build": "clear && tsc",
+    "start": "clear && node ./build/index.js",
+    "test": "clear && jest"
+  },
+  "keywords": ["DojoPuzzles", "TechnicalTest", "Intelitrader"],
+  "author": "Leona Christen",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}

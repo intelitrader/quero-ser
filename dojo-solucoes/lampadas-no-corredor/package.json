@@ -1,0 +1,17 @@
+{
+  "name": "lampadas-no-corredor",
+  "version": "1.0.0",
+  "description": "Escreva um programa que determine qual é o estado final de cada lâmpada. Está ligada ou desligada?",
+  "main": "index.js",
+  "scripts": {
+    "build": "clear && tsc",
+    "start": "clear && node ./build/index.js",
+    "test": "clear && jest"
+  },
+  "keywords": ["DojoPuzzles", "TechnicalTest", "Intelitrader"],
+  "author": "Leona Christen",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
