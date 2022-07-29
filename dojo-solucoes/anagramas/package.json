@@ -1,0 +1,17 @@
+{
+  "name": "anagramas",
+  "version": "1.0.0",
+  "description": "Escreva um programa que gere todos os anagramas potenciais de uma string.",
+  "main": "index.js",
+  "scripts": {
+    "build": "clear && tsc",
+    "start": "clear && node ./build/index.js",
+    "test": "clear && jest"
+  },
+  "keywords": ["DojoPuzzles", "TechnicalTest", "Intelitrader"],
+  "author": "Leona Christen",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
