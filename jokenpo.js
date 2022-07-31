@@ -24,5 +24,4 @@ const jokenpo = (player1, player2) => {
   }
 }
 
-// Exemplo de uso
-console.log(jokenpo('pedra', 'tesoura'));
+console.log(jokenpo('pedra', 'papel'));
