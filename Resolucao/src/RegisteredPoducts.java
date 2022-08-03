@@ -7,9 +7,13 @@ public class RegisteredPoducts {
     this.products.add(product);
   }
 
+  public ArrayList<Product> getProducts() {
+    return this.products;
+  }
+
   public boolean isRegisteredProduct(Product product) {
-    for (int i = 0; i < this.products.size(); i += 1) {
-        return this.products.get(i).getCode() == product.getCode();
+    for (Product value : this.products) {
+      return value.getCode() == product.getCode();
     }
     return false;
   }
