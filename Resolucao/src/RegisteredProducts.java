@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
-public class RegisteredPoducts {
+public class RegisteredProducts {
   private ArrayList<Product> products;
+
+  public RegisteredProducts() {
+    this.products = new ArrayList<>();
+  }
 
   public void addProduct(Product product) {
     this.products.add(product);

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ProductsSold {
   private ArrayList<ProductSold> productsSold;
 
-  public void ProductSold(ProductSold productSold) {
+  public ProductsSold(ProductSold productSold) {
     for (ProductSold value : this.productsSold) {
       if (value.getProduct().getCode() == productSold.getProduct().getCode()) {
         value.setAmountSales(productSold.getAmountSales());
