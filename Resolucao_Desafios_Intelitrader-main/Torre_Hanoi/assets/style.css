@@ -1,0 +1,60 @@
+.hanoi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 450px;
+    width: 600px;
+    background: #ccf;
+    position: relative;
+}
+
+.tower {
+    position: relative;
+    cursor: pointer;
+}
+
+.tower:hover {
+    background: #99F;
+}
+
+.tower::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 200px;
+    bottom: 0;
+    left: 90px;
+    background: purple;
+    border-radius: 10px 10px 0 0;
+}
+
+.disk {
+    position: absolute;
+    background: linear-gradient(0deg, rgb(102, 0, 63), rgb(44, 2, 39));
+    height: 35px;
+    width: 180px;
+    border-radius: 15px;
+    margin-left: 10px;
+    z-index: 2;
+    transition: left .2s, bottom .2s .2s;
+    pointer-events: none;
+}
+
+.d1 {width: 60px; margin-left: 70px;}
+.d2 {width: 90px; margin-left: 55px;}
+.d3 {width: 120px; margin-left: 40px;}
+.d4 {width: 150px; margin-left: 25px;}
+
+.t1 {left: 0;}
+.t2 {left: 200px;}
+.t3 {left: 400px;}
+
+.p1 {bottom: 0;}
+.p2 {bottom: 35px;}
+.p3 {bottom: 70px;}
+.p4 {bottom: 105px;}
+.p5 {bottom: 140px;}
+
+.p0 {
+    bottom: 350px;
+}
