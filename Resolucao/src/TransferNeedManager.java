@@ -4,13 +4,13 @@ public class TransferNeedManager {
   private int transferNeed;
   private int transferStorage;
 
-  public TransferNeedManager(Product product, int amountsales) {
-    this.productCode = product.getCode();
-    this.stockAfterSales = product.getStartingAmount() - amountsales;
-    if (this.stockAfterSales - product.getMinimumQuantityCO() > 0) {
+  public TransferNeedManager(ProductSold productSold) {
+    this.productCode = productSold.getProduct().getCode();
+    this.stockAfterSales = productSold.getProduct().getStartingAmount() - productSold.getAmountSales();
+    if (this.stockAfterSales - productSold.getProduct().getMinimumQuantityCO() > 0) {
       this.transferNeed = 0;
     } else {
-      this.transferNeed = product.getMinimumQuantityCO() - this.stockAfterSales;
+      this.transferNeed = productSold.getProduct().getMinimumQuantityCO() - this.stockAfterSales;
     }
 
     if (this.transferNeed > 1 && this.transferNeed < 10) {
