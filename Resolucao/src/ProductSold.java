@@ -1,18 +1,9 @@
-public class ProductSold {
-  private Product product;
+public class ProductSold extends Product {
   private int amountSales;
 
-  public ProductSold(Product product, int amoutSales) {
-    this.product = product;
+  public ProductSold(int code, int startingAmount, int minimumQuantityCO, int amoutSales) {
+    super(code, startingAmount, minimumQuantityCO);
     this.amountSales = amoutSales;
-  }
-
-  public Product getProduct() {
-    return product;
-  }
-
-  public void setProduct(Product product) {
-    this.product = product;
   }
 
   public int getAmountSales() {

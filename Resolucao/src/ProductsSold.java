@@ -3,17 +3,15 @@ import java.util.ArrayList;
 public class ProductsSold {
   private ArrayList<ProductSold> productsSold;
 
-  public ProductsSold(ProductSold productSold) {
-    for (ProductSold value : this.productsSold) {
-      if (value.getProduct().getCode() == productSold.getProduct().getCode()) {
-        value.setAmountSales(productSold.getAmountSales());
-      } else {
-        this.productsSold.add(productSold);
-      }
-    }
+  public ProductsSold() {
+    this.productsSold = new ArrayList<>();
   }
 
   public ArrayList<ProductSold> getProductsSold() {
     return this.productsSold;
+  }
+
+  public void addProductSold(ProductSold productSold) {
+    int code = productSold.getCode();
   }
 }
