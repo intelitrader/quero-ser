@@ -11,13 +11,16 @@ public class Starter {
     RegisteredProducts registeredProducts = new RegisteredProducts();
     ProductsSold productsSold = new ProductsSold();
     Divergences divergences = new Divergences();
+    SalesByChannelListManager salesByChannelListManager = new SalesByChannelListManager();
 
     Starter starter = new Starter();
     starter.saveRegisteredProducts(products, registeredProducts);
-    starter.saveProductsSold(sales, productsSold, registeredProducts, divergences);
+    starter.saveProductsSold(sales, productsSold, registeredProducts, divergences, salesByChannelListManager);
 
     starter.generateTransferNeedReport(output, productsSold);
     starter.generateDivergencesReport(output, divergences);
+
+    System.out.println(salesByChannelListManager.getSalesByChannels());
 
   }
 
@@ -130,7 +133,7 @@ public class Starter {
     return new Product(code, startingAmount, minimumQuantityCO);
   }
 
-  public void saveProductsSold(File sales, ProductsSold productsSold, RegisteredProducts registeredProducts, Divergences divergences) {
+  public void saveProductsSold(File sales, ProductsSold productsSold, RegisteredProducts registeredProducts, Divergences divergences, SalesByChannelListManager salesByChannelListManager) {
     try {
       FileReader reader = new FileReader(sales);
       BufferedReader buffReader = new BufferedReader(reader);
@@ -140,6 +143,7 @@ public class Starter {
       String row = buffReader.readLine();
       lineNumber += 1;
       checkDivergences(row, lineNumber, registeredProducts, divergences);
+      saveSalesByChannel(row, salesByChannelListManager);
       if (isProductRegistered(row, registeredProducts)) {
         productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
       }
@@ -149,6 +153,7 @@ public class Starter {
         lineNumber += 1;
         if (row != null) {
           checkDivergences(row, lineNumber, registeredProducts, divergences);
+          saveSalesByChannel(row, salesByChannelListManager);
         }
         if (row != null && isProductRegistered(row, registeredProducts)) {;
           productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
@@ -221,6 +226,18 @@ public class Starter {
     return new Divergence(lineNumber, saleStatusMessage);
   }
 
+  public void saveSalesByChannel(String row, SalesByChannelListManager salesByChannelListManager) {
+    String [] saleInfos = row.split(";");
+    int amountSales = Integer.parseInt(saleInfos[1]);
+    int saleStatus = Integer.parseInt(saleInfos[2]);
+    short channelnumber = Short.parseShort(saleInfos[3]);
+
+    if (saleStatus == 100 || saleStatus == 102) {
+      SalesByChannel salesByChannel = createSalesByChannelObject(channelnumber, amountSales);
+      salesByChannelListManager.addSalesByChanel(salesByChannel);
+    }
+  }
+
   public static boolean isProductRegistered(String row, RegisteredProducts registeredProducts) {
     String [] productInfos = row.split(";");
     int code = Integer.parseInt(productInfos[0]);
@@ -239,5 +256,9 @@ public class Starter {
     } else {
       return String.format(MessageFormat.format("%{0}s", columnWidth), data);
     }
+  }
+
+  public SalesByChannel createSalesByChannelObject(short channelNumber, int amountSales) {
+    return new SalesByChannel(channelNumber, amountSales);
   }
 }
