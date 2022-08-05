@@ -8,6 +8,9 @@ public class Starter {
     File products = new File("./Inputs/PRODUCTS.txt");
     File sales = new File("./Inputs/SALES.txt");
     File output = new File("./Output");
+    if (!output.exists()) {
+      output.mkdir();
+    }
     RegisteredProducts registeredProducts = new RegisteredProducts();
     ProductsSold productsSold = new ProductsSold();
     Divergences divergences = new Divergences();
