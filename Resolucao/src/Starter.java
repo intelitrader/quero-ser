@@ -10,14 +10,39 @@ public class Starter {
     File output = new File("./Output");
     RegisteredProducts registeredProducts = new RegisteredProducts();
     ProductsSold productsSold = new ProductsSold();
+    Divergences divergences = new Divergences();
 
     Starter starter = new Starter();
     starter.saveRegisteredProducts(products, registeredProducts);
-    starter.saveProductsSold(sales, productsSold, registeredProducts);
+    starter.saveProductsSold(sales, productsSold, registeredProducts, divergences);
 
     starter.generateTransferNeedReport(output, productsSold);
+    starter.generateDivergencesReport(output, divergences);
+
   }
 
+  public void generateDivergencesReport(File output, Divergences divergences) {
+    try {
+      ArrayList<Divergence> divergencesList = divergences.getDivergences();
+
+      File file = new File(output, "divergencias.txt");
+      file.createNewFile();
+
+      FileWriter writer = new FileWriter(file);
+      BufferedWriter buffWriter = new BufferedWriter(writer);
+
+      for (Divergence divergence : divergencesList) {
+        int lineNumber = divergence.getLineNumber();
+        String saleStatusMessage = divergence.getSaleStatusMessage();
+        String row = String.format("Linha %s - %s", lineNumber, saleStatusMessage);
+        buffWriter.write(row);
+        buffWriter.flush();
+        buffWriter.newLine();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
   public void generateTransferNeedReport(File output, ProductsSold productsSold) {
     try {
       ArrayList<ProductSold> productSoldList = productsSold.getProductsSold();
@@ -105,20 +130,27 @@ public class Starter {
     return new Product(code, startingAmount, minimumQuantityCO);
   }
 
-  public void saveProductsSold(File sales, ProductsSold productsSold, RegisteredProducts registeredProducts) {
+  public void saveProductsSold(File sales, ProductsSold productsSold, RegisteredProducts registeredProducts, Divergences divergences) {
     try {
       FileReader reader = new FileReader(sales);
       BufferedReader buffReader = new BufferedReader(reader);
 
+      int lineNumber = 0;
+
       String row = buffReader.readLine();
+      lineNumber += 1;
+      checkDivergences(row, lineNumber, registeredProducts, divergences);
       if (isProductRegistered(row, registeredProducts)) {
         productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
       }
 
       while (row != null) {
         row = buffReader.readLine();
+        lineNumber += 1;
+        if (row != null) {
+          checkDivergences(row, lineNumber, registeredProducts, divergences);
+        }
         if (row != null && isProductRegistered(row, registeredProducts)) {;
-          checkDivergences(row, registeredProducts, buffReader);
           productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
         }
       }
@@ -153,15 +185,40 @@ public class Starter {
     return null;
   }
 
-  public boolean checkDivergences(String row, RegisteredProducts registeredProducts, BufferedReader buffReader) {
+  public void checkDivergences(String row, int lineNumber, RegisteredProducts registeredProducts, Divergences divergences) {
     String [] productSoldInfos = row.split(";");
     int code = Integer.parseInt(productSoldInfos[0]);
-      for (Product product : registeredProducts.getProducts()) {
-        if (product.getCode() != code) {
-          return false;
-        }
-      }
-    return true;
+    int saleStatus = Integer.parseInt(productSoldInfos[2]);
+    String saleStatusMessage = "";
+    Product product = getProductByCode(code, registeredProducts);
+
+    if (saleStatus == 135) {
+      saleStatusMessage = "Venda cancelada";
+      Divergence divergenceObject = new Divergence(lineNumber, saleStatusMessage);
+      divergences.addDivergence(divergenceObject);
+      return;
+    } else if (saleStatus == 190) {
+      saleStatusMessage = "Venda não finalizada";
+      Divergence divergenceObject = new Divergence(lineNumber, saleStatusMessage);
+      divergences.addDivergence(divergenceObject);
+      return;
+    } else if (saleStatus == 999) {
+      saleStatusMessage = "Erro desconhecido. Acionar equipe de TI";
+      Divergence divergenceObject = new Divergence(lineNumber, saleStatusMessage);
+      divergences.addDivergence(divergenceObject);
+      return;
+    }
+
+    if (product == null) {
+      saleStatusMessage = "Código de produto não encontrado " + code;
+      Divergence divergenceObj = createDivergenceObject(productSoldInfos, lineNumber, saleStatusMessage);
+      divergences.addDivergence(divergenceObj);
+      return;
+    }
+  }
+
+  public Divergence createDivergenceObject(String [] productSoldInfos, int lineNumber, String saleStatusMessage) {
+    return new Divergence(lineNumber, saleStatusMessage);
   }
 
   public static boolean isProductRegistered(String row, RegisteredProducts registeredProducts) {

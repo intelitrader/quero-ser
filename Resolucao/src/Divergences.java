@@ -10,4 +10,8 @@ public class Divergences {
   public void addDivergence(Divergence divergence) {
     this.divergences.add(divergence);
   }
+
+  public ArrayList<Divergence> getDivergences() {
+    return divergences;
+  }
 }
