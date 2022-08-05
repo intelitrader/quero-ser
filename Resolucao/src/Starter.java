@@ -20,9 +20,6 @@ public class Starter {
     starter.generateTransferNeedReport(output, productsSold);
     starter.generateDivergencesReport(output, divergences);
     starter.generateSalesByChannelReport(output, salesByChannelListManager);
-
-    System.out.println(salesByChannelListManager.getSalesByChannels());
-
   }
 
   public void generateSalesByChannelReport(File output, SalesByChannelListManager salesByChannelListManager) {
