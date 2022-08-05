@@ -1,6 +1,6 @@
 public class SalesByChannel {
-  short channelNumber;
-  int amountSales;
+  private short channelNumber;
+  private int amountSales;
 
   public SalesByChannel(short channelNumber, int amountSales) {
     this.channelNumber = channelNumber;

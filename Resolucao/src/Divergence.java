@@ -1,6 +1,6 @@
 public class Divergence {
-  int lineNumber;
-  String saleStatusMessage;
+  private int lineNumber;
+  private String saleStatusMessage;
 
   public Divergence(int lineNumber, String saleStatusMessage) {
     this.lineNumber = lineNumber;
