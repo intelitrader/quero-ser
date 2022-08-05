@@ -1,4 +1,5 @@
 import java.io.*;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -27,6 +28,18 @@ public class Starter {
 
       FileWriter writer = new FileWriter(file);
       BufferedWriter buffWriter = new BufferedWriter(writer);
+      buffWriter.write("Necessidade de Transferência Armazém para CO");
+      buffWriter.flush();
+      buffWriter.newLine();
+      buffWriter.write(" ");
+      buffWriter.flush();
+      buffWriter.newLine();
+      buffWriter.write("Produto  QtCO  QtMin  QtVendas  Estq.após  Necess.  Transf. de");
+      buffWriter.flush();
+      buffWriter.newLine();
+      buffWriter.write("                                   Vendas            Arm p/ CO");
+      buffWriter.flush();
+      buffWriter.newLine();
 
       for (ProductSold productSold : productSoldList) {
         TransferNeedManager transferNeedManagerInfos = new TransferNeedManager(productSold);
@@ -40,18 +53,18 @@ public class Starter {
 
         StringBuilder row = new StringBuilder();
         row.append(code)
-           .append("    ")
-           .append(formatProductData(startingAmount))
-           .append("    ")
-           .append(formatProductData(minimumQuantityCO))
-           .append("    ")
-           .append(formatProductData(amountSales))
-           .append("    ")
-           .append(formatProductData(stockAfterSales))
-           .append("    ")
-           .append(formatProductData(transferNeed))
-           .append("    ")
-           .append(formatProductData(transferStorage));
+           .append("   ")
+           .append(formatProductData(startingAmount, 5))
+           .append("   ")
+           .append(formatProductData(minimumQuantityCO, 4))
+           .append("   ")
+           .append(formatProductData(amountSales, 7))
+           .append("   ")
+           .append(formatProductData(stockAfterSales, 8))
+           .append("   ")
+           .append(formatProductData(transferNeed, 6))
+           .append("   ")
+           .append(formatProductData(transferStorage, 9));
 
         buffWriter.write(row.toString());
         buffWriter.flush();
@@ -161,12 +174,11 @@ public class Starter {
     return false;
   }
 
-  public String formatProductData(int data) {
-    short columnWidth = 5;
+  public String formatProductData(int data, int columnWidth) {
     if (String.valueOf(data).length() >= columnWidth) {
       return "" + data;
     } else {
-      return String.format("%5s", data);
+      return String.format(MessageFormat.format("%{0}s", columnWidth), data);
     }
   }
 }
