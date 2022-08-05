@@ -19,9 +19,62 @@ public class Starter {
 
     starter.generateTransferNeedReport(output, productsSold);
     starter.generateDivergencesReport(output, divergences);
+    starter.generateSalesByChannelReport(output, salesByChannelListManager);
 
     System.out.println(salesByChannelListManager.getSalesByChannels());
 
+  }
+
+  public void generateSalesByChannelReport(File output, SalesByChannelListManager salesByChannelListManager) {
+    try {
+      ArrayList<SalesByChannel> salesByChannelList = salesByChannelListManager.getSalesByChannels();
+      Collections.sort(salesByChannelList, ((o1, o2) -> o1.getChannelNumber() - o2.getChannelNumber()));
+
+      File file = new File(output, "totcanais.txt");
+      file.createNewFile();
+
+      FileWriter writer = new FileWriter(file);
+      BufferedWriter buffWriter = new BufferedWriter(writer);
+
+      buffWriter.write("Quantidades de Vendas por canal");
+      buffWriter.flush();
+      buffWriter.newLine();
+      buffWriter.write(" ");
+      buffWriter.flush();
+      buffWriter.newLine();
+      buffWriter.write("Canal                  QtVendas");
+      buffWriter.flush();
+      buffWriter.newLine();
+
+      for (SalesByChannel sale : salesByChannelList) {
+        short channelNumber = sale.getChannelNumber();
+        int amoutSales = sale.getAmountSales();
+        String channel = getChannelName(channelNumber);
+        String row = String
+                .format("%s - %s%s", channelNumber, channel, formatAmountSalesData(amoutSales, channel));
+
+        buffWriter.write(row);
+        buffWriter.flush();
+        buffWriter.newLine();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public String getChannelName(short channelNumber) {
+    switch (channelNumber) {
+      case 1:
+        return "Representantes";
+      case 2:
+        return "Website";
+      case 3:
+        return "App móvel Android";
+      case 4:
+        return "App móvel iPhone";
+      default:
+        return "Canal não registado";
+    }
   }
 
   public void generateDivergencesReport(File output, Divergences divergences) {
@@ -82,17 +135,17 @@ public class Starter {
         StringBuilder row = new StringBuilder();
         row.append(code)
            .append("   ")
-           .append(formatProductData(startingAmount, 5))
+           .append(formatData(startingAmount, 5))
            .append("   ")
-           .append(formatProductData(minimumQuantityCO, 4))
+           .append(formatData(minimumQuantityCO, 4))
            .append("   ")
-           .append(formatProductData(amountSales, 7))
+           .append(formatData(amountSales, 7))
            .append("   ")
-           .append(formatProductData(stockAfterSales, 8))
+           .append(formatData(stockAfterSales, 8))
            .append("   ")
-           .append(formatProductData(transferNeed, 6))
+           .append(formatData(transferNeed, 6))
            .append("   ")
-           .append(formatProductData(transferStorage, 9));
+           .append(formatData(transferStorage, 9));
 
         buffWriter.write(row.toString());
         buffWriter.flush();
@@ -250,12 +303,19 @@ public class Starter {
     return false;
   }
 
-  public String formatProductData(int data, int columnWidth) {
+  public String formatData(int data, int columnWidth) {
     if (String.valueOf(data).length() >= columnWidth) {
       return "" + data;
     } else {
       return String.format(MessageFormat.format("%{0}s", columnWidth), data);
     }
+  }
+
+  public String formatAmountSalesData(int data, String channel) {
+    String dataStr = ""+data;
+    int width = 27;
+    int distance = width - (channel.length() + dataStr.length()) + dataStr.length();
+    return String.format(MessageFormat.format("%{0}s", distance), data);
   }
 
   public SalesByChannel createSalesByChannelObject(short channelNumber, int amountSales) {
