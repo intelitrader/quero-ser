@@ -111,7 +111,9 @@ public class Starter {
       BufferedReader buffReader = new BufferedReader(reader);
 
       String row = buffReader.readLine();
-      productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
+      if (isProductRegistered(row, registeredProducts)) {
+        productsSold.addProductSold(createProductSoldObject(row, registeredProducts));
+      }
 
       while (row != null) {
         row = buffReader.readLine();
@@ -162,7 +164,7 @@ public class Starter {
     return true;
   }
 
-  public boolean isProductRegistered(String row, RegisteredProducts registeredProducts) {
+  public static boolean isProductRegistered(String row, RegisteredProducts registeredProducts) {
     String [] productInfos = row.split(";");
     int code = Integer.parseInt(productInfos[0]);
 
