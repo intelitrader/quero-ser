@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jokenpo</title>
+</head>
+<body>
+<main class="main">
+    <div class="titulo">
+        <h1>Jokenpô</h1>
+    </div>
+    <div data-js="primeiroPasso" class="container">
+        <button data-id="0" aria-label="Papel">
+            <img src="assets/img-papel.png" alt="Mão aberta">
+        </button>
+        <button data-id="1" aria-label="Tesoura">
+            <img src="assets/img-tesoura.png" alt="Mão em formato de tesoura">
+        </button>
+        <button data-id="2" aria-label="Pedra" >
+            <img src="assets/img-pedra.png" alt="Mão fechada">
+        </button>
+    </div>
+
+    <div data-js="segundoPasso" class="segundoPasso">
+        <div class="containerVoce">
+            <h2> Você </h2>
+            <div data-js="containerBtnUser"></div>
+        </div>
+        <div data-js="toBackHome" class="menssagem">
+            <p> Vs </p>
+            <h1 data-js="menssage"></h1>
+        </div>
+        <div class="containerComputer">
+            <h2> Computador </h2>
+            <div data-js="containerBtnComputer" class="container-btn"></div>
+        </div>
+    </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
