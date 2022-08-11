@@ -1,0 +1,6 @@
+Quantidades de Vendas por canal 
+
+1 - Representantes            8
+2 - Website                   6
+3 - App móvel Android         9
+4 - App móvel Iphone          3
