@@ -1,0 +1,20 @@
+
+print('Desafio - Jokenpo')
+
+print('\n* Por favor jogadores, escolham PEDRA, PAPEL OU TESOURA *\n')
+
+primeiro_jogador = input('-> Jogador 1: Pedra, Papel ou Tesoura? ').upper()
+segundo_jogador = input('-> Jogador 2: Pedra, Papel ou Tesoura? ').upper()
+
+print('\n------> Resultado final')
+if (primeiro_jogador == 'TESOURA' and segundo_jogador == 'PAPEL'):
+  print('Jogador 1 é o vencedor!')
+elif (primeiro_jogador == 'PAPEL' and segundo_jogador == 'PEDRA'):
+  print('Jogador 1 é o vencedor!')
+elif (primeiro_jogador == 'PEDRA' and segundo_jogador == 'TESOURA'):
+  print('Jogador 1 é o vencedor!')  
+elif (primeiro_jogador == segundo_jogador):
+  print('Empate')
+else:
+  print("Jogador 2 é o vencedor!")
+  
