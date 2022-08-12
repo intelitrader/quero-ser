@@ -1,0 +1,36 @@
+print('\tDesafio - Caixa eletrônico')
+print('\n--> As cédulas estão limitadas, com 10 cédulas de cada, valores das cédulas: R$10, R$20, R$50, R$100\n')
+saque = int(input('Saque no valor de: R$'))
+
+#Variaveis
+quant_cedulas = 10
+#Feito uma quantidade geral, suponha que todas tenham a mesma quantidade, quando desejar mudar, mudar apenas na geral, já que, as outas recebem ela 
+cinquenta = quant_cedulas
+cem = quant_cedulas
+vinte = quant_cedulas
+dez = quant_cedulas
+
+while(saque >= 100 and cem > 0):
+  saque = saque - 100
+  cem -= 1 
+
+while(saque >= 50 and cinquenta > 0):
+  saque = saque - 50
+  cinquenta -= 1
+
+while(saque >= 20 and vinte > 0):
+  saque = saque - 20
+  vinte -= 1
+
+while(saque >= 10 and dez > 0):
+  saque = saque - 10
+  dez -= 1
+
+#Para escrevemos as varívaveis ao longo do texto podemos utilizar o .format ou usar uma vírgula
+print('Foi entregue ', quant_cedulas - cem, ' notas de R$100')
+print('Foi entregue ', quant_cedulas - cinquenta, ' notas de R$50')
+print('Foi entregue {} notas de R$20'.format(quant_cedulas - vinte))
+print('Foi entregue {} notas de R$10'.format(quant_cedulas - dez))
+
+
+
