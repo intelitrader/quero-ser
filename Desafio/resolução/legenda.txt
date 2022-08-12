@@ -1,0 +1,28 @@
+
+/*Legenda:
+productArray.forEach(array =>
+  array[0] -> código do produto;
+  array[1] -> quantidade em estoque no início do período;
+  array[2] -> quantidade mínima que deve ser mantida no CO)
+)
+
+vendasArray.forEach(venda => 
+  venda[0] -> código do produto
+  venda[1] -> quantidade vendida
+  venda[2] -> situação da venda
+  venda[3] -> canal de venda)
+)
+
+códigos de venda (venda[2]):
+100: venda confirmada e pagamento ok;
+102: venda confirmada mas com pagamento pendente;
+135: venda cancelada;
+190: venda não finalizada no canal de vendas;
+999: erro não identificado
+
+códigos de canais de venda(venda[3]):
+1: representante comercial
+2: Website
+3: Aplitativo móvel Android
+4: Aplicativo móvel iPhone
+*/
