@@ -1,5 +1,5 @@
 function lampadasNoCorredor(nLampadas) {
-  let arrayDeLampadas = [];
+  const arrayDeLampadas = [];
   for (let i = 1; i <= nLampadas; i++) {
     arrayDeLampadas.push(-1);
   }
@@ -16,7 +16,7 @@ function lampadasNoCorredor(nLampadas) {
     counter++;
   }
 
-  let arrayOnOff = [];
+  const arrayOnOff = [];
 
   //on = 1, off = -1;
   arrayDeLampadas.forEach(lampada => {
@@ -26,8 +26,12 @@ function lampadasNoCorredor(nLampadas) {
       arrayOnOff.push('on');
     }
   });
+
   console.log(arrayOnOff);
   return arrayOnOff;
 }
 
 lampadasNoCorredor(5);
+lampadasNoCorredor(2);
+lampadasNoCorredor(3);
+lampadasNoCorredor(15);

@@ -64,8 +64,6 @@ function creatingSalesPerChannelTableTxt(array) {
   let firstArray = [];
   let salesPerChannelTxt = [];
 
-  console.log(array);
-
   for (let i = 0; i < array.length; i++) {
     let newInnerArray = [];
     for (let j = 0; j < array[i].length; j++) {

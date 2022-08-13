@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resolução desafio técnico Intelitrader</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="../resolução/main.js"></script>
   </head>
   <body>
@@ -14,9 +20,8 @@
       solução
     </h1>
     <div class="input">
-      <label for="produtos">Abra os arquivos de produtos e vendas</label>
       <input
-        id="produtos"
+        id="filesInput"
         type="file"
         multiple="multiple"
         onchange="loadFiles(this.files[0], this.files[1])"
@@ -55,5 +60,4 @@
       >
     </div>
   </body>
-  <script></script>
 </html>

@@ -1,5 +1,6 @@
 body {
   width: 100vw;
+  font-family: 'Nunito', sans-serif;;
 }
 
 h1 {
@@ -61,4 +62,30 @@ table {
   display: none;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+.generateFile button, .generateFile a {
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.generateFile button:hover, .generateFile a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+
+}
+
+.generateFile a {
+  text-decoration: none;
+}
+
+#produtos input{
+  background-color: red;
 }
