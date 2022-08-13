@@ -196,7 +196,7 @@ function creatingTransferTable(array) {
   myTable += '</tr></table>';
   // (D) ATTACH HTML TO CONTAINER
   document.getElementById('transfer').innerHTML =
-    'Necessidade de Transferência Armazém para CO' + myTable;
+    '<h2>Necessidade de Transferência Armazém para CO</h2>' + myTable;
 }
 
 function creatingDivergenciesTable(array) {
@@ -214,7 +214,8 @@ function creatingDivergenciesTable(array) {
   myTable += '</tr></table>';
   console.log(myTable);
   // (D) ATTACH HTML TO CONTAINER
-  document.getElementById('divergencies').innerHTML = myTable;
+  document.getElementById('divergencies').innerHTML =
+    '<h2>Divergências Encontradas</h2>' + myTable;
 }
 
 function creatingSalesPerChannelTable(array) {
@@ -234,133 +235,5 @@ function creatingSalesPerChannelTable(array) {
   myTable += '</tr></table>';
   // (D) ATTACH HTML TO CONTAINER
   document.getElementById('salesPerChannel').innerHTML =
-    'Quantidades de Vendas por canal' + myTable;
+    '<h2>Quantidade de Vendas por Canal</h2>' + myTable;
 }
-
-// function file(array) {
-//   var row_width = 40;
-
-//   var content = '';
-//   // array += 'Username' + new Array(row_width + 1).join(' ') + 'Password\n';
-//   // array += '********' + new Array(row_width + 1).join(' ') + '********\n';
-
-//   for (var i = 0; i < array.length; i += 2) {
-//     content += array[i] + new Array(row_width - array[i].length + 9).join(' ');
-//     content += array[i + 1];
-//     content += '\n';
-//   }
-
-//   // Build a data URI:
-//   uri = 'data:application/octet-stream,' + encodeURIComponent(content);
-
-//   // Click on the file to download
-//   // You can also do this as a button that has the href pointing to the data URI
-//   location.href = uri;
-// }
-
-//----------------------------------------------------------------------
-//using the fileSystem module in Node.js to access file system, read and manipulate files
-//const fs = require('fs');
-
-//let products1 = '';
-//let vendas1 = '';
-// function products(path) {
-//   return fs.readFileSync(path, 'utf-8');
-// }
-
-// function sales(path) {
-//   return fs.readFileSync(path, 'utf-8');
-// }
-
-// async function loadFileVendas(file) {
-//   let vendas = await file.text();
-//   return vendas;
-
-//   //document.getElementById('output').textContent = text;
-// }
-
-//const vendas1 = sales('./Desafio/Caso de teste 2/c2_vendas.txt');
-//const products1 = products('./Desafio/Caso de teste 2/c2_produtos.txt');
-
-//array contendo os produtos:
-//let productsArray1 = [];
-
-//array contendo as vendas:
-//let vendasArray1 = [];
-
-//array contendo apenas as vendas confirmadas:
-//let vendasConfirmadas = [];
-
-//objeto contendo as vendas organizadas('códigoDoProduto':número de vendas)
-//let vendasOrganizadas = {};
-
-//array contendo as quantidades vendidas por canal de venda
-// let vendasPorCanal = [
-//   ['1', 'Representantes', 0],
-//   ['2', 'Website', 0],
-//   ['3', 'App móvel Android', 0],
-//   ['4', 'App móvel Iphone', 0]
-// ];
-
-// const transfereHeader = [
-//   'Produto',
-//   'QtCO',
-//   'QtMin',
-//   'QtVendas',
-//   'Estq.após Vendas',
-//   'Necess.',
-//   'Transf. de Arm p/ CO'
-// ];
-
-//array para a parte 1 do projeto
-//console.log(creatingTransfereTxt(productsArray1));
-
-//array para a parte 2 do projeto
-//let divergencias = [];
-
-//Criando os arrays dos produtos e das vendas:
-//stringToArray(products1, productsArray1);
-//stringToArray(vendas1, vendasArray1);
-//console.log(productsArray1);
-//console.log(vendasArray1);
-
-//Criando o array vendasConfirmadas
-//onlyConfirmedSales(productsArray1, vendasArray1);
-//console.log(vendasConfirmadas);
-
-//Organizando o array vendasConfirmadas
-//sortingConfirmedSales(vendasConfirmadas);
-//console.log(vendasOrganizadas);
-
-//Adicionando as vendas ao transfere
-//creatingTransfereTxt(productsArray1);
-//console.table(creatingTransfereTxt(productsArray1));
-
-//Criando arquivo de divergencias
-//creatingDivergencias(productsArray1, vendasArray1);
-//console.log(creatingDivergencias(productsArray1, vendasArray1));
-
-//criando arquivo de vendas por canal
-//sortingChannelSales(vendasConfirmadas);
-//console.log(vendasPorCanal);
-
-//fs.CreateTextFile('transfere.txt', true);
-
-//changes completely the file
-// fs.writeFile('./Desafio/resolução/teste.txt', content, err => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-// });
-
-//fs.writeFile('./Desafio/resolução/teste2.txt', 'ultra2');
-
-//add something to the file
-// fs.appendFile('./Desafio/resolução/teste.txt', content, err => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-// })
-//
