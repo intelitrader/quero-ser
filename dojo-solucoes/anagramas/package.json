@@ -5,13 +5,21 @@
   "main": "index.js",
   "scripts": {
     "build": "clear && tsc",
-    "start": "clear && node ./build/index.js",
+    "start": "clear && node ./build/src/index.js",
     "test": "clear && jest"
   },
-  "keywords": ["DojoPuzzles", "TechnicalTest", "Intelitrader"],
+  "keywords": [
+    "DojoPuzzles",
+    "TechnicalTest",
+    "Intelitrader"
+  ],
   "author": "Leona Christen",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "jest": "^28.1.3"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
   }
 }

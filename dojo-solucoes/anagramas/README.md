@@ -18,7 +18,7 @@ obir obri oibr oirb orbi orib
     Dentro da pasta da solução no terminal: 
     npm i && npm run start
 
-    Possivel checar o exemplo da questão com:
+    Possível checar o exemplo da questão com:
     npm run test
 
     Caso não tenha Node.js e Npm instalados siga o passo a passo no site:
