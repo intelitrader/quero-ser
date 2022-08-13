@@ -21,21 +21,12 @@ h2 {
 
 table {
   font-size: 1rem;
+  border-collapse: collapse;
+  margin: 0 auto;  
 }
 
 #transfer, #salesPerChannel{
   text-align: center;
-}
-
- 
-/* #transfer table, #divergencies table {
-  border-collapse: collapse;
-  margin: 0 auto;  
-} */
-
-table {
-  border-collapse: collapse;
-  margin: 0 auto;  
 }
 
 #transfer tr, #salesPerChannel tr {
@@ -54,7 +45,6 @@ table {
   font-weight: bold;
 }
 
-
 #transfer tr:nth-child(1) td {
   padding: 5px;
 }
@@ -65,4 +55,10 @@ table {
 
 #salesPerChannel td:nth-child(n+2) {
   min-width: 150px;
+}
+
+.generateFile {
+  display: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }

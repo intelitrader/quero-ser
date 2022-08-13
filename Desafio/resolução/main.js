@@ -14,17 +14,88 @@ function logFiles(productsString, salesString) {
   let sortedSales = sortingConfirmedSales(confirmedSales);
 
   let transfereArray = creatingTransfereArray(productsArray, sortedSales);
+  let transfereTxt = creatingTransferTxt(transfereArray);
 
   let divergencies = creatingDivergencies(productsArray, salesArray);
+  let divergenciesTxt = divergencies.join('\n');
 
   let salesPerChannel = sortingChannelSales(confirmedSales);
+  let salesPerChannelTxt = creatingSalesPerChannelTableTxt(salesPerChannel);
 
-  creatingTransferTable(transfereArray);
-  creatingDivergenciesTable(divergencies);
-  creatingSalesPerChannelTable(salesPerChannel);
+  creatingTransferTable(transfereArray, transfereTxt);
+  creatingDivergenciesTable(divergencies, divergenciesTxt);
+  creatingSalesPerChannelTable(salesPerChannel, salesPerChannelTxt);
 }
 
 /*Functions*/
+
+function creatingTransferTxt(array) {
+  //console.log(array);
+  let transferTxt = [];
+  let transferTxtReady = [];
+
+  //criando espaçamento entre os itens
+  for (let i = 0; i < array.length; i++) {
+    let newInnerArray = [];
+    for (let j = 0; j < array[i].length; j++) {
+      if (typeof array[i][j] === 'string') {
+        let newCell = array[i][j].padStart(20, ' ');
+        newInnerArray.push(newCell);
+      } else {
+        let newCell = array[i][j].toString().padStart(20, ' ');
+        newInnerArray.push(newCell);
+      }
+    }
+    transferTxtReady.push(newInnerArray);
+  }
+
+  transferTxtReady.forEach(array => {
+    array = array.join(' ');
+    transferTxt.push(array);
+  });
+  transferTxt.unshift('Necessidade de Transferencia Armazem para CO');
+
+  transferTxt = transferTxt.join('\n');
+
+  return transferTxt;
+}
+
+function creatingSalesPerChannelTableTxt(array) {
+  let firstArray = [];
+  let salesPerChannelTxt = [];
+
+  console.log(array);
+
+  for (let i = 0; i < array.length; i++) {
+    let newInnerArray = [];
+    for (let j = 0; j < array[i].length; j++) {
+      if (typeof array[i][j] === 'string') {
+        let newCell = array[i][j].padStart(20, ' ');
+        newInnerArray.push(newCell);
+      } else {
+        let newCell = array[i][j].toString().padStart(20, ' ');
+        newInnerArray.push(newCell);
+      }
+    }
+    firstArray.push(newInnerArray);
+  }
+
+  firstArray.forEach(sale => {
+    sale = sale.join(',');
+    sale = sale.replace(',', '-');
+    salesPerChannelTxt.push(sale);
+  });
+
+  salesPerChannelTxt.unshift(
+    '                    Canal                                     Vendas'
+  );
+  salesPerChannelTxt.unshift('Quantidades de Vendas por canal');
+
+  salesPerChannelTxt = salesPerChannelTxt.join('\n');
+  salesPerChannelTxt = salesPerChannelTxt.replaceAll(',', '    ');
+
+  return salesPerChannelTxt;
+}
 
 function stringToArray(string) {
   let array = string.split(/\r?\n/);
@@ -179,7 +250,7 @@ function sortingChannelSales(confirmedSales) {
   return salesPerChannel;
 }
 
-function creatingTransferTable(array) {
+function creatingTransferTable(array, stringToTxtFile) {
   let myTable = '<table><tr>';
   let perrow = 7; // CELLS PER ROW
   array.forEach(innerArray =>
@@ -197,28 +268,30 @@ function creatingTransferTable(array) {
   // (D) ATTACH HTML TO CONTAINER
   document.getElementById('transfer').innerHTML =
     '<h2>Necessidade de Transferência Armazém para CO</h2>' + myTable;
+
+  let div = document.querySelector('.generateFile.transferFile');
+  div.style.display = 'inline-block';
+
+  let btnCreateFileTransfer = document.querySelector('#btnCreateFileTransfer');
+
+  btnCreateFileTransfer.addEventListener(
+    'click',
+    function () {
+      var link = document.getElementById('downloadFileTransfer');
+      link.href = generateTxtFile(stringToTxtFile);
+      link.style.display = 'inline-block';
+    },
+    false
+  );
+
+  document
+    .querySelector('#downloadFileTransfer')
+    .addEventListener('click', event => {
+      event.currentTarget.style.display = 'none';
+    });
 }
 
-function creatingDivergenciesTable(array) {
-  let myTable = '<table><tr>';
-  let perrow = 1; // CELLS PER ROW
-  array.forEach((value, i) => {
-    myTable += `<td>${value}</td>`;
-    // BREAK INTO NEXT ROW
-    let next = i + 1;
-    if (next % perrow == 0 && next != array.length) {
-      myTable += '</tr><tr>';
-    }
-  });
-  // (C3) CLOSE THE TABLE STRING
-  myTable += '</tr></table>';
-  console.log(myTable);
-  // (D) ATTACH HTML TO CONTAINER
-  document.getElementById('divergencies').innerHTML =
-    '<h2>Divergências Encontradas</h2>' + myTable;
-}
-
-function creatingSalesPerChannelTable(array) {
+function creatingSalesPerChannelTable(array, stringToTxtFile) {
   let myTable = '<table><tr>';
   let perrow = 3; // CELLS PER ROW
   array.forEach(innerArray =>
@@ -236,4 +309,79 @@ function creatingSalesPerChannelTable(array) {
   // (D) ATTACH HTML TO CONTAINER
   document.getElementById('salesPerChannel').innerHTML =
     '<h2>Quantidade de Vendas por Canal</h2>' + myTable;
+
+  let div = document.querySelector('.generateFile.salesPerChannelFile');
+  div.style.display = 'inline-block';
+
+  let btnCreateFileSalesPerChannel = document.querySelector(
+    '#btnCreateFileSalesPerChannel'
+  );
+
+  btnCreateFileSalesPerChannel.addEventListener(
+    'click',
+    function () {
+      var link = document.getElementById('downloadFileSalesPerChannel');
+      link.href = generateTxtFile(stringToTxtFile);
+      link.style.display = 'inline-block';
+    },
+    false
+  );
+
+  document
+    .querySelector('#downloadFileSalesPerChannel')
+    .addEventListener('click', event => {
+      event.currentTarget.style.display = 'none';
+    });
+}
+
+function creatingDivergenciesTable(array, stringToTxtFile) {
+  let myTable = '<table><tr>';
+  let perrow = 1; // CELLS PER ROW
+  array.forEach((value, i) => {
+    myTable += `<td>${value}</td>`;
+    // BREAK INTO NEXT ROW
+    let next = i + 1;
+    if (next % perrow == 0 && next != array.length) {
+      myTable += '</tr><tr>';
+    }
+  });
+  // (C3) CLOSE THE TABLE STRING
+  myTable += '</tr></table>';
+
+  // (D) ATTACH HTML TO CONTAINER
+  document.getElementById('divergencies').innerHTML =
+    '<h2>Divergências Encontradas</h2>' + myTable;
+
+  let div = document.querySelector('.generateFile.divergenciesFile');
+  div.style.display = 'inline-block';
+
+  let btnCreateFileDivergencies = document.querySelector(
+    '#btnCreateFileDivergencies'
+  );
+
+  btnCreateFileDivergencies.addEventListener(
+    'click',
+    function () {
+      var link = document.getElementById('downloadFileDivergencies');
+      link.href = generateTxtFile(stringToTxtFile);
+      link.style.display = 'inline-block';
+    },
+    false
+  );
+
+  document
+    .querySelector('#downloadFileDivergencies')
+    .addEventListener('click', event => {
+      event.currentTarget.style.display = 'none';
+    });
+}
+
+function generateTxtFile(text) {
+  var textFile = null;
+  var data = new Blob([text], { type: 'text/plain' });
+  if (textFile !== null) {
+    window.URL.revokeObjectURL(textFile);
+  }
+  textFile = window.URL.createObjectURL(data);
+  return textFile;
 }
