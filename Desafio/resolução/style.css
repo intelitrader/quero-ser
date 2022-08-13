@@ -1,0 +1,91 @@
+body {
+  width: 100vw;
+  font-family: 'Nunito', sans-serif;;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+}
+
+.input label {
+  display: block;
+  margin: 1rem;
+}
+
+table {
+  font-size: 1rem;
+  border-collapse: collapse;
+  margin: 0 auto;  
+}
+
+#transfer, #salesPerChannel{
+  text-align: center;
+}
+
+#transfer tr, #salesPerChannel tr {
+  text-align: center;
+  border: 1px solid black;
+}
+
+
+#transfer tr:nth-child(1), #transfer tr td:nth-child(1) {
+  background-color: grey;
+  color: white;
+}
+
+#transfer tr:nth-child(n+2) td:nth-child(7) {
+  background-color: rgba(53, 168, 53, 0.782);
+  font-weight: bold;
+}
+
+#transfer tr:nth-child(1) td {
+  padding: 5px;
+}
+
+#salesPerChannel td:nth-child(1) {
+  min-width: 50px;
+}
+
+#salesPerChannel td:nth-child(n+2) {
+  min-width: 150px;
+}
+
+.generateFile {
+  display: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.generateFile button, .generateFile a {
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.generateFile button:hover, .generateFile a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+
+}
+
+.generateFile a {
+  text-decoration: none;
+}
+
+#produtos input{
+  background-color: red;
+}
