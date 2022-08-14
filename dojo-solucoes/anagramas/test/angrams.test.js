@@ -29,13 +29,10 @@ const anagrams = (word) => {
     return anagramsList.join(' ');
 };
 
-describe('Teste da função que gera anagramas', () => {
-    test('Testando para a palavra biro', () => {
-        let word = 'biro';
-        const result = anagrams(word);
-        const anagramsAmount = factor(word.length); 
-        console.log(result);
-
-        expect(result.split(' ').length).toEqual(anagramsAmount);
-    });
+test('Testando para a palavra biro', () => {
+    let word = 'biro';
+    const result = anagrams(word);
+    const anagramsAmount = factor(word.length); 
+    console.log({anagramsAmount, result});
+    expect(result.split(' ').length).toEqual(anagramsAmount);
 });
