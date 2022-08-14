@@ -1,5 +1,9 @@
+import * as readline from 'node:readline';
+import { stdin, stdout } from 'process';
+
+// Função que cria e checa as lâmpadas no corredor
 const hallLights = (qty: number): string[] => {
-    let lightsStates: boolean[] = [];
+    const lightsStates: boolean[] = [];
     const lightsPositions: number[] = [];
     for (let i = 0; i < qty; i++) {
         lightsStates.push(false);
@@ -19,9 +23,17 @@ const hallLights = (qty: number): string[] => {
         else {
             return 'off';
         }   
-    })
+    });
 
     return result;
 };
 
-console.log(hallLights(3));
+const rl: readline.Interface = readline.createInterface({
+    input: stdin,
+    output: stdout
+});
+
+rl.question('Por gentileza insira o número de lâmpadas presentes no corredor -> ', (answer: string) => {
+    console.log(hallLights(Number(answer)));
+    rl.close();
+});
