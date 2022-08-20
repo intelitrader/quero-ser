@@ -16,22 +16,22 @@ saleChannel = list()
 
 try:
     # Caso de Teste 1
-    #with open("Caso de teste 1/c1_produtos.txt", "r") as products:  # Abrindo arquivo que le os produtos
-       #for line in products:
-            #productsRaw.append(line)  # Colocando todas as linhas lidas em uma lista
+    with open("Caso de teste 1/c1_produtos.txt", "r") as products:  # Abrindo arquivo que le os produtos
+       for line in products:
+            productsRaw.append(line)  # Colocando todas as linhas lidas em uma lista
 
-    #with open("Caso de teste 1/c1_vendas.txt", "r") as sales:
-        #for line in sales:
-            #salesRaw.append(line)
-
-     #Caso de teste 2
-    with open("Caso de teste 2/c2_produtos.txt", "r") as products:
-        for line in products:
-            productsRaw.append(line)
-
-    with open("Caso de teste 2/c2_vendas.txt", "r") as sales:
+    with open("Caso de teste 1/c1_vendas.txt", "r") as sales:
         for line in sales:
             salesRaw.append(line)
+
+     #Caso de teste 2
+    #with open("Caso de teste 2/c2_produtos.txt", "r") as products:
+        #for line in products:
+            #productsRaw.append(line)
+
+    #with open("Caso de teste 2/c2_vendas.txt", "r") as sales:
+        #for line in sales:
+            #salesRaw.append(line)
 
     # Produtos
     for i in range(len(productsRaw)):  # Separando cada atributo diferente pelo ;
@@ -69,11 +69,11 @@ for i in range(len(salesOrdered)):
         divergences += f"Linha {i + 1} - Código de Produto não encontrado {saleCode[i]}\n"
 
 # Caso de teste 1
-#with open("Caso de teste 1/c1_divergencias.txt", "w", encoding="UTF-8") as divergence:
-    #divergence.write(divergences)
-# Caso de teste 2
-with open("Caso de teste 2/c2_divergencias.txt", "w", encoding="UTF-8") as divergence:
+with open("Caso de teste 1/c1_divergencias.txt", "w", encoding="UTF-8") as divergence:
     divergence.write(divergences)
+# Caso de teste 2
+#with open("Caso de teste 2/c2_divergencias.txt", "w", encoding="UTF-8") as divergence:
+    #divergence.write(divergences)
 
 # Relatorios por canais
 
@@ -104,11 +104,11 @@ reports += f"3 - App móvel Android       {totalSalesChannel3}\n"
 reports += f"4 - App móvel Iphone        {totalSalesChannel4}"
 
 # Caso de teste 1
-#with open("Caso de teste 1/c1_totcanais.txt", "w", encoding="UTF-8") as report:
-    #report.write(reports)
-# Caso de teste 2
-with open("Caso de teste 2/c2_totcanais.txt", "w", encoding="UTF-8") as report:
+with open("Caso de teste 1/c1_totcanais.txt", "w", encoding="UTF-8") as report:
     report.write(reports)
+# Caso de teste 2
+#with open("Caso de teste 2/c2_totcanais.txt", "w", encoding="UTF-8") as report:
+    #report.write(reports)
 
 # Transferencia para CO
 productTotalSale = 0
@@ -135,8 +135,8 @@ for i in range(len(productCode)):
     productTotalSale = 0
 
 # Caso de teste 1
-#with open("Caso de teste 1/c1_transfere.txt", "w", encoding="UTF-8") as transfers:
-    #transfers.write(transfer)
-# Caso de teste 2
-with open("Caso de teste 2/c2_transfere.txt", "w", encoding="UTF-8") as transfers:
+with open("Caso de teste 1/c1_transfere.txt", "w", encoding="UTF-8") as transfers:
     transfers.write(transfer)
+# Caso de teste 2
+#with open("Caso de teste 2/c2_transfere.txt", "w", encoding="UTF-8") as transfers:
+    #transfers.write(transfer)
