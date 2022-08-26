@@ -1,0 +1,11 @@
+{
+  "name": "intelitrader_estoque_operacional",
+  "version": "1.0.0",
+  "description": "Desafio Intelitrader - Estoque Operacional",
+  "main": "EstoqueOperacional.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renan Siqueira",
+  "license": "ISC"
+}
