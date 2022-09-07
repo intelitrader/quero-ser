@@ -105,3 +105,49 @@ def geratransferetxt(arquivoprodutos, arquivovendas):
     arquivo.write(stringfinal)
     arquivo.close()
 
+def geradivergencias(arquivoproduto, arquivovenda):
+    'Gera arquivo divergencias.txt'
+    
+    listavendas = geralistavendas(arquivovenda) #Gera matriz de vendas
+    dicionarioprodutos = geradicionarioprodutos(arquivoproduto) #Gera dicionario de produtos
+    
+    textoarquivo = '' #Texto a ser gravado no arquivo
+    
+    for i in range(len(listavendas)): #Preenche a string
+        if listavendas[i][2] == '999':
+            textoarquivo += 'Linha {} - Erro desconhecido. Acionar equipe de TI\n'.format(i + 1)
+        elif listavendas[i][0] not in dicionarioprodutos.keys():
+            textoarquivo += 'Linha {} - Código de Produto não encontrado {}\n'.format(i + 1, listavendas[i][0])
+        elif listavendas[i][2] == '135':
+            textoarquivo += 'Linha {} - Venda cancelada\n'.format(i + 1)
+        elif listavendas[i][2] == '190':
+            textoarquivo += 'Linha {} - Venda não finalizada\n'.format(i + 1)
+        
+    #Gera o arquivo
+    arquivo = open('DIVERGENCIAS.TXT', 'w')
+    arquivo.write(textoarquivo)
+    arquivo.close()
+
+def geratotcanais(arquivovenda):
+
+    listavendas = geralistavendas(arquivovenda) #Gera matriz das vendas
+
+    dicionariovendas = { '1':0, '2':0, '3':0, '4':0} #Inicializa dicionario para contagem das vendas por canal
+
+    for venda in listavendas: #Contagem das vendas por canal
+        if venda[2] == '100' or venda[2] == '102':
+            dicionariovendas[venda[3]] += int(venda[1])
+
+    stringfinal = '' #String para guardar o texto a ser escrito no arquivo
+    
+    #Preenche a string
+    stringfinal += 'Quantidades de Vendas por canal\n\n{:<21}  {:>8}\n'.format('Canal', 'QtVendas')
+    stringfinal += '{:<21}  {:>8}\n'.format('1 - Representantes', dicionariovendas['1'])
+    stringfinal += '{:<21}  {:>8}\n'.format('2 - Website', dicionariovendas['2'])
+    stringfinal += '{:<21}  {:>8}\n'.format('3 - App móvel Android', dicionariovendas['3'])
+    stringfinal += '{:<21}  {:>8}\n'.format('4 - App móvel iPhone', dicionariovendas['4'])
+    
+    #Gera o arquivo
+    arquivo = open('TOTCANAIS.TXT', 'w')
+    arquivo.write(stringfinal)
+    arquivo.close()
