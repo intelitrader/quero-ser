@@ -1,3 +1,4 @@
+import sys
 def geradicionarioprodutos(arquivoprodutos):
     'Gera o dicionario de produtos'
     #Abre o arquivo, lê o conteudo e fecha o arquivo
@@ -11,9 +12,12 @@ def geradicionarioprodutos(arquivoprodutos):
         content[i] = content[i].split(';')
     
     dicionario = dict() #Inicializa o dicionario
-
+    
     for produto in content: #Preenche o dicionario com o código de produto como chave e uma lista com os valores
-        dicionario[produto[0]] = [produto[1], produto[2]]   
+        if produto == ['']: #Checa se membro da lista é uma lista vazia
+            pass
+        else:
+            dicionario[produto[0]] = [produto[1], produto[2]]   
 
     return dicionario   #Retorna o dicionario
 
@@ -31,8 +35,9 @@ def geralistavendas(arquivovendas):
     for i in range(len(content)): #Faz uma matriz com a lista com cada membro virando uma lista a cada ';'
         content[i] = content[i].split(';')
     
-    content.pop() #Exclui o membro vazio do fim da lista
-
+    if [''] in content: #Remove se membro da lista é uma lista vazia
+        content.remove([''])
+    
     return content  #Retorna a lista
 
 
@@ -151,3 +156,14 @@ def geratotcanais(arquivovenda):
     arquivo = open('TOTCANAIS.TXT', 'w')
     arquivo.write(stringfinal)
     arquivo.close()
+
+arquivovenda = sys.argv[1]
+arquivoproduto = sys.argv[2]
+
+
+geratransferetxt(arquivoproduto, arquivovenda)
+geradivergencias(arquivoproduto, arquivovenda)
+geratotcanais(arquivovenda)
+
+
+
