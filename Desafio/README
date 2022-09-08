@@ -1,1 +1,1 @@
-Para rodar "python3 'caminhodoarquivovendas' 'caminhodoarquivoprodutos'"
+Para rodar "python3 EstoqueOperacional.py 'caminhodoarquivovendas' 'caminhodoarquivoprodutos'"
