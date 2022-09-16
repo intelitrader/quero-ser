@@ -1,0 +1,29 @@
+{
+  "name": "jokenpo",
+  "version": "1.0.0",
+  "description": "DojoPuzzles problem solution",
+  "main": "index.js",
+  "directories": {
+    "test": "mocha"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "mocha",
+    "chai",
+    "solid",
+    "javascript"
+  ],
+  "author": "jpnathan",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {}
+}
