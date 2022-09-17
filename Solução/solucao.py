@@ -33,6 +33,14 @@ def relatorioCanais(dicioCanais):
     nomeArquivo = "TOTCANAIS.TXT"
     escreverArquivo(path, nomeArquivo, texto)
 
+def gerarDivergencias(divegencia):
+    texto = ""
+    for linha in divegencia:
+        texto += linha
+    path = "C:/Users/Eduardo/Documents/Codiguin"
+    nomeArquivo = "DIVERGENCIAS.TXT"
+    escreverArquivo(path,nomeArquivo, texto)
+
 def registrar_vendas(info_produtos, vendas):
     file_vendas = abrir_arquivo(vendas, "r")
     divergencias = []
@@ -80,7 +88,9 @@ def registrar_vendas(info_produtos, vendas):
                 canais["Android"] += qtVendas
             else:
                 canais["Iphone"] += qtVendas
+        contLinhas += 1
     relatorioCanais(canais)
+    gerarDivergencias(divergencias)
 
 caminhoProdutos = "C:/Users/Eduardo/Documents/GitHub/quero-ser/Desafio/Caso de teste 1/c1_produtos.txt"
 dicioProdutos = info_produtos(caminhoProdutos)
