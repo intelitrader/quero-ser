@@ -24,7 +24,7 @@ etc...
 Cada linha do arquivo refere-se a um produto cadastrado que contém duas informações separadas pelo caractere ";".
 | Posição | Informação                                                   | Formato             | Observações                                             |
 |---------|--------------------------------------------------------------|---------------------|---------------------------------------------------------|
-| (1)     | Código do Produto                                            | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 100000) |
+| (1)     | Código do Produto                                            | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 10000)  |
 | (2)     | Quantidade em estoque no início do período                   | Número inteiro      |                                                         |
 | (3)     | Quantidade mínima que deve ser mantida no Centro Operacional | Número Inteiro      |                                                         |
 
@@ -39,7 +39,7 @@ etc...
 ```
 | Posição | Informação         | Formato             | Observações                                                                                                                                                                              |
 |---------|--------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| (1)     | Código do Produto  | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 100000)                                                                                                                                  |
+| (1)     | Código do Produto  | 5 dígitos numéricos | O código de produto tem 5 dígitos (começando em 10000)                                                                                                                                   |
 | (2)     | Quantidade vendida | Número inteiro      |                                                                                                                                                                                          |
 | (3)     | Situação da venda  | Número inteiro      | 100: venda confirmada e com pagamento ok. 102: venda confirmada, mas com pagamento pendente 135: venda cancelada 190: venda não finalizada no canal de vendas 999: erro não identificado |
 | (4)     | Canal de venda     | Número inteiro      | 1: Representante comercial 2: Website 3: Aplicativo móvel Android 4: Aplicativo móvel iPhone                                                                                             |
