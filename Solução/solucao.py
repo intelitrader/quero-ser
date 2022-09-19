@@ -1,4 +1,4 @@
-from Produto import Produto
+from pathlib import Path
 
 def abrir_arquivo(caminho, modo):
     arquivo = open(caminho, modo, encoding="UTF-8")
@@ -22,7 +22,8 @@ def info_produtos(produtos):
     return dicionario
 
 def escreverArquivo(pathArquivo,nomeArquivo, texto):
-    arquivo = abrir_arquivo(pathArquivo+"/"+f"{nomeArquivo}", "w+")
+    pathArquivo = Path(pathArquivo+"/"+f"{nomeArquivo}")
+    arquivo = abrir_arquivo(pathArquivo, "w+")
     arquivo.write(texto)
     fechar_arquivo(arquivo)
 
@@ -38,17 +39,17 @@ def relatorioCanais(dicioVendas):
     texto = texto + "\n2 - Website			" + str(canais[1])
     texto = texto + "\n3 - App móvel Android		" + str(canais[2])
     texto = texto + "\n4 - App móvel iPhone		" + str(canais[3])
-    path = "C:/Users/Eduardo/Documents/Codiguin"
+    pathCanais = input("Digite o caminho onde deseja salvar o relatorio sobre os canais de vendas: ")
     nomeArquivo = "TOTCANAIS.TXT"
-    escreverArquivo(path, nomeArquivo, texto)
+    escreverArquivo(pathCanais, nomeArquivo, texto)
 
 def gerarDivergencias(divegencia):
     texto = ""
     for linha in divegencia:
         texto += linha
-    path = "C:/Users/Eduardo/Documents/Codiguin"
+    pathDivergencias = input("Digite o caminho onde deseja salvar o relatorio de divergencias: ")
     nomeArquivo = "DIVERGENCIAS.TXT"
-    escreverArquivo(path,nomeArquivo, texto)
+    escreverArquivo(pathDivergencias,nomeArquivo, texto)
 
 def gerarRelatorioTransferencia(infoProdutos, infoVendas):
     texto = "Necessidade de Transferência Armazém para CO\n"
@@ -66,9 +67,9 @@ def gerarRelatorioTransferencia(infoProdutos, infoVendas):
                 necessidade = 10
         transferencia = necessidade
         texto += f"\n{produto}	{qtCo}	{qtMin}	{qtVendas}		{estoque}		{necessidade}		{transferencia}"
-    pathArquivo = "C:/Users/Eduardo/Documents/Codiguin"
+    pathTransferencia = input("Digite o caminho onde deseja salvar o relatorio de transferencia: ")
     nomeArquivo = "transfere.txt"
-    escreverArquivo(pathArquivo,nomeArquivo, texto)
+    escreverArquivo(pathTransferencia,nomeArquivo, texto)
 
 def main(info_produtos, arquivoVendas):
     divergencias = []
@@ -114,10 +115,12 @@ def main(info_produtos, arquivoVendas):
     gerarDivergencias(divergencias)
     gerarRelatorioTransferencia(info_produtos, dicioVendas)
 
-pathProdutos = "C:/Users/Eduardo/Documents/GitHub/quero-ser/Desafio/Caso de teste 1/c1_produtos.txt"
+pathProdutos = input("Digite o caminho para o arquivo com as informações dos produtos:")
+pathProdutos = Path(pathProdutos)
 infoProdutos = info_produtos(pathProdutos)
 
-pathVendas = "C:/Users/Eduardo/Documents/GitHub/quero-ser/Desafio/Caso de teste 1/c1_vendas.txt"
+pathVendas = input("Digite o caminho para o arquivo com as informações de vendas")
+pathVendas = Path(pathVendas)
 arquivoVendas = abrir_arquivo(pathVendas, "r")
 
 main(infoProdutos, arquivoVendas)
