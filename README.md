@@ -1,57 +1,38 @@
 # Quero ser Intelitrader
 
-## [Quem somos](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
+## Como rodar a aplicação
+O código da aplicação foi desenvolvido em [c++11](https://pt.wikipedia.org/wiki/C%2B%2B11), portanto você precisará desse compilador para compilar o código.
 
-## [Sobre as vagas](id:SobreAsVagas)
-Você gosta de programar e aprender? Aqui é o lugar certo. 
+### Como compilar
+O arquivo **app.cpp** se encontra dentro do diretório **Challenge**
+```terminal
+$ g++-11 app.cpp -o app
+```
+Ao executar o compilador, será gerado um arquivo executável dentro do mesmo diretório.
 
-Temos uma cultura focada em formação e vamos te ensinar tudo que você precisa para virar um Engenheiro ou Engenheira de Software. Temos demanda para backend e frontend.
+### Como executar
 
-Usamos Scrum, Git, Visual Studio e Visual Studio Code.
+Execute o arquivo **app** via terminal, inserindo respectivamente o caminho dos arquivos **produtos.txt** e **vendas.txt**.
 
-Aqui usamos bastante C# e C++. Usamos também JavaScript (front) e Python (algumas ferramentas internas).
+```terminal
+$ ./app "../Caso de teste 1/c1_produtos.txt" "../Caso de teste 1/c1_vendas.txt"
+```
+### Saída
+Os três relatórios serão criados dentro do diretório **Output**
 
-## [Onde vocês ficam?](id:Localizacao)
-Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
 
-Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
 
-Temos horário flexível, você pode trabalhar na hora que for melhor para você. Estuda à tarde? Sem problemas. Vai pra academia todo dia 11:00? Ótimo, continue com sua rotina.
+### Observações importantes
 
-O tempo gasto com a Intelitrader também é flexível. Você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é se você entrega código de qualidade e gosta de programar, aprender e estudar.
+Alguns pontos foram encontrados com relação a problemas nos requisitos informados, de qualquer forma o código foi desenvolvido baseado no que interpretei dos resultados dos casos de teste informados para que os relatórios gerados fiquem iguais.
 
-## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
+1. Não foi informada uma ordem de priodidade com relação as divergências, portanto, existem casos em que uma venda pode apresentar duas divergências, entretanto, o arquivo de saída de teste informa apenas uma. Por exemplo:
+> - Na linha 14 do arquivo c1_vendas.txt o código do produto não existe em c1_produtos.txt, alé disso essa venda também apresenta o código 999 referente a um erro desconhecido.    
+> - Nesse caso o teste informa sobre o código 999 mas ignora o fato de não existir o código do produto
 
-Não nos importamos com formação. 
+2. No arquivo **c1_totcanal.txt** estão sendo contabilizadas as vendas de produtos que não existem mas possuem código 100 ou 102 (Referente a uma venda efetuada).
 
-Você fez faculdade? Bom pra você, esperamos que você tenha aproveitado e aprendido bastante. Tem bastante gente que faz 4 anos de faculdade e não aprende nada. :-(
+> - Isso seria impossível numa aplicação real, visto que é impossível realizar uma venda de um produto que não existe.
 
-O que nos interessa é:
-
-* Você sabe programar?
-* Você gosta de programar?
-* Você gosta de aprender?
-* Você sabe que na área de programação você precisa aprender sempre, o tempo todo, todo dia?
-
-Nós te ajudamos ensinando e guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e ter disposição para estudar.
-
-## [Como me candidato?](id:ComoMeCandidato)
-
-### [Desenvolvedor(a)](id:CandidaturaDev)
-
-Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
-
-1. Leia com atenção. Sua candidatura só será considerada se você seguir corretamente as instruções.
-2. Faça um fork desse repositório.
-3. Escolha 3 testes em [DojoPuzzles](http://dojopuzzles.com/) e resolva com sua linguagem favorita (se você escolher o desafio "Ano Bissexto" seu curriculum será desconsiderado; se você optar por no lugar do Dojo realizar o que está na pasta Desafio **terá prioridade na seleção**)
-5. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
-6. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
-
-## [Condições](id:CondicoesEDiferenciais)
-
-* Regime: **PJ**;
-* Período: **Integral**;
-* Contratação: **Imediata**;
 
 
