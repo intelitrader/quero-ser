@@ -1,6 +1,6 @@
 # Quero ser Intelitrader
 
-Resolução de 3 exercícios simples do Site DojoPuzzles com linguagem python.
+Resolução de 3 exercícios simples do Site DojoPuzzles com linguagem Python.
 
 felix@oakz.org
 [https://github.com/FelixOakz]
