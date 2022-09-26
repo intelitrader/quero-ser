@@ -19,7 +19,7 @@ const lista = () => {
   return lista;
 }
 
-function App() {
+export default function App() {
 
   const [mostrar, setMostrar] = useState(false);
 
@@ -51,5 +51,3 @@ function App() {
     </C.Container>
   );
 }
-
-export default App;
