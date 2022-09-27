@@ -7,8 +7,6 @@ const convertStringDataToArray = (stringData) => {
   const dataArray = stringData.split("\n");
   return dataArray.map((data) => data.split(";"));
 };
-
-//Converting string data of the products into array
 productsDataArray = convertStringDataToArray(productsData);
 
 // Generating an array with only the product codes.
@@ -21,10 +19,6 @@ productsDataArray.forEach((product) => {
 salesDataInfo = convertStringDataToArray(salesData);
 
 let divergencesInfo = "";
-let sellerSales = 0;
-let websiteSales = 0;
-let androidAppSales = 0;
-let iphoneAppSales = 0;
 
 for (const sale of salesDataInfo) {
   //Test to identify non-existent code in the product list.
