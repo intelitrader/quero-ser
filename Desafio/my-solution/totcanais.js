@@ -7,13 +7,9 @@ const convertStringDataToArray = (stringData) => {
   const dataArray = stringData.split("\n");
   return dataArray.map((data) => data.split(";"));
 };
-productsDataArray = convertStringDataToArray(productsData);
 
-// Generating an array with only the product codes.
-const productCodesArray = [];
-productsDataArray.forEach((product) => {
-  productCodesArray.push(Number(product[0]));
-});
+//Converting string data of the products into array
+productsDataArray = convertStringDataToArray(productsData);
 
 //Converting string data of the sales into array
 salesDataInfo = convertStringDataToArray(salesData);
