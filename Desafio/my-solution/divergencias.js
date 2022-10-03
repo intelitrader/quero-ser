@@ -1,22 +1,23 @@
-const { readFileSync, writeFileSync } = require("fs");
-const productsData = readFileSync("./data/c2_produtos.txt", "utf8");
-const salesData = readFileSync("./data/c2_vendas.txt", "utf8");
+import { readFileSync, writeFileSync } from "fs";
+const productsData = readFileSync("./data/c1_produtos.txt", "utf8");
+const salesData = readFileSync("./data/c1_vendas.txt", "utf8");
 
 //Converts a string of data into an array, separating it with "\n" and ";"...
 const convertStringDataToArray = (stringData) => {
   const dataArray = stringData.split("\n");
   return dataArray.map((data) => data.split(";"));
 };
-productsDataArray = convertStringDataToArray(productsData);
+
+let productsDataInfo = convertStringDataToArray(productsData);
 
 // Generating an array with only the product codes.
 const productCodesArray = [];
-productsDataArray.forEach((product) => {
+productsDataInfo.forEach((product) => {
   productCodesArray.push(Number(product[0]));
 });
 
 //Converting string data of the sales into array
-salesDataInfo = convertStringDataToArray(salesData);
+let salesDataInfo = convertStringDataToArray(salesData);
 
 let divergencesInfo = "";
 
@@ -50,5 +51,5 @@ for (const sale of salesDataInfo) {
   }
 }
 
-//Generating the divergence file
+//Generating "divergencias" file
 writeFileSync("output/divergencias.txt", divergencesInfo);

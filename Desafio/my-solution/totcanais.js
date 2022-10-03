@@ -1,5 +1,4 @@
-const { readFileSync, writeFileSync } = require("fs");
-const productsData = readFileSync("./data/c1_produtos.txt", "utf8");
+import { readFileSync, writeFileSync } from "fs";
 const salesData = readFileSync("./data/c1_vendas.txt", "utf8");
 
 //Converts a string of data into an array, separating it with "\n" and ";"...
@@ -8,11 +7,8 @@ const convertStringDataToArray = (stringData) => {
   return dataArray.map((data) => data.split(";"));
 };
 
-//Converting string data of the products into array
-productsDataArray = convertStringDataToArray(productsData);
-
 //Converting string data of the sales into array
-salesDataInfo = convertStringDataToArray(salesData);
+let salesDataInfo = convertStringDataToArray(salesData);
 
 let sellerSales = 0;
 let websiteSales = 0;
@@ -44,4 +40,5 @@ const totCanaisInfo = `Quantidade de vendas por canal\n
 3 - App móvel Android          ${androidAppSales}
 4 - App móvel iPhone           ${iphoneAppSales}`;
 
+// Generating "totcanais" file
 writeFileSync("output/totcanais.txt", totCanaisInfo);
