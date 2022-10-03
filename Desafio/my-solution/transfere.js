@@ -68,4 +68,5 @@ for (const infoProduct of productsDataInfo) {
 
 transferInfo = table(infoSaleByProduct);
 
-writeFileSync("output/transfere.txt", transferInfo);
+writeFileSync("output/transfere.txt", `Necessidade de transferência - Armazém para CO\n\n`);
+writeFileSync("output/transfere.txt", transferInfo, { flag: "a" });
