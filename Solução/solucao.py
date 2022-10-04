@@ -7,6 +7,12 @@ def abrir_arquivo(caminho, modo):
 def fechar_arquivo(arquivo):
     arquivo.close()
 
+def escreverArquivo(pathArquivo,nomeArquivo, texto):
+    pathArquivo = Path(pathArquivo+"/"+f"{nomeArquivo}")
+    arquivo = abrir_arquivo(pathArquivo, "w+")
+    arquivo.write(texto)
+    fechar_arquivo(arquivo)
+
 def info_produtos(produtos):
     '''Função que abre o arquivo produtos.TXT e o devolve em forma de dicionario, onde
     as chaves do dicio_produtos equivale ao código de produto e os valores são quantidade min e quantidade em estoque.'''
@@ -21,24 +27,19 @@ def info_produtos(produtos):
     fechar_arquivo(file_produtos)
     return dicionario
 
-def escreverArquivo(pathArquivo,nomeArquivo, texto):
-    pathArquivo = Path(pathArquivo+"/"+f"{nomeArquivo}")
-    arquivo = abrir_arquivo(pathArquivo, "w+")
-    arquivo.write(texto)
-    fechar_arquivo(arquivo)
-
 def relatorioCanais(dicioVendas):
-    canais = [0,0,0,0]
-    for vendas in dicioVendas.values():
-        canais[0] += vendas[1]
-        canais[1] += vendas[2]
-        canais[2] += vendas[3]
-        canais[3] += vendas[4]
+    '''Função que pecorre o dicionario com as informações de venda e as relaciona com seus devidos canais'''
+    canais = [0,0,0,0] #Iniciando a lista de canais
+    for vendas in dicioVendas.values(): #Pecorrendo o dicionario de vendas
+        canais[0] += vendas[1] #Somando as vendas por representantes
+        canais[1] += vendas[2] #Somando as vendas por website
+        canais[2] += vendas[3] #Somando as vendas por Android
+        canais[3] += vendas[4] #Somando as vendas por Iphone
     texto = "Quantidades de Vendas por canal\n"
     texto = texto + "\n1 - Representantes		" + str(canais[0])
     texto = texto + "\n2 - Website			" + str(canais[1])
     texto = texto + "\n3 - App móvel Android		" + str(canais[2])
-    texto = texto + "\n4 - App móvel iPhone		" + str(canais[3])
+    texto = texto + "\n4 - App móvel iPhone		" + str(canais[3]) 
     pathCanais = input("Digite o caminho onde deseja salvar o relatorio sobre os canais de vendas: ")
     nomeArquivo = "TOTCANAIS.TXT"
     escreverArquivo(pathCanais, nomeArquivo, texto)
