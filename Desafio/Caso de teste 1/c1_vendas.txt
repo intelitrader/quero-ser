@@ -29,3 +29,5 @@ codigo do produto; quantidade da venda; situação da venda; canal da venda
 23400;79;100;1
 16320;30;100;1
 28790;71;100;3
+
+
