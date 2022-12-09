@@ -3,5 +3,3 @@
 26440;2899;800
 28790;310;150
 36540;431;100
-
-codigo do produto; quantidade em estoque; quantidade minima
