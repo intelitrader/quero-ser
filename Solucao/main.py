@@ -7,6 +7,7 @@
 # Como o Centro Operacional não tem grande espaço o estoque mantido ali é limitado.
 # Assim, com base nas vendas do período e no estoque pré-existente o programa deve calcular, para cada produto,
 # a quantidade de itens que devem ser enviados do Armazém para o Centro Operacional.
+caso = input('Qual o caso de teste [1/2]? ')
 """print((open("c1_produtos.txt")).read())
  print((open("c1_vendas.txt")).read())"""
 class Produto:
@@ -17,9 +18,9 @@ class Produto:
 totcanais = {}
 estoque = []
 vendasprod = {}
-vendas = open("c1_vendas.txt", "r")
+vendas = open(f"c{caso}_vendas.txt", "r+")
 lstprod = []
-pro = open('c1_produtos.txt')
+pro = open(f'c{caso}_produtos.txt')
 for produto in pro:
     infprod = produto.split(';')
     estoque.append(Produto(infprod[0], infprod[1], infprod[2]))
@@ -29,14 +30,7 @@ c = 1
 divergencias = open('divergencias.txt', 'w+')
 for venda in vendas:
     informacoes = venda.split(';')
-    if informacoes[2] == '999':
-        divergencias.writelines(f"""Linha {c} – Erro desconhecido. Acionar equipe de TI\n""")
-    elif informacoes[2] == '190':
-        divergencias.writelines(f"""Linha {c} – Venda não finalizada\n""")
-    elif not vendasprod.keys().__contains__(informacoes[0]):
-        divergencias.writelines(f"""Linha {c} – Código de Produto não encontrado {informacoes[0]}\n""")
-    elif informacoes[2] == '135':
-        divergencias.writelines(f"""Linha {c} – Venda cancelada\n""")
+    informacoes[3] = informacoes[3].replace('\n', "")
     if informacoes[2] == '100' or informacoes[2] == '102':  # se as vendas forem confirmadas
         if not totcanais.keys().__contains__(informacoes[3]):
             totcanais.update(({f'{informacoes[3]}': 0}))
@@ -46,10 +40,18 @@ for venda in vendas:
         if vendasprod.keys().__contains__(informacoes[0]):
             valor = vendasprod.get(informacoes[0])
             vendasprod.update({f"{informacoes[0]}": valor + int(informacoes[1])})
+    if informacoes[2] == '999':
+        divergencias.writelines(f"""Linha {c} – Erro desconhecido. Acionar equipe de TI\n""")
+    elif informacoes[2] == '190':
+        divergencias.writelines(f"""Linha {c} – Venda não finalizada\n""")
+    elif not vendasprod.keys().__contains__(informacoes[0]):
+        divergencias.writelines(f"""Linha {c} – Código de Produto não encontrado {informacoes[0]}\n""")
+    elif informacoes[2] == '135':
+        divergencias.writelines(f"""Linha {c} – Venda cancelada\n""")
+
     c += 1
 transfere = open('transfere.txt', 'w+')
-transfere.writelines("""
-Necessidade de Transferencia Armazem para CO
+transfere.writelines("""Necessidade de Transferencia Armazem para CO
 
 Produto  QtCO  QtMin  QtVendas  Estq.após  Necess.  Transf. de
                                 Vendas              Arm p/ CO\n""")
@@ -64,7 +66,9 @@ for chave, valor in vendasprod.items():
 totcanaistext = open('totcanal.txt', 'w+')
 totcanaistext.writelines(f"Quantidades de Vendas por canal\n"
                          f"\n"
-                         f"1 - Representantes		    {list(totcanais.values())[0]}\n"
-                         f"2 - Website			        {list(totcanais.values())[2]}\n"
-                         f"3 - App móvel Android		{list(totcanais.values())[1]}\n"
-                         f"4 - App móvel iPhone		{list(totcanais.values())[3]}")
+                         f"Canal                     QtVendas\n"
+                         f"1 - Representantes           {list(totcanais.values())[0]}\n"
+                         f"2 - Website                  {list(totcanais.values())[2]}\n"
+                         f"3 - App móvel Android        {list(totcanais.values())[1]}\n"
+                         f"4 - App móvel iPhone         {list(totcanais.values())[3]}")
+print(totcanais)
