@@ -71,4 +71,3 @@ totcanaistext.writelines(f"Quantidades de Vendas por canal\n"
                          f"2 - Website                  {list(totcanais.values())[2]}\n"
                          f"3 - App móvel Android        {list(totcanais.values())[1]}\n"
                          f"4 - App móvel iPhone         {list(totcanais.values())[3]}")
-print(totcanais)
