@@ -1,4 +1,4 @@
-# Teste Técnico Intelitrader
+# Teste
 
 ## Contexto
 
