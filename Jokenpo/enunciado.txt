@@ -1,0 +1,15 @@
+Jokenpo
+Gostei! Vamos usar esse!
+Não gostei! Mostre-me outro.
+
+Este problema foi utilizado em 2302 Dojo(s).
+
+Jokenpo é uma brincadeira japonesa, onde dois jogadores escolhem um dentre três possíveis itens: Pedra, Papel ou Tesoura.
+
+O objetivo é fazer um juiz de Jokenpo que dada a jogada dos dois jogadores informa o resultado da partida.
+
+As regras são as seguintes:
+
+Pedra empata com Pedra e ganha de Tesoura
+Tesoura empata com Tesoura e ganha de Papel
+Papel empata com Papel e ganha de Pedra
