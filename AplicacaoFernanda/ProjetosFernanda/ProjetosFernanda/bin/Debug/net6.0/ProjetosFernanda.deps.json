@@ -1,0 +1,58 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ProjetosFernanda/1.0.0": {
+        "dependencies": {
+          "CaixaEletronico": "1.0.0",
+          "ChequeExtenso": "1.0.0",
+          "FizzBuzz": "1.0.0"
+        },
+        "runtime": {
+          "ProjetosFernanda.dll": {}
+        }
+      },
+      "CaixaEletronico/1.0.0": {
+        "runtime": {
+          "CaixaEletronico.dll": {}
+        }
+      },
+      "ChequeExtenso/1.0.0": {
+        "runtime": {
+          "ChequeExtenso.dll": {}
+        }
+      },
+      "FizzBuzz/1.0.0": {
+        "runtime": {
+          "FizzBuzz.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProjetosFernanda/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CaixaEletronico/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChequeExtenso/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FizzBuzz/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

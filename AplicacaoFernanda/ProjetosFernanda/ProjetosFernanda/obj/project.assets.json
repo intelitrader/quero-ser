@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "CaixaEletronico/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CaixaEletronico.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CaixaEletronico.dll": {}
+        }
+      },
+      "ChequeExtenso/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ChequeExtenso.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChequeExtenso.dll": {}
+        }
+      },
+      "FizzBuzz/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/FizzBuzz.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FizzBuzz.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CaixaEletronico/1.0.0": {
+      "type": "project",
+      "path": "../CaixaEletronico/CaixaEletronico.csproj",
+      "msbuildProject": "../CaixaEletronico/CaixaEletronico.csproj"
+    },
+    "ChequeExtenso/1.0.0": {
+      "type": "project",
+      "path": "../ChequeExtenso/ChequeExtenso.csproj",
+      "msbuildProject": "../ChequeExtenso/ChequeExtenso.csproj"
+    },
+    "FizzBuzz/1.0.0": {
+      "type": "project",
+      "path": "../Erdos/FizzBuzz.csproj",
+      "msbuildProject": "../Erdos/FizzBuzz.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "CaixaEletronico >= 1.0.0",
+      "ChequeExtenso >= 1.0.0",
+      "FizzBuzz >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ferna\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\ProjetosFernanda\\ProjetosFernanda.csproj",
+      "projectName": "ProjetosFernanda",
+      "projectPath": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\ProjetosFernanda\\ProjetosFernanda.csproj",
+      "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\ProjetosFernanda\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\CaixaEletronico\\CaixaEletronico.csproj": {
+              "projectPath": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\CaixaEletronico\\CaixaEletronico.csproj"
+            },
+            "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\ChequeExtenso\\ChequeExtenso.csproj": {
+              "projectPath": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\ChequeExtenso\\ChequeExtenso.csproj"
+            },
+            "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\Erdos\\FizzBuzz.csproj": {
+              "projectPath": "C:\\Users\\ferna\\source\\repos\\DesafioFernanda\\quero-ser\\AplicacaoFernanda\\ProjetosFernanda\\Erdos\\FizzBuzz.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

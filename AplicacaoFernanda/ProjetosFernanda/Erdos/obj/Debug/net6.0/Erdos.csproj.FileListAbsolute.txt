@@ -1,0 +1,15 @@
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\bin\Debug\net6.0\Erdos.exe
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\bin\Debug\net6.0\Erdos.deps.json
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\bin\Debug\net6.0\Erdos.runtimeconfig.json
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\bin\Debug\net6.0\Erdos.dll
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\bin\Debug\net6.0\Erdos.pdb
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.csproj.AssemblyReference.cache
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.AssemblyInfoInputs.cache
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.AssemblyInfo.cs
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.csproj.CoreCompileInputs.cache
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.dll
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\refint\Erdos.dll
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.pdb
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\Erdos.genruntimeconfig.cache
+C:\Users\ferna\source\repos\DesafioFernanda\quero-ser\Desafio\AplicacaoFernanda\ProjetosFernanda\Erdos\obj\Debug\net6.0\ref\Erdos.dll
