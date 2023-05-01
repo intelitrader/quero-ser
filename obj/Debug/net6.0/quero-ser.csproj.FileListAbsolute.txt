@@ -13,3 +13,6 @@
 /home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/ref/quero-ser.dll
 /home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.pdb
 /home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.genruntimeconfig.cache
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.csproj.CopyComplete

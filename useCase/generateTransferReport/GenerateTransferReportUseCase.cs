@@ -21,7 +21,34 @@ namespace quero_ser.useCase.generateTransferReport
             string createNameFile = $"transfere.txt";
             string filePathSave = $"{pathFolder}/{folderName}/{createNameFile}";
 
-            Console.WriteLine("GenerateTransferReportUseCase");
+            List<Transfer> transfersList = new List<Transfer>();
+
+            foreach (Product product in productsList)
+            {
+                List<Sale> filterProductsSales = _reportsTranfersRepository.FilterProductsSales(product, salesList);
+                int totalProductSales = _reportsTranfersRepository.TotalProductSales(filterProductsSales);
+
+                int stockAfterSale = product.quantityInStockBeginningPeriod - totalProductSales;
+                int stockReplenishmentNeeded = stockAfterSale - product.minStockCenterOperation;
+                int replenishmentQuantity = stockReplenishmentNeeded >= 0 ? 0 : Math.Abs(stockReplenishmentNeeded);
+                int transferToOperationsCenter = replenishmentQuantity >= 1 && replenishmentQuantity <= 10 ? 10 : replenishmentQuantity;
+
+                Transfer newTransfer = new Transfer()
+                {
+                    product = product.productCode,
+                    QuantityOperationsCenter = product.quantityInStockBeginningPeriod,
+                    minimumAmount = product.minStockCenterOperation,
+                    quantitySold = totalProductSales,
+                    stockAfterSale = stockAfterSale,
+                    replacement = replenishmentQuantity,
+                    transferToOperationsCenter = transferToOperationsCenter
+                };
+
+                transfersList.Add(newTransfer);
+            }
+
+            _reportsTranfersRepository.CreateFileTransfer(filePathSave, transfersList);
+
         }
     }
 }
