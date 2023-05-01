@@ -24,6 +24,10 @@ namespace quero_ser.useCase.importProduct
 
             string[] lines = _productsRepository.ReadFile(filePath);
 
+            List<Product> formatProductsList = _productsRepository.FormatProductListFile(lines);
+
+            return formatProductsList;
+
         }
     }
 }
