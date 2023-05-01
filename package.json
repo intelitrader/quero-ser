@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
+    "csv-writer": "^1.6.0",
     "pkg": "^5.8.1"
   }
 }
