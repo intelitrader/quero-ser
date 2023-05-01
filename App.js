@@ -1,6 +1,6 @@
 // var readVendas = require("./Functions/readVendas.js");
 import montaProduto from "./Functions/Tratamento/montaProduto.js";
-import Produto from "./Class/Produto.js";
+import montaVenda from "./Functions/Tratamento/montaVenda.js";
 
 const teste = montaProduto('./Entrada/c1_produtos.txt');
 
