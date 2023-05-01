@@ -14,5 +14,12 @@ namespace quero_ser.repositories.implementation
 
             return filterProductsSales;
         }
+
+        public int TotalProductSales(List<Sale> productSaleList)
+        {
+            int totalProductSales = productSaleList.Sum(sale => sale.quantitySale);
+
+            return totalProductSales;
+        }
     }
 }
