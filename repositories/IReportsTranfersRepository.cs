@@ -9,6 +9,7 @@ namespace quero_ser.repositories
     public interface IReportsTranfersRepository
     {
         public List<Sale> FilterProductsSales(Product product, List<Sale> salesList);
+        public int TotalProductSales(List<Sale> productSaleList);
 
     }
 }
