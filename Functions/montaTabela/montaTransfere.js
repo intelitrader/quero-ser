@@ -5,12 +5,14 @@ export default function montaTransfere() {
   const ArrayProdutos = montaProduto("./Entrada/c1_produtos.txt");
   const ArrayVendas = montaVenda("./Entrada/c1_vendas.txt");
 
-  let produtosVendidos = {};
+  const produtosVendidos = {};
 
   // inicia cada posição com 0
   ArrayProdutos.forEach((produto) => {
     produtosVendidos[produto.codigo] = 0;
   });
+
+  let count = 0;
 
   ArrayVendas.forEach((venda) => {
     const codigoVenda = parseInt(venda.codigoProduto, 10);
@@ -20,13 +22,19 @@ export default function montaTransfere() {
       (produto) => produto.codigo == codigoVenda
     );
 
-    // se caso o .txt tiver alguma linha vazia
-    if (teste) {
-      produtosVendidos[codigoVenda] += quantidade;
-    }
+    count++;
 
-    // console.log(produtosVendidos);
+    // se caso o .txt tiver alguma linha como undefined
+    if (teste) {
+      // chega a situacao da venda
+      if (venda.situacao == 100 || venda.situacao == 120) {
+        produtosVendidos[codigoVenda] += quantidade;
+      }
+    } else {
+      console.log(teste);
+      console.log(count);
+    }
   });
 
-  console.log(produtosVendidos);
+//   console.log(produtosVendidos);
 }
