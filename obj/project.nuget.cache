@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9trIMJ+6ge1sGACd3l5o7elfNUOBQbCOCDEgMF3qyOOj2hhZOnJHCEXx7xybAjATCn8PavufbG09Eq32fGxnvQ==",
+  "dgSpecHash": "MDd9qQyAhBSB7NmEl8KXGzyj/LpNpF8RJXPK1tqAxUG3w1oc9N89yz/27ZCsa3riHPk7pjtyRpTmSkFXeCLQEA==",
   "success": true,
   "projectFilePath": "/home/douglas/Documents/github/quero-ser/quero-ser.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/douglas/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/douglas/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
