@@ -1,10 +1,10 @@
 // var readVendas = require("./Functions/readVendas.js");
-import { produtosC1, produtosC2 } from "./Functions/Read/readProdutos.js";
-import { vendasC1, vendasC2 } from "./Functions/Read/readVendas.js";
+import { produtos } from "./Functions/Read/readTxt.js";
 import Produto from "./Class/Produto.js";
 
 import { montaProduto } from "./Functions/Tratamento/montaProduto.js";
 
-// const prod = 
-const teste = montaProduto(produtosC1());
+
+const rawProdutos = produtos('./Entrada/c2_produtos.txt')
+const teste = montaProduto(rawProdutos);
 console.log(teste)
