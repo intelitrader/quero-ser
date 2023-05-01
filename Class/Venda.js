@@ -1,6 +1,6 @@
 class Venda {
-    constructor(codigo, quantidade, situacao, canal){
-        this.codigo = codigo;
+    constructor(codigoProduto, quantidade, situacao, canal){
+        this.codigoProduto = codigoProduto;
         this.quantidade = quantidade;
         this.situacao = situacao;
         this.canal = canal;

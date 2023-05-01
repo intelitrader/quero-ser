@@ -1,10 +1,8 @@
 // var readVendas = require("./Functions/readVendas.js");
-import { produtos } from "./Functions/Read/readTxt.js";
+import montaProduto from "./Functions/Tratamento/montaProduto.js";
 import Produto from "./Class/Produto.js";
 
-import { montaProduto } from "./Functions/Tratamento/montaProduto.js";
+const teste = montaProduto('./Entrada/c1_produtos.txt');
 
-
-const rawProdutos = produtos('./Entrada/c2_produtos.txt')
-const teste = montaProduto(rawProdutos);
-console.log(teste)
+teste.forEach(element => console.log(element));
+// console.log(teste)

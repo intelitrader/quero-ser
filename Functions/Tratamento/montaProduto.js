@@ -1,7 +1,10 @@
 // import { produtosC1 } from "../Read/readProdutos";
 import Produto from "../../Class/Produto.js";
+import readTxt from "../Read/readTxt.js";
 
-export function montaProduto(rawProdutos) {
+export default function montaProduto(url) {
+
+    const rawProdutos = readTxt(url)
     
     const produtosTratados = rawProdutos.split('\r\n');
     

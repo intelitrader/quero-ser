@@ -1,6 +1,6 @@
 import fs from 'fs' ;
 
-export function produtos(url) {
+export default function readTxt(url) {
 
     try {  
         var data = fs.readFileSync(url, 'utf8');
