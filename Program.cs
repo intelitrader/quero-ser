@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using quero_ser.model;
 using quero_ser.repositories;
 using quero_ser.repositories.implementation;
+using quero_ser.useCase.generateTransferReport;
 using quero_ser.useCase.importProduct;
 using quero_ser.useCase.importSale;
 
@@ -21,11 +22,18 @@ class Program
         .AddScoped<ISalesRepository, SalesRepository>()
         .AddScoped<ImportSaleUseCase>()
 
+        // relatorios de transferencia
+        .AddScoped<IReportsTranfersRepository, ReportsTransfersRepository>()
+        .AddScoped<GenerateTransferReportUseCase>()
+
+
         .BuildServiceProvider();
 
         ImportProductUseCase importProductUseCase = serviceProvider.GetService<ImportProductUseCase>()!;
 
         ImportSaleUseCase importSaleUseCase = serviceProvider.GetService<ImportSaleUseCase>()!;
+
+        GenerateTransferReportUseCase generateTransferReportUseCase = serviceProvider.GetService<GenerateTransferReportUseCase>()!;
 
         string diretorios = $"{System.Environment.CurrentDirectory}/Desafio";
         string[] files = Directory.GetDirectories(diretorios);
@@ -39,6 +47,9 @@ class Program
                 List<Product> productsList = importProductUseCase.execute(diretorios, nameFile);
 
                 List<Sale> salesList = importSaleUseCase.execute(diretorios, nameFile);
+
+                generateTransferReportUseCase.execute(salesList, productsList, diretorios, nameFile);
+
 
             }
 
