@@ -1,0 +1,15 @@
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/quero-ser
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/quero-ser.deps.json
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/quero-ser.runtimeconfig.json
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/quero-ser.dll
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/ref/quero-ser.dll
+/home/douglas/Documents/github/quero-ser/bin/Debug/net6.0/quero-ser.pdb
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.csproj.AssemblyReference.cache
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.GeneratedMSBuildEditorConfig.editorconfig
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.AssemblyInfoInputs.cache
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.AssemblyInfo.cs
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.csproj.CoreCompileInputs.cache
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.dll
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/ref/quero-ser.dll
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.pdb
+/home/douglas/Documents/github/quero-ser/obj/Debug/net6.0/quero-ser.genruntimeconfig.cache
