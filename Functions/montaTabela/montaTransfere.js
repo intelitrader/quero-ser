@@ -39,8 +39,8 @@ function somaVendas(ArrayProdutos, ArrayVendas) {
 }
 
 export default function montaTransfere() {
-  const ArrayProdutos = montaProduto("./Entrada/c1_produtos.txt");
-  const ArrayVendas = montaVenda("./Entrada/c1_vendas.txt");
+  const ArrayProdutos = montaProduto("./Entrada/c2_produtos.txt");
+  const ArrayVendas = montaVenda("./Entrada/c2_vendas.txt");
 
   const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas);
   //   console.log(vendidos);
@@ -48,29 +48,24 @@ export default function montaTransfere() {
   for (const total in produtosVendidos) {
     // index do produto que tem o codigo igual a posicao do array de vendas
     const busca = ArrayProdutos.findIndex((produto) => produto.codigo == total);
-
-    const quantidadeMinima = ArrayProdutos[busca].quantidadeMinima;
-    const quantidade = ArrayProdutos[busca].quantidade;
-
+    // 0, 1, 2, 3...
     if (busca !== -1) {
-      // 0, 1, 2, 3...
       ArrayProdutos[busca].vendas = produtosVendidos[total];
     }
 
+    const quantidade = ArrayProdutos[busca].quantidade;
+    const quantidadeMinima = ArrayProdutos[busca].quantidadeMinima;
+
     // calculo para estoque apos vendas
     const estoqueAtual = quantidade - ArrayProdutos[busca].vendas;
-
     ArrayProdutos[busca].estoque = estoqueAtual;
 
     // se estoque atual for menor que o minimo
-    if (ArrayProdutos[busca].estoque < quantidadeMinima) {
-      const necessario = quantidadeMinima - ArrayProdutos[busca].estoque;
+    if (estoqueAtual < quantidadeMinima) {
+      const necessario = quantidadeMinima - estoqueAtual;
       ArrayProdutos[busca].necessidade = necessario;
       // se a necessidade estiver entre 1 e 10
-      if ( 
-        ArrayProdutos[busca].necessidade > 1 &&
-        ArrayProdutos[busca].necessidade < 10
-      ) {
+      if (necessario > 1 && necessario < 10) {
         ArrayProdutos[busca].transferencia = 10;
       } else {
         ArrayProdutos[busca].transferencia = necessario;
@@ -81,7 +76,7 @@ export default function montaTransfere() {
     }
   }
 
-    console.log(ArrayProdutos);
+  console.log(ArrayProdutos);
 
   const transfere = {
     Produto: ArrayProdutos[0].codigo,
