@@ -1,25 +1,41 @@
-export default function somaCanal(ArrayVendas) {
-  let Representante = 0;
-  let Website = 0;
-  let Android = 0;
-  let iPhone = 0;
+import criaCanal from "../criaArquivo/criaCanal.js";
+
+export default function somaCanal(ArrayVendas, cn) {
+  const canais = [
+    {
+      nome: "Representante",
+      total: 0,
+    },
+    {
+      nome: "Website",
+      total: 0,
+    },
+    {
+      nome: "Android",
+      total: 0,
+    },
+    {
+      nome: "iPhone",
+      total: 0,
+    },
+  ];
 
   ArrayVendas.forEach((venda) => {
     switch (venda.canal) {
       case 1:
-        Representante += venda.quantidade;
+        canais[0].total += venda.quantidade;
         break;
       case 2:
-        Website += venda.quantidade;
+        canais[1].total += venda.quantidade;
         break;
       case 3:
-        Android += venda.quantidade;
+        canais[2].total += venda.quantidade;
         break;
       case 4:
-        iPhone += venda.quantidade;
+        canais[3].total += venda.quantidade;
         break;
     }
   });
 
-  console.log(iPhone);
+  criaCanal(canais, cn);
 }

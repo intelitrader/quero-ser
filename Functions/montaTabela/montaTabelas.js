@@ -8,7 +8,7 @@ export default function montaTabelas(cn) {
   const ArrayProdutos = montaProduto("./Entrada/" + cn + "_produtos.txt");
   const ArrayVendas = montaVenda("./Entrada/" + cn + "_vendas.txt");
 
-  somaCanal(ArrayVendas);
+  somaCanal(ArrayVendas, cn);
 
   const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas, cn);
 
