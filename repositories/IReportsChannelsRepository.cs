@@ -6,7 +6,7 @@ using quero_ser.model;
 
 namespace quero_ser.repositories
 {
-    public interface IReportsChannelRepository
+    public interface IReportsChannelsRepository
     {
         public int TotalSalesRepresentativeQuantities(List<Sale> salesList);
         public int TotalSalesWebSiteQuantities(List<Sale> salesList);

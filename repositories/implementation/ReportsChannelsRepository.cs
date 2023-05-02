@@ -7,7 +7,7 @@ using quero_ser.model;
 
 namespace quero_ser.repositories.implementation
 {
-    public class ReportsChannelRepository : IReportsChannelRepository
+    public class ReportsChannelsRepository : IReportsChannelsRepository
     {
         public async Task CreateFile(string filePath, int totalSalesRepresentative, int totalSalesWebSite, int totalSalesAndroid, int totalSalesIPhone)
         {
