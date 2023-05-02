@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node setup.js",
+    "relatorios": "node setup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
