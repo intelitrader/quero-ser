@@ -1,3 +1,4 @@
-import montaTransfere from "./Functions/montaTabela/montaTransfere.js";
+import montaTabelas from "./Functions/montaTabela/montaTabelas.js";
 
-montaTransfere();
+montaTabelas("c1");
+// montaTransfere("c2");

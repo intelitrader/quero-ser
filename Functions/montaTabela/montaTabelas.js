@@ -1,9 +1,12 @@
 import montaProduto from "../Tratamento/montaProduto.js";
 import montaVenda from "../Tratamento/montaVenda.js";
+import criaRelatorio from "../criaArquivo/criaRelatorio.js";
 import criaTransfere from "../criaArquivo/criaTransfere.js";
 
-function somaVendas(ArrayProdutos, ArrayVendas) {
+function somaVendas(ArrayProdutos, ArrayVendas, cn) {
   const produtosVendidos = {};
+
+  const divergencias = [];
 
   // inicia cada posição com 0
   ArrayProdutos.forEach((produto) => {
@@ -25,25 +28,38 @@ function somaVendas(ArrayProdutos, ArrayVendas) {
     // se caso o .txt tiver alguma linha como undefined
     if (teste) {
       // chega a situacao da venda
-      if (venda.situacao == 100 || venda.situacao == 120) {
+      if (venda.situacao == 100 || venda.situacao == 102) {
         produtosVendidos[codigoVenda] += quantidade;
+      } else if (venda.situacao == 135) {
+        divergencias.push("Linha " + count + " - Venda cancelada");
+      } else if (venda.situacao == 190) {
+        divergencias.push("Linha " + count + " - Venda não finalizada");
+      } else {
+        divergencias.push(
+          "Linha " + count + " - Erro desconhecido. Acionar equipe de TI"
+        );
       }
     } else {
       // mostra a linha com o erro
-      // console.log(teste);
-      // console.log(count);
+      divergencias.push(
+        "Linha " +
+          count +
+          " - Código de Produto não encontrado " +
+          venda.codigoProduto
+      );
     }
   });
 
-  //   console.log(produtosVendidos);
+  criaRelatorio(divergencias, cn);
+
   return produtosVendidos;
 }
 
-export default function montaTransfere() {
-  const ArrayProdutos = montaProduto("./Entrada/c1_produtos.txt");
-  const ArrayVendas = montaVenda("./Entrada/c1_vendas.txt");
+export default function montaTabelas(cn) {
+  const ArrayProdutos = montaProduto("./Entrada/" + cn + "_produtos.txt");
+  const ArrayVendas = montaVenda("./Entrada/" + cn + "_vendas.txt");
 
-  const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas);
+  const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas, cn);
   //   console.log(vendidos);
 
   for (const codigoVendas in produtosVendidos) {
@@ -80,5 +96,5 @@ export default function montaTransfere() {
     }
   }
 
-  criaTransfere(ArrayProdutos);
+  // criaTransfere(ArrayProdutos, cn);
 }

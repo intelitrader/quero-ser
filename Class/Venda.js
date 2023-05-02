@@ -1,4 +1,4 @@
-class Venda {
+export default class Venda {
     constructor(codigoProduto, quantidade, situacao, canal){
         this.codigoProduto = codigoProduto;
         this.quantidade = quantidade;
@@ -6,4 +6,3 @@ class Venda {
         this.canal = canal;
     }
 }
-export default Venda;

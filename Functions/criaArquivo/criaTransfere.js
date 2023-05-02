@@ -1,23 +1,23 @@
 import fs from "fs";
 import EasyTable from "easy-table";
 
-export default function criaTransfere(transfere) {
-  var t = new EasyTable();
+export default function criaTransfere(transfere, cn) {
+  var tabela = new EasyTable();
 
   transfere.forEach(function (dado) {
-    t.cell("Produto", dado.codigo);
-    t.cell("Quantidade Atual", dado.quantidade);
-    t.cell("Quantidade Minima", dado.quantidadeMinima);
-    t.cell("Vendas", dado.vendas);
-    t.cell("Estoque", dado.estoque);
-    t.cell("Necessidade", dado.necessidade);
-    t.cell("Transferencia", dado.transferencia);
-    t.newRow();
+    tabela.cell("Produto", dado.codigo);
+    tabela.cell("Quantidade Atual", dado.quantidade);
+    tabela.cell("Quantidade Minima", dado.quantidadeMinima);
+    tabela.cell("Vendas", dado.vendas);
+    tabela.cell("Estoque", dado.estoque);
+    tabela.cell("Necessidade", dado.necessidade);
+    tabela.cell("Transferencia", dado.transferencia);
+    tabela.newRow();
   });
 
-  console.log(t.toString());
+  console.log(tabela.toString());
 
-  const tabelaTransfere = t.toString();
+  const tabelaTransfere = tabela.toString();
 
-  fs.writeFileSync("./Saida/c1_Transfere.txt", tabelaTransfere);
+  fs.writeFileSync("./Saida/" + cn + "_transfere.txt", tabelaTransfere);
 }
