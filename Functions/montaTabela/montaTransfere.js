@@ -39,54 +39,62 @@ function somaVendas(ArrayProdutos, ArrayVendas) {
 }
 
 export default function montaTransfere() {
-  const ArrayProdutos = montaProduto("./Entrada/c2_produtos.txt");
-  const ArrayVendas = montaVenda("./Entrada/c2_vendas.txt");
+  const ArrayProdutos = montaProduto("./Entrada/c1_produtos.txt");
+  const ArrayVendas = montaVenda("./Entrada/c1_vendas.txt");
 
   const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas);
   //   console.log(vendidos);
 
-  for (const total in produtosVendidos) {
+  for (const codigoVendas in produtosVendidos) {
     // index do produto que tem o codigo igual a posicao do array de vendas
-    const busca = ArrayProdutos.findIndex((produto) => produto.codigo == total);
+    const index = ArrayProdutos.findIndex((produto) => produto.codigo == codigoVendas);
     // 0, 1, 2, 3...
-    if (busca !== -1) {
-      ArrayProdutos[busca].vendas = produtosVendidos[total];
+    if (index !== -1) {
+      ArrayProdutos[index].vendas = produtosVendidos[codigoVendas];
     }
 
-    const quantidade = ArrayProdutos[busca].quantidade;
-    const quantidadeMinima = ArrayProdutos[busca].quantidadeMinima;
+    const quantidade = ArrayProdutos[index].quantidade;
+    const quantidadeMinima = ArrayProdutos[index].quantidadeMinima;
 
     // calculo para estoque apos vendas
-    const estoqueAtual = quantidade - ArrayProdutos[busca].vendas;
-    ArrayProdutos[busca].estoque = estoqueAtual;
+    const estoqueAtual = (quantidade - ArrayProdutos[index].vendas);
+    ArrayProdutos[index].estoque = estoqueAtual;
 
     // se estoque atual for menor que o minimo
     if (estoqueAtual < quantidadeMinima) {
       const necessario = quantidadeMinima - estoqueAtual;
-      ArrayProdutos[busca].necessidade = necessario;
+      ArrayProdutos[index].necessidade = necessario;
       // se a necessidade estiver entre 1 e 10
       if (necessario > 1 && necessario < 10) {
-        ArrayProdutos[busca].transferencia = 10;
+        ArrayProdutos[index].transferencia = 10;
       } else {
-        ArrayProdutos[busca].transferencia = necessario;
+        ArrayProdutos[index].transferencia = necessario;
       }
     } else {
-      ArrayProdutos[busca].necessidade = 0;
-      ArrayProdutos[busca].transferencia = 0;
+      // se nao for menor, fica tudo 0
+      ArrayProdutos[index].necessidade = 0;
+      ArrayProdutos[index].transferencia = 0;
     }
   }
 
-  console.log(ArrayProdutos);
+  const transfere = [];
 
-  const transfere = {
-    Produto: ArrayProdutos[0].codigo,
-    Quantidade: ArrayProdutos[0].quantidade,
-    QuantidadeMinima: ArrayProdutos[0].quantidadeMinima,
-    Vendas: ArrayProdutos[0].vendas,
-    Estoque: ArrayProdutos[0].estoque,
-    // Necessario: ArrayProdutos[0].necessario,
-    // Transferencia: ArrayProdutos[0].transferencia
-  };
+  let i = 0;
+  ArrayProdutos.forEach((produto) => {
+    // apenas mostra os que tiveram alguma venda
+    if (produto.vendas > 0) {
+      transfere[i] = {
+        Produto: produto.codigo,
+        Quantidade: produto.quantidade,
+        QuantidadeMinima: produto.quantidadeMinima,
+        Vendas: produto.vendas,
+        Estoque: produto.estoque,
+        Necessidade: produto.necessidade,
+        Transferencia: produto.transferencia,
+      };
+      i++;
+    }
+  });
 
-  //   console.log(transfere);
+  console.log(transfere);
 }
