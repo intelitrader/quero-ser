@@ -28,16 +28,23 @@ function somaVendas(ArrayProdutos, ArrayVendas, cn) {
     // se caso o .txt tiver alguma linha como undefined
     if (teste) {
       // chega a situacao da venda
-      if (venda.situacao == 100 || venda.situacao == 102) {
-        produtosVendidos[codigoVenda] += quantidade;
-      } else if (venda.situacao == 135) {
-        divergencias.push("Linha " + count + " - Venda cancelada");
-      } else if (venda.situacao == 190) {
-        divergencias.push("Linha " + count + " - Venda não finalizada");
-      } else {
-        divergencias.push(
-          "Linha " + count + " - Erro desconhecido. Acionar equipe de TI"
-        );
+
+      switch (venda.situacao) {
+        case 100:
+        case 102:
+          produtosVendidos[codigoVenda] += quantidade;
+          break;
+        case 135:
+          divergencias.push("Linha " + count + " - Venda cancelada");
+          break;
+        case 190:
+          divergencias.push("Linha " + count + " - Venda não finalizada");
+          break;
+        default:
+          divergencias.push(
+            "Linha " + count + " - Erro desconhecido. Acionar equipe de TI"
+          );
+          break;
       }
     } else {
       // mostra a linha com o erro
@@ -49,7 +56,7 @@ function somaVendas(ArrayProdutos, ArrayVendas, cn) {
       );
     }
   });
-
+  // console.log(divergencias);
   criaRelatorio(divergencias, cn);
 
   return produtosVendidos;

@@ -9,7 +9,7 @@ export default function criaRelatorio(divergencias, cn) {
       tabela.newRow();
     });
   
-    console.log(tabela.toString());
+    // console.log(tabela.toString());
   
     const tabelaDivergencias = tabela.toString();
   
