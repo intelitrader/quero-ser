@@ -79,7 +79,23 @@ namespace quero_ser.repositories.implementation
 
         public List<Divergence> FilterUnknownErrors(List<Product> productsList, Sale sale, int line)
         {
-            throw new NotImplementedException();
+
+            List<Divergence> UnknownErrorsList = new List<Divergence>();
+
+            if (sale.saleSituation == 999)
+            {
+                Divergence divergence = new Divergence()
+                {
+                    numberLine = line + 1,
+                    message = "Erro desconhecido. Acionar equipe de TI"
+                };
+
+                UnknownErrorsList.Add(divergence);
+
+            }
+
+            return UnknownErrorsList;
+
         }
     }
 }
