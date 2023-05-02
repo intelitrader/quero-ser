@@ -53,7 +53,7 @@ export default function somaVendas(ArrayProdutos, ArrayVendas, cn) {
     }
   });
 
-  // criaDivergencia(divergencias, cn);
+  criaDivergencia(divergencias, cn);
 
   return produtosVendidos;
 }

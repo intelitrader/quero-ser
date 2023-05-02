@@ -8,9 +8,7 @@ export default function criaDivergencia(divergencias, cn) {
       tabela.cell("Divergências", dado);
       tabela.newRow();
     });
-  
-    // console.log(tabela.toString());
-  
+    
     const tabelaDivergencias = tabela.toString();
   
     fs.writeFileSync("./Saida/" + cn + "_divergencias.txt", tabelaDivergencias);

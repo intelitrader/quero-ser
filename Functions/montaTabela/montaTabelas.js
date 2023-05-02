@@ -46,5 +46,5 @@ export default function montaTabelas(cn) {
     }
   }
 
-  // criaTransfere(ArrayProdutos, cn);
+  criaTransfere(ArrayProdutos, cn);
 }

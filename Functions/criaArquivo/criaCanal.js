@@ -10,8 +10,6 @@ export default function criaCanal(Canal, cn) {
       tabela.newRow();
     });
   
-    // console.log(tabela.toString());
-  
     const tabelaCanais = tabela.toString();
   
     fs.writeFileSync("./Saida/" + cn + "_totcanal.txt", tabelaCanais);
