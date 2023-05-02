@@ -1,5 +1,6 @@
 import montaProduto from "../Tratamento/montaProduto.js";
 import montaVenda from "../Tratamento/montaVenda.js";
+import criaTransfere from "../criaArquivo/criaTransfere.js";
 
 function somaVendas(ArrayProdutos, ArrayVendas) {
   const produtosVendidos = {};
@@ -47,7 +48,9 @@ export default function montaTransfere() {
 
   for (const codigoVendas in produtosVendidos) {
     // index do produto que tem o codigo igual a posicao do array de vendas
-    const index = ArrayProdutos.findIndex((produto) => produto.codigo == codigoVendas);
+    const index = ArrayProdutos.findIndex(
+      (produto) => produto.codigo == codigoVendas
+    );
     // 0, 1, 2, 3...
     if (index !== -1) {
       ArrayProdutos[index].vendas = produtosVendidos[codigoVendas];
@@ -57,7 +60,7 @@ export default function montaTransfere() {
     const quantidadeMinima = ArrayProdutos[index].quantidadeMinima;
 
     // calculo para estoque apos vendas
-    const estoqueAtual = (quantidade - ArrayProdutos[index].vendas);
+    const estoqueAtual = quantidade - ArrayProdutos[index].vendas;
     ArrayProdutos[index].estoque = estoqueAtual;
 
     // se estoque atual for menor que o minimo
@@ -77,24 +80,5 @@ export default function montaTransfere() {
     }
   }
 
-  const transfere = [];
-
-  let i = 0;
-  ArrayProdutos.forEach((produto) => {
-    // apenas mostra os que tiveram alguma venda
-    if (produto.vendas > 0) {
-      transfere[i] = {
-        Produto: produto.codigo,
-        Quantidade: produto.quantidade,
-        QuantidadeMinima: produto.quantidadeMinima,
-        Vendas: produto.vendas,
-        Estoque: produto.estoque,
-        Necessidade: produto.necessidade,
-        Transferencia: produto.transferencia,
-      };
-      i++;
-    }
-  });
-
-  console.log(transfere);
+  criaTransfere(ArrayProdutos);
 }
