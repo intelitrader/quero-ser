@@ -1,73 +1,16 @@
 import montaProduto from "../Tratamento/montaProduto.js";
 import montaVenda from "../Tratamento/montaVenda.js";
-import criaRelatorio from "../criaArquivo/criaRelatorio.js";
+import somaVendas from "./somaVendas.js";
+import somaCanal from "./somaCanal.js";
 import criaTransfere from "../criaArquivo/criaTransfere.js";
-
-function somaVendas(ArrayProdutos, ArrayVendas, cn) {
-  const produtosVendidos = {};
-
-  const divergencias = [];
-
-  // inicia cada posição com 0
-  ArrayProdutos.forEach((produto) => {
-    produtosVendidos[produto.codigo] = 0;
-  });
-
-  let count = 0;
-
-  ArrayVendas.forEach((venda) => {
-    const codigoVenda = venda.codigoProduto;
-    const quantidade = venda.quantidade;
-
-    const teste = ArrayProdutos.find(
-      (produto) => produto.codigo == codigoVenda
-    );
-
-    count++;
-
-    // se caso o .txt tiver alguma linha como undefined
-    if (teste) {
-      // chega a situacao da venda
-
-      switch (venda.situacao) {
-        case 100:
-        case 102:
-          produtosVendidos[codigoVenda] += quantidade;
-          break;
-        case 135:
-          divergencias.push("Linha " + count + " - Venda cancelada");
-          break;
-        case 190:
-          divergencias.push("Linha " + count + " - Venda não finalizada");
-          break;
-        default:
-          divergencias.push(
-            "Linha " + count + " - Erro desconhecido. Acionar equipe de TI"
-          );
-          break;
-      }
-    } else {
-      // mostra a linha com o erro
-      divergencias.push(
-        "Linha " +
-          count +
-          " - Código de Produto não encontrado " +
-          venda.codigoProduto
-      );
-    }
-  });
-  // console.log(divergencias);
-  criaRelatorio(divergencias, cn);
-
-  return produtosVendidos;
-}
 
 export default function montaTabelas(cn) {
   const ArrayProdutos = montaProduto("./Entrada/" + cn + "_produtos.txt");
   const ArrayVendas = montaVenda("./Entrada/" + cn + "_vendas.txt");
 
+  somaCanal(ArrayVendas);
+
   const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas, cn);
-  //   console.log(vendidos);
 
   for (const codigoVendas in produtosVendidos) {
     // index do produto que tem o codigo igual a posicao do array de vendas
