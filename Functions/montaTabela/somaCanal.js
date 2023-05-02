@@ -21,20 +21,21 @@ export default function somaCanal(ArrayVendas, cn) {
   ];
 
   ArrayVendas.forEach((venda) => {
-    switch (venda.canal) {
-      case 1:
-        canais[0].total += venda.quantidade;
-        break;
-      case 2:
-        canais[1].total += venda.quantidade;
-        break;
-      case 3:
-        canais[2].total += venda.quantidade;
-        break;
-      case 4:
-        canais[3].total += venda.quantidade;
-        break;
-    }
+    if (venda.situacao == 100 || venda.situacao == 102)
+      switch (venda.canal) {
+        case 1:
+          canais[0].total += venda.quantidade;
+          break;
+        case 2:
+          canais[1].total += venda.quantidade;
+          break;
+        case 3:
+          canais[2].total += venda.quantidade;
+          break;
+        case 4:
+          canais[3].total += venda.quantidade;
+          break;
+      }
   });
 
   criaCanal(canais, cn);

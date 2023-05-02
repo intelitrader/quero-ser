@@ -1,9 +1,0 @@
-Divergências                                      
---------------------------------------------------
-Linha 4 - Venda não finalizada                    
-Linha 7 - Venda não finalizada                    
-Linha 9 - Venda cancelada                         
-Linha 10 - Erro desconhecido. Acionar equipe de TI
-Linha 14 - Código de Produto não encontrado 27440 
-Linha 20 - Código de Produto não encontrado 31288 
-Linha 31 - Código de Produto não encontrado NaN   
