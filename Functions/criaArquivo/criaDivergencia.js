@@ -1,7 +1,7 @@
 import fs from "fs";
 import EasyTable from "easy-table";
 
-export default function criaRelatorio(divergencias, cn) {
+export default function criaDivergencia(divergencias, cn) {
     var tabela = new EasyTable();
 
     divergencias.forEach(function (dado) {

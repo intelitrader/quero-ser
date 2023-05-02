@@ -1,8 +1,7 @@
-import criaRelatorio from "../criaArquivo/criaRelatorio.js";
+import criaDivergencia from "../criaArquivo/criaDivergencia.js";
 
 export default function somaVendas(ArrayProdutos, ArrayVendas, cn) {
   const produtosVendidos = {};
-
   const divergencias = [];
 
   // inicia cada posição com 0
@@ -54,7 +53,7 @@ export default function somaVendas(ArrayProdutos, ArrayVendas, cn) {
     }
   });
 
-  // criaRelatorio(divergencias, cn);
+  // criaDivergencia(divergencias, cn);
 
   return produtosVendidos;
 }
