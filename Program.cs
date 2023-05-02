@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using quero_ser.model;
 using quero_ser.repositories;
 using quero_ser.repositories.implementation;
+using quero_ser.useCase.generateDivergenceReport;
 using quero_ser.useCase.generateTransferReport;
 using quero_ser.useCase.importProduct;
 using quero_ser.useCase.importSale;
@@ -26,6 +27,10 @@ class Program
         .AddScoped<IReportsTranfersRepository, ReportsTransfersRepository>()
         .AddScoped<GenerateTransferReportUseCase>()
 
+        // relatorios de divergencia
+        .AddScoped<IReportsDivergencesRepository, ReportsDivergencesRepository>()
+        .AddScoped<GenerateDivergenceReportUseCase>()
+
 
         .BuildServiceProvider();
 
@@ -34,6 +39,8 @@ class Program
         ImportSaleUseCase importSaleUseCase = serviceProvider.GetService<ImportSaleUseCase>()!;
 
         GenerateTransferReportUseCase generateTransferReportUseCase = serviceProvider.GetService<GenerateTransferReportUseCase>()!;
+
+        GenerateDivergenceReportUseCase generateDivergenceReportUseCase = serviceProvider.GetService<GenerateDivergenceReportUseCase>()!;
 
         string diretorios = $"{System.Environment.CurrentDirectory}/Desafio";
         string[] files = Directory.GetDirectories(diretorios);
@@ -50,6 +57,7 @@ class Program
 
                 generateTransferReportUseCase.execute(salesList, productsList, diretorios, nameFile);
 
+                generateDivergenceReportUseCase.execute(salesList, productsList, diretorios, nameFile);
 
             }
 
