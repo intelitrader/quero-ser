@@ -1,0 +1,31 @@
+{
+    "vendas_confirmadas": {
+        "16320": {
+            "qtCO": 343,
+            "qtMin": 200,
+            "qtVendas": 122,
+            "estqAposVendas": 221,
+            "necess": 0,
+            "transfArmazemCO": 0
+        },
+        "23400": {
+            "qtCO": 343,
+            "qtMin": 200,
+            "qtVendas": 122,
+            "estqAposVendas": 221,
+            "necess": 0,
+            "transfArmazemCO": 0
+        }
+    },
+    "divergencias": {
+        "linha_1": "descrição desta linha",
+        "linha_9": "descrição desta linha",
+        "linha_16": "descrição desta linha + código de produto"
+    },
+    "canais": {
+        "representantes": 123,
+        "website": 456,
+        "android": 580,
+        "iphone": 187
+    }   
+}
