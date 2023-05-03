@@ -5,14 +5,16 @@ export default function criaTransfere(transfere, cn) {
   var tabela = new EasyTable();
 
   transfere.forEach(function (dado) {
-    tabela.cell("Produto", dado.codigo);
-    tabela.cell("Quantidade Atual", dado.quantidade);
-    tabela.cell("Quantidade Minima", dado.quantidadeMinima);
-    tabela.cell("Vendas", dado.vendas);
-    tabela.cell("Estoque", dado.estoque);
-    tabela.cell("Necessidade", dado.necessidade);
-    tabela.cell("Transferencia", dado.transferencia);
-    tabela.newRow();
+    if (dado.codigo !== 0) {
+      tabela.cell("Produto", dado.codigo);
+      tabela.cell("Quantidade Atual", dado.quantidade);
+      tabela.cell("Quantidade Minima", dado.quantidadeMinima);
+      tabela.cell("Vendas", dado.vendas);
+      tabela.cell("Estoque", dado.estoque);
+      tabela.cell("Necessidade", dado.necessidade);
+      tabela.cell("Transferencia", dado.transferencia);
+      tabela.newRow();
+    }
   });
 
   const tabelaTransfere = tabela.toString();

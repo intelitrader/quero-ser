@@ -30,4 +30,3 @@ Produto  Quantidade Atual  Quantidade Minima  Vendas  Estoque  Necessidade  Tran
 13700    841               800                297     544      256          256          
 13750    499               330                476     23       307          307          
 13800    630               600                792     -162     762          762          
-0        0                 0                  0       0        0            0            
