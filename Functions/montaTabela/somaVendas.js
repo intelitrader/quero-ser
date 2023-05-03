@@ -43,13 +43,15 @@ export default function somaVendas(ArrayProdutos, ArrayVendas, cn) {
           break;
       }
     } else {
-      // mostra a linha com o erro
-      divergencias.push(
-        "Linha " +
-          count +
-          " - Código de Produto não encontrado " +
-          venda.codigoProduto
-      );
+      if (!isNaN(venda.codigoProduto)) {
+        // mostra a linha com o erro
+        divergencias.push(
+          "Linha " +
+            count +
+            " - Código de Produto não encontrado " +
+            venda.codigoProduto
+        );
+      }
     }
   });
 
