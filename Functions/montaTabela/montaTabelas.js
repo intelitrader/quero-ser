@@ -39,10 +39,6 @@ export default function montaTabelas(cn) {
       } else {
         ArrayProdutos[index].transferencia = necessario;
       }
-    } else {
-      // se nao for menor, fica tudo 0
-      ArrayProdutos[index].necessidade = 0;
-      ArrayProdutos[index].transferencia = 0;
     }
   }
 
