@@ -1,6 +1,6 @@
 import fs from 'fs' ;
 
-export default function readTxt(url) {
+export default function lerArquivo(url) {
 
     try {  
         var data = fs.readFileSync(url, 'utf8');

@@ -1,9 +1,9 @@
 // import { produtosC1 } from "../Read/readProdutos";
 import Venda from "../../Class/Venda.js";
-import readTxt from "../Read/readTxt.js";
+import lerArquivo from "../lerArquivo/lerArquivo.js";
 
 export default function montaVenda(url) {
-  const rawVendas = readTxt(url);
+  const rawVendas = lerArquivo(url);
 
   const vendasTratadas = rawVendas.split("\r\n");
 
