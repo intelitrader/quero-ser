@@ -7,10 +7,10 @@ export default function montaProduto(url) {
 
   const produtosTratados = rawProdutos.split("\r\n");
 
-  let linhaProdutos = [];
+  const linhaProdutos = [];
 
   for (let i = 0; i < produtosTratados.length; i++) {
-    let linha = [];
+    const linha = [];
     linha[i] = produtosTratados[i].split(";");
     linhaProdutos[i] = new Produto(
       parseInt(linha[i][0], 10),

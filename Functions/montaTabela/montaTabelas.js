@@ -3,10 +3,13 @@ import montaVenda from "../Tratamento/montaVenda.js";
 import somaVendas from "./somaVendas.js";
 import somaCanal from "./somaCanal.js";
 import criaTransfere from "../criaArquivo/criaTransfere.js";
+import criaPasta from "../criaArquivo/criaPasta.js";
 
 export default function montaTabelas(cn) {
   const ArrayProdutos = montaProduto("./Entrada/" + cn + "_produtos.txt");
   const ArrayVendas = montaVenda("./Entrada/" + cn + "_vendas.txt");
+
+  criaPasta(cn);
 
   somaCanal(ArrayVendas, cn);
 

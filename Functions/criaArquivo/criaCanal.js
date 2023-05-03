@@ -12,5 +12,5 @@ export default function criaCanal(Canal, cn) {
   
     const tabelaCanais = tabela.toString();
   
-    fs.writeFileSync("./Saida/" + cn + "_totcanal.txt", tabelaCanais);
+    fs.writeFileSync("./Saida/"+ cn +"/" + cn + "_totcanal.txt", tabelaCanais);
 }

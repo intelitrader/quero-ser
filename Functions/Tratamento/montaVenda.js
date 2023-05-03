@@ -7,10 +7,10 @@ export default function montaVenda(url) {
 
   const vendasTratadas = rawVendas.split("\r\n");
 
-  let linhaVendas = [];
+  const linhaVendas = [];
 
   for (let i = 0; i < vendasTratadas.length; i++) {
-    let linha = [];
+    const linha = [];
     linha[i] = vendasTratadas[i].split(";");
     linhaVendas[i] = new Venda(
       parseInt(linha[i][0], 10),

@@ -43,6 +43,7 @@ export default function somaVendas(ArrayProdutos, ArrayVendas, cn) {
           break;
       }
     } else {
+      // linhas vazias no arquivo entrada de venda
       if (!isNaN(venda.codigoProduto)) {
         // mostra a linha com o erro
         divergencias.push(

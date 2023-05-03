@@ -11,5 +11,5 @@ export default function criaDivergencia(divergencias, cn) {
     
     const tabelaDivergencias = tabela.toString();
   
-    fs.writeFileSync("./Saida/" + cn + "_divergencias.txt", tabelaDivergencias);
+    fs.writeFileSync("./Saida/"+ cn +"/" + cn + "_divergencias.txt", tabelaDivergencias);
 }
