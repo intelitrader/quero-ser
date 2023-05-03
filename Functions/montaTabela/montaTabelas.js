@@ -15,14 +15,14 @@ export default function montaTabelas(cn) {
 
   const produtosVendidos = somaVendas(ArrayProdutos, ArrayVendas, cn);
 
-  for (const codigoVendas in produtosVendidos) {
+  for (const codigoProdutos in produtosVendidos) {
     // index do produto que tem o codigo igual a posicao do array de vendas
     const index = ArrayProdutos.findIndex(
-      (produto) => produto.codigo == codigoVendas
+      (produto) => produto.codigo == codigoProdutos
     );
     // 0, 1, 2, 3...
     if (index !== -1) {
-      ArrayProdutos[index].vendas = produtosVendidos[codigoVendas];
+      ArrayProdutos[index].vendas = produtosVendidos[codigoProdutos];
     }
 
     const quantidade = ArrayProdutos[index].quantidade;
