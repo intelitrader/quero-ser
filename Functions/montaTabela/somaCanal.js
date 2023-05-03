@@ -11,11 +11,11 @@ export default function somaCanal(ArrayVendas, cn) {
       total: 0,
     },
     {
-      nome: "Android",
+      nome: "App móvel Android",
       total: 0,
     },
     {
-      nome: "iPhone",
+      nome: "App móvel iPhone",
       total: 0,
     },
   ];

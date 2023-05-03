@@ -1,6 +1,0 @@
-Canal          Total
--------------  -----
-Representante  5476 
-Website        2219 
-Android        4139 
-iPhone         816  

@@ -6,7 +6,7 @@ export default function criaCanal(Canal, cn) {
 
   Canal.forEach(function (canal) {
     tabela.cell("Canal", canal.nome);
-    tabela.cell("Total", canal.total);
+    tabela.cell("QtVendas", canal.total);
     tabela.newRow();
   });
 
