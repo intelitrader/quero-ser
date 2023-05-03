@@ -17,5 +17,8 @@ export default function criaTransfere(transfere, cn) {
 
   const tabelaTransfere = tabela.toString();
 
-  fs.writeFileSync("./Saida/"+ cn +"/" + cn + "_transfere.txt", tabelaTransfere);
+  fs.writeFileSync(
+    "./Saida/" + cn + "/" + cn + "_transfere.txt",
+    tabelaTransfere
+  );
 }
