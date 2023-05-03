@@ -1,0 +1,6 @@
+Canal          Total
+-------------  -----
+Representante  624  
+Website        873  
+Android        582  
+iPhone         88   
