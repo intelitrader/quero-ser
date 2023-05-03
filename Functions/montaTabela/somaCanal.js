@@ -3,19 +3,19 @@ import criaCanal from "../criaArquivo/criaCanal.js";
 export default function somaCanal(ArrayVendas, cn) {
   const canais = [
     {
-      nome: "Representante",
+      nome: "1 - Representantes",
       total: 0,
     },
     {
-      nome: "Website",
+      nome: "2 -Website",
       total: 0,
     },
     {
-      nome: "App móvel Android",
+      nome: "3 - App móvel Android",
       total: 0,
     },
     {
-      nome: "App móvel iPhone",
+      nome: "4 - App móvel iPhone",
       total: 0,
     },
   ];
