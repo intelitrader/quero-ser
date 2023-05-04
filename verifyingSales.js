@@ -32,4 +32,49 @@ class Sales {
   }
 }
 
+// reading "PRODUTOS.TXT"
+const products = fs
+  .readFileSync("./Desafio/Caso de teste 1/c1_produtos.txt", "utf-8", (err, data) => {
+    if (err) throw err;
+  })
+  .trim()
+  .split("\n")
+  .map((line) => {
+    const [productCode, QtCO, QtMin] = line.split(";");
+
+    return { productCode, QtCO: parseInt(QtCO), QtMin: parseInt(QtMin) };
+  });
+
+// reading "vendas.txt" and calculating confirmed sales
+const sales = fs
+  .readFileSync("./Desafio/Caso de teste 1/c1_vendas.txt", "utf-8", (err, data) => {
+    if (err) throw err;
+  })
+  .trim()
+  .split("\n")
+  .reduce((acc, line) => {
+    const [productCode, QtSales, sellSituation] = line.split(" ");
+    if (sellSituation === "100" || sellSituation === "102") {
+      acc[productCode] = (acc[productCode] || 0) + parseInt(QtSales);
+    }
+    return acc;
+  }, {});
+
+// calculating the need to transfer products
+const transferProducts = products.map((product) => {
+  const QtSales = sales[product.productCode] || 0;
+  const afterSaleInventory = product.QtCO - QtSales;
+  const need = Math.max(product.QtMin - afterSaleInventory, 0);
+  const transfer = Math.min(need, afterSaleInventory);
+
+  return {
+    productCode: product.productCode,
+    QtCO: product.QtCO,
+    QtMin: product.QtMin,
+    QtSales,
+    afterSaleInventory,
+    need,
+    transfer,
+  };
+});
 
