@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import Sales from "./verifyingSales.js";
 
 // store total sales by channel
 const quantitiesByChannel = {
@@ -9,8 +10,8 @@ const quantitiesByChannel = {
 };
 
 // function to update quantities sales by channel
-const updateQuantitiesBySalesChannels = (sales) => {
-  sales.forEach((sale) => {
+const updateQuantitiesBySalesChannels = () => {
+    Sales.forEach((sale) => {
     const channel = sale.channel;
     const sellSituation = sale.sellSituation;
     const quantities = sale.quantities;
@@ -59,25 +60,28 @@ const writeTotalsByChannel = () => {
 
 // function to read the sales file and call the update and write functions
 const generateTotals = () => {
-  fs.readFile("./VENDAS.TXT", "utf8", (err, data) => {
-    if (err) throw err
-
-    const sales = data
-      .trim()
-      .split("\n")
-      .map((line) => {
-        const [productCode, channel, sellSituation, quantitie] =
-          line.split(" ");
-        return {
-          productCode: parseInt(productCode),
-          channel: parseInt(channel),
-          sellSituation: parseInt(sellSituation),
-          quantitie: parseInt(quantitie),
-        };
-      });
-    updateQuantitiesBySalesChannels(sales);
-    writeTotalsByChannel();
-  });
+  const sales = fs.readFile(
+    "./Desafio/Caso de teste 1/c1_vendas.txt",
+    "utf-8",
+    (err, data) => {
+      if (err) throw err;
+      data
+        .trim()
+        .split("\n")
+        .map((line) => {
+          const [productCode, channel, sellSituation, quantitie] =
+            line.split(" ");
+          return {
+            productCode: parseInt(productCode),
+            channel: parseInt(channel),
+            sellSituation: parseInt(sellSituation),
+            quantitie: parseInt(quantitie),
+          };
+        });
+      updateQuantitiesBySalesChannels(sales);
+      writeTotalsByChannel();
+    }
+  );
 };
 
 generateTotals();

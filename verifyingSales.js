@@ -18,7 +18,7 @@ class Products {
   }
 }
 
-class Sales {
+export default class Sales {
   productCode;
   QtSales;
   sellSituation;
@@ -50,11 +50,8 @@ const products = fs
   });
 
 // reading "vendas.txt" and calculating confirmed sales
-const sales = fs
-  .readFileSync(
-    "./Desafio/Caso de teste 1/c1_vendas.txt",
-    "utf-8",
-    (err, data) => {
+const sales = fs.readFileSync("./Desafio/Caso de teste 1/c1_vendas.txt",
+    "utf-8",(err, data) => {
       if (err) throw err;
     }
   )
