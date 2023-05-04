@@ -78,3 +78,12 @@ const transferProducts = products.map((product) => {
   };
 });
 
+// writing results on "transfere.txt" file
+const header =
+  "Produto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co\n";
+const rows = transferProducts.map(
+  (product) =>
+    `${product.productCode}\t - ${product.QtCO}\t - ${product.QtMin}\t - ${product.QtSales}\t - ${product.afterSaleInventory}\t - ${product.need}\t\t - ${product.transfer}\t\t\n`
+);
+
+fs.writeFileSync("TRANSFERE.txt", header + rows.join(" "));
