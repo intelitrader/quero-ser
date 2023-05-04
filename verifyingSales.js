@@ -85,7 +85,7 @@ const transferProducts = products.map((product) => {
 
 // writing results on "transfere.txt" file
 const header =
-  "Produto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co\n\n";
+  "Necessidade de Transferência Armazém para CO\n\nProduto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co\n\n";
 const rows = transferProducts.map(
   (product) =>
     `${product.productCode}\t - ${product.QtCO}\t - ${product.QtMin}\t - ${product.QtSales}\t - ${product.afterSaleInventory}\t - \t\t${product.need}\t - \t\t${product.transfer}\n`

@@ -1,3 +1,5 @@
+Necessidade de Transferência Armazém para CO
+
 Produto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co
 
 16320	 - 344	 - 200	 - 0	 - 344	 - 		0	 - 		0
