@@ -16,8 +16,8 @@ const updateQuantitiesBySalesChannels = (sales) => {
     const quantities = sale.quantities;
 
     if (sellSituation === 100 || sellSituation === 102) {
-      if (channel in quantitiesBySaleChannels) {
-        quantitiesBySaleChannels[channel] += quantities;
+      if (channel in quantitiesByChannel) {
+        quantitiesByChannel[channel] += quantities;
       } else {
         return `Channel ${channel} not found!`;
       }
@@ -29,8 +29,8 @@ const updateQuantitiesBySalesChannels = (sales) => {
 const writeTotalsByChannel = () => {
   let text = "Quantidade de vendas por canal\n\n";
 
-  for (let channel in quantitiesBySaleChannels) {
-    const quantitie = quantitiesBySaleChannels[channel];
+  for (let channel in quantitiesByChannel) {
+    const quantitie = quantitiesByChannel[channel];
     let channelName;
 
     switch (parseInt(channel)) {
@@ -60,7 +60,7 @@ const writeTotalsByChannel = () => {
 // function to read the sales file and call the update and write functions
 const generateTotals = () => {
   fs.readFile("./VENDAS.TXT", "utf8", (err, data) => {
-    if (err) throw err;
+    if (err) throw err
 
     const sales = data
       .trim()
