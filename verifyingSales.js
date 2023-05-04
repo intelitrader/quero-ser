@@ -34,9 +34,13 @@ class Sales {
 
 // reading "PRODUTOS.TXT"
 const products = fs
-  .readFileSync("./Desafio/Caso de teste 1/c1_produtos.txt", "utf-8", (err, data) => {
-    if (err) throw err;
-  })
+  .readFileSync(
+    "./Desafio/Caso de teste 1/c1_produtos.txt",
+    "utf-8",
+    (err, data) => {
+      if (err) throw err;
+    }
+  )
   .trim()
   .split("\n")
   .map((line) => {
@@ -47,9 +51,13 @@ const products = fs
 
 // reading "vendas.txt" and calculating confirmed sales
 const sales = fs
-  .readFileSync("./Desafio/Caso de teste 1/c1_vendas.txt", "utf-8", (err, data) => {
-    if (err) throw err;
-  })
+  .readFileSync(
+    "./Desafio/Caso de teste 1/c1_vendas.txt",
+    "utf-8",
+    (err, data) => {
+      if (err) throw err;
+    }
+  )
   .trim()
   .split("\n")
   .reduce((acc, line) => {
