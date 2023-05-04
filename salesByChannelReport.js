@@ -24,3 +24,35 @@ const updateQuantitiesBySalesChannels = (sales) => {
         }
     })
 }
+
+// function to write quantities by channel on file
+const writeTotalsByChannel = () => {
+    let text = "Quantidade de vendas por canal\n\n";
+
+    for (let channel in quantitiesBySaleChannels){
+        const quantitie = quantitiesBySaleChannels[channel];
+        let channelName;
+
+        switch (parseInt(channel)){
+            case 1:
+                channelName = "Representantes";
+                break;
+            case 2:
+                channelName = "Website";
+                break;
+            case 3:
+                channelName = "App móvel Android";
+                break
+            case 4:
+                channelName = "App móvel iPhone";
+                break
+            default:
+                channelName = `Canal ${channel}`
+        }
+        text += `${channel} - ${channelName} = ${quantitie} \n\n`
+    }
+ 
+    fs.writeFileSync("TOTCANAIS.TXT", text, err => {
+        if (err) throw err;
+    });
+}
