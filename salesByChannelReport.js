@@ -78,6 +78,7 @@ const generateTotals = () => {
             quantitie: parseInt(quantitie),
           };
         });
+        console.log(sales)
       updateQuantitiesBySalesChannels(sales);
       writeTotalsByChannel();
     }
