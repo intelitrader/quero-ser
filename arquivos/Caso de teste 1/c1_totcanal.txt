@@ -3,5 +3,5 @@ Quantidades de Vendas por canal
 Canal                  QtVendas
 1 - Representantes          624
 2 - Website                 873
-3 - App móvel Android       582
-4 - App móvel iPhone         88
+3 - App mï¿½vel Android       581
+4 - App mï¿½vel iPhone         88

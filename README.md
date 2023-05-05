@@ -1,57 +1,35 @@
-# Quero ser Intelitrader
+# Desafio Intelitrader
 
-## [Quem somos](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
+## Descrição 
+Este projeto é a resolução de um desafio para candidatura de vaga, idealizada pela Intelitrader. 
+O desafio se trata de um sistema para gerenciar vendas e estoque de um empresa, sendo que o cadastro dos produtos e das vendas deve ser feito de forma externa através de arquivos .txt, e o sistema dará como saída outros arquivos .txt (transfere.txt, totcanais.txt, e divergencias.txt).
 
-## [Sobre as vagas](id:SobreAsVagas)
-Você gosta de programar e aprender? Aqui é o lugar certo. 
+**Link para a descrição completa do desafio [aqui](https://github.com/intelitrader/quero-ser/tree/master/Desafio)**
 
-Temos uma cultura focada em formação e vamos te ensinar tudo que você precisa para virar um Engenheiro ou Engenheira de Software. Temos demanda para backend e frontend.
+ ## 📁 Acesso ao projeto
 
-Usamos Scrum, Git, Visual Studio e Visual Studio Code.
+Você pode ter acesso aos arquivos do projeto clicando [aqui](https://github.com/guiCarvalhoSP/desafio-intelitrader). 
 
-Aqui usamos bastante C# e C++. Usamos também JavaScript (front) e Python (algumas ferramentas internas).
+## 🛠️ Como rodar o projeto
 
-## [Onde vocês ficam?](id:Localizacao)
-Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
+- É necessário ter previamente instalado em sua máquina o [Git](https://git-scm.com/) [NPM](https://www.npmjs.com/) e [NodeJs](https://nodejs.org/en). Após instala-los e configura-los, poderá seguir para os próximos passos.
+- Use o comando ``git clone https://github.com/guiCarvalhoSP/desafio-intelitrader.git`` para clonar o projeto no diretório desejado.
+- Após clonar, abra o diretório no projeto em um terminal, e execute o comando ``npm i`` ou ``npm install``, para instalar as dependências.
+- Ao finalizar a instalação, você poderá executar o programa em um terminal através do comando ``npm run app``. O programa executará, e criará na raíz do projeto um diretório chamado "resultados", neste diretório estára todos os arquivos gerados.
 
-Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
+**Importante** :
+- Para o programa funcinar corretamente, deve se ter um arquivo para vendas no diretório "src\files\vendas\", e um arquivo para produtos no diretório "src\files\produtos". Caso não haja algum dos arquivos em um desses diretórios o programa gerará uma mensagem de erro no console do terminal. Não existe padrão para os nomes dos arquivos.
 
-Temos horário flexível, você pode trabalhar na hora que for melhor para você. Estuda à tarde? Sem problemas. Vai pra academia todo dia 11:00? Ótimo, continue com sua rotina.
+- O programa inicialmente vem com um arquivo de produto e de venda já nos diretórios corretos (mesmos arquivos do Caso de teste 1), e que você pode altera-los a vontade, desde que os novos arquivos sigam os moldes deles.
 
-O tempo gasto com a Intelitrader também é flexível. Você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é se você entrega código de qualidade e gosta de programar, aprender e estudar.
+- Caso haja mais de um arquivo no diretório de produtos ou de venda, será considerado apenas o primeiro de cada um, em ordem alfabética.
 
-## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
+- Pode se rodar o projeto, com os mesmos arquivos, ou arquivos diferentes de venda e produtos várias vezes, e os resultados serão salvos em ordem de execução, nos arquivos transfere.txt, totcanais.txt, e divergencias.txt do diretório "resultados" .
 
-Não nos importamos com formação. 
+- Na raíz do projeto a um diretório chamado "arquivos", este diretório não é utilizado pelo projeto, e nele está armazenado dois casos de testes (Com os arquivos de entrada de produtos e vendas, e os 3 arquivos que se esperam de resultado). Use-os para realizar eventuais testes.
 
-Você fez faculdade? Bom pra você, esperamos que você tenha aproveitado e aprendido bastante. Tem bastante gente que faz 4 anos de faculdade e não aprende nada. :-(
-
-O que nos interessa é:
-
-* Você sabe programar?
-* Você gosta de programar?
-* Você gosta de aprender?
-* Você sabe que na área de programação você precisa aprender sempre, o tempo todo, todo dia?
-
-Nós te ajudamos ensinando e guiando seu aprendizado. Você só precisa gostar do que faz, ter boa vontade e ter disposição para estudar.
-
-## [Como me candidato?](id:ComoMeCandidato)
-
-### [Desenvolvedor(a)](id:CandidaturaDev)
-
-Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
-
-1. Leia com atenção. Sua candidatura só será considerada se você seguir corretamente as instruções.
-2. Faça um fork desse repositório.
-3. Escolha 3 testes em [DojoPuzzles](http://dojopuzzles.com/) e resolva com sua linguagem favorita (se você escolher o desafio "Ano Bissexto" seu curriculum será desconsiderado; se você optar por no lugar do Dojo realizar o que está na pasta Desafio **terá prioridade na seleção**)
-5. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
-6. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
-
-## [Condições](id:CondicoesEDiferenciais)
-
-* Regime: **PJ**;
-* Período: **Integral**;
-* Contratação: **Imediata**;
-
+## ✔️ Tecnologias utilizadas
+- ``Javascript``
+- ``NodeJs``
+- ``Biblioteca fs``
 
