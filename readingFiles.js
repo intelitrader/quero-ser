@@ -5,9 +5,9 @@ const productsArray = productsFile.split("\n");
 
 export const productsArrayResult = {};
 
-productsArray.forEach((line) => {
+productsArray.forEach((line, index) => {
     const [productCode, QtCO, QtMin] = line.split(";")
-    productsArrayResult[productCode]= {productCode, QtCO, QtMin}
+    productsArrayResult[index + 1]= {productCode, QtCO, QtMin}
     
 })
 
