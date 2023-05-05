@@ -7,11 +7,10 @@ const sales = salesArrayResult;
 
 // calculating the need to transfer products
 const transferProducts = products.map((product) => {
-  const QtSales = sales[product.productCode] || 0;
+  const QtSales = sales[product] ?? 0;
   const afterSaleInventory = product.QtCO - QtSales;
   const need = Math.max(product.QtMin - afterSaleInventory, 0);
   const transfer = Math.min(need, afterSaleInventory);
-
   return {
     productCode: product.productCode,
     QtCO: product.QtCO,
@@ -22,6 +21,7 @@ const transferProducts = products.map((product) => {
     transfer,
   };
 });
+console.log(transferProducts)
 
 // writing results on "transfere.txt" file
 const header =
@@ -31,4 +31,4 @@ const rows = transferProducts.map(
     `${product.productCode}\t - ${product.QtCO}\t - ${product.QtMin}\t - ${product.QtSales}\t - ${product.afterSaleInventory}\t\t - ${product.need}\t\t - ${product.transfer}\t\t\n`
 );
 
-fs.writeFileSync("TRANSFERE.txt", header + rows.join(" "));
+fs.writeFileSync("TRANSFERE.txt", header + rows.join(""));
