@@ -3,7 +3,7 @@ import fs from "node:fs"
 const productsFile = fs.readFileSync("./Desafio/Caso de teste 1/c1_produtos.txt", "utf8");
 const productsArray = productsFile.split("\n");
 
-export const productsArrayResult = {};
+export const productsArrayResult = [];
 
 productsArray.forEach((line, index) => {
     const [productCode, QtCO, QtMin] = line.split(";")
@@ -11,12 +11,10 @@ productsArray.forEach((line, index) => {
     
 })
 
-console.log(productsArrayResult)
-
 const salesFile = fs.readFileSync('./Desafio/Caso de teste 1/c1_vendas.txt', 'utf-8');
-const salesArray = salesFile.split('\n');
+const salesArray = salesFile.split('\r\n');
 
-export const salesArrayResult = {};
+export const salesArrayResult = [];
 
 salesArray.forEach((line, index) => {
   const [productCode, QtSales, sellSituation, channel] = line.split(";");
@@ -24,5 +22,3 @@ salesArray.forEach((line, index) => {
     salesArrayResult[index + 1] = { productCode, QtSales, sellSituation, channel };
   }
 });
-
-console.log(salesArrayResult);
