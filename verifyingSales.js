@@ -7,10 +7,11 @@ const sales = salesArrayResult;
 
 // calculating the need to transfer products
 const transferProducts = products.map((product) => {
-  const QtSales = sales[product] ?? 0;
-  const afterSaleInventory = product.QtCO - QtSales;
-  const need = Math.max(product.QtMin - afterSaleInventory, 0);
-  const transfer = Math.min(need, afterSaleInventory);
+  const salesInfo = sales.find((sale) => sale.productCode === product.productCode)
+  const QtSales =  salesInfo ? salesInfo.QtSales : 0;
+  const afterSaleInventory = (product.QtCO - QtSales).toString();
+  const need = Math.max(product.QtMin - afterSaleInventory, 0).toString();
+  const transfer = Math.min(need, afterSaleInventory).toString();
   return {
     productCode: product.productCode,
     QtCO: product.QtCO,
