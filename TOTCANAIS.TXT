@@ -1,6 +1,6 @@
 Quantitdade de vendas por canal
 
-1 - Representantes = 0
-2 - Website = 0
-3 - App móvel Android = 0
-4 - App móvel iPhone = 0
+1 - Representantes = 7
+2 - Website = 6
+3 - App móvel Android = 9
+4 - App móvel iPhone = 3

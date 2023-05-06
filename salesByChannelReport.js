@@ -5,43 +5,29 @@ const salesFile = fs.readFileSync(
   "utf-8"
 );
 const salesArray = salesFile.split("\r\n");
-const salesArrayResult = [];
 
-salesArray.forEach((line, index) => {
+const salesArrayResult = salesArray.reduce((result, line) => {
   const [productCode, QtSales, sellSituation, channel] = line.split(";");
-  if (sellSituation === '100' || sellSituation === '102'){
-    salesArrayResult[index] = {
+  if (sellSituation === "100" || sellSituation === "102") {
+    result.push({
       productCode,
       QtSales: QtSales || 0,
       sellSituation,
       channel,
-    };
+    });
   }
-  return salesArrayResult;
-});
+  return result;
+}, []);
 
-let repCount = 0;
-let websiteCount = 0;
-let androidCount = 0;
-let iphoneCount = 0;
+const repSales = salesArrayResult.filter((sale) => sale.channel === '1').length;
+const websiteSales = salesArrayResult.filter((sale) => sale.channel === '2').length;
+const androidSales = salesArrayResult.filter((sale) => sale.channel === '3').length;
+const iphoneSales = salesArrayResult.filter((sale) => sale.channel === '4').length; 
 
-for (let i = 0; i < salesArrayResult.length; i++) {
-  if(salesArrayResult[i].channel === '1'){
-    repCount++;
-  }
-  if (salesArrayResult[i].channel === '2'){
-    websiteCount++
-  }
-  if (salesArrayResult[i].channel === '3'){
-    androidCount++
-  }
-  if (salesArrayResult[i].channel === '4'){
-    iphoneCount++
-  }
-}
 
-const content = `Quantitdade de vendas por canal\n\n1 - Representantes = ${repCount}\n2 - Website = ${websiteCount}\n3 - App móvel Android = ${androidCount}\n4 - App móvel iPhone = ${iphoneCount}`;
+const content = 
+`Quantitdade de vendas por canal\n\n1 - Representantes = ${repSales}\n2 - Website = ${websiteSales}\n3 - App móvel Android = ${androidSales}\n4 - App móvel iPhone = ${iphoneSales}`;
 
 fs.writeFileSync("TOTCANAIS.TXT", content, "utf-8");
 
-console.log(salesArrayResult)
+console.log(salesArrayResult);
