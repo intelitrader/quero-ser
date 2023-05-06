@@ -39,4 +39,3 @@ salesArray.forEach((line, index) => {
   }
   return salesArrayResult;
 });
-console.log(salesArrayResult)

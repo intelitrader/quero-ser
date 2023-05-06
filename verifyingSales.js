@@ -7,15 +7,12 @@ const sales = salesArrayResult;
 
 // calculating the need to transfer products
 const transferProducts = products.map((product) => {
-  const salesInfo = sales.find((sale) => sale.productCode === product.productCode && sale.sellSituation === '100' || sale.sellSituation === '102')
+  const salesInfo = sales.find((sale) => sale.productCode === product.productCode && (sale.sellSituation === '100' || sale.sellSituation === '102'))
   const QtSales =  salesInfo ? salesInfo.QtSales : 0;
   const afterSaleInventory = (product.QtCO - QtSales);
   const need = (product.QtMin > afterSaleInventory) ? (product.QtMin - afterSaleInventory) : 0;
-  const transfer = ((need > 1) && (need < 10)) ? 10: need;
+  const transfer = ((need > 1) && (need < 10)) ? 10: 0;
 
-
-  // this.necessario = (this.qtMin > this.estoqPosVenda) ? (this.qtMin - this.estoqPosVenda) : 0
-  //this.transfArmazemPCo = (this.necessario > 1) && (this.necessario < 10) ? 10 : this.necessario
   return {
     productCode: product.productCode,
     QtCO: product.QtCO,
@@ -26,9 +23,7 @@ const transferProducts = products.map((product) => {
     transfer,
   };
 });
-console.log(transferProducts)
 
-// writing results on "transfere.txt" file
 const header =
   "Necessidade de Transferência Armazém para CO\n\nProduto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co\n\n";
 const rows = transferProducts.map(

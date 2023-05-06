@@ -1,88 +1,47 @@
 import fs from "node:fs";
-import Sales from "./verifyingSales.js";
 
-// store total sales by channel
-const quantitiesByChannel = {
-  1: 0,
-  2: 0,
-  3: 0,
-  4: 0,
-};
+const salesFile = fs.readFileSync(
+  "./Desafio/Caso de teste 1/c1_vendas.txt",
+  "utf-8"
+);
+const salesArray = salesFile.split("\r\n");
+const salesArrayResult = [];
 
-// function to update quantities sales by channel
-const updateQuantitiesBySalesChannels = () => {
-    Sales.forEach((sale) => {
-    const channel = sale.channel;
-    const sellSituation = sale.sellSituation;
-    const quantities = sale.quantities;
-
-    if (sellSituation === 100 || sellSituation === 102) {
-      if (channel in quantitiesByChannel) {
-        quantitiesByChannel[channel] += quantities;
-      } else {
-        return `Channel ${channel} not found!`;
-      }
-    }
-  });
-};
-
-// function to write quantities by channel on file
-const writeTotalsByChannel = () => {
-  let text = "Quantidade de vendas por canal\n\n";
-
-  for (let channel in quantitiesByChannel) {
-    const quantitie = quantitiesByChannel[channel];
-    let channelName;
-
-    switch (parseInt(channel)) {
-      case 1:
-        channelName = "Representantes";
-        break;
-      case 2:
-        channelName = "Website";
-        break;
-      case 3:
-        channelName = "App móvel Android";
-        break;
-      case 4:
-        channelName = "App móvel iPhone";
-        break;
-      default:
-        channelName = `Canal ${channel}`;
-    }
-    text += `${channel} - ${channelName} = ${quantitie} \n\n`;
+salesArray.forEach((line, index) => {
+  const [productCode, QtSales, sellSituation, channel] = line.split(";");
+  if (sellSituation === '100' || sellSituation === '102'){
+    salesArrayResult[index] = {
+      productCode,
+      QtSales: QtSales || 0,
+      sellSituation,
+      channel,
+    };
   }
+  return salesArrayResult;
+});
 
-  fs.writeFileSync("TOTCANAIS.TXT", text, (err) => {
-    if (err) throw err;
-  });
-};
+let repCount = 0;
+let websiteCount = 0;
+let androidCount = 0;
+let iphoneCount = 0;
 
-// function to read the sales file and call the update and write functions
-const generateTotals = () => {
-  const sales = fs.readFile(
-    "./Desafio/Caso de teste 1/c1_vendas.txt",
-    "utf-8",
-    (err, data) => {
-      if (err) throw err;
-      data
-        .trim()
-        .split("\n")
-        .map((line) => {
-          const [productCode, channel, sellSituation, quantitie] =
-            line.split(" ");
-          return {
-            productCode: parseInt(productCode),
-            channel: parseInt(channel),
-            sellSituation: parseInt(sellSituation),
-            quantitie: parseInt(quantitie),
-          };
-        });
-        console.log(sales)
-      updateQuantitiesBySalesChannels(sales);
-      writeTotalsByChannel();
-    }
-  );
-};
+for (let i = 0; i < salesArrayResult.length; i++) {
+  if(salesArrayResult[i].channel === '1'){
+    repCount++;
+  }
+  if (salesArrayResult[i].channel === '2'){
+    websiteCount++
+  }
+  if (salesArrayResult[i].channel === '3'){
+    androidCount++
+  }
+  if (salesArrayResult[i].channel === '4'){
+    iphoneCount++
+  }
+}
 
-generateTotals();
+const content = `Quantitdade de vendas por canal\n\n1 - Representantes = ${repCount}\n2 - Website = ${websiteCount}\n3 - App móvel Android = ${androidCount}\n4 - App móvel iPhone = ${iphoneCount}`;
+
+fs.writeFileSync("TOTCANAIS.TXT", content, "utf-8");
+
+console.log(salesArrayResult)
