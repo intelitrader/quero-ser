@@ -16,4 +16,4 @@ const content =
 
 fs.writeFileSync("TOTCANAIS.TXT", content, "utf-8");
 
-console.log(content);
+console.log(confirmedSalesFiltered);
