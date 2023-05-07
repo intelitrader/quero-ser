@@ -23,19 +23,12 @@ export const salesArrayResult = [];
 
 salesArray.forEach((line, index) => {
   const [productCode, QtSales, sellSituation, channel] = line.split(";");
-  if (
-    sellSituation === "100" ||
-    sellSituation === "102" ||
-    sellSituation === "135" ||
-    sellSituation === "190" ||
-    sellSituation === "999"
-  ) {
     salesArrayResult[index] = {
       productCode,
-      QtSales: QtSales || 0,
+      QtSales: Number(QtSales) || 0,
       sellSituation,
       channel,
     };
-  }
   return salesArrayResult;
 });
+console.log(salesArrayResult)
