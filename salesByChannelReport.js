@@ -1,18 +1,51 @@
-import fs from "node:fs";
-import { salesArrayResult } from "./readingFiles.js";
+import fs from "node:fs"
 
-const sales = salesArrayResult
+const salesFile = fs.readFileSync(
+  "./Desafio/Caso de teste 1/c1_vendas.txt",
+  "utf-8"
+);
+const salesArray = salesFile.split("\r\n");
 
-const confirmedSalesFiltered = sales.filter((sale) => sale.sellSituation === '100' || sale.sellSituation === '102')
+const filteredSalesArray = salesArray.filter((line) => {
+  const [, , sellSituation, channel] = line.split(";");
+  return sellSituation === "100" || sellSituation === "102";
+});
 
-const repSales = confirmedSalesFiltered.filter((sale) => sale.channel === '1').length;
-const websiteSales = confirmedSalesFiltered.filter((sale) => sale.channel === '2').length;
-const androidSales = confirmedSalesFiltered.filter((sale) => sale.channel === '3').length;
-const iphoneSales = confirmedSalesFiltered.filter((sale) => sale.channel === '4').length; 
+const groupedSalesByChannel = filteredSalesArray.reduce((result, line) => {
+  const [, QtSales, , channel] = line.split(";");
+  if (!result[channel]) {
+    result[channel] = 0;
+  }
+  result[channel] += Number(QtSales) || 0;
+  return result;
+}, {});
 
+function getChannelName(channel) {
+  switch (channel) {
+    case '1':
+      return "Representantes";
+      
+    case '2':
+      return "Website";
+      
+    case '3':
+      return "App móvel Android";
+      
+    case '4':
+      return "App móvel iPhone";
+      
+    default:
+      break
+  }
+}
+const header = `Quantidades de Vendas por canal\n\n`
+const output = Object.entries(groupedSalesByChannel)
+  .map(([channel, qtSales], index) => {
+    const channelName = getChannelName(channel);
+    const rowNumber = index + 1;
+    const paddedChannelName = channelName.padEnd(20);
+    return `${rowNumber} - ${paddedChannelName} = ${qtSales}`;
+  })
+  .join("\n");
 
-const content = 
-`Quantitdade de vendas por canal\n\n1 - Representantes = ${repSales}\n2 - Website = ${websiteSales}\n3 - App móvel Android = ${androidSales}\n4 - App móvel iPhone = ${iphoneSales}`;
-
-fs.writeFileSync("TOTCANAIS.TXT", content, "utf-8");
-
+fs.writeFileSync("totcanais.txt", header + output, "utf-8");
