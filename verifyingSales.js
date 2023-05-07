@@ -5,24 +5,34 @@ import { salesArrayResult } from "./readingFiles.js";
 const products = productsArrayResult;
 const sales = salesArrayResult;
 
-// calculating the need to transfer products
-const transferProducts = products.map((product) => {
-  const salesInfo = sales.find((sale) => sale.productCode === product.productCode && (sale.sellSituation === '100' || sale.sellSituation === '102'))
-  const QtSales =  salesInfo ? salesInfo.QtSales : 0;
-  const afterSaleInventory = (product.QtCO - QtSales);
-  const need = (product.QtMin > afterSaleInventory) ? (product.QtMin - afterSaleInventory) : 0;
-  const transfer = ((need > 1) && (need < 10)) ? 10: 0;
+// grouping sales by productCode
+const salesByProduct = sales.reduce((acc, sale) => {
+  const productCode = sale.productCode;
+  const qtSales = parseInt(sale.QtSales);
+  if (acc[productCode]) {
+    acc[productCode] += qtSales;
+  } else {
+    acc[productCode] = qtSales;
+  }
+  return acc;
+}, {});
 
+const transferProducts = products.map((product) => {
+  const qtSales = salesByProduct[product.productCode] || 0;
+  const afterSaleInventory = product.QtCO - qtSales;
+  const need = product.QtMin - afterSaleInventory;
+  const transfer = (need > 1 && need < 10) ? 10 : 0;
   return {
     productCode: product.productCode,
     QtCO: product.QtCO,
     QtMin: product.QtMin,
-    QtSales,
+    QtSales: qtSales,
     afterSaleInventory,
     need,
     transfer,
   };
 });
+
 
 const header =
   "Necessidade de Transferência Armazém para CO\n\nProduto - QtCO - QtMin - QtVendas - Estq. após venda - Necess. - Transf. de Arm p/ Co\n\n";
@@ -32,5 +42,3 @@ const rows = transferProducts.map(
 );
 
 fs.writeFileSync("TRANSFERE.txt", header + rows.join(""));
-
-
