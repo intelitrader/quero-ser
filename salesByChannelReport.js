@@ -1,28 +1,14 @@
 import fs from "node:fs";
+import { salesArrayResult } from "./readingFiles.js";
 
-const salesFile = fs.readFileSync(
-  "./Desafio/Caso de teste 1/c1_vendas.txt",
-  "utf-8"
-);
-const salesArray = salesFile.split("\r\n");
+const sales = salesArrayResult
 
-const salesArrayResult = salesArray.reduce((result, line) => {
-  const [productCode, QtSales, sellSituation, channel] = line.split(";");
-  if (sellSituation === "100" || sellSituation === "102") {
-    result.push({
-      productCode,
-      QtSales: QtSales || 0,
-      sellSituation,
-      channel,
-    });
-  }
-  return result;
-}, []);
+const confirmedSalesFiltered = sales.filter((sale) => sale.sellSituation === '100' || sale.sellSituation === '102')
 
-const repSales = salesArrayResult.filter((sale) => sale.channel === '1').length;
-const websiteSales = salesArrayResult.filter((sale) => sale.channel === '2').length;
-const androidSales = salesArrayResult.filter((sale) => sale.channel === '3').length;
-const iphoneSales = salesArrayResult.filter((sale) => sale.channel === '4').length; 
+const repSales = confirmedSalesFiltered.filter((sale) => sale.channel === '1').length;
+const websiteSales = confirmedSalesFiltered.filter((sale) => sale.channel === '2').length;
+const androidSales = confirmedSalesFiltered.filter((sale) => sale.channel === '3').length;
+const iphoneSales = confirmedSalesFiltered.filter((sale) => sale.channel === '4').length; 
 
 
 const content = 
@@ -30,4 +16,4 @@ const content =
 
 fs.writeFileSync("TOTCANAIS.TXT", content, "utf-8");
 
-console.log(salesArrayResult);
+console.log(content);
