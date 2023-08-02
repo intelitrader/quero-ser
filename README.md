@@ -1,7 +1,7 @@
 # Quero ser Intelitrader
 
 ## [Quem somos](id:OqEhAIntelitrader)
-A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software de alto desempenho para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
+A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos. Não podemos colocar o nome dos clientes aqui por motivos contratuais, mas todas as grandes corretoras de valores são nossos clientes.
 
 ## [Sobre as vagas](id:SobreAsVagas)
 Você gosta de programar e aprender? Aqui é o lugar certo. 
@@ -10,16 +10,14 @@ Temos uma cultura focada em formação e vamos te ensinar tudo que você precisa
 
 Usamos Scrum, Git, Visual Studio e Visual Studio Code.
 
-Aqui usamos bastante C# e C++. Usamos também JavaScript (front) e Python (algumas ferramentas internas).
+Aqui usamos bastante C#. Usamos também C++ (para alto desempenho), ReactJs (front) e Python e PHP (algumas ferramentas internas e scripts em geral).
 
 ## [Onde vocês ficam?](id:Localizacao)
 Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
 
-Mesmo acabando a pandemia você terá a opção de trabalhar de casa, no horário que for melhor para você.
+Temos horário flexível, o cumprimento dos combinados é muito mais importante que estar online em horário comercial. Cumprindo com os combinados, não tem problema nenhum ir para a academia as 11h, ao cinema quarta-feira as 15h e não vamos pedir justificativas para ausências pessoais.
 
-Temos horário flexível, você pode trabalhar na hora que for melhor para você. Estuda à tarde? Sem problemas. Vai pra academia todo dia 11:00? Ótimo, continue com sua rotina.
-
-O tempo gasto com a Intelitrader também é flexível. Você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é se você entrega código de qualidade e gosta de programar, aprender e estudar.
+O tempo disposto com a Intelitrader também é flexível. Combinando direitnho, nada está proibido, você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é estar entregando código de qualidade, os combinados sendo atendidos, os sistemas rodando bem em produção, estar aprendendo e ensinando.
 
 ## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
 
@@ -43,10 +41,11 @@ Nós te ajudamos ensinando e guiando seu aprendizado. Você só precisa gostar d
 Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
 
 1. Leia com atenção. Sua candidatura só será considerada se você seguir corretamente as instruções.
-2. Faça um fork desse repositório.
-3. Escolha 3 testes em [DojoPuzzles](http://dojopuzzles.com/) e resolva com sua linguagem favorita (se você escolher o desafio "Ano Bissexto" seu curriculum será desconsiderado; se você optar por no lugar do Dojo realizar o que está na pasta Desafio **terá prioridade na seleção**)
-5. Crie um pull request com sua solução e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **link do problema**, **sua solução** (link para o pull request), e um **link para seu curriculum, portfolio ou linkedin**.
-6. Se você seguiu as instruções corretamente entraremos em contato para marcar uma entrevista técnica.
+2. Crie um repositório git para publicar a sua resolução
+3. Resolve pelo menos 2 dos desafios listados abaixo e os faça em C, C++ ou C# pois o nosso objetivo é avaliar a sua lógica de programação, então preferimos linguagens mais rígidas (olha que C# nem é tanto) 
+4. Também não gostaríamos que utilizassem funções pronta de ordenação, reversão e afins, a ideia é você criar suas funções utilizando a sua lógica de programação.
+5. Publique a solução em um repositório git e envie um e-mail para **vagas.dev@intelitrader.com.br**. Seu e-mail deve conter o **os 2 desafios escolhidos**, **sua solução** (link para o repositório), e um **link para seu curriculum, portfolio ou linkedin**.
+6. Se você seguiu as instruções corretamente e seu código funciona (sim, precisa compilar de primeira e caso alguma coisa tenha que ser feita para rodar o programa, deve estar documentado em um readme.md) entraremos em contato para marcar uma entrevista técnica.
 
 ## [Condições](id:CondicoesEDiferenciais)
 
@@ -54,4 +53,12 @@ Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
 * Período: **Integral**;
 * Contratação: **Imediata**;
 
+## [Desafios propostos](id:DesafiosPropostos)
+Todos os desafios se baseiam em criar uma aplicação console, que ao executar pede para o usuários os dados, depois realiza o processamento proposto e por fim informa o usuário o resultado ou o caminho do resultado dependendo do caso.
 
+1. Crie uma aplicação que comprime/descomprime arquivos utilizando o Algoritmo de Huffman.
+2. Crie uma aplicação que criptografa/descriptografa arquivos utilizando Cifra de César
+3. Crie uma aplicação que codifica/decodifica arquivos para Base64
+4. Crie uma aplicação que recebe um arquivo de texto e monta um ranking de quantidade dos caracteres contidos
+5. Crie uma aplicação que recebe dois arquivos e gera um terceiro arquivo contendo as linhas contidas nos 2 arquivos recebidos (a interseção)
+6. Crie uma aplicação capaz de realizar multiplicação de números com mais de 22 caracteres (bigInt)
