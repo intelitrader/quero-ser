@@ -15,9 +15,9 @@ Aqui usamos bastante C#. Usamos também C++ (para alto desempenho), ReactJs (fro
 ## [Onde vocês ficam?](id:Localizacao)
 Nossa sede é em São Paulo mas todo mundo é home office com horário flexível. **Desde 2012**. Tem gente de todo o Brasil trabalhando para Intelitrader.
 
-Temos horário flexível, o cumprimento dos combinados é muito mais importante que estar online em horário comercial. Cumprindo com os combinados, não tem problema nenhum ir para a academia as 11h, ao cinema quarta-feira as 15h e não vamos pedir justificativas para ausências pessoais.
+Temos horário flexível, o cumprimento dos combinados é muito mais importante que estar online em horário comercial. Cumprindo com os combinados, não tem problema nenhum ir para a academia às 11h, ao cinema quarta-feira às 15h e não vamos pedir justificativas para ausências pessoais.
 
-O tempo disposto com a Intelitrader também é flexível. Combinando direitnho, nada está proibido, você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é estar entregando código de qualidade, os combinados sendo atendidos, os sistemas rodando bem em produção, estar aprendendo e ensinando.
+O tempo disposto com a Intelitrader também é flexível. Combinando direitinho, nada está proibido, você pode trabalhar somente 4 horas por dia, escolher trabalhar 3 dias só por semana, etc. Obviamente a remuneração será proporcional. A única coisa que nos importa é estar entregando código de qualidade, os combinados sendo atendidos, os sistemas rodando bem em produção, estar aprendendo e ensinando.
 
 ## [Requisitos Básicos (para todas as vagas)](id:RequisitosBasicos)
 
