@@ -1,0 +1,9 @@
+{
+  "name": "intelitrader_challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:leonardojcpg/intelitrader_challenge.git",
+  "author": "leonardoGomes <leonardojpinheirogomes@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}
