@@ -5,8 +5,8 @@ de dois arrays.
 
 Um exemplo seria:
 
-Array 1 -> [-1, 5]
-Array 2 -> [26, 6]
+* Array 1 -> [-1, 5]
+* Array 2 -> [26, 6]
 
 A menor distância seria a combinação do número 5 do array 1 com o número 6 do array 2, que seria 1 de distância.
 
