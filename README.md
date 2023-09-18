@@ -54,11 +54,9 @@ Para oportunidade de **Desenvolvedor(a)** siga as instruções abaixo:
 * Contratação: **Imediata**;
 
 ## [Desafios propostos](id:DesafiosPropostos)
-Todos os desafios se baseiam em criar uma aplicação console, que ao executar pede para o usuários os dados, depois realiza o processamento proposto e por fim informa o usuário o resultado ou o caminho do resultado dependendo do caso.
+Todos os desafios se baseiam em criar uma aplicação console, que ao executar pede para o usuários os dados (opcional, dependendo do exercício), depois realiza o processamento proposto e por fim informa o usuário o resultado ou o caminho do resultado dependendo do caso.
 
-1. Crie uma aplicação que comprime/descomprime arquivos utilizando o Algoritmo de Huffman.
-2. Crie uma aplicação que criptografa/descriptografa arquivos utilizando Cifra de César
-3. Crie uma aplicação que codifica/decodifica arquivos para Base64
-4. Crie uma aplicação que recebe um arquivo de texto e monta um ranking de quantidade dos caracteres contidos
-5. Crie uma aplicação que recebe dois arquivos e gera um terceiro arquivo contendo as linhas contidas nos 2 arquivos recebidos (a interseção)
-6. Crie uma aplicação capaz de realizar multiplicação de números com mais de 22 caracteres (bigInt)
+**Importante:** Não use o chat gtp para resolver os exercícios, pois poderá ser solicitado para você explicar e refazer o exercício ao vivo na entrevista técnica.
+
+1. [Criptografia do navio](exercicios/criptografia_navio.md)
+2. [Menor distancia arrays](exercicios/menor_distancia_array.md)
