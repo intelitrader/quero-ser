@@ -37,28 +37,37 @@ Seu objetivo é fazer um programa que receba e processe todas as notificações 
 A primeira linha é composta por um inteiro informando o número de notificações e as linhas subsequences contem as notificações no seguinte formato: **posição,ação,valor,quantidade**.
 
 ### exemplo:
-10\
+12\
 1,0,15.4,50\
 2,0,15.5,50\
 2,2,0,0\
 2,0,15.4,10\
 3,0,15.9,30\
 3,1,0,20\
+4,0,16.50,200\
+5,0,17.00,100\
+5,0,16.59,20\
+6,2,0,0\
+1,2,0,0\
+2,1,15.6,0
 
 ## Output:
 O output deve seguir o seguinte formato onde cada linha representa uma posição.
 
-1,15.4,50\
-2,15.4,10\
-3,15.9,20
+1,15.4,10\
+2,15.6,20\
+3,16.50,200\
+4,16.59,20\
+
 
 *representação do resultado*
 
 POSICAO | VALOR | QUANTIDADE 
 --------|-------|------------
-1       | 15.4  | 50         
-2       | 15.4  | 10         
-3       | 15.9  | 20   
+1       | 15.4  | 10         
+2       | 15.6  | 20         
+3       | 16.50 | 200
+4       | 16.59 | 20   
 
 
 
