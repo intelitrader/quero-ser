@@ -60,3 +60,4 @@ Todos os desafios se baseiam em criar uma aplicação console, que ao executar p
 
 1. [Criptografia do navio](exercicios/criptografia_navio.md)
 2. [Menor distancia arrays](exercicios/menor_distancia_array.md)
+3. [Livro de ofertas](exercicios/livro_de_ofertas.md)
