@@ -1,0 +1,15 @@
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\bin\Debug\net6.0\Troco.exe
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\bin\Debug\net6.0\Troco.deps.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\bin\Debug\net6.0\Troco.runtimeconfig.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\bin\Debug\net6.0\Troco.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\bin\Debug\net6.0\Troco.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.csproj.AssemblyReference.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.AssemblyInfoInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.AssemblyInfo.cs
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.csproj.CoreCompileInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\refint\Troco.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\Troco.genruntimeconfig.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Troco\Troco\obj\Debug\net6.0\ref\Troco.dll
