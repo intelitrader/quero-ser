@@ -1,0 +1,24 @@
+Linha 8 - Erro desconhecido. Acionar equipe de TI
+Linha 32 - Venda cancelada
+Linha 37 - Erro desconhecido. Acionar equipe de TI
+Linha 85 - Código de Produto não encontrado 13112
+Linha 88 - Venda não finalizada
+Linha 121 - Código de Produto não encontrado 13210
+Linha 222 - Venda cancelada
+Linha 241 - Erro desconhecido. Acionar equipe de TI
+Linha 268 - Venda não finalizada
+Linha 322 - Venda não finalizada
+Linha 332 - Venda cancelada
+Linha 362 - Venda cancelada
+Linha 395 - Venda cancelada
+Linha 397 - Venda não finalizada
+Linha 413 - Venda cancelada
+Linha 437 - Venda não finalizada
+Linha 466 - Venda cancelada
+Linha 467 - Venda cancelada
+Linha 636 - Venda não finalizada
+Linha 659 - Venda cancelada
+Linha 669 - Venda cancelada
+Linha 673 - Venda cancelada
+Linha 684 - Venda cancelada
+Linha 776 - Venda cancelada
