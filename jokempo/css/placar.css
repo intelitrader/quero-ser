@@ -1,0 +1,30 @@
+
+#titulo{
+   text-align: center;
+   margin-bottom: 3rem; 
+   font-weight: bold;
+   font-size: 50px;
+   background-color: var(--cinza-medio);
+   color: var(--preto-medio);
+   }
+
+#placar{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+ .pts{
+    border-radius: 10px;
+    background-color: var(--silver);
+    
+   
+ }
+@media (max-width: 900px) {
+    #titulo {
+           margin: 0%;
+           font-size: 25px;
+           margin-bottom: 3rem;
+        }
+    
+       
+}

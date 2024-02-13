@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', cursive;
+}
+
+li{
+list-style-type: none;
+}
+
+:root {
+    /*header---.center*/
+    --tamanho-maximo: 1100px;
+    --margem: 0 auto;
+    --magem-esquerda: 0 2%;
+
+  
+    /*medidas de tela toda*/
+    --vertical-inteira: 100%;
+    --horizontal-inteira: 100%;
+
+    /*cores geral*/
+    --fundo: #639ac9;
+    --preto: black;
+    --preto-medio: #222;
+    --branco: #FFF;
+    --azul-claro: #DFE3E5;
+    --vermelho-forte: #B72E2E;
+    --cinza-escuro: #4F4C4C;
+    --cinza-claro: #F7F4F4;
+    --cinza-medio: #D9D9D9;
+    --fonte-link: #0084FF;
+    --fonte-cinza: #666;
+    --silver: #cad5da;
+}
+
+img{
+    width: 150px;
+    margin-top: 5%;
+}
+
+@media (max-width: 900px) {
+img {
+        width: 50px;
+        margin-left: 0%;
+        margin: right 0%;
+        height: 50px;
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+
+
+}
