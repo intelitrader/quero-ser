@@ -113,12 +113,8 @@ namespace LivroOfertas
                     }
                 }
             }
-            Console.WriteLine(finalResult);
         }
-
         Console.WriteLine(finalResult);
-
-
         }
 
     }
