@@ -3,7 +3,7 @@
 Parabéns!! você foi contratado por uma corretora para montar  um sistema de livro de ofertas de vendas e compras.  
 Um livro de ofertas nada mais é que uma lista de um mesmo produto organizadas pelo seu preço.
 
-A cada negocicão de compra ou venda  os livros de ofertas são atualizados, podendo inserir , remover ou modifcar as ofertas presentes no livro. 
+A cada negociação de compra ou venda  os livros de ofertas são atualizados, podendo inserir , remover ou modifcar as ofertas presentes no livro. 
 Cada operação na livro gera uma nova mensagem que é composta por 4 paramêtros, o primeiro valor é a posição da atualização, já segunda é o tipo de ação a ser tomada, em  terceiro temos o valor e por último a quantidade. Cada propriedade é descrita na tabela abaixo:
 
 
@@ -57,7 +57,7 @@ O output deve seguir o seguinte formato onde cada linha representa uma posição
 1,15.4,10\
 2,15.6,20\
 3,16.50,200\
-4,16.59,20\
+4,16.59,20
 
 
 *representação do resultado*
