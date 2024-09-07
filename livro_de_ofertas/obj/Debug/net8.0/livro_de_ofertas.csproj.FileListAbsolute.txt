@@ -1,0 +1,15 @@
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.GeneratedMSBuildEditorConfig.editorconfig
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.AssemblyInfoInputs.cache
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.AssemblyInfo.cs
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.csproj.CoreCompileInputs.cache
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.sourcelink.json
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\bin\Debug\net8.0\livro_de_ofertas.exe
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\bin\Debug\net8.0\livro_de_ofertas.deps.json
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\bin\Debug\net8.0\livro_de_ofertas.runtimeconfig.json
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\bin\Debug\net8.0\livro_de_ofertas.dll
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\bin\Debug\net8.0\livro_de_ofertas.pdb
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.dll
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\refint\livro_de_ofertas.dll
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.pdb
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\livro_de_ofertas.genruntimeconfig.cache
+E:\IntelitraderCsharp\quero-ser\livro_de_ofertas\obj\Debug\net8.0\ref\livro_de_ofertas.dll

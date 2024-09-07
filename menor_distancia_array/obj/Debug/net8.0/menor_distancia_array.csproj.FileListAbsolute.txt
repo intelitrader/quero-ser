@@ -1,0 +1,15 @@
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\bin\Debug\net8.0\menor_distancia_array.exe
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\bin\Debug\net8.0\menor_distancia_array.deps.json
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\bin\Debug\net8.0\menor_distancia_array.runtimeconfig.json
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\bin\Debug\net8.0\menor_distancia_array.dll
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\bin\Debug\net8.0\menor_distancia_array.pdb
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.GeneratedMSBuildEditorConfig.editorconfig
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.AssemblyInfoInputs.cache
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.AssemblyInfo.cs
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.csproj.CoreCompileInputs.cache
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.sourcelink.json
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.dll
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\refint\menor_distancia_array.dll
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.pdb
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\menor_distancia_array.genruntimeconfig.cache
+E:\IntelitraderCsharp\quero-ser\menor_distancia_array\obj\Debug\net8.0\ref\menor_distancia_array.dll
