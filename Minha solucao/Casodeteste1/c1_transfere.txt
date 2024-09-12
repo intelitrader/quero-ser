@@ -1,0 +1,9 @@
+Necessidade de Transferência Armazém para CO
+
+Produto  QtCO  QtMin  QtVendas  Estq.após  Necess.  Transf. de
+                                   Vendas            Arm p/ CO
+16320     344    200       128        216        0           0
+23400    1435    500       937        498        2          10
+26440    2899    800       239       2660        0           0
+28790     310    150       245         65       85          85
+36540     431    100       617       -186      286         286
