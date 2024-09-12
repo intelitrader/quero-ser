@@ -1,0 +1,79 @@
+.selecao{
+    opacity: .2;
+}
+
+.selecao:hover{
+    opacity: .1;
+}
+#jogador-escolha{
+    display: flex;
+    justify-content: space-evenly;
+}
+ul#jogador-escolha li a.selecionado, ul#computador-escolha li a.selecionado{
+    opacity: 1;
+}
+ul#jogador-escolha li a:hover,
+ul#jogador-escolha li a.selecionado,
+ul#computador-escolha li a.selecionado{
+    opacity: 1;
+}
+#computador-escolha{
+    display: flex;
+    justify-content: space-evenly;
+}
+#versus{
+margin-top: 3rem;
+margin-bottom: 3rem;
+text-align: center;
+font-size: 25px;
+font-weight: bold;
+
+}
+#jogador-nome,
+#jogador-pontos,
+#computador-pontos{
+    margin-left: 10rem;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#jogador-pontos{
+    color: var(--vermelho-forte);
+    padding-left: 15px;
+    padding-right:15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   
+}
+
+#computador-pontos{
+    color: var(--vermelho-forte);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+#jogador-nome {
+    color: var(--branco);
+    background-color: var(--preto-medio);
+    border-radius: 5px;
+    margin-right: 15rem;
+    font-family: cursive;
+}
+
+@media (max-width: 900px) {
+    
+#versus {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+        #jogador-nome{
+        font-size: 15px;
+        }
+
+}

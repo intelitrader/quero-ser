@@ -1,0 +1,269 @@
+$( documento ).pronto( função () {
+
+    // Converte todos os links com a classe progress-button para 
+    // botões reais com medidores de progresso. 
+    // Você precisa chamar esta função assim que a página for carregada. 
+    // Se você adicionar botões posteriormente, precisará chamar a função apenas para eles.
+
+    $( '.progress-button' ).progressInitialize();
+
+    // Ouça os cliques nos três primeiros botões e inicie 
+    // as animações de progresso
+
+    $( '#submitButton' ).click( function ( e ) {
+        e.preventDefault();
+
+        // Esta função mostrará um medidor de progresso para 
+        // a quantidade de tempo especificada
+
+        $( this ).progressTimed( 2 );
+    });
+
+    $( '#actionButton' ).click( function ( e ) {
+        e.preventDefault();
+        $( this ).progressTimed( 2 );
+    });
+
+    $( '#generateButton' ).one( 'click' , function ( e ) {
+        e.preventDefault();
+
+        // Pode receber um retorno de chamada
+
+        botão var = $( this );
+        button.progressTimed( 3 , função () {
+
+            // Neste retorno de chamada, você pode definir o atributo href do botão 
+            // para a URL do arquivo gerado. Para a demonstração, vamos apenas 
+            // configurar um novo ouvinte de evento que alerta uma mensagem.
+
+            button.click( função () {
+                alert( 'Mostrando como um callback funciona!' );
+            });
+        });
+    });
+
+    // Tratamento de progresso personalizado
+
+    var controlButton = $( '#controlButton' );
+
+    controlButton.click( function ( e ) {
+        e.preventDefault();
+
+        // Você pode opcionalmente chamar a função progressStart. 
+        // Simulará a atividade a cada 2 segundos se o 
+        // medidor de progresso não tiver sido incrementado.
+
+        controlButton.progressStart();
+    });
+
+    $( '.command.increment' ).click( function () {
+
+        // Incrementa a barra de progresso em 10%. Passe um número 
+        // como argumento para incrementar com um valor diferente.
+
+        controlButton.progressIncrement();
+    });
+
+    $( '.command.set-to-1' ).click( function () {
+
+        // Configura o medidor de progresso para a porcentagem especificada
+
+        controlButton.progressSet( 1 );
+    });
+
+    $( '.command.set-to-50' ).click( function () {
+        controlButton.progressSet( 50 );
+    });
+
+    $( '.command.finish' ).click( function () {
+
+        // Defina o medidor de progresso para 100% e mostre o texto pronto.
+        controlButton.progressFinish();
+    });
+
+});
+
+// A funcionalidade do medidor de progresso está disponível como uma série de plugins. 
+// Você pode colocar este código em um arquivo separado se quiser manter as coisas organizadas.
+
+( função ( $ ) {
+
+    // Criando vários plugins jQuery que você pode usar para 
+    // inicializar e controlar os medidores de progresso.
+
+    $.fn.progressInitialize = function () {
+
+        // Esta função cria a marcação necessária para o medidor de progresso 
+        // e configura alguns ouvintes de eventos.
+
+        // Percorre todos os botões:
+
+        retorne  este .each( função () {
+
+            botão var = $( this ),
+                progresso = 0 ;
+
+            // Extraia os atributos de dados no objeto de opções. 
+            // Se eles estiverem ausentes, eles receberão valores padrão.
+
+            var options = $.extend({
+                 type : 'background-horizontal' ,
+                 loading : 'Loading..' ,
+                 completed : 'Done!'
+            }, botão.dados());
+
+            // Adicione os atributos de dados se estiverem faltando no elemento. 
+            // Eles são usados ​​pelo nosso código CSS para mostrar as mensagens 
+            button.attr({ 'data-loading' : options.loading, 'data-finished' : options.finished});
+
+            // Adiciona a marcação necessária para a barra de progresso ao botão 
+            var bar = $( '<span class="tz-bar ' + options.type + '">' ).appendTo(button);
+
+            // O evento de progresso diz ao botão para atualizar a barra de progresso 
+            button.on( 'progress' , function ( e, val, absolute, finish ) {
+
+                if (!button.hasClass( 'em andamento' )){
+
+                    // Este é o primeiro evento de progresso para o botão (ou o 
+                    // primeiro depois de terminar em uma execução anterior). Reinicie 
+                    // o progresso e remova algumas classes que podem ter sobrado.
+
+                    bar.show();
+                    progresso = 0 ;
+                    button.removeClass( 'concluído' ).addClass( 'em andamento' )
+                }
+
+                // val, absolute e finish são dados de eventos passados ​​pelos 
+                métodos progressIncrement // e progressSet que você pode ver perto do final deste arquivo.
+
+                if (absoluto){
+                    progresso = val;
+                }
+                senão {
+                    progresso += val;
+                }
+
+                if (progresso >= 100 ){
+                    progresso = 100 ;
+                }
+
+                se (terminar){
+
+                    button.removeClass( 'em andamento' ).addClass( 'concluído' );
+
+                    bar.delay( 500 ).fadeOut( função () {
+
+                        // Aciona o evento custom progress-finish 
+                        button.trigger( 'progress-finish' );
+                        setProgress( 0 );
+                    });
+
+                }
+
+                setProgress(progresso);
+            });
+
+            função  setProgress ( porcentagem ) {
+                bar.filter( '.background-horizontal,.background-bar' ).width(percentage+ '%' );
+                bar.filter( '.background-vertical' ).height(percentage+ '%' );
+            }
+
+        });
+
+    };
+
+    // progressStart simula a atividade no medidor de progresso. Chame-o primeiro, 
+    // se o progresso demorar muito para terminar.
+
+    $.fn.progressStart = function () {
+
+        botão var = this .first(),
+            last_progress = new  Date ().getTime();
+
+        if (button.hasClass( 'in-progress' )){
+             // Não inicia uma segunda vez! 
+            devolva  isso ;
+        }
+
+        button.on( 'progresso' , function () {
+            last_progress = new  Date ().getTime();
+        });
+
+        // A cada meio segundo verifica se o progresso 
+        // foi incrementado nos últimos dois segundos
+
+        var intervalo = janela .setInterval( função () {
+
+            if ( new  Date ().getTime() > 2000 +last_progress){
+
+                // Não houve atividade por dois segundos. Incremente a 
+                barra // de progresso um pouco para mostrar que algo está acontecendo
+
+                button.progressIncrement( 5 );
+            }
+
+        }, 500 );
+
+        button.on( 'progress-finish' , function () {
+             janela .clearInterval(intervalo);
+        });
+
+        botão de retorno.progressIncrement ( 10 );
+    };
+
+    $.fn.progressFinish = function () {
+         return  this .first().progressSet( 100 );
+    };
+
+    $.fn.progressIncrement = function ( val ) {
+
+        valor = valor || 10 ;
+
+        botão var = this .first();
+
+        button.trigger( 'progresso' ,[val])
+
+        devolva  isso ;
+    };
+
+    $.fn.progressSet = function ( val ) {
+        valor = valor || 10 ;
+
+        var final = false ;
+        if (val >= 100 ){
+            final = verdadeiro ;
+        }
+
+        return  this .first().trigger( 'progress' ,[val, true , finish]);
+    };
+
+    // Esta função cria um medidor de progresso que 
+    // termina em um determinado período de tempo.
+
+    $.fn.progressTimed = function ( segundos, cb ) {
+
+        botão var = this .first(),
+            bar = botão.find( '.tz-bar' );
+
+        if (button.is( '.in-progress' )){
+             return  this ;
+        }
+
+        // Define uma declaração de transição para a duração do medidor. 
+        // CSS fará o trabalho de animar a barra de progresso para nós.
+
+        bar.css( 'transição' , segundos+ 's linear' );
+        button.progressSet( 99 );
+
+        janela .setTimeout( função () {
+            bar.css( 'transição' , '' );
+            botão.progressFinish();
+
+            if ($.isFunction(cb)){
+                cb();
+            }
+
+        }, segundos* 1000 );
+    };
+
+})(jQuery);
