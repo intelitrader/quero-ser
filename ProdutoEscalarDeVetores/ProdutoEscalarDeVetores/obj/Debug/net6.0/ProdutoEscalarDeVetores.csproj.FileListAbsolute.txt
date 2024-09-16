@@ -1,0 +1,15 @@
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.csproj.AssemblyReference.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.AssemblyInfoInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.AssemblyInfo.cs
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.csproj.CoreCompileInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\bin\Debug\net6.0\ProdutoEscalarDeVetores.exe
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\bin\Debug\net6.0\ProdutoEscalarDeVetores.deps.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\bin\Debug\net6.0\ProdutoEscalarDeVetores.runtimeconfig.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\bin\Debug\net6.0\ProdutoEscalarDeVetores.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\bin\Debug\net6.0\ProdutoEscalarDeVetores.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\refint\ProdutoEscalarDeVetores.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ProdutoEscalarDeVetores.genruntimeconfig.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\ProdutoEscalarDeVetores\ProdutoEscalarDeVetores\obj\Debug\net6.0\ref\ProdutoEscalarDeVetores.dll
