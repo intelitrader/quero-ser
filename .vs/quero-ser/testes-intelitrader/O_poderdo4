@@ -1,0 +1,38 @@
+using System;
+
+namespace Expressões {
+    internal class Program {
+        static void Main(string[] args) {
+
+            Calcular calcular = new Calcular();
+
+            Console.WriteLine();
+            Console.WriteLine("O Homem que Calculava ! ");
+
+            calcular.RealizarFuncao();
+
+
+        }
+
+
+        public class Calcular {
+
+            public string Formula { get; set; }
+
+            public Calcular() {
+
+            }
+
+
+            public void RealizarFuncao() {
+
+                var n1 = 80;
+
+                Console.WriteLine($"Entrada valor:  {n1}");
+                Formula = " ((4 * 4) + 4) * 4";
+                Console.WriteLine($"Formula: {Formula} ={n1}");
+
+            }
+        }
+    }
+}
