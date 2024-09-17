@@ -1,0 +1,3 @@
+Fiz o tudo o que foi pedido, ou pelo menos o que consegui fazer. Tentei deixar o código o mais legível e simples possível, e claro seguindo alguns pilares do SOLID.
+
+Obrigado :) !
