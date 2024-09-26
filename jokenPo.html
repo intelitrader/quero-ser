@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deasfio JokenPo</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Jo ken Po</h1>
+
+    <div class="container" style="display: flex; flex-direction: column; margin: auto; max-width: 400px; background: #ddd; padding: 1rem; border-radius: 1rem;">
+        <h3>Player: <span class="choice-player" style="text-transform: uppercase; color: #0000ff;"></span></h3>
+        <h3>Computador: <span class="choice-pc" style="text-transform: uppercase; color: green;"></span></h3>
+        <div class="result" style="text-align: center; margin: 2rem; font-size: 20px; font-weight: bold;">
+            <span class="result-jokenpo"></span>
+        </div>
+        <div class="winner" style="display: flex; justify-content: center; margin: 2rem; font-size: 25px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+
+        const resultJokenpo = document.querySelector('.result-jokenpo');
+        const choicePlayer = document.querySelector('.choice-player');
+        const choicePC = document.querySelector('.choice-pc');
+        const winner = document.querySelector('.winner');
+
+        let player = prompt('Você escolhe PEDRA, PAPEL ou TESOURA?')
+
+        
+        const computerChoice = () => {
+            let choiceComputer = Math.floor(Math.random() * 100)
+            if(choiceComputer < 40) {
+                return 'pedra'
+            } else if (choiceComputer >= 40 && choiceComputer <= 60) {
+                return 'papel'
+            } else {
+                return 'tesoura'
+            }
+        }
+
+        let html = '';
+        let showWinner = '';
+
+        let computer = computerChoice();
+        console.log(`O escolhido pelo PC é: ${computer}`)
+
+        choicePlayer.innerHTML = player;
+        choicePC.innerHTML = computer;
+
+        const JokenPo = () => {
+            if(player === "pedra" || player === "PEDRA" ) {
+                if(computer == 'papel') {
+                    console.log('PAPEL GANHA')
+                    html += `<span style="color: green; text-transform:uppercase;">${computer}</span> GANHA DE <span style="color: #0000ff; text-transform:uppercase;">${player}</span><br />`;
+                    showWinner += `COMPUTADOR Ganhou!!!`
+                } else if(computer == 'tesoura') {
+                    console.log('PEDRA GANHA')
+                    html += `<span style="color: #0000ff; text-transform:uppercase;">${player}</span> GANHA DE <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `JOGADOR Ganhou!!!`
+                } else {
+                    console.log('PLAYER 1 = PEDRA / PLAYER 2 = PEDRA (EMPATE) - REINICIE O JOGO')
+                    html += `JOGADOR ESCOLHEU <span style="color: #0000ff; text-transform:uppercase;">${player}</span> E COMPUTADOR ESCOLHEU <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `DEU EMPATE!!!`
+                }
+            } else if (player == 'papel' || player === "PAPEL") {
+                if(computer == 'tesoura') {
+                    console.log('TESOURA GANHA')
+                    html += `<span style="color: green; text-transform:uppercase;">${computer}</span> GANHA DE <span style="color: #0000ff; text-transform:uppercase;">${player}</span>`;
+                    showWinner += `COMPUTADOR Ganhou!!!`
+                } else if (computer == 'pedra') {
+                    console.log('PAPEL GANHA')
+                    html += `<span style="color: #0000ff; text-transform:uppercase;">${player}</span> GANHA DE <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `JOGADOR Ganhou!!!`
+                } else {
+                    console.log(' ESCOLHEU = PAPEL / PLAYER 2 = PAPEL (EMPATE) - REINICIE O JOGO')
+                    html += `JOGADOR ESCOLHEU <span style="color: #0000ff; text-transform:uppercase;">${player}</span> E COMPUTADOR ESCOLHEU <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `DEU EMPATE!!!`
+                }
+            } else if (player == 'tesoura' || player === "TESOURA") {
+                if(computer == 'pedra') {
+                    console.log('PEDRA GANHA')
+                    html += `<span style="color: green; text-transform:uppercase;">${computer}</span> GANHA DE <span style="color: #0000ff; text-transform:uppercase;">${player}</span>`;
+                    showWinner += `COMPUTADOR Ganhou!!!`
+                } else if (computer == 'papel') {
+                    console.log('TESOURA GANHA')
+                    html += `<span style="color: #0000ff; text-transform:uppercase;">${player}</span> GANHA DE <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `JOGADOR Ganhou!!!`
+                } else {
+                    console.log('PLAYER 1 = TESOURA / PLAYER 2 = TESOURA (EMPATE) - REINICIE O JOGO')
+                    html += `JOGADOR ESCOLHEU <span style="color: #0000ff; text-transform:uppercase;">${player}</span> E COMPUTADOR ESCOLHEU <span style="color: green; text-transform:uppercase;">${computer}</span>`;
+                    showWinner += `DEU EMPATE!!!`
+                }
+            }
+
+            resultJokenpo.innerHTML = html
+
+            winner.innerHTML = showWinner;
+        }
+        JokenPo()
+
+
+
+    </script>
+</body>
+</html>
