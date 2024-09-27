@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "17a59be4-dfc7-43d5-a86c-7b6cf89ba5b6": {
+      "ProjectGuid": "17a59be4-dfc7-43d5-a86c-7b6cf89ba5b6",
+      "DisplayName": "Functions",
+      "ColorIndex": 0
+    },
+    "32bf2a32-b6f2-45ea-a2a4-dc9b4fba749f": {
+      "ProjectGuid": "32bf2a32-b6f2-45ea-a2a4-dc9b4fba749f",
+      "DisplayName": "FunctionsTest",
+      "ColorIndex": 1
+    },
+    "677c5e0c-996b-46e9-aac3-d26d37aa18ac": {
+      "ProjectGuid": "677c5e0c-996b-46e9-aac3-d26d37aa18ac",
+      "DisplayName": "Main",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "43ab498a-d567-42a9-b814-068128d8b03c": {
+      "ProjectGuid": "43ab498a-d567-42a9-b814-068128d8b03c",
+      "DisplayName": "Functions",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
