@@ -2,8 +2,6 @@
 
 **Entender esse documento já faz parte do teste. Leia com atenção.**
 
-Se você ficar com alguma dúvida, pesquise e use sua melhor interpretação. 
-
 ## Visão Geral
 O objetivo deste desafio é avaliar sua capacidade de criar uma arquitetura de sincronização de dados entre um ambiente restrito (Android OS) e uma aplicação externa, utilizando o **Redis** como intermediário (Message Broker/Data Store).
 
@@ -25,14 +23,14 @@ Você deverá construir um pipeline que leia mensagens do WhatsApp ou WhatsApp B
 O WhatsApp no Android armazena mensagens, contatos e metadados em bancos de dados SQLite localizados no diretório interno da aplicação. Seu objetivo é ler essas mensagens e salvar num banco de dados externo.
 
 ### Etapa 1: Ambiente e Setup
-1.  Configurar um emulador Android
-2.  Instalar o **WhatsApp Business**
+1.  Configurar um emulador Android (você vai precisar de uma imagem root)
+2.  Instalar o WhatsApp
 3.  Ativar uma conta do WhatsApp (recomendamos que você use um número de teste ao invés de usar o seu próprio número)
-4.  O foco está nos bancos de dados em: `/data/data/com.whatsapp.w4b/databases/` (especialmente o `msgstore.db`).
+4.  O foco está nos bancos de dados em: `/data/data/com.whatsapp*/databases/` (especialmente o `msgstore.db`).
 
 ### Etapa 2: O Agente Nativo (Android Side)
 Você deve desenvolver um binário nativo para rodar dentro do Android.
-* **Linguagens permitidas:** Rust, Go, C++ ou Swift (via suporte NDK/Android).
+* **Linguagens permitidas:** Rust, Go, C, C++ ou Swift (somente linguagens nativas via NDK).
 * **Ação A (Leitura):** O binário que roda dentro do Android deve monitorar o banco SQLite de mensagens e, a cada nova inserção, enviar o conteúdo para uma instância do **Redis**.
 * **Ação B (Escrita):** O mesmo binário deve "escutar" uma fila/tópico no Redis e, ao receber um novo comando, inserir um contato na agenda telefônica do Android (via `content insert` ou chamadas de API do sistema).
 
@@ -49,7 +47,7 @@ Crie uma aplicação em **.NET (C#)** que servirá como interface externa:
     Este endpoint deve publicar os dados no Redis para que o Agente Nativo processe a inserção no Android.
 
 
-## 3. Critérios de Avaliação
+## Critérios de Avaliação
 Queremos avaliar seu processo de raciocínio, sua capacidade de lidar com o NDK e sua habilidade de resolução de problemas de baixo nível.
 
 * **Arquitetura:** Como você resolveu a comunicação entre o binário nativo e o mundo externo?
