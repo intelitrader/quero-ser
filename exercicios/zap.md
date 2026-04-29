@@ -1,6 +1,8 @@
 # Desafio Técnico: Integração e Monitoramento Android Real-Time
 
-Entender esse documento já faz parte do teste. Leia com atenção. 
+**Entender esse documento já faz parte do teste. Leia com atenção.**
+
+Se você ficar com alguma dúvida, pesquise e use sua melhor interpretação. 
 
 ## Visão Geral
 O objetivo deste desafio é avaliar sua capacidade de criar uma arquitetura de sincronização de dados entre um ambiente restrito (Android OS) e uma aplicação externa, utilizando o **Redis** como intermediário (Message Broker/Data Store).
