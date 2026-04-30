@@ -1,0 +1,17 @@
+﻿@Intelitrader.Zap.API_HostAddress = https://localhost:7255
+
+### Testar a especificação OpenAPI (JSON)
+GET {{Intelitrader.Zap.API_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+### Criar um novo contato (Ação B do desafio)
+POST {{Intelitrader.Zap.API_HostAddress}}/api/contacts
+Content-Type: application/json
+
+{
+  "name": "Rodrigo Furlaneti",
+  "number": "+5511999999999"
+}
+
+###
