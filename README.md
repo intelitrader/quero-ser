@@ -1,4 +1,5 @@
 # Quero ser Intelitrader
+Meu nome é Rafael Bigeschi de Almeida, o projeto Desafio-Intelitrader está na branch "desafio".
 
 ## Quem somos
 A [Intelitrader](http://www.intelitrader.com.br) é uma empresa de software especializada no desenvolvimento de **software para o mercado financeiro**. A empresa foi fundada em 2011 e temos como clientes corretoras de valores, bancos e gestoras de investimentos (como Itaú, Nubank, Banco Modal, Banco Paulista, Terra Investimentos, Necton, Mirae, corretoras Ideal e Genial, entre outros). 
