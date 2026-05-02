@@ -1,0 +1,15 @@
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\bin\Debug\net7.0\Desafio05.exe
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\bin\Debug\net7.0\Desafio05.deps.json
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\bin\Debug\net7.0\Desafio05.runtimeconfig.json
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\bin\Debug\net7.0\Desafio05.dll
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\bin\Debug\net7.0\Desafio05.pdb
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.AssemblyInfoInputs.cache
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.AssemblyInfo.cs
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.dll
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\refint\Desafio05.dll
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.pdb
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\Desafio05.genruntimeconfig.cache
+C:\Users\pc\Documents\Projetos\Desafios Intelitrader\Desafio05\obj\Debug\net7.0\ref\Desafio05.dll
