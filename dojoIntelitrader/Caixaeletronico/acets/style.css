@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+html{
+    font-family: Passion One;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {  
+    
+    background-image: url('../acets/imagens/caixa.jpg');
+    background-position: top center;
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container{
+    padding-top: 20px;
+   width: 700px;
+    min-height: 390px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    background-color: #fff;
+}
+.cedulas{
+    margin: 3px;
+}
+.btn{
+    background-color: rgb(61, 161, 61);
+    border-style: none;
+    padding: 5px;
+}
