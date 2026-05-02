@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio FizzBuzz</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Desafio FizzBuzz</h1>
+
+    <div class="result" style="display: flex; flex-direction: column; max-width: 100px; margin: auto; text-align:center; font-family: Arial, sans-serif; font-weight: bold; background-color: #ccc;"></div>
+
+<script>
+
+    const result = document.querySelector('.result');
+
+    let html = '';
+
+    const fizzBuzz = () => {
+        for(let n = 1; n <= 100; n++) {
+        if((n % 3) === 0 || (n % 5) === 0) {
+                if(n % 3 === 0 && n % 5 === 0) {
+                    console.log('FizzBuzz')
+                    html += '<p>FizzBuzz</p>'
+                } else if (n % 3 === 0) {
+                    console.log('Fizz')
+                    html += '<p>Fizz</p>'
+                } else if (n % 5 === 0) {
+                    console.log('Buzz')
+                    html += '<p>Buzz</p>'
+                }
+            
+        } else {
+                console.log(n)
+                html += `<p>${n}</p>`
+            }
+            
+            result.innerHTML = html
+        }
+    }
+    fizzBuzz()
+
+</script>
+</body>
+</html>
