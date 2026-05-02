@@ -1,0 +1,30 @@
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.csproj.AssemblyReference.cache
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.AssemblyInfoInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.AssemblyInfo.cs
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.csproj.CoreCompileInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.exe
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.deps.json
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.runtimeconfig.json
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\ref\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.pdb
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\ref\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.pdb
+C:\Users\guica\Desktop\Processo seletivo\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.genruntimeconfig.cache
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.exe
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.deps.json
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.runtimeconfig.json
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\ref\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\bin\Debug\net6.0\Desafio Saque - Caixa Eletronico.pdb
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.csproj.AssemblyReference.cache
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.AssemblyInfoInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.AssemblyInfo.cs
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.csproj.CoreCompileInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\ref\Desafio Saque - Caixa Eletronico.dll
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.pdb
+C:\Users\guica\Desktop\Processo seletivo\Processo Seletivo - Intelitrader\Desafio Saque - Caixa Eletronico\obj\Debug\net6.0\Desafio Saque - Caixa Eletronico.genruntimeconfig.cache
