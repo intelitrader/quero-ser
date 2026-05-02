@@ -1,0 +1,16 @@
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.exe
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.deps.json
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.runtimeconfig.json
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.runtimeconfig.dev.json
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.dll
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\bin\Debug\net5.0\DesafioIntelitrader.pdb
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.csproj.AssemblyReference.cache
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.AssemblyInfoInputs.cache
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.AssemblyInfo.cs
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.csproj.CoreCompileInputs.cache
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.dll
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\refint\DesafioIntelitrader.dll
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.pdb
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\DesafioIntelitrader.genruntimeconfig.cache
+C:\Users\T-GAMER\source\repos\quero-ser\Desafio\Solução\DesafioIntelitrader\DesafioIntelitrader\obj\Debug\net5.0\ref\DesafioIntelitrader.dll

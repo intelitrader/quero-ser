@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioIntelitrader", "DesafioIntelitrader\DesafioIntelitrader.csproj", "{AE029E7D-5F6D-45C0-96EB-70335F8DDECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE029E7D-5F6D-45C0-96EB-70335F8DDECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE029E7D-5F6D-45C0-96EB-70335F8DDECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE029E7D-5F6D-45C0-96EB-70335F8DDECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE029E7D-5F6D-45C0-96EB-70335F8DDECE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {131AB895-8632-4585-8CC8-8F926BB7BE9F}
+	EndGlobalSection
+EndGlobal
