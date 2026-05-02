@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jogador.css">
+    <link rel="stylesheet" href="css/placar.css">
+    <link rel="stylesheet" href="css/msm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <title>Jokempo | HOME</title>
+</head>
+    <body>
+        <div id="principal">
+           
+            <h1 id="titulo">Pedra, Papel e Tesoura</h1>
+            <div id="placar">
+                <div id="jogador">
+                    <h2 id="jogador-nome" >Luciano</h2>
+                    <span id="jogador-pontos" class="pts">Placar: 0</span>
+                    <ul id="jogador-escolha">
+                        <li><a class="selecao" id="jogador-escolha-1" onclick="jogar(1)" ><img src="img/pedra.png" alt="imagem de uma  mão fechada representando uma pedra no jogo jokempo"></a></li>
+                        <li><a class="selecao" id="jogador-escolha-2" onclick="jogar(2)" ><img src="img/papel.png" alt="imagem de uma mão aberta representando paple no jogo jokempo"></a></li>
+                        <li><a class="selecao" id="jogador-escolha-3" onclick="jogar(3)" ><img src="img/tesoura.png" alt="imagem de uma mão como indicador e anelar esticados representando uma tesoura no jogo jokempo"></a></li>
+                    </ul>   </div>
+            </div>
+
+            <div id="versus">Vs</div>
+
+            <div id="placar">
+                <div id="computador">
+                    <h2 id="jogador-nome">Advarsário</h2>
+                    <span id="computador-pontos" class="pts"> Placar: 0</span>
+                    <ul id="computador-escolha">
+                        <li><a class="selecao"id="computador-escolha-1"><img src="img/pedra.png" alt="imagem de uma  mão fechada representando uma pedra no jogo jokempo"></a></li>
+                        <li><a class="selecao"id="computador-escolha-2"><img src="img/papel.png" alt="imagem de uma mão aberta representando paple no jogo jokempo"></a></li>
+                        <li><a class="selecao"id="computador-escolha-3"><img src="img/tesoura.png" alt="imagem de uma mão como indicador e anelar esticados representando uma tesoura no jogo jokempo"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+        <div id="msm">Mensagens</div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
