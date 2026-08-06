@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Puzzle - Descubra o assassino</title>
+</head>
+<body>
+
+    <div style="display: flex;">
+        
+        <ol>
+            <h2>Suspeitos:</h2>
+            <li> Charles B. Abbage</li>
+            <li> Donald Duck Knuth</li>
+            <li> Ada L. Ovelace</li>
+            <li> Alan T. Uring</li>
+            <li> Ivar J. Acobson</li>
+            <li> Ras Mus Ler Dorf</li>
+        </ol>
+
+        
+        <ol>
+            <h2>Locais:</h2>
+            <li> Redmond</li>
+            <li> Palo Alto</li>
+            <li> San Francisco</li>
+            <li> Tokio</li>
+            <li> Restaurante no Fim do Universo</li>
+            <li> São Paulo</li>
+            <li> Cupertino</li>
+            <li> Helsinki</li>
+            <li> Maida Vale</li>
+            <li> Toronto</li>
+        </ol>
+
+        
+        <ol>
+            <h2>Armas:</h2>
+            <li> Peixeira</li>
+            <li> DynaTAC 8000X (o primeiro aparelho celular do mundo)</li>
+            <li> Trezoitão</li>
+            <li> Trebuchet</li>
+            <li> Maça</li>
+            <li> Gládio</li>
+        </ol>
+    </div>
+
+    <form>
+        <h2>Qual a sua teoria?</h2>
+        <label for="Suspeito" style="display: block;">Suspeito:</label>
+        <input type="number" id="Suspeito" name="Suspeito"/>
+
+        <label for="Local" style="display: block;">Local:</label>
+        <input type="number" id="Local" name="Local"/>
+
+        <label for="Arma" style="display: block;">Arma:</label>
+        <input type="number" id="Arma" name="Arma"/>
+
+        <button id="button" type="submit" onclick="testeDeTeoria()" style="display: block;">Testar teoria</button>
+    </form>
+
+    <h2>Resposta da testemunha:</h2>
+    <p id="testemunha"></p>
+
+</body>
+<script src="./DescubraOAssassino.js"></script>
+</html>
