@@ -1,0 +1,16 @@
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.AssemblyInfo.cs
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.exe
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.deps.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.runtimeconfig.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.runtimeconfig.dev.json
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\ref\EntreLetras.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\bin\Debug\net5.0\EntreLetras.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\ref\EntreLetras.dll
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.pdb
+C:\Users\lucas\Documents\SenaiLucas\Intelitrader\DesafioUm\EntreLetras\obj\Debug\net5.0\EntreLetras.genruntimeconfig.cache
