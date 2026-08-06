@@ -1,0 +1,22 @@
+#msm {
+    
+    border-radius: 15px;
+    background-color: var(--silver);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+@media (max-width: 900px) {
+   #msm {
+       
+        font-size: 25px;
+      
+    }
+
+
+}
