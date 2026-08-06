@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="acets/style.css">
+    <title>Jokenpo</title>
+</head>
+
+<body>
+    <section id="jokenpo">
+        <h1>Vamos Jogar Jokenpo!</h1>
+        <p>Escolha uma opção abaixo</p>
+        <div class="container-jokenpo">
+            <div class="ppt" id="pedra"><button class="btn"><img class="pedra" width="200px"
+                        src="acets/imagens/pedra.png" alt=""></button></div>
+            <div class="ppt" id="papel"><button class="btn"><img class="papel" width="200px"
+                        src="acets/imagens/papel.png" alt=""></button></div>
+            <div class="ppt" id="tesoura"><button class="btn"><img class="tesoura" width="200px"
+                        src="acets/imagens/tesoura.png" alt=""></button></div>
+        </div>
+        <button class="button" onclick="verificaJogar()">Jogar</button>
+        <button class="button" onclick="resetar()">Reset</button>
+        <div id="resultado">
+            <div class="result" id="usuario">
+                <h1>Sua Jogada</h1>
+            </div>
+            <div class="result" id="maquina">
+                <h1>Computador</h1>
+            </div>
+        </div>
+    </section>
+    <script src="acets/main.js"></script>
+</body>
+
+</html>

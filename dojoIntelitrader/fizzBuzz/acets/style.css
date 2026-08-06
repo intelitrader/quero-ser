@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    background-color: rgb(56, 142, 255);
+}
+
+.container {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.658);
+}
+
+#btn {
+    margin: auto;
+    max-width: 200px;
+    padding: 10px 20px;
+    font-size: 20pt;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+}
+
+#btn:hover {
+    color: rgb(56, 142, 255);
+}
+
+.result {
+    margin: 20px auto;
+    max-width: 600px;
+    color: rgb(56, 142, 255);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.658);
+}
+
+.result p {
+    margin: auto;
+    padding: 5px;
+    border-bottom: 1px #000 solid;
+    max-width: 500px;
+}
