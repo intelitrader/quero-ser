@@ -1,0 +1,6 @@
+Linha 4 - Venda nãoo finalizada
+Linha 7 - Venda nãoo finalizada
+Linha 9 - Venda cancelada
+Linha 10 - Erro desconhecido. Acionar equipe de TI
+Linha 14 - Erro desconhecido. Acionar equipe de TI
+Linha 20 - Código de Produto nao encontrado 31288
