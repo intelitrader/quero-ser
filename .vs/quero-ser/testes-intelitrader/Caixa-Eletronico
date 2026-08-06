@@ -1,0 +1,70 @@
+using System;
+
+namespace Teste_Caixa {
+    internal class Program {
+
+        static void Main(string[] args) {
+
+
+
+            Console.WriteLine(" Caixa Eletronico ");
+            Console.WriteLine();
+            Console.WriteLine("//////////////////////////////////////////////////////////////");
+            Console.WriteLine();
+
+            bool sair = false;
+            while (!sair) {
+                int resto = 0;
+
+
+                Console.Write("Digite o valor do saque: ");
+                int valor = Convert.ToInt16(Console.ReadLine());
+
+                if ((valor % 2) != 0 && (valor % 5) != 0) {
+
+                    Console.WriteLine(" Desculpe, o caixa não possue notas de 5 ! ");
+                    Console.WriteLine();
+
+                }
+
+                else {
+                    
+                    int n100 = valor / 100;
+                    resto = valor - (n100 * 100);
+                    int n50 = resto / 50;
+                    resto = resto - (n50 * 50);
+                    int n20 = resto / 20;
+                    resto = resto - (n20 * 20);
+                    int n10 = resto / 10;
+                    resto = resto - (n10 * 10);
+
+                    Console.WriteLine();
+                    Console.WriteLine($"Valor do Saque desejado: R${valor}");
+                    Console.WriteLine();
+                    Console.WriteLine("Emitindo as notas para o saque:");
+                    Console.WriteLine();
+                    Console.WriteLine("-Notas de R$100:  " + n100);
+                    Console.WriteLine();
+                    Console.WriteLine("-Notas de R$50:  " + n50);
+                    Console.WriteLine();
+                    Console.WriteLine("-Notas de R$20:  " + n20);
+                    Console.WriteLine();
+                    Console.WriteLine("-Notas de R$10:  " + n10);
+                    Console.WriteLine();
+
+                }
+
+
+                Console.WriteLine("Deseja sair do caixa ?  s/n");
+                char op = char.Parse(Console.ReadLine());
+                if (op == 's') {
+                    sair = true;
+                }
+                    Console.Clear();
+            }
+
+        }
+
+    }
+}
+
