@@ -1,0 +1,16 @@
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.exe
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.deps.json
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.runtimeconfig.json
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.runtimeconfig.dev.json
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.dll
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\bin\Debug\net5.0\Solução.pdb
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.csproj.AssemblyReference.cache
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.AssemblyInfoInputs.cache
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.AssemblyInfo.cs
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.csproj.CoreCompileInputs.cache
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.dll
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\refint\Solução.dll
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.pdb
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\Solução.genruntimeconfig.cache
+C:\Users\INPOWER\Documents\git\quero-ser\Solução\Solução\Solução\obj\Debug\net5.0\ref\Solução.dll
