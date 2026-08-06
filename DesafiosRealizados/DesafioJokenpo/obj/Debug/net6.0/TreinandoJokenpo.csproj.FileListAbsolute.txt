@@ -1,0 +1,15 @@
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\TreinandoJokenpo.exe
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\TreinandoJokenpo.deps.json
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\TreinandoJokenpo.runtimeconfig.json
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\TreinandoJokenpo.dll
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\ref\TreinandoJokenpo.dll
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\bin\Debug\net6.0\TreinandoJokenpo.pdb
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.csproj.AssemblyReference.cache
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.AssemblyInfoInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.AssemblyInfo.cs
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.csproj.CoreCompileInputs.cache
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.dll
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\ref\TreinandoJokenpo.dll
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.pdb
+C:\Users\guica\Desktop\Processo seletivo\TreinandoJokenpo\obj\Debug\net6.0\TreinandoJokenpo.genruntimeconfig.cache
