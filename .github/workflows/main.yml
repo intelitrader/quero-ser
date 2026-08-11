@@ -1,0 +1,53 @@
+name: CI/CD Zap Project
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # --- BACKEND .NET ---
+  build-dotnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+          
+      - name: Restore & Build
+        run: |
+          dotnet restore Source/Zap/BackEnd/Zap.sln
+          dotnet build Source/Zap/BackEnd/Zap.sln --configuration Release --no-restore
+
+  # --- AGENT RUST (Cross-Compile para Android/Linux) ---
+  build-rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-unknown-linux-gnu, aarch64-linux-android
+          
+      - name: Build Agent (Linux Test)
+        run: |
+          cd Source/Zap/BackEnd/Intelitrader.Zap.Agent
+          cargo build --release --target x86_64-unknown-linux-gnu
+
+  # --- INFRA (Redis & Docker) ---
+  deploy-infra:
+    needs: [build-dotnet, build-rust]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Exemplo de deploy usando Docker Compose (API + Redis)
+      - name: Build and Push Docker Images
+        run: |
+          docker compose build
+          # Aqui entraria o login no Azure Container Registry ou DockerHub
+          # docker compose push

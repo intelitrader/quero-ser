@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Intelitrader.Zap.API/Intelitrader.Zap.API.csproj" />
+  <Project Path="Intelitrader.Zap.Application/Intelitrader.Zap.Application.csproj" />
+  <Project Path="Intelitrader.Zap.Domain/Intelitrader.Zap.Domain.csproj" />
+  <Project Path="Intelitrader.Zap.Infrastructure/Intelitrader.Zap.Infrastructure.csproj" />
+  <Project Path="Intelitrader.Zap.Tests/Intelitrader.Zap.Tests.csproj" />
+</Solution>
