@@ -1,0 +1,15 @@
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\bin\Debug\net6.0\Intervalos.exe
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\bin\Debug\net6.0\Intervalos.deps.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\bin\Debug\net6.0\Intervalos.runtimeconfig.json
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\bin\Debug\net6.0\Intervalos.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\bin\Debug\net6.0\Intervalos.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.csproj.AssemblyReference.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.AssemblyInfoInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.AssemblyInfo.cs
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.csproj.CoreCompileInputs.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\refint\Intervalos.dll
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.pdb
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\Intervalos.genruntimeconfig.cache
+C:\Users\fsnn\Projetos\Testes\07-intelitrader\Intervalos\Intervalos\obj\Debug\net6.0\ref\Intervalos.dll
