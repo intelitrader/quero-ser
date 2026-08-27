@@ -1,0 +1,7 @@
+Linha 13 – Código de Produto não encontrado 27440
+Linha 19 – Código de Produto não encontrado 31288
+Linha 3 – Venda  Venda não finalizada
+Linha 6 – Venda  Venda não finalizada
+Linha 8 – Venda cancelada
+Linha 9 – Erro desconhecido. Acionar equipe de TI
+Linha 13 – Erro desconhecido. Acionar equipe de TI
